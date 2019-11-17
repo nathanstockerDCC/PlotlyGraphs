@@ -4,7 +4,7 @@ function RentalGraph(chartData){
 var DataToUse = $('#TypeDD_RentalGraph option:selected').text();
 
 
-if (DataToUse == "Wellington City"){
+if (DataToUse == "Dunedin City"){
 	data = [{
 		x: $.map(chartData, function(data){
 			return data["YearToMonth"]
@@ -69,7 +69,7 @@ else {
 			;}),
 		type: 'line',
 		line: {width: 5},
-		name: 'Wellington City',
+		name: 'Dunedin City',
 		marker: {width: 100, color: Colour1}
         },{
 		x: $.map(chartData, function(data){
@@ -96,7 +96,7 @@ else {
 			return data["YearToMonth"]
 			;}),
 		y: $.map(chartData, function(data){
-			return data["Dunedin"]
+			return data["National"]
 			;}),
 		type: 'line',
 		name: 'Dunedin',
@@ -106,7 +106,7 @@ else {
 			return data["YearToMonth"]
 			;}),
 		y: $.map(chartData, function(data){
-			return data["Wellington Region"]
+			return data["Wellington"]
 			;}),
 		type: 'line',
 		name: 'Wellington Region',
