@@ -41,10 +41,10 @@ else {
         }]
 	;}
 
-var	RangeVar = [2003,2015];
+var	RangeVar = [2009,2019];
 
-if (ExtraData == 'Consented Dwellings') {RangeVar = [1991,2015];}
-else if (ExtraData == 'Projected Dwellings') {RangeVar = [2003,2043];}
+if (ExtraData == 'Consented Dwellings') {RangeVar = [1991,2019];}
+else if (ExtraData == 'Projected Dwellings') {RangeVar = [2009,2048];}
 
 
 if (ExtraData == 'Projected Dwellings') {
