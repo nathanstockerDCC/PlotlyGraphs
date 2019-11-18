@@ -12,18 +12,6 @@ if (datatypetouse_Development_by_Month == "Constructed Dwellings" && timeframe_D
 			return data["Citywide Years Longterm Years"];
 		})
 	;}
-else if (datatypetouse_Development_by_Month == "New Parcels" && timeframe_Development_by_Month == "Years") {
-	VisType = 'line',
-	xValues = $.map(chartData, function(data){
-			return data["Citywide Years Longterm Years"];
-		})
-	;}
-else if (datatypetouse_Development_by_Month == "New Parcels" && timeframe_Development_by_Month == "Rolling Average") {
-	VisType = 'bar',
-	xValues = $.map(chartData, function(data){
-			return data["Citywide All Months"];
-		})
-	;}
 else if (timeframe_Development_by_Month == "Months") {
 	VisType = 'bar',
 	xValues = $.map(chartData, function(data){
@@ -315,110 +303,6 @@ else if (datatypetouse_Development_by_Month == "Constructed Dwellings") {
 		}
 	;}
 	
-else if (datatypetouse_Development_by_Month == "New Parcels") {
-
-	var yValues = $.map(chartData, function(data){
-		return data[TimeframeConverted+"New Parcels"];
-		});
-	
-	BlanksToRemove(yValues);
-	RemoveBlanks(xValues, dels);
-	RemoveBlanks(yValues, dels);
-
-	data = [{
-		x: xValues,
-		y: yValues,
-		name: "New Parcels",
-		type: VisType,
-		line: {width: 6,},
-		connectgaps: true,
-		marker: {color: Colour1}
-        }];
-
-	layout = {
-		title: 'New Parcels',
-		showlegend: false,
-		xaxis: {
-			zeroline: false, 
-			tickmode: 'auto',
-			nticks: xValues.length,
-			tickangle: 45,
-			fixedrange: Zooming
-			},
-		yaxis: {
-			zeroline: false, 
-			fixedrange: Zooming
-			}
-		}
-	;}	
-	
-else {
-
-	var yValuesLU = $.map(chartData, function(data){
-		return data[TimeframeConverted+"Land Use Consents"];
-		});
-	
-	var yValuesSubD = $.map(chartData, function(data){
-		return data[TimeframeConverted+"Subdivision Consents"];
-		});
-	
-	var yValuesCombined = $.map(chartData, function(data){
-		return data[TimeframeConverted+"Combined Consents"];
-		});
-	
-	BlanksToRemove(yValuesLU);
-	RemoveBlanks(xValues, dels);
-	RemoveBlanks(yValuesLU, dels);
-	RemoveBlanks(yValuesSubD, dels);
-	RemoveBlanks(yValuesCombined, dels);
-
-	data = [{
-		x: xValues,
-		y: yValuesLU,
-		name: "Land Use Consents",
-		type: VisType,
-		line: {width: 6,},
-		connectgaps: true,
-		marker: {color: Colour1}
-		
-        },{
-		x: xValues,
-		y: yValuesSubD,
-		name: "Subdivision Consents",
-		type: VisType,
-		line: {width: 6,},
-		connectgaps: true,
-		marker: {color: Colour2}
-		
-        },{
-		x: xValues,
-		y: yValuesCombined,
-		name: "Combined Consents",
-		type: VisType,
-		line: {width: 6,},
-		connectgaps: true,
-		marker: {color: Colour3}
-        }];
-
-	layout = {
-		title: 'Resource Consents',
-		showlegend: true,
-		legend : {orientation: 'h', y: '-0.25'},
-		barmode: 'stack',
-		xaxis: {
-			zeroline: false, 
-			tickmode: 'auto',
-			nticks: xValues.length,
-			tickangle: 45,
-			fixedrange: Zooming
-			},
-		yaxis: {
-			zeroline: false, 
-			fixedrange: Zooming, 
-			}
-		}
-	;}
-
 
 Plotly.newPlot('AllDevelopmentbyMonth', data, layout);
 }
