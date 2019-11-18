@@ -26,7 +26,7 @@ data = [{
         },{
 		x: Years,
 		y: $.map(chartData, function(data){
-			return data[DataType+];
+			return data[DataType];
 		}),
 		type: 'bar',
 		connectgaps: true,
