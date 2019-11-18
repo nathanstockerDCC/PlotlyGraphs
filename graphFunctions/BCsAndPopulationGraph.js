@@ -11,7 +11,7 @@ if (DataType == "Consented Dwellings"){
 	xRange = [1990.5, Years[Years.length - 1]]
 		;}
 else {
-	xRange = [2003.5, Years[Years.length - 1]]
+	xRange = [2008.5, Years[Years.length - 1]]
 	;}
 
 data = [{
@@ -26,22 +26,22 @@ data = [{
         },{
 		x: Years,
 		y: $.map(chartData, function(data){
-			return data[DataType+" Multiplied by Household Size"];
+			return data[DataType+];
 		}),
 		type: 'bar',
 		connectgaps: true,
-		name: DataType+" Capacity",
+		name: DataType,
 		marker: {color: Colour3}	
 		
         },{
 			
 		x: Years,
 		y: $.map(chartData, function(data){
-			return data["PopulationGrowth"];
+			return data["HouseholdGrowth"];
 		}),
 		type: 'line',
 		connectgaps: true,
-		name: 'Approx. Population Increase',
+		name: 'Approx. Household Growth',
 		marker: {color: Colour2},
 		line: {width: 3}	
 
@@ -49,7 +49,7 @@ data = [{
 
 		
 layout = {
-		title: DataType+' and Population Growth',
+		title: DataType+' and Household Growth',
 		showlegend: true,
 		legend: {orientation: 'h', y: '-0.25'},
 		xaxis: {
