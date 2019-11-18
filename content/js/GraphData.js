@@ -31,15 +31,9 @@ var graphdata = [{
 		height : "500px",
 		paper_bgcolor: 'rgba(0,0,0,0)',
 		plot_bgcolor: 'rgba(0,0,0,0)',
-		csv : "/dccgraphs/data/SuburbBCDataAnnualbySuburbRanked.csv",
+		csv : "/dccgraphs/data/SuburbBCDataAnnualbySuburb.csv",
 		func : "CitywideBySuburbgraph",
 		funcFile : "/dccgraphs/graphFunctions/CitywideBySuburbgraph.js",
-		button : [
-			{
-				text : "Sort by Distance to CBD / Alphabetically",
-				id : "SortTypeCitywideBySuburb"
-			}
-		],
 		drop : [
 			{
 				text : "Start year",
