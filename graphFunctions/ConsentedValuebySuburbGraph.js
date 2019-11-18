@@ -4,7 +4,7 @@ var suburbtouse = $('#datafromdropdown_suburbgraph option:selected').text();
 var comparisonsuburbtouse = $('#comparisiondd_suburbgraph option:selected').text();
 	
 if (suburbtouse == "") {
-	suburbtouse = "Wellington City Total"
+	suburbtouse = "Dunedin City Total"
 	;}
 		
 	SuburbYears = $.map(chartData, function(data){
