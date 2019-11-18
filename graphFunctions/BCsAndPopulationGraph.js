@@ -8,10 +8,10 @@ Years = $.map(chartData, function(data){
 			});
 
 if (DataType == "Consented Dwellings"){
-	xRange = [1990.5, Years[Years.length - 1]]
+	xRange = [1990.5, Years[Years.length]]
 		;}
 else {
-	xRange = [2008.5, Years[Years.length - 1]]
+	xRange = [2008.5, Years[Years.length]]
 	;}
 
 data = [{
