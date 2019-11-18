@@ -99,7 +99,7 @@ else {
 			return data["National"]
 			;}),
 		type: 'line',
-		name: 'Dunedin',
+		name: 'National',
 		marker: {color: Colour4}			
         },{
 		x: $.map(chartData, function(data){
