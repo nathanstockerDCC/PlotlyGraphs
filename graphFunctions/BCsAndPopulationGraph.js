@@ -47,7 +47,7 @@ layout = {
 			zeroline: false, 
 			tickmode: 'linear', 
 			tick0 : 1,
-			dtick: 1,
+			dtick: 2,
 			tickangle: 45,
 			range: xRange,
 			title: "Year ending 30 June"},
