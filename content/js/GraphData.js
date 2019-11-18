@@ -19,7 +19,7 @@ var graphdata = [{
 		link : [
 			{
 				linktext : "Datasource",
-				text : "Statistics New Zealand and Wellington City Council (.csv)",
+				text : "Statistics New Zealand and Dunedin City Council (.csv)",
 				url : "/dccgraphs/data/BCsAndPopulationGraph.csv"
 			}
 		]
@@ -44,11 +44,11 @@ var graphdata = [{
 			{
 				text : "Start year",
 				id : "dropdownStartYear_Citywide_by_Suburb",
-				valtext : ["2016","2015","2014","2013","2012","2011","2010","2009","2008","2007","2006","2005","2004"]
+				valtext : ["2018", "2017","2016","2015","2014","2013","2012","2011","2010","2009","2008","2007","2006","2005","2004","2003","2002"]
 			},{
 				text : "End year",
 				id : "dropdownEndYear_Citywide_by_Suburb",
-				valtext : ["2016","2015","2014","2013","2012","2011","2010","2009","2008","2007","2006","2005","2004"]
+				valtext : ["2018", "2017","2016","2015","2014","2013","2012","2011","2010","2009","2008","2007","2006","2005","2004","2003","2002"]
 			},{
 				text : "Choose a data type",
 				id : "datatypedd_CitywideBySuburbgraph",
@@ -77,7 +77,7 @@ var graphdata = [{
 			{
 				text : "Choose a data type",
 				id : "datatypedd_DevelopmentbyMonthgraph",
-				valtext : ["Total Dwellings Consented","Consented Dwellings by Type", "Value of Consented Construction", "Constructed Dwellings", "Resource Consents", "New Parcels"]
+				valtext : ["Total Dwellings Consented","Consented Dwellings by Type", "Value of Consented Construction", "Constructed Dwellings"]
 			},{
 				text : "Choose a timeframe",
 				id : "timeframe_DevelopmentbyMonthgraph",
@@ -87,7 +87,7 @@ var graphdata = [{
 		link : [
 			{
 				linktext : "Datasource",
-				text : "Statistics New Zealand and Wellington City Council (.csv)",
+				text : "Statistics New Zealand and Dunedin City Council (.csv)",
 				url : "/dccgraphs/data/CitywideBCdataMonthly.csv"
 			}
 		]
@@ -130,7 +130,7 @@ var graphdata = [{
 		link : [
 			{
 				linktext : "Datasource",
-				text : "Statistics New Zealand, Wellington City Council, and .ID (.csv)",
+				text : "Statistics New Zealand, Dunedin City Council, and .ID (.csv)",
 				url : "/dccgraphs/data/DwellingsCCCd.csv"
 			},{
 				linktext : "Forecast.ID website",
@@ -185,19 +185,19 @@ var graphdata = [{
 			{
 				text : "Start year",
 				id : "dropdownStartYear_Pie",
-				valtext : ["2017","2016","2015","2014","2013","2012","2011","2010","2009","2008","2007","2006","2005","2004","2003","2002","2001","2000","1999","1998","1997","1996","1995","1994","1993","1992","1991"]
+				valtext : ["2018","2017","2016","2015","2014","2013","2012","2011","2010","2009","2008","2007","2006","2005","2004","2003","2002","2001","2000","1999","1998","1997","1996","1995","1994","1993","1992","1991"]
 			},{
 				text : "End year",
 				id : "dropdownEndYear_Pie",
-				valtext : ["2017","2016","2015","2014","2013","2012","2011","2010","2009","2008","2007","2006","2005","2004","2003","2002","2001","2000","1999","1998","1997","1996","1995","1994","1993","1992","1991"]
+				valtext : ["2018","2017","2016","2015","2014","2013","2012","2011","2010","2009","2008","2007","2006","2005","2004","2003","2002","2001","2000","1999","1998","1997","1996","1995","1994","1993","1992","1991"]
 			},{
 				text : "Comparison start year",
 				id : "dropdownStartYearTwo_Pie",
-				valtext : ["-","2017","2016","2015","2014","2013","2012","2011","2010","2009","2008","2007","2006","2005","2004","2003","2002","2001","2000","1999","1998","1997","1996","1995","1994","1993","1992","1991"]
+				valtext : ["-","2018","2017","2016","2015","2014","2013","2012","2011","2010","2009","2008","2007","2006","2005","2004","2003","2002","2001","2000","1999","1998","1997","1996","1995","1994","1993","1992","1991"]
 			},{
 				text : "Comparison end year",
 				id : "dropdownEndYearTwo_Pie",
-				valtext : ["-","2017","2016","2015","2014","2013","2012","2011","2010","2009","2008","2007","2006","2005","2004","2003","2002","2001","2000","1999","1998","1997","1996","1995","1994","1993","1992","1991"]
+				valtext : ["-","2018","2017","2016","2015","2014","2013","2012","2011","2010","2009","2008","2007","2006","2005","2004","2003","2002","2001","2000","1999","1998","1997","1996","1995","1994","1993","1992","1991"]
 			}
 		],
 		link : [
@@ -272,7 +272,7 @@ var graphdata = [{
 			{
 				text : "Choose a data type",
 				id : "TypeDD_RentalGraph",
-				valtext : ["Wellington City", "Mean Rent Comparison"]
+				valtext : ["Dunedin City", "Mean Rent Comparison"]
 			}
 		],	
 		link : [
@@ -301,23 +301,11 @@ var graphdata = [{
 			{
 				text : "Choose an area",
 				id : "datafromdropdown_suburbgraph",
-				valtext : ["Wellington City Total","Aro Valley","Berhampore","Breaker Bay","Broadmeadows","Brooklyn","Churton Park",
-				"Crofton Downs","Glenside","Grenada North","Grenada Village","Hataitai","Highbury","Horokiwi","Houghton Bay",
-				"Island Bay","Johnsonville","Kaiwharawhara","Karaka Bays","Karori","Kelburn","Khandallah","Kilbirnie","Kingston",
-				"Lyall Bay","Makara","Makara Beach","Maupuia","Melrose","Miramar","Moa Point","Mornington","Mt Cook","Mt Victoria",
-				"Newlands","Newtown","Ngaio","Ngauranga","Northland","Ohariu","Oriental Bay","Owhiro Bay","Paparangi","Pipitea","Rongotai",
-				"Roseneath","Seatoun","Southgate","Strathmore Park","Takapu Valley","Tawa","Te Aro","Thorndon","Vogeltown","Wadestown",
-				"Wellington Central","Wilton","Woodridge"]
+				valtext : ["Dunedin City Total","Andersons Bay/Waverley", "Blueskin Bay", "Caversham", "Concord/Corstophine/Kew", "Fairfield", "Green Island/Abbotsford", "Helensburgh/Balmacewen", "Inner City", "Leith Valley", "Maori Hill", "Mornington", "Mosgiel", "Musselburgh/Tainui", "North East Valley", "Outer Peninsula", "Outram/Momona", "Peninsula", "Pine Hill", "Port Chalmers/Purakaunui", "Roslyn/Belleknowes", "South Coast", "South Dunedin", "St Clair", "St Kilda", "Strath Taieri", "Taieri", "Three Mile Hill", "University", "Waikouaiti/Karitane", "Wakari", "West Harbour"]
 			},{
 				text : "Compare with another area",
 				id : "comparisiondd_suburbgraph",
-				valtext : [" ","Wellington City Total","Aro Valley","Berhampore","Breaker Bay","Broadmeadows","Brooklyn","Churton Park",
-				"Crofton Downs","Glenside","Grenada North","Grenada Village","Hataitai","Highbury","Horokiwi","Houghton Bay",
-				"Island Bay","Johnsonville","Kaiwharawhara","Karaka Bays","Karori","Kelburn","Khandallah","Kilbirnie","Kingston",
-				"Lyall Bay","Makara","Makara Beach","Maupuia","Melrose","Miramar","Moa Point","Mornington","Mt Cook","Mt Victoria",
-				"Newlands","Newtown","Ngaio","Ngauranga","Northland","Ohariu","Oriental Bay","Owhiro Bay","Paparangi","Pipitea","Rongotai",
-				"Roseneath","Seatoun","Southgate","Strathmore Park","Takapu Valley","Tawa","Te Aro","Thorndon","Vogeltown","Wadestown",
-				"Wellington Central","Wilton","Woodridge"]
+				valtext : [" ","Dunedin City Total","Andersons Bay/Waverley", "Blueskin Bay", "Caversham", "Concord/Corstophine/Kew", "Fairfield", "Green Island/Abbotsford", "Helensburgh/Balmacewen", "Inner City", "Leith Valley", "Maori Hill", "Mornington", "Mosgiel", "Musselburgh/Tainui", "North East Valley", "Outer Peninsula", "Outram/Momona", "Peninsula", "Pine Hill", "Port Chalmers/Purakaunui", "Roslyn/Belleknowes", "South Coast", "South Dunedin", "St Clair", "St Kilda", "Strath Taieri", "Taieri", "Three Mile Hill", "University", "Waikouaiti/Karitane", "Wakari", "West Harbour"]
 			},{
 				text : "Choose a data type",
 				id : "datatypedd_suburbgraph",
@@ -331,43 +319,6 @@ var graphdata = [{
 				url : "/dccgraphs/data/SuburbBCDataAnnualbyYear.csv"
 			}
 		]
-	}, {
-		name : "Suburb Rental Information",
-		id : "SubRentalInfo",
-		container : "SuburbRentalGraph",
-		width : "100%",
-		height : "500px",
-		paper_bgcolor: 'rgba(0,0,0,0)',
-		plot_bgcolor: 'rgba(0,0,0,0)',
-		csv : "/dccgraphs/data/RentDetailedQuarterly.csv",
-		func : "SuburbRentalGraph",
-		funcFile : "/dccgraphs/graphFunctions/SuburbRentalGraph.js",
-		drop : [
-			{
-				text : "Choose an area",
-				id : "AreaDD_SuburbRentalGraph",
-				valtext : ["TA Total","Brooklyn","Hataitai","Island Bay/Melrose","Johnsonville/Newlands","Karori","Karori South/Makara","Kelburn/Aro Valley","Khandallah","Kilbirnie/Lyall Bay","Kingston/Happy Valley","Lambton","Miramar/Strathmore","Mt Cook","Mt Victoria/Roseneath","Ngaio/Kaiwharawhara/Wilton","Northland","Oriental Bay/Seatoun","Tawa/Grenada North","Te Aro","Vogeltown/Berhampore/Newtown","Wadestown/Thordon"]
-			},{
-				text : "Choose a property type",
-				id : "TypeDD_SuburbRentalGraph",
-				valtext : ["House","Apartment","Flat","Room"]
-			},{
-				text : "Choose a property size",
-				id : "BedroomsDD_SuburbRentalGraph",
-				valtext : ["Bedrooms Total","1","2","3","4","5+"]
-			}
-		],
-		link : [
-			{
-				linktext : "Datasource",
-				text : "Ministry of Business, Innovation and Employment (.csv)",
-				url : "/dccgraphs/data/RentDetailedQuarterly.csv"
-			},{
-				linktext : "MBIE rental data website",
-				text : "Ministry of Business, Innovation and Employment",
-				url : "http://www.mbie.govt.nz/info-services/housing-property/sector-information-and-statistics/rental-bond-data"
-			}
-		]
-		}
+	}
 ];
 
