@@ -19,7 +19,7 @@ function InfometricsGraph(chartData) {
 	if (DataToUseWithSpaces == "Rental Affordability Index") {
 		var textdiv = document.getElementById("ExtraReferences");
 		var aTag = document.createElement('a');
-		aTag.setAttribute('href', "http://ecoprofile.infometrics.co.nz/Wellington%20City/StandardOfLiving/RentalAffordability");
+		aTag.setAttribute('href', "http://ecoprofile.infometrics.co.nz/Dunedin%20City/StandardOfLiving/RentalAffordability");
 		aTag.setAttribute('target', "_blank");
 		aTag.innerHTML = "Rental Affordability Index";
 		textdiv.appendChild(aTag); ;
@@ -28,7 +28,7 @@ function InfometricsGraph(chartData) {
 	if (DataToUseWithSpaces == "Housing Affordability Index") {
 		var textdiv = document.getElementById("ExtraReferences");
 		var aTag = document.createElement('a');
-		aTag.setAttribute('href', "http://ecoprofile.infometrics.co.nz/Wellington%20City/StandardOfLiving/Housing_Affordability");
+		aTag.setAttribute('href', "http://ecoprofile.infometrics.co.nz/Dunedin%20City/StandardOfLiving/Housing_Affordability");
 		aTag.setAttribute('target', "_blank");
 		aTag.innerHTML = "Housing Affordability Index";
 		textdiv.appendChild(aTag); ;
@@ -66,7 +66,7 @@ for (var i = deletes.length-1; i >= 0; i--){
 ;}
 
 
-var yValuesWellington = $.map(chartData, function (data) {
+var yValuesDunedin = $.map(chartData, function (data) {
 				return data[DataToUse];
 			});
 
@@ -78,17 +78,17 @@ var xValues = $.map(chartData, function (data) {
 				return data[YearUsed];
 			});
 
-BlanksToRemove(yValuesWellington);
+BlanksToRemove(yValuesDunedin);
 RemoveBlanks(xValues, dels);
-RemoveBlanks(yValuesWellington, dels);
+RemoveBlanks(yValuesDunedin, dels);
 RemoveBlanks(yValuesNZ, dels);
 				
 	data = [{
 
 			x : xValues,
-			y : yValuesWellington,
+			y : yValuesDunedin,
 			type : 'bar',
-			name : "Wellington",
+			name : "Dunedin",
 			marker : {
 				color : Colour1
 			}
