@@ -24,16 +24,6 @@ data = [{
 		marker: {color: Colour1}
 		
         },{
-		x: Years,
-		y: $.map(chartData, function(data){
-			return data[DataType];
-		}),
-		type: 'bar',
-		connectgaps: true,
-		name: DataType,
-		marker: {color: Colour3}	
-		
-        },{
 			
 		x: Years,
 		y: $.map(chartData, function(data){
