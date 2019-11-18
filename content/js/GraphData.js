@@ -53,7 +53,7 @@ var graphdata = [{
 			{
 				linktext : "Datasource",
 				text : "Statistics New Zealand (.csv)",
-				url : "/dccgraphs/data/SuburbBCDataAnnualbySuburbRanked.csv"
+				url : "/dccgraphs/data/SuburbBCDataAnnualbySuburb.csv"
 			}
 		]
 	}, {
