@@ -39,8 +39,8 @@ function PropertyDataGraph(chartData){
 		showlegend: true,
 		legend: {orientation: 'h', y: '-0.25'},
 		xaxis: {zeroline: false, tickmode: 'linear', tick0: 0, dtick: 4, tickangle: 45, fixedrange: Zooming},
-		yaxis: {zeroline: false, fixedrange: Zooming, rangemode: "tozero", side: 'right',range:[0,1400]},
-		yaxis2: {zeroline: false, fixedrange: Zooming, rangemode: "tozero", side: 'left',tickformat: '$,s', overlaying: 'y', range:[0,700000]}
+		yaxis: {zeroline: false, fixedrange: Zooming, rangemode: "tozero", side: 'right',range:[0,1200]},
+		yaxis2: {zeroline: false, fixedrange: Zooming, rangemode: "tozero", side: 'left',tickformat: '$,s', overlaying: 'y', range:[0,600000]}
 		};
 	
 	;}
