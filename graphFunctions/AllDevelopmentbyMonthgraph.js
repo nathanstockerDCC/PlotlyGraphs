@@ -16,10 +16,10 @@ else if (timeframe_Development_by_Month == "Months") {
 	VisType = 'bar',
 	xValues = $.map(chartData, function(data){
 			return data["Citywide All Months"];
-		})
+		}),
 	xaxis: {
 		range: ['2018-01-01', '2019-08-30']
-		},
+		}
 		;}
 else if (timeframe_Development_by_Month == "Years") {
 	VisType = 'bar',
