@@ -304,7 +304,7 @@ else if (datatypetouse_Development_by_Month == "Constructed Dwellings") {
 	;}
 	
 
-if (timeframe_Development_by_Month == "Years") {
+if (timeframe_Development_by_Month == "Months") {
 	layout = {
 		xaxis: {
 			range: ['2018-01-01', '2019-08-30']
