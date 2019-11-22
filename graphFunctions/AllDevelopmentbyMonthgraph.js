@@ -10,28 +10,28 @@ if (datatypetouse_Development_by_Month == "Constructed Dwellings" && timeframe_D
 	VisType = 'line',
 	xValues = $.map(chartData, function(data){
 			return data["Citywide Years Longterm Years"];
-		})
+		}),
 	dtickValue = 3
 	;}
 else if (timeframe_Development_by_Month == "Months") {
 	VisType = 'bar',
 	xValues = $.map(chartData, function(data){
 			return data["Citywide All Months"];
-		})
+		}),
 	dtickValue = 6
 	;}
 else if (timeframe_Development_by_Month == "Years") {
 	VisType = 'bar',
 	xValues = $.map(chartData, function(data){
 			return data["Citywide Years Longterm Years"];
-		})
+		}),
 	dtickValue = 3
 	;}	
 else {
 	VisType = 'line',
 	xValues = $.map(chartData, function(data){
 			return data["Citywide All Months"];
-		})
+		}),
 	dtickValue = 6
 	;}
 
