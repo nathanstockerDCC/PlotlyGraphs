@@ -292,7 +292,7 @@ else if (datatypetouse_Development_by_Month == "Constructed Dwellings") {
 			zeroline: false, 
 			tickmode: 'linear',
 			tick0: 0,
-			dtick: 2,
+			dtick: 1,
 			tickangle: 45, 
 			fixedrange: Zooming			
 			},
