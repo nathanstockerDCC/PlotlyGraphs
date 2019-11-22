@@ -139,7 +139,7 @@ if (datatypetouse_Citywide_by_Suburb == "Total Dwellings Consented") {
 			tickmode: 'linear', 
 			tick0: 0, 
 			dtick: 1, 
-			tickangle: 45, 
+//			tickangle: 45, 
 			categoryorder: 'category ascending',
 			automargin: true,
 			fixedrange: Zooming},
