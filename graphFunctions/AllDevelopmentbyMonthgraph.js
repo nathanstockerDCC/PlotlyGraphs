@@ -94,6 +94,7 @@ if (datatypetouse_Development_by_Month == "Total Dwellings Consented") {
 			tickmode: 'auto',
 			tickangle: 45,
 			dtick: dtickValue,
+			tick0: xValues[0],
 			fixedrange: Zooming
 			},		
 		yaxis: {
@@ -187,8 +188,8 @@ else if (datatypetouse_Development_by_Month == "Consented Dwellings by Type") {
 		xaxis: {
 			zeroline: false, 
 			tickmode: 'linear',
-			tick0: 0,
 			dtick: dtickValue,
+			tick0: xValues[0],
 			tickangle: 45,
 			fixedrange: Zooming
 			},
@@ -256,8 +257,8 @@ else if (datatypetouse_Development_by_Month == "Value of Consented Construction"
 		xaxis: {
 			zeroline: false, 
 			tickmode: 'linear',
-			tick0: 0,
 			dtick: dtickValue,
+			tick0: xValues[0],
 			tickangle: 45,
 			fixedrange: Zooming
 			},
@@ -296,8 +297,8 @@ else if (datatypetouse_Development_by_Month == "Constructed Dwellings") {
 		xaxis: {
 			zeroline: false, 
 			tickmode: 'linear',
-			tick0: 0,
 			dtick: dtickValue,
+			tick0: xValues[0],
 			tickangle: 45, 
 			fixedrange: Zooming			
 			},
