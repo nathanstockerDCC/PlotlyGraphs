@@ -11,24 +11,28 @@ if (datatypetouse_Development_by_Month == "Constructed Dwellings" && timeframe_D
 	xValues = $.map(chartData, function(data){
 			return data["Citywide Years Longterm Years"];
 		})
+	dtickValue = 3
 	;}
 else if (timeframe_Development_by_Month == "Months") {
 	VisType = 'bar',
 	xValues = $.map(chartData, function(data){
 			return data["Citywide All Months"];
 		})
+	dtickValue = 6
 	;}
 else if (timeframe_Development_by_Month == "Years") {
 	VisType = 'bar',
 	xValues = $.map(chartData, function(data){
 			return data["Citywide Years Longterm Years"];
 		})
+	dtickValue = 3
 	;}	
 else {
 	VisType = 'line',
 	xValues = $.map(chartData, function(data){
 			return data["Citywide All Months"];
 		})
+	dtickValue = 6
 	;}
 
 TimeframeConverted = "Citywide "+timeframe_Development_by_Month+" Longterm ";
@@ -89,6 +93,7 @@ if (datatypetouse_Development_by_Month == "Total Dwellings Consented") {
 			zeroline: false,
 			tickmode: 'auto',
 			tickangle: 45,
+			dtick: dtickValue,
 			fixedrange: Zooming
 			},		
 		yaxis: {
@@ -183,7 +188,7 @@ else if (datatypetouse_Development_by_Month == "Consented Dwellings by Type") {
 			zeroline: false, 
 			tickmode: 'linear',
 			tick0: 0,
-			dtick: 2,
+			dtick: dtickValue,
 			tickangle: 45,
 			fixedrange: Zooming
 			},
@@ -252,7 +257,7 @@ else if (datatypetouse_Development_by_Month == "Value of Consented Construction"
 			zeroline: false, 
 			tickmode: 'linear',
 			tick0: 0,
-			dtick: 2,
+			dtick: dtickValue,
 			tickangle: 45,
 			fixedrange: Zooming
 			},
@@ -292,7 +297,7 @@ else if (datatypetouse_Development_by_Month == "Constructed Dwellings") {
 			zeroline: false, 
 			tickmode: 'linear',
 			tick0: 0,
-			dtick: 1,
+			dtick: dtickValue,
 			tickangle: 45, 
 			fixedrange: Zooming			
 			},
