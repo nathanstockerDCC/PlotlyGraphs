@@ -112,8 +112,8 @@ if (datatypetouse == "Consented Dwellings by Type" && comparisonsuburbtouse == "
 		xaxis: {
 			zeroline: false, 
 			tickmode: 'linear', 
-			tick0: 0, 
-			dtick: 1, 
+			tick0: SuburbYears[0],
+			dtick: 2,
 			tickangle: 45, 
 			fixedrange: Zooming},
 		yaxis: {
@@ -213,8 +213,8 @@ else if (datatypetouse == "Consented Dwellings by Type" && comparisonsuburbtouse
 			title: comparisonsuburbtouse,
 			zeroline: false, 
 			tickmode: 'linear', 
-			tick0: 0, 
-			dtick: 1, 
+			tick0: SuburbYears[0],
+			dtick: 2,
 			tickangle: 45, 
 			fixedrange: Zooming},
 		
@@ -222,8 +222,8 @@ else if (datatypetouse == "Consented Dwellings by Type" && comparisonsuburbtouse
 			title: suburbtouse,
 			zeroline: false,
 			tickmode: 'linear', 
-			tick0: 0, 
-			dtick: 1, 
+			tick0: SuburbYears[0],
+			dtick: 2,
 			tickangle: 45, 
 			fixedrange: Zooming,
 			anchor: 'y2'},
@@ -308,8 +308,18 @@ else {
         title: 'Total Dwellings Consented',
         showlegend: true,
 		legend: {orientation: 'h', y: '-0.25'},
-        xaxis: {zeroline: false, tickmode: 'linear', tick0: 0, dtick: 1, tickangle: 45, fixedrange: Zooming},
-        yaxis: {zeroline: false, rangemode: "tozero", fixedrange: Zooming}
+        xaxis: {
+		zeroline: false, 
+		tickmode: 'linear', 
+		tick0: SuburbYears[0],
+		dtick: 2,
+		tickangle: 45, 
+		fixedrange: Zooming
+		},
+        yaxis: {
+		zeroline: false, 
+		rangemode: "tozero", 
+		fixedrange: Zooming}
 		}
 	;}
 
