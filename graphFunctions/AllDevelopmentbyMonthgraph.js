@@ -91,7 +91,7 @@ if (datatypetouse_Development_by_Month == "Total Dwellings Consented") {
 		showlegend: false,
 		xaxis: {
 			zeroline: false,
-			tickmode: 'auto',
+			tickmode: 'linear',
 			tickangle: 45,
 			dtick: dtickValue,
 			tick0: xValues[0],
