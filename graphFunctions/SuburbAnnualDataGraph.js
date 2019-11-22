@@ -270,8 +270,8 @@ else if (datatypetouse == "Value of Consented Construction") {
 		xaxis: {
 			zeroline: false,
 			tickmode: 'linear',
-			tick0: 0,
-			dtick: 1,
+			tick0: SuburbYears[0],
+			dtick: 2,
 			tickangle: 45,
 			fixedrange: Zooming
 			}, 
