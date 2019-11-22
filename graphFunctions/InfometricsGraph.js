@@ -114,7 +114,7 @@ RemoveBlanks(yValuesNZ, dels);
 			fixedrange : Zooming,
 			zeroline : false,
 			tickmode : 'linear', 
-			tick0 : 0, 
+			tick0 : xValues[0], 
 			dtick : 1,
 			tickangle : 45
 		},
