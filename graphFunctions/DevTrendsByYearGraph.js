@@ -60,7 +60,7 @@ function DevTrendsByYearGraph(chartData){
 			title: 'Consented Dwellings by Year',
 			showlegend: true,
 			legend: {orientation: 'h', y: '-0.25'},
-			xaxis: {zeroline: false, tickmode: 'linear', tick0: 0, dtick: 1, tickangle: 45, fixedrange: Zooming},
+			xaxis: {zeroline: false, tickmode: 'linear', tick0: 1992, dtick: 2, tickangle: 45, fixedrange: Zooming},
 			yaxis: {zeroline: false, fixedrange: Zooming}
         };
 
