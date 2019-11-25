@@ -51,10 +51,12 @@ else if (timeframe_Development_by_Month == "Months") {
 		});
 		
 	var StartDate = new Date(DateMinMax(xValues, "max"));
-	StartDate.setDate(StartDate.getDate()-750);
+	StartDate.setDate(StartDate.getDate());
+//	StartDate.setDate(StartDate.getDate()-750);
 	
 	var EndDate = new Date(DateMinMax(xValues, "max"));
-	EndDate.setDate(EndDate.getDate()+20);
+	EndDate.setDate(EndDate.getDate());
+//	EndDate.setDate(EndDate.getDate()+20);
 
 	dtickValue = 6
 	;}
