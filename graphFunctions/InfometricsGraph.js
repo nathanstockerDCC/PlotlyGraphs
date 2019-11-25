@@ -109,7 +109,11 @@ RemoveBlanks(yValuesNZ, dels);
 	layout = {
 		title : DataToUseWithSpaces,
 		showlegend : true,
-		legend: {orientation: 'h', y: '-0.25'},
+		legend: {
+			orientation: 'h',
+			y: '-0.25',
+			x: '0.5',
+			xanchor: 'center'},
 		xaxis : {
 			fixedrange : Zooming,
 			zeroline : false,
