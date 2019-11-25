@@ -29,47 +29,55 @@ function DevTrendsByYearGraph(chartData){
 		;}
 	;}
 		
-	data = [{
-		xValues: $.map(chartData, function(data){
+	var xValues = $.map(chartData, function(data){
 			return data["Annual Citywide Longterm Years"];}),
-		yValuesHouses: $.map(chartData, function(data){
+
+	var yValuesHouses = $.map(chartData, function(data){
 			return data["Annual Citywide Longterm New Houses"];}),
-		name: 'Houses',
-		line: {width: 6},
-		marker: {color: Colour1}
-		}, {
-		xValues: $.map(chartData, function(data){
-			return data["Annual Citywide Longterm Years"];}),
-		yValuesUnits: $.map(chartData, function(data){
+
+	var yValuesUnits = $.map(chartData, function(data){
 			return data["Annual Citywide Longterm New Units"];}),
-		name: 'Units',
-		line: {width: 6,},
-		marker: {color: Colour2}
-		}, {
-		xValues: $.map(chartData, function(data){
-			return data["Annual Citywide Longterm Years"];}),
-		yValuesApartments: $.map(chartData, function(data){
+
+	var yValuesApartments = $.map(chartData, function(data){
 			return data["Annual Citywide Longterm New Apartments"];}),
-		name: 'Apartments',
-		line: {width: 6,},
-		marker: {color: Colour5}
-		}, {
-		xValues: $.map(chartData, function(data){
-			return data["Annual Citywide Longterm Years"];}),
-		yValuesRVUs: $.map(chartData, function(data){
+			
+	var yValuesRVUs = $.map(chartData, function(data){
 			return data["Annual Citywide Longterm Retirement Village Units"];}),
-		name: 'Retirement Village Units',
-		line: {width: 6,},
-		marker: {color: Colour4}
-		}, {
-		xValues: $.map(chartData, function(data){
-			return data["Annual Citywide Longterm Years"];}),
-		yValuesTotal: $.map(chartData, function(data){
+
+	var yValuesTotal = $.map(chartData, function(data){
 			return data["Annual Citywide Longterm Total New Dwellings"];}),
-		name: 'Total',
-		opacity: 0.7,
-		marker:{color:'#AAAAAA'},
-		type: 'bar'	
+			
+		data = [{
+			x: xValues,
+			y: yValuesHouses,
+			name: 'Houses',
+			line: {width: 6},
+			marker: {color: Colour1}
+		}, {
+			x: xValues,
+			y: yValuesUnits,
+			name: 'Units',
+			line: {width: 6,},
+			marker: {color: Colour2}
+		}, {
+			x: xValues,
+			y: yValuesApartments,
+			name: 'Apartments',
+			line: {width: 6,},
+			marker: {color: Colour5}
+		}, {
+			x: xValues,
+			y: yValuesRVUs,
+			name: 'Retirement Village Units',
+			line: {width: 6,},
+			marker: {color: Colour4}
+		}, {
+			x: xValues,
+			y: yValuesTotal,
+			name: 'Total',
+			opacity: 0.7,
+			marker:{color:'#AAAAAA'},
+			type: 'bar'	
 		}],
 
 	BlanksToRemove(yValuesHouses);
