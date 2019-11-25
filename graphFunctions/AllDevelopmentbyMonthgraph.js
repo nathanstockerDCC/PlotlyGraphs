@@ -88,6 +88,8 @@ else {
 
 console.log("Start: "+StartDate)
 console.log("End: "+EndDate)
+console.log("Max: "+Date(DateMinMax(xValues, "max")))
+
 	
 StartDate = (new Date(StartDate)).getTime();
 EndDate = (new Date(EndDate)).getTime();
