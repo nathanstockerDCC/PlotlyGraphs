@@ -27,8 +27,10 @@ if (datatypetouse_Development_by_Month == "Constructed Dwellings" && timeframe_D
 			return data["Citywide Years Longterm Years"];
 		});
 		
-	var StartDate = new Date(xValues[0]).getTime();
+	var StartDate = new Date(xValues[0]);
+	StartDate.setDate(StartDate.getDate()-183);
 	var EndDate = new Date(max_date(xValues));
+	EndDate.setDate(EndDate.getDate()+183);
 
 	dtickValue = 3
 	;}
@@ -39,10 +41,10 @@ else if (timeframe_Development_by_Month == "Months") {
 		});
 		
 	var StartDate = new Date(xValues[xValues.length - 25]);
-	StartDate.setDate(StartDate.getDate()-1);
+	StartDate.setDate(StartDate.getDate()-15);
 	
-	var EndDate = new Date(xValues[xValues.length - 1]);
-	EndDate.setDate(EndDate.getDate()+1);
+	var EndDate = new Date(max_date(xValues));
+	EndDate.setDate(EndDate.getDate()+15);
 
 	dtickValue = 6
 	;}
@@ -53,7 +55,9 @@ else if (timeframe_Development_by_Month == "Years") {
 		});
 
 	var StartDate = new Date(xValues[0]);
+	StartDate.setDate(StartDate.getDate()-183);
 	var EndDate = new Date(max_date(xValues));
+	EndDate.setDate(EndDate.getDate()+183);
 
 	dtickValue = 3
 	;}	
@@ -64,10 +68,10 @@ else {
 		});
 		
 	var StartDate = new Date(xValues[xValues.length - 25]);
-	StartDate.setDate(StartDate.getDate()-1);
+	StartDate.setDate(StartDate.getDate()-15);
 	
-	var EndDate = new Date(xValues[xValues.length - 1]);
-	EndDate.setDate(EndDate.getDate()+1);
+	var EndDate = new Date(max_date(xValues));
+	EndDate.setDate(EndDate.getDate()+15);
 
 	dtickValue = 6
 	;}
