@@ -37,7 +37,7 @@ if (datatypetouse_Development_by_Month == "Constructed Dwellings" && timeframe_D
 			return data["Citywide Years Longterm Years"];
 		});
 		
-	var EndDate = new Date(DateMinMax(xValues, "min"));
+	var StartDate = new Date(DateMinMax(xValues, "min"));
 	StartDate.setDate(StartDate.getDate()-250);
 	var EndDate = new Date(DateMinMax(xValues, "max"));
 	EndDate.setDate(EndDate.getDate()+250);
@@ -50,7 +50,7 @@ else if (timeframe_Development_by_Month == "Months") {
 			return data["Citywide All Months"];
 		});
 		
-	var EndDate = new Date(DateMinMax(xValues, "min"));
+	var StartDate = new Date(DateMinMax(xValues, "min"));
 	StartDate.setDate(StartDate.getDate()-20);
 	
 	var EndDate = new Date(DateMinMax(xValues, "max"));
@@ -64,7 +64,7 @@ else if (timeframe_Development_by_Month == "Years") {
 			return data["Citywide Years Longterm Years"];
 		});
 
-	var EndDate = new Date(DateMinMax(xValues, "min"));
+	var StartDate = new Date(DateMinMax(xValues, "min"));
 	StartDate.setDate(StartDate.getDate()-250);
 	var EndDate = new Date(DateMinMax(xValues, "max"));
 	EndDate.setDate(EndDate.getDate()+250);
@@ -77,7 +77,7 @@ else {
 			return data["Citywide All Months"];
 		});
 		
-	var EndDate = new Date(DateMinMax(xValues, "min"));
+	var StartDate = new Date(DateMinMax(xValues, "min"));
 	StartDate.setDate(StartDate.getDate()-20);
 	
 	var EndDate = new Date(DateMinMax(xValues, "max"));
