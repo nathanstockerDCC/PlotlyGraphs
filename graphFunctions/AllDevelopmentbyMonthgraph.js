@@ -22,7 +22,12 @@ function DateMinMax(all_dates, minmax) {
 
 	return minmax_dt;
 	}
-  
+
+function DaysToMilliseconds(Days) {
+	return Days * 86400000;
+	}
+	
+	
 function AllDevelopmentbyMonthgraph(chartData){
 	
 if (chartData == null || chartData.length <= 0)
@@ -43,7 +48,8 @@ if (datatypetouse_Development_by_Month == "Constructed Dwellings" && timeframe_D
 	var EndDate = new Date(DateMinMax(filteredDates, "max"));
 	EndDate.setDate(EndDate.getDate()+250);
 
-	dtickValue = 3
+	dtickValue = DaysToMilliseconds(730)
+
 	;}
 else if (timeframe_Development_by_Month == "Months") {
 	VisType = 'bar';
@@ -53,11 +59,12 @@ else if (timeframe_Development_by_Month == "Months") {
 		
 	var filteredDates = xValues.filter(function(e) { return e !== "" })
 	var StartDate = new Date(DateMinMax(filteredDates, "max"));
-	StartDate.setDate(StartDate.getDate()-750);
+	StartDate.setDate(StartDate.getDate()-720);
 	var EndDate = new Date(DateMinMax(filteredDates, "max"));
 	EndDate.setDate(EndDate.getDate()+20);
 
-	dtickValue = 6
+	dtickValue = DaysToMilliseconds(91.5)
+	
 	;}
 else if (timeframe_Development_by_Month == "Years") {
 	VisType = 'bar';
@@ -71,7 +78,7 @@ else if (timeframe_Development_by_Month == "Years") {
 	var EndDate = new Date(DateMinMax(filteredDates, "max"));
 	EndDate.setDate(EndDate.getDate()+250);
 
-	dtickValue = 3
+	dtickValue = DaysToMilliseconds(730)
 	;}	
 else {
 	VisType = 'line';
@@ -81,16 +88,12 @@ else {
 		
 	var filteredDates = xValues.filter(function(e) { return e !== "" })
 	var StartDate = new Date(DateMinMax(filteredDates, "max"));
-	StartDate.setDate(StartDate.getDate()-750);
+	StartDate.setDate(StartDate.getDate()-720);
 	var EndDate = new Date(DateMinMax(filteredDates, "max"));
 	EndDate.setDate(EndDate.getDate()+20);
 
-	dtickValue = 6
+	dtickValue = DaysToMilliseconds(91.5)
 	;}
-
-console.log("Start: "+StartDate)
-console.log("End: "+EndDate)
-console.log("xValues: "+xValues)
 
 	
 StartDate = (new Date(StartDate)).getTime();
@@ -366,6 +369,8 @@ else if (datatypetouse_Development_by_Month == "Constructed Dwellings") {
 			tickangle: 45, 
 			type: 'date',
 			range: [StartDate, EndDate],
+			tickmode: 'linear',
+			dtick: dtickValue,
 			fixedrange: Zooming			
 			},
 		yaxis: {
