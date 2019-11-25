@@ -51,8 +51,7 @@ if (datatypetouse_Development_by_Month == "Constructed Dwellings" && timeframe_D
 		});
 		
 	var filteredDates = xValues.filter(function(e) { return e !== "" })
-	var StartDate = new Date(DateMinMax(filteredDates, "min"));
-	StartDate.setDate(StartDate.getDate()-250);
+	var StartDate = new Date("01-01-2008");
 	var EndDate = new Date(DateMinMax(filteredDates, "max"));
 	EndDate.setDate(EndDate.getDate()+250);
 
@@ -68,7 +67,7 @@ else if (timeframe_Development_by_Month == "Months") {
 		
 	var filteredDates = xValues.filter(function(e) { return e !== "" })
 	var StartDate = new Date(DateMinMax(filteredDates, "max"));
-	StartDate.setDate(StartDate.getDate()-720);
+	StartDate.setDate(StartDate.getDate()-715);
 	var EndDate = new Date(DateMinMax(filteredDates, "max"));
 	EndDate.setDate(EndDate.getDate()+20);
 
@@ -99,7 +98,7 @@ else {
 		
 	var filteredDates = xValues.filter(function(e) { return e !== "" })
 	var StartDate = new Date(DateMinMax(filteredDates, "max"));
-	StartDate.setDate(StartDate.getDate()-720);
+	StartDate.setDate(StartDate.getDate()-715);
 	var EndDate = new Date(DateMinMax(filteredDates, "max"));
 	EndDate.setDate(EndDate.getDate()+20);
 
