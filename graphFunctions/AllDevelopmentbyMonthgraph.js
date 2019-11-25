@@ -1,16 +1,30 @@
 
-function max_date(all_dates) {
-	var max_dt = all_dates[0],
-	max_dtObj = new Date(all_dates[0]);
+function DateMinMax(all_dates, minmax) {
+	var minmax_dt = all_dates[0],
+	minmax_dt_dtObj = new Date(all_dates[0]);
 	all_dates.forEach(function(dt, index)
-	{
-	if ( new Date( dt ) > max_dtObj)
+	
+	if (minmax == "max") {
 		{
-		max_dt = dt;
-		max_dtObj = new Date(dt);
-		}
-	});
-	return max_dt;
+		if ( new Date( dt ) > minmax_dt_dtObj)
+			{
+			minmax_dt = dt;
+			minmax_dt_dtObj = new Date(dt);
+			}
+		});
+	}
+	
+	if (minmax == "min") {
+		{
+		if ( new Date( dt ) < minmax_dt_dtObj)
+			{
+			minmax_dt = dt;
+			minmax_dt_dtObj = new Date(dt);
+			}
+		});
+	}	
+	
+	return minmax_dt;
 	}
   
 function AllDevelopmentbyMonthgraph(chartData){
@@ -27,10 +41,10 @@ if (datatypetouse_Development_by_Month == "Constructed Dwellings" && timeframe_D
 			return data["Citywide Years Longterm Years"];
 		});
 		
-	var StartDate = new Date(xValues[0]);
-	StartDate.setDate(StartDate.getDate()-183);
-	var EndDate = new Date(max_date(xValues));
-	EndDate.setDate(EndDate.getDate()+183);
+	var EndDate = new Date(DateMinMax(xValues, "min"));
+	StartDate.setDate(StartDate.getDate()-250);
+	var EndDate = new Date(DateMinMax(xValues, "max"));
+	EndDate.setDate(EndDate.getDate()+250);
 
 	dtickValue = 3
 	;}
@@ -40,11 +54,11 @@ else if (timeframe_Development_by_Month == "Months") {
 			return data["Citywide All Months"];
 		});
 		
-	var StartDate = new Date(xValues[xValues.length - 25]);
-	StartDate.setDate(StartDate.getDate()-15);
+	var EndDate = new Date(DateMinMax(xValues, "min"));
+	StartDate.setDate(StartDate.getDate()-20);
 	
-	var EndDate = new Date(max_date(xValues));
-	EndDate.setDate(EndDate.getDate()+15);
+	var EndDate = new Date(DateMinMax(xValues, "max"));
+	EndDate.setDate(EndDate.getDate()+20);
 
 	dtickValue = 6
 	;}
@@ -54,10 +68,10 @@ else if (timeframe_Development_by_Month == "Years") {
 			return data["Citywide Years Longterm Years"];
 		});
 
-	var StartDate = new Date(xValues[0]);
-	StartDate.setDate(StartDate.getDate()-183);
-	var EndDate = new Date(max_date(xValues));
-	EndDate.setDate(EndDate.getDate()+183);
+	var EndDate = new Date(DateMinMax(xValues, "min"));
+	StartDate.setDate(StartDate.getDate()-250);
+	var EndDate = new Date(DateMinMax(xValues, "max"));
+	EndDate.setDate(EndDate.getDate()+250);
 
 	dtickValue = 3
 	;}	
@@ -67,11 +81,11 @@ else {
 			return data["Citywide All Months"];
 		});
 		
-	var StartDate = new Date(xValues[xValues.length - 25]);
-	StartDate.setDate(StartDate.getDate()-15);
+	var EndDate = new Date(DateMinMax(xValues, "min"));
+	StartDate.setDate(StartDate.getDate()-20);
 	
-	var EndDate = new Date(max_date(xValues));
-	EndDate.setDate(EndDate.getDate()+15);
+	var EndDate = new Date(DateMinMax(xValues, "max"));
+	EndDate.setDate(EndDate.getDate()+20);
 
 	dtickValue = 6
 	;}
@@ -330,10 +344,6 @@ else if (datatypetouse_Development_by_Month == "Constructed Dwellings") {
 	BlanksToRemove(yValues);
 	RemoveBlanks(xValues, dels);
 	RemoveBlanks(yValues, dels);
-
-	console.log(xValues);
-	console.log(StartDate);
-	console.log(EndDate);
 	
 	data = [{
 		x: xValues,
