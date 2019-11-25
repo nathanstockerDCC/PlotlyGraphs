@@ -59,6 +59,8 @@ else {
 
 console.info(StartDate);
 console.info(EndDate);
+console.info(xValues);
+console.info(xValues[xValues.length - 1]);
 	
 TimeframeConverted = "Citywide "+timeframe_Development_by_Month+" Longterm ";
 
