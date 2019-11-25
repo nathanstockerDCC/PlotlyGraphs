@@ -304,12 +304,12 @@ else if (datatypetouse_Development_by_Month == "Constructed Dwellings") {
 		showlegend: false,
 		xaxis: {
 			zeroline: false, 
-			tickmode: 'linear',
-//			type: 'date',
-			dtick: dtickValue,
-			tick0: xValues[0],
+//			tickmode: 'linear',
+			type: 'date',
+//			dtick: dtickValue,
+//			tick0: xValues[0],
 			tickangle: 45, 
-			range: [xValues[0], xValues[12]],
+//			range: [xValues[0], xValues[12]],
 			fixedrange: Zooming			
 			},
 		yaxis: {
