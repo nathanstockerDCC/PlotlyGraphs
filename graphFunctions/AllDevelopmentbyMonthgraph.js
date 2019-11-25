@@ -167,7 +167,7 @@ if (datatypetouse_Development_by_Month == "Total Dwellings Consented") {
 		showlegend: false,
 		xaxis: {
 			zeroline: false, 
-			tickangle: 45,
+//			tickangle: 45,
 			type: 'date',
 			range: [StartDate, EndDate],
 			tickmode: 'linear',
