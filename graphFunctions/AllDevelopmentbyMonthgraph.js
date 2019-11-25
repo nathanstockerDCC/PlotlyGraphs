@@ -305,10 +305,11 @@ else if (datatypetouse_Development_by_Month == "Constructed Dwellings") {
 		xaxis: {
 			zeroline: false, 
 			tickmode: 'linear',
+			type: 'date',
 			dtick: dtickValue,
 			tick0: xValues[0],
 			tickangle: 45, 
-			range: ['2018-01-01', '2019-08-30'],
+			range: ['1514764800000', '1567296000000'],
 			fixedrange: Zooming			
 			},
 		yaxis: {
@@ -319,6 +320,13 @@ else if (datatypetouse_Development_by_Month == "Constructed Dwellings") {
 	;}
 	
 
-
+/* if (timeframe_Development_by_Month == "Months") {
+	layout = {
+		xaxis: {
+			range: ['2018-01-01', '2019-08-30']
+			}
+		}
+	;}
+*/	
 Plotly.newPlot('AllDevelopmentbyMonth', data, layout);
 }
