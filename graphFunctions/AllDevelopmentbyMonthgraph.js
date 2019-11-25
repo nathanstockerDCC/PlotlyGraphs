@@ -56,8 +56,9 @@ if (datatypetouse_Development_by_Month == "Constructed Dwellings" && timeframe_D
 	var EndDate = new Date(DateMinMax(filteredDates, "max"));
 	EndDate.setDate(EndDate.getDate()+250);
 
-	dtickValue = TimeToMilliseconds(2, "Years")
-
+	dtickValue = TimeToMilliseconds(2, "Years");
+	tickformatValue = "%Y"
+	
 	;}
 else if (timeframe_Development_by_Month == "Months") {
 	VisType = 'bar';
@@ -71,7 +72,8 @@ else if (timeframe_Development_by_Month == "Months") {
 	var EndDate = new Date(DateMinMax(filteredDates, "max"));
 	EndDate.setDate(EndDate.getDate()+20);
 
-	dtickValue = TimeToMilliseconds(3, "Months")
+	dtickValue = TimeToMilliseconds(3, "Months");
+	tickformatValue = "%b '%y"
 	
 	;}
 else if (timeframe_Development_by_Month == "Years") {
@@ -86,7 +88,8 @@ else if (timeframe_Development_by_Month == "Years") {
 	var EndDate = new Date(DateMinMax(filteredDates, "max"));
 	EndDate.setDate(EndDate.getDate()+250);
 
-	dtickValue = TimeToMilliseconds(2, "Years")
+	dtickValue = TimeToMilliseconds(2, "Years");
+	tickformatValue = "%Y"
 	;}	
 else {
 	VisType = 'line';
@@ -100,7 +103,9 @@ else {
 	var EndDate = new Date(DateMinMax(filteredDates, "max"));
 	EndDate.setDate(EndDate.getDate()+20);
 
-	dtickValue = TimeToMilliseconds(3, "Months")
+	dtickValue = TimeToMilliseconds(3, "Months");
+	tickformatValue = "%b '%y"
+
 	;}
 
 	
@@ -379,6 +384,7 @@ else if (datatypetouse_Development_by_Month == "Constructed Dwellings") {
 			range: [StartDate, EndDate],
 			tickmode: 'linear',
 			dtick: dtickValue,
+			tickformat: tickformatValue,
 			fixedrange: Zooming			
 			},
 		yaxis: {
