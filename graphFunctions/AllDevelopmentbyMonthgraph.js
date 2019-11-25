@@ -350,6 +350,9 @@ else if (datatypetouse_Development_by_Month == "Constructed Dwellings") {
 		}
 	;}
 	
+console.log(xValues);
+console.log(StartDate);
+console.log(EndDate);
 
 
 Plotly.newPlot('AllDevelopmentbyMonth', data, layout);
