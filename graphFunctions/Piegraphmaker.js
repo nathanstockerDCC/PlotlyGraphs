@@ -119,12 +119,12 @@ var layout = {
 	showlegend: false,
 	annotations: [{
 		text: startYearValue.concat(" - ", endYearValue),
-		x: 0.175, y: 1.1,
+		x: 0.175, y: 0.1,
 		showarrow: false,
 		font : {size :20}
 		},{
 		text: startYearValueTwo.concat(" - ", endYearValueTwo),
-		x: 0.825, y: 1.1,
+		x: 0.825, y: 0.1,
 		showarrow: false,
 		font : {size :20}
 		}]
