@@ -69,7 +69,7 @@ if(startYearValueTwo == "-" || endYearValueTwo == "-"){
 		direction: "clockwise",
 		name  : startYearValue.concat(" - ", endYearValue),
 		text : x_type_split,
-	//	textfont: {colors: [Colour2, Colour3, Colour1]},
+//		textfont: {colors: [Colour2, Colour3, Colour1]},
 		hoverinfo: "label+value+percent+name",
 		marker: {colors: [Colour4, Colour2, Colour3]}
 		}];
@@ -78,7 +78,7 @@ if(startYearValueTwo == "-" || endYearValueTwo == "-"){
 		title: 'Dwelling Type Split',
 		showlegend: false,
 		annotations: [{
-			text: startYearValue.concat(" - ", endYearValue),
+			text: '<b>'+startYearValue.concat(" - ", endYearValue)+'<b>',
 			x: 0.5, y: -0.1,
 			showarrow: false,
 			font : {size :20}
@@ -117,12 +117,12 @@ else {
 		title: 'Dwelling Type Split',
 		showlegend: false,
 		annotations: [{
-			text: startYearValue.concat(" - ", endYearValue),
+			text: '<b>'+startYearValue.concat(" - ", endYearValue)+'<b>',
 			x: 0.175, y: -0.1,
 			showarrow: false,
 			font : {size :20}
 			},{
-			text: startYearValueTwo.concat(" - ", endYearValueTwo),
+			text: '<b>'+startYearValueTwo.concat(" - ", endYearValueTwo)+'<b>',
 			x: 0.825, y: -0.1,
 			showarrow: false,
 			font : {size :20}
