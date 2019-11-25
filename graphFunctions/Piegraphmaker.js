@@ -78,7 +78,7 @@ if(startYearValueTwo == "-" || endYearValueTwo == "-"){
 		title: 'Dwelling Type Split',
 		showlegend: false,
 		annotations: [{
-			text: '<b>'+startYearValue.concat(" - ", endYearValue)+'<b>',
+			text: "<b>"+startYearValue.concat(" - ", endYearValue)+"</b>",
 			x: 0.5, y: -0.1,
 			showarrow: false,
 			font : {size :20}
@@ -117,12 +117,12 @@ else {
 		title: 'Dwelling Type Split',
 		showlegend: false,
 		annotations: [{
-			text: '<b>'+startYearValue.concat(" - ", endYearValue)+'<b>',
+			text: "<b>"+startYearValue.concat(" - ", endYearValue)+"</b>",
 			x: 0.175, y: -0.1,
 			showarrow: false,
 			font : {size :20}
 			},{
-			text: '<b>'+startYearValueTwo.concat(" - ", endYearValueTwo)+'<b>',
+			text: "<b>"+startYearValueTwo.concat(" - ", endYearValueTwo)+"</b>",
 			x: 0.825, y: -0.1,
 			showarrow: false,
 			font : {size :20}
