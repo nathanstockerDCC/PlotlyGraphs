@@ -19,7 +19,7 @@ data = [{
 		y: $.map(chartData, function(data){
 			return data[DataType];
 		}),
-		type: 'bar',
+		type: 'line',
 		name: DataType,
 		marker: {color: Colour1}
 		
