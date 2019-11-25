@@ -308,7 +308,7 @@ else if (datatypetouse_Development_by_Month == "Constructed Dwellings") {
 			dtick: dtickValue,
 			tick0: xValues[0],
 			tickangle: 45, 
-			range: ['2018-01-01', '2019-08-30']
+			range: ['2018-01-01', '2019-08-30'],
 			fixedrange: Zooming			
 			},
 		yaxis: {
