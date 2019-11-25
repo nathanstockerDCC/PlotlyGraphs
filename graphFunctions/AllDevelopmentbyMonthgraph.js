@@ -57,6 +57,9 @@ else {
 	dtickValue = 6
 	;}
 
+console.info(StartDate);
+console.info(EndDate);
+	
 TimeframeConverted = "Citywide "+timeframe_Development_by_Month+" Longterm ";
 
 var dels = [];
