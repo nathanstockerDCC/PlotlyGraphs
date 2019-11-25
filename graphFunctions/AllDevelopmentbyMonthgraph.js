@@ -1,3 +1,90 @@
+function DateMinMax(all_dates, minmax) {
+	var minmax_dt = all_dates[0];
+	minmax_dt_dtObj = new Date(all_dates[0]);
+	all_dates.forEach(function(dt, index)
+	{
+		if (minmax == "max") {
+			if ( new Date( dt ) > minmax_dt_dtObj )
+				{
+				minmax_dt = dt;
+				minmax_dt_dtObj = new Date(dt);
+				}
+			};
+		
+		if (minmax == "min") {
+			if ( new Date( dt ) < minmax_dt_dtObj )
+				{
+				minmax_dt = dt;
+				minmax_dt_dtObj = new Date(dt);
+				}
+			};	
+	});
+
+	return minmax_dt;
+	}
+  
+function AllDevelopmentbyMonthgraph(chartData){
+	
+if (chartData == null || chartData.length <= 0)
+		return;
+
+var datatypetouse_Development_by_Month = $('#datatypedd_DevelopmentbyMonthgraph option:selected').text();
+var timeframe_Development_by_Month = $('#timeframe_DevelopmentbyMonthgraph option:selected').text();
+
+if (datatypetouse_Development_by_Month == "Constructed Dwellings" && timeframe_Development_by_Month == "Years") {
+	VisType = 'line';
+	xValues = $.map(chartData, function(data){
+			return data["Citywide Years Longterm Years"];
+		});
+		
+	var StartDate = new Date(DateMinMax(xValues, "min"));
+	StartDate.setDate(StartDate.getDate()-250);
+	var EndDate = new Date(DateMinMax(xValues, "max"));
+	EndDate.setDate(EndDate.getDate()+250);
+
+	dtickValue = 3
+	;}
+else if (timeframe_Development_by_Month == "Months") {
+	VisType = 'bar';
+	xValues = $.map(chartData, function(data){
+			return data["Citywide All Months"];
+		});
+		
+	var StartDate = new Date(DateMinMax(xValues, "max"));
+	StartDate.setDate(StartDate.getDate()-750);
+	
+	var EndDate = new Date(DateMinMax(xValues, "max"));
+	EndDate.setDate(EndDate.getDate()+20);
+
+	dtickValue = 6
+	;}
+else if (timeframe_Development_by_Month == "Years") {
+	VisType = 'bar';
+	xValues = $.map(chartData, function(data){
+			return data["Citywide Years Longterm Years"];
+		});
+
+	var StartDate = new Date(DateMinMax(xValues, "min"));
+	StartDate.setDate(StartDate.getDate()-250);
+	var EndDate = new Date(DateMinMax(xValues, "max"));
+	EndDate.setDate(EndDate.getDate()+250);
+
+	dtickValue = 3
+	;}	
+else {
+	VisType = 'line';
+	xValues = $.map(chartData, function(data){
+			return data["Citywide All Months"];
+		});
+		
+	var StartDate = new Date(DateMinMax(xValues, "max"));
+	StartDate.setDate(StartDate.getDate()-750);
+	
+	var EndDate = new Date(DateMinMax(xValues, "max"));
+	EndDate.setDate(EndDate.getDate()+20);
+
+	dtickValue = 6
+	;}
 
 console.log("Start: "+StartDate)
 console.log("End: "+EndDate)
