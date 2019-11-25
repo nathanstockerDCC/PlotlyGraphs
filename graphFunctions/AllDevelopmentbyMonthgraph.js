@@ -50,8 +50,8 @@ else if (timeframe_Development_by_Month == "Months") {
 			return data["Citywide All Months"];
 		});
 		
-	var StartDate = new Date(DateMinMax(xValues, "min"));
-	StartDate.setDate(StartDate.getDate()-20);
+	var StartDate = new Date(DateMinMax(xValues, "max"));
+	StartDate.setDate(StartDate.getDate()-750);
 	
 	var EndDate = new Date(DateMinMax(xValues, "max"));
 	EndDate.setDate(EndDate.getDate()+20);
@@ -77,8 +77,8 @@ else {
 			return data["Citywide All Months"];
 		});
 		
-	var StartDate = new Date(DateMinMax(xValues, "min"));
-	StartDate.setDate(StartDate.getDate()-20);
+	var StartDate = new Date(DateMinMax(xValues, "max"));
+	StartDate.setDate(StartDate.getDate()-750);
 	
 	var EndDate = new Date(DateMinMax(xValues, "max"));
 	EndDate.setDate(EndDate.getDate()+20);
