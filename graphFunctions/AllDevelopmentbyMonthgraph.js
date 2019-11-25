@@ -27,7 +27,7 @@ if (datatypetouse_Development_by_Month == "Constructed Dwellings" && timeframe_D
 			return data["Citywide Years Longterm Years"];
 		});
 		
-	var StartDate = new Date(xValues[0]);
+	var StartDate = new Date(xValues[0]).getTime();
 	var EndDate = new Date(max_date(xValues));
 
 	dtickValue = 3
@@ -72,6 +72,10 @@ else {
 	dtickValue = 6
 	;}
 
+StartDate = (new Date(StartDate)).getTime();
+EndDate = (new Date(EndDate)).getTime();
+
+	
 TimeframeConverted = "Citywide "+timeframe_Development_by_Month+" Longterm ";
 
 var dels = [];
@@ -322,11 +326,11 @@ else if (datatypetouse_Development_by_Month == "Constructed Dwellings") {
 	BlanksToRemove(yValues);
 	RemoveBlanks(xValues, dels);
 	RemoveBlanks(yValues, dels);
-	
+
 	console.log(xValues);
 	console.log(StartDate);
 	console.log(EndDate);
-
+	
 	data = [{
 		x: xValues,
 		y: yValues,
@@ -353,6 +357,8 @@ else if (datatypetouse_Development_by_Month == "Constructed Dwellings") {
 			}
 		}
 	;}
+	
+
 
 
 Plotly.newPlot('AllDevelopmentbyMonth', data, layout);
