@@ -1,29 +1,25 @@
-
 function DateMinMax(all_dates, minmax) {
 	var minmax_dt = all_dates[0];
 	minmax_dt_dtObj = new Date(all_dates[0]);
-	all_dates.forEach(function(dt, index);
-	
-	if (minmax == "max") {
-		{
-		if ( new Date( dt ) > minmax_dt_dtObj)
-			{
-			minmax_dt = dt;
-			minmax_dt_dtObj = new Date(dt);
-			}
-		});
-	}
-	
-	if (minmax == "min") {
-		{
-		if ( new Date( dt ) < minmax_dt_dtObj)
-			{
-			minmax_dt = dt;
-			minmax_dt_dtObj = new Date(dt);
-			}
-		});
-	}	
-	
+	all_dates.forEach(function(dt, index)
+	{
+		if (minmax == "max") {
+			if ( new Date( dt ) > minmax_dt_dtObj )
+				{
+				minmax_dt = dt;
+				minmax_dt_dtObj = new Date(dt);
+				}
+			};
+		
+		if (minmax == "min") {
+			if ( new Date( dt ) < minmax_dt_dtObj )
+				{
+				minmax_dt = dt;
+				minmax_dt_dtObj = new Date(dt);
+				}
+			};	
+	});
+
 	return minmax_dt;
 	}
   
