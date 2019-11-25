@@ -88,8 +88,8 @@ else {
 	dtickValue = 6
 	;}
 
-console.log("Start: "+StartDate)
-console.log("End: "+EndDate)
+console.log("Startt: "+DateMinMax(xValues, "min"))
+console.log("Endd: "+DateMinMax(xValues, "max"))
 console.log("xValues: "+xValues)
 
 	
