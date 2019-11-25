@@ -212,7 +212,7 @@ else {
 	layout = {
 		title: 'Dwellings Consented by Type and Suburb',
 		showlegend: true,
-#		legend: {orientation: 'h', y: '-0.25'},
+//		legend: {orientation: 'h', y: '-0.25'},
 		xaxis: {
 			zeroline: false, 
 			tickmode: 'linear', 
