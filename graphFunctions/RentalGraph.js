@@ -117,7 +117,7 @@ else {
 	layout = {
 		title: 'Rental Costs',
 		showlegend: true,
-		legend: {orientation: 'h', y: '-0.25'},
+		legend: {orientation: 'h', y: '-0.25', "x": 0.5},
 		xaxis: {
 			fixedrange: Zooming, 
 			zeroline: false, 
