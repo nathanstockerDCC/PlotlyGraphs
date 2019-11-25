@@ -305,7 +305,7 @@ else if (datatypetouse_Development_by_Month == "Constructed Dwellings") {
 		xaxis: {
 			zeroline: false, 
 			tickmode: 'linear',
-			type: 'date',
+//			type: 'date',
 			dtick: dtickValue,
 			tick0: xValues[0],
 			tickangle: 45, 
