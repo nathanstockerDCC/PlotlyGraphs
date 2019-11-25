@@ -37,9 +37,10 @@ if (datatypetouse_Development_by_Month == "Constructed Dwellings" && timeframe_D
 			return data["Citywide Years Longterm Years"];
 		});
 		
-	var StartDate = new Date(DateMinMax(xValues, "min"));
+	var filteredDates = xValues.filter(function(e) { return e !== "" })
+	var StartDate = new Date(DateMinMax(filteredDates, "min"));
 	StartDate.setDate(StartDate.getDate()-250);
-	var EndDate = new Date(DateMinMax(xValues, "max"));
+	var EndDate = new Date(DateMinMax(filteredDates, "max"));
 	EndDate.setDate(EndDate.getDate()+250);
 
 	dtickValue = 3
@@ -50,13 +51,11 @@ else if (timeframe_Development_by_Month == "Months") {
 			return data["Citywide All Months"];
 		});
 		
-	var StartDate = new Date(DateMinMax(xValues, "max"));
-	StartDate.setDate(StartDate.getDate());
-//	StartDate.setDate(StartDate.getDate()-750);
-	
-	var EndDate = new Date(DateMinMax(xValues, "max"));
-	EndDate.setDate(EndDate.getDate());
-//	EndDate.setDate(EndDate.getDate()+20);
+	var filteredDates = xValues.filter(function(e) { return e !== "" })
+	var StartDate = new Date(DateMinMax(filteredDates, "max"));
+	StartDate.setDate(StartDate.getDate()-750);
+	var EndDate = new Date(DateMinMax(filteredDates, "max"));
+	EndDate.setDate(EndDate.getDate()+20);
 
 	dtickValue = 6
 	;}
@@ -66,9 +65,10 @@ else if (timeframe_Development_by_Month == "Years") {
 			return data["Citywide Years Longterm Years"];
 		});
 
-	var StartDate = new Date(DateMinMax(xValues, "min"));
+	var filteredDates = xValues.filter(function(e) { return e !== "" })
+	var StartDate = new Date(DateMinMax(filteredDates, "min"));
 	StartDate.setDate(StartDate.getDate()-250);
-	var EndDate = new Date(DateMinMax(xValues, "max"));
+	var EndDate = new Date(DateMinMax(filteredDates, "max"));
 	EndDate.setDate(EndDate.getDate()+250);
 
 	dtickValue = 3
@@ -79,17 +79,17 @@ else {
 			return data["Citywide All Months"];
 		});
 		
-	var StartDate = new Date(DateMinMax(xValues, "max"));
+	var filteredDates = xValues.filter(function(e) { return e !== "" })
+	var StartDate = new Date(DateMinMax(filteredDates, "max"));
 	StartDate.setDate(StartDate.getDate()-750);
-	
-	var EndDate = new Date(DateMinMax(xValues, "max"));
+	var EndDate = new Date(DateMinMax(filteredDates, "max"));
 	EndDate.setDate(EndDate.getDate()+20);
 
 	dtickValue = 6
 	;}
 
-console.log("Startt: "+DateMinMax(xValues, "min"))
-console.log("Endd: "+DateMinMax(xValues, "max"))
+console.log("Start: "+StartDate)
+console.log("End: "+EndDate)
 console.log("xValues: "+xValues)
 
 	
