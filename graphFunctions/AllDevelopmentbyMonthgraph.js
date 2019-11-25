@@ -184,7 +184,11 @@ else if (datatypetouse_Development_by_Month == "Consented Dwellings by Type") {
 	layout = {
 		title: 'Consented Dwellings by Type',
 		showlegend: true,
-		legend : {orientation: 'h', y: '-0.25'},
+		legend: {
+			orientation: 'h',
+			y: '-0.25',
+			x: '0.5',
+			xanchor: 'center'},
 		xaxis: {
 			zeroline: false, 
 			tickmode: 'linear',
@@ -253,7 +257,11 @@ else if (datatypetouse_Development_by_Month == "Value of Consented Construction"
 	layout = {
 		title: 'Value of Consented Construction',
 		showlegend: true,
-		legend : {orientation: 'h', y: '-0.25'},
+		legend: {
+			orientation: 'h',
+			y: '-0.25',
+			x: '0.5',
+			xanchor: 'center'},
 		xaxis: {
 			zeroline: false, 
 			tickmode: 'linear',
