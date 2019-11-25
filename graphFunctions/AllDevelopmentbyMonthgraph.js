@@ -7,31 +7,53 @@ var datatypetouse_Development_by_Month = $('#datatypedd_DevelopmentbyMonthgraph 
 var timeframe_Development_by_Month = $('#timeframe_DevelopmentbyMonthgraph option:selected').text();
 
 if (datatypetouse_Development_by_Month == "Constructed Dwellings" && timeframe_Development_by_Month == "Years") {
-	VisType = 'line',
+	VisType = 'line';
 	xValues = $.map(chartData, function(data){
 			return data["Citywide Years Longterm Years"];
-		}),
+		});
+		
+	var StartDate = new Date(xValues[0]);
+	var EndDate = new Date(xValues[xValues.length - 1]);
+
 	dtickValue = 3
 	;}
 else if (timeframe_Development_by_Month == "Months") {
-	VisType = 'bar',
+	VisType = 'bar';
 	xValues = $.map(chartData, function(data){
 			return data["Citywide All Months"];
-		}),
+		});
+		
+	var StartDate = new Date(xValues[xValues.length - 25]);
+	StartDate.setDate(StartDate.getDate()-1);
+	
+	var EndDate = new Date(xValues[xValues.length - 1]);
+	EndDate.setDate(EndDate.getDate()+1);
+
 	dtickValue = 6
 	;}
 else if (timeframe_Development_by_Month == "Years") {
-	VisType = 'bar',
+	VisType = 'bar';
 	xValues = $.map(chartData, function(data){
 			return data["Citywide Years Longterm Years"];
-		}),
+		});
+
+	var StartDate = new Date(xValues[0]);
+	var EndDate = new Date(xValues[xValues.length - 1]);
+
 	dtickValue = 3
 	;}	
 else {
-	VisType = 'line',
+	VisType = 'line';
 	xValues = $.map(chartData, function(data){
 			return data["Citywide All Months"];
-		}),
+		});
+		
+	var StartDate = new Date(xValues[xValues.length - 25]);
+	StartDate.setDate(StartDate.getDate()-1);
+	
+	var EndDate = new Date(xValues[xValues.length - 1]);
+	EndDate.setDate(EndDate.getDate()+1);
+
 	dtickValue = 6
 	;}
 
@@ -90,11 +112,10 @@ if (datatypetouse_Development_by_Month == "Total Dwellings Consented") {
 		title: 'Total Dwellings Consented',
 		showlegend: false,
 		xaxis: {
-			zeroline: false,
-			tickmode: 'linear',
+			zeroline: false, 
 			tickangle: 45,
-			dtick: dtickValue,
-			tick0: xValues[0],
+			type: 'date',
+			range: [StartDate, EndDate],
 			fixedrange: Zooming
 			},		
 		yaxis: {
@@ -191,10 +212,9 @@ else if (datatypetouse_Development_by_Month == "Consented Dwellings by Type") {
 			xanchor: 'center'},
 		xaxis: {
 			zeroline: false, 
-			tickmode: 'linear',
-			dtick: dtickValue,
-			tick0: xValues[0],
 			tickangle: 45,
+			type: 'date',
+			range: [StartDate, EndDate],
 			fixedrange: Zooming
 			},
 		yaxis: {
@@ -264,10 +284,9 @@ else if (datatypetouse_Development_by_Month == "Value of Consented Construction"
 			xanchor: 'center'},
 		xaxis: {
 			zeroline: false, 
-			tickmode: 'linear',
-			dtick: dtickValue,
-			tick0: xValues[0],
 			tickangle: 45,
+			type: 'date',
+			range: [StartDate, EndDate],
 			fixedrange: Zooming
 			},
 		yaxis: {
@@ -298,24 +317,14 @@ else if (datatypetouse_Development_by_Month == "Constructed Dwellings") {
 		connectgaps: true,
 		marker: {color: Colour1}
         }];
-
-	var StartDate = new Date(xValues[xValues.length - 25]);
-	StartDate.setDate(StartDate.getDate()-1);
-	
-	var EndDate = new Date(xValues[xValues.length - 1]);
-	EndDate.setDate(EndDate.getDate()+1);
-	
 	
 	layout = {
 		title: 'Constructed Dwellings',
 		showlegend: false,
 		xaxis: {
 			zeroline: false, 
-//			tickmode: 'linear',
-			type: 'date',
-//			dtick: dtickValue,
-//			tick0: xValues[0],
 			tickangle: 45, 
+			type: 'date',
 			range: [StartDate, EndDate],
 			fixedrange: Zooming			
 			},
