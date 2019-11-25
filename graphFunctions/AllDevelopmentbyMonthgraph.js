@@ -309,7 +309,7 @@ else if (datatypetouse_Development_by_Month == "Constructed Dwellings") {
 			dtick: dtickValue,
 			tick0: xValues[0],
 			tickangle: 45, 
-//			range: ['1514764800000', '1567296000000'],
+			range: [xValues[0], xValues[12]],
 			fixedrange: Zooming			
 			},
 		yaxis: {
