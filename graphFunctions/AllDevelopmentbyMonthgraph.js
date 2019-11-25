@@ -23,8 +23,16 @@ function DateMinMax(all_dates, minmax) {
 	return minmax_dt;
 	}
 
-function DaysToMilliseconds(Days) {
-	return Days * 86400000;
+function TimeToMilliseconds(amount, type) {
+	if (type == "Days") {
+		return amount * 86400000;
+	}
+	if (type == "Months") {
+		return amount * 2628000000;
+	}
+	if (type == "Years") {
+		return amount * 31536000000;
+	}
 	}
 	
 	
@@ -48,7 +56,7 @@ if (datatypetouse_Development_by_Month == "Constructed Dwellings" && timeframe_D
 	var EndDate = new Date(DateMinMax(filteredDates, "max"));
 	EndDate.setDate(EndDate.getDate()+250);
 
-	dtickValue = DaysToMilliseconds(730)
+	dtickValue = TimeToMilliseconds(2, "Years")
 
 	;}
 else if (timeframe_Development_by_Month == "Months") {
@@ -63,7 +71,7 @@ else if (timeframe_Development_by_Month == "Months") {
 	var EndDate = new Date(DateMinMax(filteredDates, "max"));
 	EndDate.setDate(EndDate.getDate()+20);
 
-	dtickValue = DaysToMilliseconds(91.5)
+	dtickValue = TimeToMilliseconds(3, "Months")
 	
 	;}
 else if (timeframe_Development_by_Month == "Years") {
@@ -78,7 +86,7 @@ else if (timeframe_Development_by_Month == "Years") {
 	var EndDate = new Date(DateMinMax(filteredDates, "max"));
 	EndDate.setDate(EndDate.getDate()+250);
 
-	dtickValue = DaysToMilliseconds(730)
+	dtickValue = TimeToMilliseconds(2, "Years")
 	;}	
 else {
 	VisType = 'line';
@@ -92,7 +100,7 @@ else {
 	var EndDate = new Date(DateMinMax(filteredDates, "max"));
 	EndDate.setDate(EndDate.getDate()+20);
 
-	dtickValue = DaysToMilliseconds(91.5)
+	dtickValue = TimeToMilliseconds(3, "Months")
 	;}
 
 	
