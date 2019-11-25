@@ -1,8 +1,8 @@
 
 function DateMinMax(all_dates, minmax) {
-	var minmax_dt = all_dates[0],
+	var minmax_dt = all_dates[0];
 	minmax_dt_dtObj = new Date(all_dates[0]);
-	all_dates.forEach(function(dt, index)
+	all_dates.forEach(function(dt, index);
 	
 	if (minmax == "max") {
 		{
