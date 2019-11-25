@@ -46,7 +46,15 @@ function DevTrendsByYearGraph(chartData){
 
 	var yValuesTotal = $.map(chartData, function(data){
 			return data["Annual Citywide Longterm Total New Dwellings"];})
-			
+
+	BlanksToRemove(yValuesHouses);
+	RemoveBlanks(xValues, dels);
+	RemoveBlanks(yValuesHouses, dels);
+	RemoveBlanks(yValuesUnits, dels);
+	RemoveBlanks(yValuesApartments, dels);
+	RemoveBlanks(yValuesRVUs, dels);
+	RemoveBlanks(yValuesTotal, dels);
+	
 	data = [{
 		x: xValues,
 		y: yValuesHouses,
@@ -79,14 +87,6 @@ function DevTrendsByYearGraph(chartData){
 		marker:{color:'#AAAAAA'},
 		type: 'bar'	
 	}],
-
-	BlanksToRemove(yValuesHouses);
-	RemoveBlanks(xValues, dels);
-	RemoveBlanks(yValuesHouses, dels);
-	RemoveBlanks(yValuesUnits, dels);
-	RemoveBlanks(yValuesApartments, dels);
-	RemoveBlanks(yValuesRVUs, dels);
-	RemoveBlanks(yValuesTotal, dels);
 	
 	layout = {
 		title: 'Consented Dwellings by Year',
