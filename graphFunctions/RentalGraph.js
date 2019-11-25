@@ -12,7 +12,7 @@ if (DataToUse == "Dunedin City"){
 		y: $.map(chartData, function(data){
 			return data["Lower Quartile"]
 			;}),
-		type: 'line',
+		line: {width: 4},
 		name: 'Lower Quartile',
 		marker: {color: Colour1}
         },{
@@ -22,7 +22,7 @@ if (DataToUse == "Dunedin City"){
 		y: $.map(chartData, function(data){
 			return data["Geometric Mean"]
 			;}),
-		type: 'line',
+		line: {width: 4},
 		name: 'Mean',
 		marker: {color: Colour2}			
         },{
@@ -32,7 +32,7 @@ if (DataToUse == "Dunedin City"){
 		y: $.map(chartData, function(data){
 			return data["Upper Quartile"]
 			;}),
-		type: 'line',
+		line: {width: 4},
 		name: 'Upper Quartile',
 		marker: {color: Colour3}			
 		}
