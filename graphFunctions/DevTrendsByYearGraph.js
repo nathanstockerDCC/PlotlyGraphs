@@ -57,12 +57,16 @@ function DevTrendsByYearGraph(chartData){
         }],
 
         layout = {
-			title: 'Consented Dwellings by Year',
-			showlegend: true,
-			legend: {orientation: 'h', y: '-0.25'},
-			xaxis: {zeroline: false, tickmode: 'linear', tick0: 1992, dtick: 2, tickangle: 45, fixedrange: Zooming},
-			yaxis: {zeroline: false, fixedrange: Zooming}
-        };
+		title: 'Consented Dwellings by Year',
+		showlegend: true,
+		legend: {
+			orientation: 'h',
+			y: '-0.25',
+			x: '0.5',
+			xanchor: 'center'},
+		xaxis: {zeroline: false, tickmode: 'linear', tick0: 1992, dtick: 2, tickangle: 45, fixedrange: Zooming},
+		yaxis: {zeroline: false, fixedrange: Zooming}
+		};
 
 
     Plotly.plot(Dev_Trends_by_Year, data, layout);
