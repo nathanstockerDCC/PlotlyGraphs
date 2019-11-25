@@ -7,13 +7,13 @@ var endYearValueTwo = $('#dropdownEndYearTwo_Pie option:selected').val();
 
 
 if(startYearValue>endYearValue)
-{alert("End year is earlier than start year")};
+	{alert("End year is earlier than start year")};
 
 if(startYearValueTwo>endYearValueTwo && startYearValueTwo != '-' && endYearValueTwo != '-')
-{alert("End year is earlier than start year")};
+	{alert("End year is earlier than start year")};
 
 if(startYearValueTwo != '-' && endYearValueTwo == '-')
-{endYearValueTwo = startYearValueTwo, endYearValueTwo = startYearValueTwo};
+	{endYearValueTwo = startYearValueTwo, endYearValueTwo = startYearValueTwo};
 
 
 
@@ -61,76 +61,74 @@ for(i = (parseInt(startYearValueTwo)-1991); i <= (parseInt(endYearValueTwo)-1991
 var x_type_split = ["Houses","Townhouses/Units", "Apartments"];
 
 if(startYearValueTwo == "-" || endYearValueTwo == "-"){
-var data = [{
-	values: [HousesCollated,UnitsCollated,ApartmentsCollated],
-	labels: x_type_split,
-	type: 'pie',
-	sort: false,
-	direction: "clockwise",
-	name  : startYearValue.concat(" - ", endYearValue),
-	text : x_type_split,
-//	textfont: {colors: [Colour2, Colour3, Colour1]},
-	hoverinfo: "label+value+percent+name",
-	marker: {colors: [Colour4, Colour2, Colour3]}
-	
-}];
+	var data = [{
+		values: [HousesCollated,UnitsCollated,ApartmentsCollated],
+		labels: x_type_split,
+		type: 'pie',
+		sort: false,
+		direction: "clockwise",
+		name  : startYearValue.concat(" - ", endYearValue),
+		text : x_type_split,
+	//	textfont: {colors: [Colour2, Colour3, Colour1]},
+		hoverinfo: "label+value+percent+name",
+		marker: {colors: [Colour4, Colour2, Colour3]}
+		}];
 
-var layout = {
-	title: 'Dwelling Type Split',
-	showlegend: false,
-	annotations: [{
-	text: startYearValue.concat(" - ", endYearValue),
-	x: 0.5, y: 1.1,
-	showarrow: false,
-	font : {size :20}
-	}]
-};
-}
+	var layout = {
+		title: 'Dwelling Type Split',
+		showlegend: false,
+		annotations: [{
+			text: startYearValue.concat(" - ", endYearValue),
+			x: 0.5, y: -0.1,
+			showarrow: false,
+			font : {size :20}
+			}]
+		};
+	}
 
 else {
-var data = [{
-	values: [HousesCollated,UnitsCollated,ApartmentsCollated],
-	labels: x_type_split,
-	type: 'pie',
-	sort: false,
-	direction: "clockwise",
-	name  : startYearValue.concat(" - ", endYearValue),
-	text : x_type_split,
-//	textfont: {color: Colour2},
-	domain: { x: [0, .5]},
-	hoverinfo: "label+value+percent+name",
-	marker: {colors: [Colour4, Colour2, Colour3]}
+	var data = [{
+		values: [HousesCollated,UnitsCollated,ApartmentsCollated],
+		labels: x_type_split,
+		type: 'pie',
+		sort: false,
+		direction: "clockwise",
+		name  : startYearValue.concat(" - ", endYearValue),
+		text : x_type_split,
+//		textfont: {color: Colour2},
+		domain: { x: [0, .5]},
+		hoverinfo: "label+value+percent+name",
+		marker: {colors: [Colour4, Colour2, Colour3]}
 
-},{
-	values: [HousesCollated_Comparison,UnitsCollated_Comparison,ApartmentsCollated_Comparison],
-	labels: x_type_split,
-	type: 'pie',
-	sort: false,
-	direction: "clockwise",
-	name: startYearValueTwo.concat(" - ", endYearValueTwo),
-	text : x_type_split,
-	domain: { x: [0.5, 1] },
-	hoverinfo: "label+value+percent+name",
-	marker: {colors: [Colour4, Colour2, Colour3]}
-}];
-
-var layout = {
-	title: 'Dwelling Type Split',
-	showlegend: false,
-	annotations: [{
-		text: startYearValue.concat(" - ", endYearValue),
-		x: 0.175, y: 0.1,
-		showarrow: false,
-		font : {size :20}
 		},{
-		text: startYearValueTwo.concat(" - ", endYearValueTwo),
-		x: 0.825, y: 0.1,
-		showarrow: false,
-		font : {size :20}
-		}]
-	};
-}
+		values: [HousesCollated_Comparison,UnitsCollated_Comparison,ApartmentsCollated_Comparison],
+		labels: x_type_split,
+		type: 'pie',
+		sort: false,
+		direction: "clockwise",
+		name: startYearValueTwo.concat(" - ", endYearValueTwo),
+		text : x_type_split,
+		domain: { x: [0.5, 1] },
+		hoverinfo: "label+value+percent+name",
+		marker: {colors: [Colour4, Colour2, Colour3]}
+		}];
+
+	var layout = {
+		title: 'Dwelling Type Split',
+		showlegend: false,
+		annotations: [{
+			text: startYearValue.concat(" - ", endYearValue),
+			x: 0.175, y: -0.1,
+			showarrow: false,
+			font : {size :20}
+			},{
+			text: startYearValueTwo.concat(" - ", endYearValueTwo),
+			x: 0.825, y: -0.1,
+			showarrow: false,
+			font : {size :20}
+			}]
+		};
+	}
 
 Plotly.newPlot('DwellingTypePieGraph', data, layout);
 }
-
