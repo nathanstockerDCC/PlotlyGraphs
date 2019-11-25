@@ -19,7 +19,7 @@ data = [{
 		y: $.map(chartData, function(data){
 			return data[DataType];
 		}),
-		type: 'line',
+		line: {width: 6},
 		name: DataType,
 		marker: {color: Colour1}
 		
@@ -29,11 +29,10 @@ data = [{
 		y: $.map(chartData, function(data){
 			return data["HouseholdGrowth"];
 		}),
-		type: 'line',
+		line: {width: 6},
 		connectgaps: true,
 		name: 'Approx. Household Growth',
 		marker: {color: Colour2},
-		line: {width: 3}	
 
 		}];
 
