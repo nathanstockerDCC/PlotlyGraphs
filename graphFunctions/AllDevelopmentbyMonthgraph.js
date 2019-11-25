@@ -1,8 +1,23 @@
+
+function max_date(all_dates) {
+	var max_dt = all_dates[0],
+	max_dtObj = new Date(all_dates[0]);
+	all_dates.forEach(function(dt, index)
+	{
+	if ( new Date( dt ) > max_dtObj)
+		{
+		max_dt = dt;
+		max_dtObj = new Date(dt);
+		}
+	});
+	return max_dt;
+	}
+  
 function AllDevelopmentbyMonthgraph(chartData){
 	
 if (chartData == null || chartData.length <= 0)
 		return;
-	
+
 var datatypetouse_Development_by_Month = $('#datatypedd_DevelopmentbyMonthgraph option:selected').text();
 var timeframe_Development_by_Month = $('#timeframe_DevelopmentbyMonthgraph option:selected').text();
 
@@ -13,7 +28,7 @@ if (datatypetouse_Development_by_Month == "Constructed Dwellings" && timeframe_D
 		});
 		
 	var StartDate = new Date(xValues[0]);
-	var EndDate = new Date(xValues[xValues.length - 1]);
+	var EndDate = new Date(max_date(xValues));
 
 	dtickValue = 3
 	;}
@@ -38,7 +53,7 @@ else if (timeframe_Development_by_Month == "Years") {
 		});
 
 	var StartDate = new Date(xValues[0]);
-	var EndDate = new Date(xValues[xValues.length - 1]);
+	var EndDate = new Date(max_date(xValues));
 
 	dtickValue = 3
 	;}	
@@ -57,11 +72,6 @@ else {
 	dtickValue = 6
 	;}
 
-console.info(StartDate);
-console.info(EndDate);
-console.info(xValues);
-console.info(xValues[xValues.length - 1]);
-	
 TimeframeConverted = "Citywide "+timeframe_Development_by_Month+" Longterm ";
 
 var dels = [];
