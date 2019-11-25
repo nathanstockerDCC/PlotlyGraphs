@@ -299,6 +299,13 @@ else if (datatypetouse_Development_by_Month == "Constructed Dwellings") {
 		marker: {color: Colour1}
         }];
 
+	var StartDate = new Date(xValues[xValues.length - 25]);
+	StartDate.setDate(StartDate.getDate()-1);
+	
+	var EndDate = new Date(xValues[xValues.length - 1]);
+	EndDate.setDate(EndDate.getDate()+1);
+	
+	
 	layout = {
 		title: 'Constructed Dwellings',
 		showlegend: false,
@@ -309,7 +316,7 @@ else if (datatypetouse_Development_by_Month == "Constructed Dwellings") {
 //			dtick: dtickValue,
 //			tick0: xValues[0],
 			tickangle: 45, 
-			range: [xValues[xValues.length - 25], xValues[xValues.length - 1]],
+			range: [StartDate, EndDate],
 			fixedrange: Zooming			
 			},
 		yaxis: {
@@ -320,13 +327,6 @@ else if (datatypetouse_Development_by_Month == "Constructed Dwellings") {
 	;}
 	
 
-/* if (timeframe_Development_by_Month == "Months") {
-	layout = {
-		xaxis: {
-			range: ['2018-01-01', '2019-08-30']
-			}
-		}
-	;}
-*/	
+
 Plotly.newPlot('AllDevelopmentbyMonth', data, layout);
 }
