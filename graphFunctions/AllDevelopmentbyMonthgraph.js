@@ -49,12 +49,11 @@ if (datatypetouse_Development_by_Month == "Constructed Dwellings" && timeframe_D
 	xValues = $.map(chartData, function(data){
 			return data["Citywide Years Longterm Years"];
 		});
-		
+	
 	var filteredDates = xValues.filter(function(e) { return e !== "" })
-	var StartDate = new Date("01-01-2008");
+	var StartDate = new Date("01-07-2008");
 	var EndDate = new Date(DateMinMax(filteredDates, "max"));
 	EndDate.setDate(EndDate.getDate()+250);
-
 	dtickValue = TimeToMilliseconds(2, "Years");
 	tickformatValue = "%Y"
 	
@@ -171,6 +170,9 @@ if (datatypetouse_Development_by_Month == "Total Dwellings Consented") {
 			tickangle: 45,
 			type: 'date',
 			range: [StartDate, EndDate],
+			tickmode: 'linear',
+			dtick: dtickValue,
+			tickformat: tickformatValue,
 			fixedrange: Zooming
 			},		
 		yaxis: {
@@ -270,6 +272,9 @@ else if (datatypetouse_Development_by_Month == "Consented Dwellings by Type") {
 			tickangle: 45,
 			type: 'date',
 			range: [StartDate, EndDate],
+			tickmode: 'linear',
+			dtick: dtickValue,
+			tickformat: tickformatValue,
 			fixedrange: Zooming
 			},
 		yaxis: {
@@ -342,6 +347,9 @@ else if (datatypetouse_Development_by_Month == "Value of Consented Construction"
 			tickangle: 45,
 			type: 'date',
 			range: [StartDate, EndDate],
+			tickmode: 'linear',
+			dtick: dtickValue,
+			tickformat: tickformatValue,
 			fixedrange: Zooming
 			},
 		yaxis: {
