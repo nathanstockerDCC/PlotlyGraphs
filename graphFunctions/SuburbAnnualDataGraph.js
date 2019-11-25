@@ -119,6 +119,7 @@ if (datatypetouse == "Consented Dwellings by Type" && comparisonsuburbtouse == "
 			tick0: SuburbYears[0],
 			dtick: 2,
 			tickangle: 45, 
+			automargin: true,
 			fixedrange: Zooming},
 		yaxis: {
 			zeroline: false, 
@@ -224,6 +225,7 @@ else if (datatypetouse == "Consented Dwellings by Type" && comparisonsuburbtouse
 			tick0: SuburbYears[0],
 			dtick: 2,
 			tickangle: 45, 
+			automargin: true,
 			fixedrange: Zooming},
 		
 		xaxis2: {
@@ -234,6 +236,7 @@ else if (datatypetouse == "Consented Dwellings by Type" && comparisonsuburbtouse
 			dtick: 2,
 			tickangle: 45, 
 			fixedrange: Zooming,
+			automargin: true,
 			anchor: 'y2'},
 
 		yaxis: {
@@ -285,6 +288,7 @@ else if (datatypetouse == "Value of Consented Construction") {
 			tick0: SuburbYears[0],
 			dtick: 2,
 			tickangle: 45,
+			automargin: true,
 			fixedrange: Zooming
 			}, 
 		yaxis: {
@@ -330,6 +334,7 @@ else {
 			tick0: SuburbYears[0],
 			dtick: 2,
 			tickangle: 45, 
+			automargin: true,
 			fixedrange: Zooming
 			},
 		yaxis: {
