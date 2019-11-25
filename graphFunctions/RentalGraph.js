@@ -41,7 +41,7 @@ if (DataToUse == "Dunedin City"){
 	layout = {
 		title: 'Rental Costs',
 		showlegend: true,
-		legend: {orientation: 'h', y: '-0.25', x: '0.5'},
+		legend: {orientation: 'h', y: '-0.25', x: '0.5', xanchor: 'center'},
 		xaxis: {
 			fixedrange: Zooming, 
 			zeroline: false, 
@@ -117,7 +117,7 @@ else {
 	layout = {
 		title: 'Rental Costs',
 		showlegend: true,
-		legend: {orientation: 'h', y: '-0.25', x: '0.5'},
+		legend: {orientation: 'h', y: '-0.25', x: '0.5', xanchor: 'center'},
 		xaxis: {
 			fixedrange: Zooming, 
 			zeroline: false, 
