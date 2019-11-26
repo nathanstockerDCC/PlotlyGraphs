@@ -55,6 +55,7 @@ if (datatypetouse_Development_by_Month == "Constructed Dwellings" && timeframe_D
 	var EndDate = new Date(DateMinMax(filteredDates, "max"));
 	EndDate.setDate(EndDate.getDate()+250);
 	dtickValue = TimeToMilliseconds(2, "Years");
+	tick0Value = StartDate-TimeToMilliseconds(0.5, "Years");
 	tickformatValue = "%Y"
 	
 	;}
@@ -71,6 +72,7 @@ else if (timeframe_Development_by_Month == "Months") {
 	EndDate.setDate(EndDate.getDate()+20);
 
 	dtickValue = TimeToMilliseconds(3, "Months");
+	tick0Value = StartDate-TimeToMilliseconds(-1, "Months");
 	tickformatValue = "%b '%y"
 	
 	;}
@@ -87,6 +89,7 @@ else if (timeframe_Development_by_Month == "Years") {
 	EndDate.setDate(EndDate.getDate()+250);
 
 	dtickValue = TimeToMilliseconds(2, "Years");
+	tick0Value = StartDate-TimeToMilliseconds(0.5, "Years");
 	tickformatValue = "%Y"
 	;}	
 else {
@@ -102,6 +105,7 @@ else {
 	EndDate.setDate(EndDate.getDate()+20);
 
 	dtickValue = TimeToMilliseconds(3, "Months");
+	tick0Value = StartDate-TimeToMilliseconds(-1, "Months");
 	tickformatValue = "%b '%y"
 
 	;}
@@ -172,7 +176,7 @@ if (datatypetouse_Development_by_Month == "Total Dwellings Consented") {
 			range: [StartDate, EndDate],
 			tickmode: 'linear',
 			dtick: dtickValue,
-			tick0: StartDate-TimeToMilliseconds(0.3, "Years"),
+			tick0: tick0Value,
 			tickformat: tickformatValue,
 			fixedrange: Zooming
 			},		
@@ -275,7 +279,7 @@ else if (datatypetouse_Development_by_Month == "Consented Dwellings by Type") {
 			range: [StartDate, EndDate],
 			tickmode: 'linear',
 			dtick: dtickValue,
-			tick0: StartDate-TimeToMilliseconds(0.7, "Years"),
+			tick0: tick0Value,
 			tickformat: tickformatValue,
 			fixedrange: Zooming
 			},
@@ -351,6 +355,7 @@ else if (datatypetouse_Development_by_Month == "Value of Consented Construction"
 			range: [StartDate, EndDate],
 			tickmode: 'linear',
 			dtick: dtickValue,
+			tick0: tick0Value,
 			tickformat: tickformatValue,
 			fixedrange: Zooming
 			},
@@ -393,6 +398,7 @@ else if (datatypetouse_Development_by_Month == "Constructed Dwellings") {
 			range: [StartDate, EndDate],
 			tickmode: 'linear',
 			dtick: dtickValue,
+			tick0: tick0Value,
 			tickformat: tickformatValue,
 			fixedrange: Zooming			
 			},
