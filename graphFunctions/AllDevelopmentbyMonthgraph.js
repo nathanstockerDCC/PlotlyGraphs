@@ -72,7 +72,7 @@ else if (timeframe_Development_by_Month == "Months") {
 	EndDate.setDate(EndDate.getDate()+20);
 
 	dtickValue = TimeToMilliseconds(3, "Months");
-	tick0Value = StartDate-TimeToMilliseconds(-1, "Months");
+	tick0Value = StartDate-TimeToMilliseconds(-2, "Months");
 	tickformatValue = "%b '%y"
 	
 	;}
@@ -105,7 +105,7 @@ else {
 	EndDate.setDate(EndDate.getDate()+20);
 
 	dtickValue = TimeToMilliseconds(3, "Months");
-	tick0Value = StartDate-TimeToMilliseconds(-1, "Months");
+	tick0Value = StartDate-TimeToMilliseconds(-2, "Months");
 	tickformatValue = "%b '%y"
 
 	;}
