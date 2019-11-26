@@ -65,7 +65,6 @@ else if (timeframe_Development_by_Month == "Months") {
 			return data["Citywide All Months"];
 		});
 
-
 	var filteredDates = xValues.filter(function(e) { return e !== "" })
 	var StartDate = new Date(DateMinMax(filteredDates, "max"));
 	StartDate.setDate(StartDate.getDate()-715);
@@ -77,7 +76,6 @@ else if (timeframe_Development_by_Month == "Months") {
 	tickformatValue = "%b '%y"
 	
 	xValuesRedone = [];
-	
 	for (x in xValues) {
 		if (xValues[x] == "") {
 			xValuesRedone.push("");
@@ -86,7 +84,6 @@ else if (timeframe_Development_by_Month == "Months") {
 			xValuesRedone.push(new Date(xValues[x]+7))
 			}
 	}
-
 	xValues = xValuesRedone
 	
 	;}
@@ -103,7 +100,7 @@ else if (timeframe_Development_by_Month == "Years") {
 	EndDate.setDate(EndDate.getDate()+250);
 
 	dtickValue = TimeToMilliseconds(2, "Years");
-	tick0Value = StartDate-TimeToMilliseconds(0.5, "Years");
+//	tick0Value = StartDate-TimeToMilliseconds(0.5, "Years");
 	tickformatValue = "%Y"
 	;}	
 else {
@@ -114,14 +111,25 @@ else {
 		
 	var filteredDates = xValues.filter(function(e) { return e !== "" })
 	var StartDate = new Date(DateMinMax(filteredDates, "max"));
-	StartDate.setDate(StartDate.getDate()-715);
+	StartDate.setDate(StartDate.getDate()-700);
 	var EndDate = new Date(DateMinMax(filteredDates, "max"));
-	EndDate.setDate(EndDate.getDate()+20);
+	EndDate.setDate(EndDate.getDate()+30);
 
 	dtickValue = TimeToMilliseconds(3, "Months");
 	tick0Value = StartDate-TimeToMilliseconds(-2, "Months");
 	tickformatValue = "%b '%y"
 
+	xValuesRedone = [];
+	for (x in xValues) {
+		if (xValues[x] == "") {
+			xValuesRedone.push("");
+			}
+		else {
+			xValuesRedone.push(new Date(xValues[x]+7))
+			}
+	}
+	xValues = xValuesRedone
+	
 	;}
 
 	
