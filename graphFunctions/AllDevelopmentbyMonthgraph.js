@@ -64,6 +64,17 @@ else if (timeframe_Development_by_Month == "Months") {
 	xValues = $.map(chartData, function(data){
 			return data["Citywide All Months"];
 		});
+
+
+	var filteredDates = xValues.filter(function(e) { return e !== "" })
+	var StartDate = new Date(DateMinMax(filteredDates, "max"));
+	StartDate.setDate(StartDate.getDate()-715);
+	var EndDate = new Date(DateMinMax(filteredDates, "max"));
+	EndDate.setDate(EndDate.getDate()+20);
+
+	dtickValue = TimeToMilliseconds(3, "Months");
+	tick0Value = StartDate-TimeToMilliseconds(-2, "Months");
+	tickformatValue = "%b '%y"
 	
 	xValuesRedone = [];
 	
@@ -76,15 +87,7 @@ else if (timeframe_Development_by_Month == "Months") {
 			}
 	}
 
-	var filteredDates = xValues.filter(function(e) { return e !== "" })
-	var StartDate = new Date(DateMinMax(filteredDates, "max"));
-	StartDate.setDate(StartDate.getDate()-715);
-	var EndDate = new Date(DateMinMax(filteredDates, "max"));
-	EndDate.setDate(EndDate.getDate()+20);
-
-	dtickValue = TimeToMilliseconds(3, "Months");
-	tick0Value = StartDate-TimeToMilliseconds(-2, "Months");
-	tickformatValue = "%b '%y"
+	xValues = DatesRedone
 	
 	;}
 else if (timeframe_Development_by_Month == "Years") {
