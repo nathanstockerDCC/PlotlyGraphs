@@ -72,7 +72,7 @@ else if (timeframe_Development_by_Month == "Months") {
 	EndDate.setDate(EndDate.getDate()+20);
 
 	dtickValue = TimeToMilliseconds(3, "Months");
-	tick0Value = StartDate-TimeToMilliseconds(-1.5, "Months");
+	tick0Value = StartDate;
 	tickformatValue = "%b '%y"
 	
 	xValuesRedone = [];
