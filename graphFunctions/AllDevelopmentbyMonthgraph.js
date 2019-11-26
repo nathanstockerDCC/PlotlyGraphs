@@ -172,7 +172,7 @@ if (datatypetouse_Development_by_Month == "Total Dwellings Consented") {
 			range: [StartDate, EndDate],
 			tickmode: 'linear',
 			dtick: dtickValue,
-			tick0: StartDate-TimeToMilliseconds(0.5, "Years"),
+			tick0: StartDate-TimeToMilliseconds(0.3, "Years"),
 			tickformat: tickformatValue,
 			fixedrange: Zooming
 			},		
@@ -275,6 +275,7 @@ else if (datatypetouse_Development_by_Month == "Consented Dwellings by Type") {
 			range: [StartDate, EndDate],
 			tickmode: 'linear',
 			dtick: dtickValue,
+			tick0: StartDate-TimeToMilliseconds(0.7, "Years"),
 			tickformat: tickformatValue,
 			fixedrange: Zooming
 			},
