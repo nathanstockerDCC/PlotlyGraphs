@@ -84,7 +84,7 @@ else if (timeframe_Development_by_Month == "Months") {
 			xValuesRedone.push(new Date(xValues[x]+7))
 			}
 	}
-	xValues = xValuesRedone
+//	xValues = xValuesRedone
 	
 	;}
 else if (timeframe_Development_by_Month == "Years") {
@@ -100,7 +100,7 @@ else if (timeframe_Development_by_Month == "Years") {
 	EndDate.setDate(EndDate.getDate()+250);
 
 	dtickValue = TimeToMilliseconds(2, "Years");
-//	tick0Value = StartDate-TimeToMilliseconds(0.5, "Years");
+	tick0Value = StartDate-TimeToMilliseconds(0.5, "Years");
 	tickformatValue = "%Y"
 	;}	
 else {
@@ -111,9 +111,9 @@ else {
 		
 	var filteredDates = xValues.filter(function(e) { return e !== "" })
 	var StartDate = new Date(DateMinMax(filteredDates, "max"));
-	StartDate.setDate(StartDate.getDate()-700);
+	StartDate.setDate(StartDate.getDate()-715);
 	var EndDate = new Date(DateMinMax(filteredDates, "max"));
-	EndDate.setDate(EndDate.getDate()+30);
+	EndDate.setDate(EndDate.getDate()+20);
 
 	dtickValue = TimeToMilliseconds(3, "Months");
 	tick0Value = StartDate-TimeToMilliseconds(-2, "Months");
@@ -128,8 +128,7 @@ else {
 			xValuesRedone.push(new Date(xValues[x]+7))
 			}
 	}
-	xValues = xValuesRedone
-	
+//	xValues = xValuesRedone
 	;}
 
 	
