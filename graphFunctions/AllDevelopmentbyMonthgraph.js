@@ -182,6 +182,7 @@ if (datatypetouse_Development_by_Month == "Total Dwellings Consented") {
 			},		
 		yaxis: {
 			zeroline: false,
+			rangemode: 'tozero',
 			fixedrange: Zooming
 			},
 		}
@@ -285,6 +286,7 @@ else if (datatypetouse_Development_by_Month == "Consented Dwellings by Type") {
 			},
 		yaxis: {
 			zeroline: false, 
+			rangemode: 'tozero',
 			fixedrange: Zooming,
 			barmode: 'stack'
 			}
@@ -361,6 +363,7 @@ else if (datatypetouse_Development_by_Month == "Value of Consented Construction"
 			},
 		yaxis: {
 			zeroline: false, 
+			rangemode: 'tozero',
 			fixedrange: Zooming,
 			tickformat: '$,s', 
 			hoverformat: '$,.4s'
@@ -404,6 +407,7 @@ else if (datatypetouse_Development_by_Month == "Constructed Dwellings") {
 			},
 		yaxis: {
 			zeroline: false, 
+			rangemode: 'tozero',
 			fixedrange: Zooming
 			}
 		}
