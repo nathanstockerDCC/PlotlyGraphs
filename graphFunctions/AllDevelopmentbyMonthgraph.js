@@ -112,7 +112,7 @@ else if (timeframe_Development_by_Month == "Years") {
 			}
 		else {
 			xNew = new Date(xValues[x])
-			xNew.setDate(xNew.getDate()+180)
+			xNew.setDate(xNew.getDate()-180)
 			xValuesRedone.push(new Date(xNew))
 			}
 	}
