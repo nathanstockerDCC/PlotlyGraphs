@@ -84,7 +84,7 @@ else if (timeframe_Development_by_Month == "Months") {
 			xValuesRedone.push(new Date(xValues[x]+7))
 			}
 	}
-//	xValues = xValuesRedone
+	xValues = xValuesRedone
 	
 	;}
 else if (timeframe_Development_by_Month == "Years") {
