@@ -72,7 +72,7 @@ else if (timeframe_Development_by_Month == "Months") {
 	EndDate.setDate(EndDate.getDate()+40);
 
 	dtickValue = TimeToMilliseconds(3, "Months");
-	tick0Value = StartDate+TimeToMilliseconds(0.5, "Months");
+	tick0Value = StartDate-TimeToMilliseconds(0.5, "Months");
 	tickformatValue = "%b '%y"
 	
 	xValuesRedone = [];
@@ -102,7 +102,7 @@ else if (timeframe_Development_by_Month == "Years") {
 	EndDate.setDate(EndDate.getDate()+250);
 
 	dtickValue = TimeToMilliseconds(2, "Years");
-	tick0Value = StartDate+TimeToMilliseconds(0.5, "Years");
+	tick0Value = StartDate-TimeToMilliseconds(0.5, "Years");
 	tickformatValue = "%Y"
 
 	xValuesRedone = [];
