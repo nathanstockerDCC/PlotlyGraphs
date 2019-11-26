@@ -64,7 +64,9 @@ else if (timeframe_Development_by_Month == "Months") {
 	xValues = $.map(chartData, function(data){
 			return data["Citywide All Months"];
 		});
-		
+	
+	console.log(xValues)
+	
 	var filteredDates = xValues.filter(function(e) { return e !== "" })
 	var StartDate = new Date(DateMinMax(filteredDates, "max"));
 	StartDate.setDate(StartDate.getDate()-715);
