@@ -67,9 +67,9 @@ else if (timeframe_Development_by_Month == "Months") {
 
 	var filteredDates = xValues.filter(function(e) { return e !== "" })
 	var StartDate = new Date(DateMinMax(filteredDates, "max"));
-	StartDate.setDate(StartDate.getDate()-730);
+	StartDate.setDate(StartDate.getDate()-700);
 	var EndDate = new Date(DateMinMax(filteredDates, "max"));
-	EndDate.setDate(EndDate.getDate()+30);
+	EndDate.setDate(EndDate.getDate()+40);
 
 	dtickValue = TimeToMilliseconds(3, "Months");
 	tick0Value = StartDate;
