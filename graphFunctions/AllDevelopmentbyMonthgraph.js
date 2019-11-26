@@ -80,14 +80,14 @@ else if (timeframe_Development_by_Month == "Months") {
 	
 	for (x in xValues) {
 		if (xValues[x] == "") {
-			DatesRedone.push("");
+			xValuesRedone.push("");
 			}
 		else {
-			DatesRedone.push(new Date(xValues[x]+7))
+			xValuesRedone.push(new Date(xValues[x]+7))
 			}
 	}
 
-	xValues = DatesRedone
+	xValues = xValuesRedone
 	
 	;}
 else if (timeframe_Development_by_Month == "Years") {
