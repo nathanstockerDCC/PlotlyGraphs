@@ -65,8 +65,17 @@ else if (timeframe_Development_by_Month == "Months") {
 			return data["Citywide All Months"];
 		});
 	
-	console.log(xValues)
+	xValuesRedone = [];
 	
+	for (x in xValues) {
+		if (xValues[x] == "") {
+			DatesRedone.push("");
+			}
+		else {
+			DatesRedone.push(new Date(xValues[x]+7))
+			}
+	}
+
 	var filteredDates = xValues.filter(function(e) { return e !== "" })
 	var StartDate = new Date(DateMinMax(filteredDates, "max"));
 	StartDate.setDate(StartDate.getDate()-715);
