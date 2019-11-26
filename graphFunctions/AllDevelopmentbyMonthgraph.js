@@ -81,7 +81,9 @@ else if (timeframe_Development_by_Month == "Months") {
 			xValuesRedone.push("");
 			}
 		else {
-			xValuesRedone.push(new Date(xValues[x]+7))
+			xNew = new Date(xValues[x])
+			xNew.setDate(xNew.getDate()+16)
+			xValuesRedone.push(new Date(xNew))
 			}
 	}
 	xValues = xValuesRedone
@@ -100,8 +102,23 @@ else if (timeframe_Development_by_Month == "Years") {
 	EndDate.setDate(EndDate.getDate()+250);
 
 	dtickValue = TimeToMilliseconds(2, "Years");
-	tick0Value = StartDate-TimeToMilliseconds(0.5, "Years");
+	tick0Value = StartDate-TimeToMilliseconds(-0.5, "Years");
 	tickformatValue = "%Y"
+
+	xValuesRedone = [];
+	for (x in xValues) {
+		if (xValues[x] == "") {
+			xValuesRedone.push("");
+			}
+		else {
+			xNew = new Date(xValues[x])
+			xNew.setDate(xNew.getDate()+16)
+			xValuesRedone.push(new Date(xNew))
+			}
+	}
+	xValues = xValuesRedone
+
+
 	;}	
 else {
 	VisType = 'line';
@@ -125,7 +142,9 @@ else {
 			xValuesRedone.push("");
 			}
 		else {
-			xValuesRedone.push(new Date(xValues[x]+7))
+			xNew = new Date(xValues[x])
+			xNew.setDate(xNew.getDate()+16)
+			xValuesRedone.push(new Date(xNew))
 			}
 	}
 //	xValues = xValuesRedone
