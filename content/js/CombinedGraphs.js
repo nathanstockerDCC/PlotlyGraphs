@@ -1,8 +1,8 @@
-var Colour1 = 'rgb(69, 71, 82)';
-var Colour2 = 'rgb(255, 227, 115)';
-var Colour3 = 'rgb(191, 189, 191)';
-var Colour4 = 'rgb(166, 150, 120)';
-var Colour5 = 'rgb(214, 191, 110)';
+var Colour1 = 'rgb(0, 133, 155)';
+var Colour2 = 'rgb(228, 0, 43)';
+var Colour3 = 'rgb(135, 2, 123)';
+var Colour4 = 'rgb(196, 112, 30)';
+var Colour5 = 'rgb(108, 114, 118)';
 
 var Zooming = false;
 
