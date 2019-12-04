@@ -448,7 +448,9 @@ else if (datatypetouse_Development_by_Month == "Constructed Dwellings") {
 		yaxis: {
 			zeroline: false, 
 			rangemode: 'tozero',
-			fixedrange: Zooming
+			fixedrange: Zooming,
+			paper_bgcolor: 'rgba(0,0,0,0)',
+  			plot_bgcolor: 'rgba(0,0,0,0)'
 			}
 		}
 	;}
