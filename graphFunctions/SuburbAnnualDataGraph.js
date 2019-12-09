@@ -95,14 +95,14 @@ if (datatypetouse == "Consented Dwellings by Type" && comparisonsuburbtouse == "
         y: apartmentdata,
         name: 'Apartments',
 		type: 'bar',
-		marker: {color: Colour3}
+		marker: {color: Colour4}
 
 		},{
         x: SuburbYears,
         y: retirementunitsdata,
         name: 'Retirement Village Units',
 		type: 'bar',
-		marker: {color: Colour4}
+		marker: {color: Colour5}
         }],
 
 	layout = {
@@ -155,7 +155,7 @@ else if (datatypetouse == "Consented Dwellings by Type" && comparisonsuburbtouse
 		type: 'bar',
 		xaxis: 'x2',
 		yaxis: 'y2',
-		marker: {color: Colour3}
+		marker: {color: Colour4}
        
 		},{
         x: SuburbYears,
@@ -164,7 +164,7 @@ else if (datatypetouse == "Consented Dwellings by Type" && comparisonsuburbtouse
 		type: 'bar',
 		xaxis: 'x2',
 		yaxis: 'y2',
-		marker: {color: Colour4}
+		marker: {color: Colour5}
         
 		},{    
 	    x: SuburbYears,
@@ -191,7 +191,7 @@ else if (datatypetouse == "Consented Dwellings by Type" && comparisonsuburbtouse
 		visible: visibilitytoggle,
         type: 'bar',
 		showlegend: false,
-		marker: {color: Colour3}
+		marker: {color: Colour4}
        
 		},{
         x: SuburbYears,
@@ -200,7 +200,7 @@ else if (datatypetouse == "Consented Dwellings by Type" && comparisonsuburbtouse
 		visible: visibilitytoggle,
 		type: 'bar',
 		showlegend: false,
-		marker: {color: Colour4}
+		marker: {color: Colour5}
         }];
 		
 	temp_sum1 = Math.max.apply(Math, totaldwellingsdata);
