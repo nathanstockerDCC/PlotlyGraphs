@@ -31,7 +31,7 @@ function PropertyDataGraph(chartData){
 			}),
 		type: 'bar',
 		name: 'House Sales',
-		marker: {color: Colour2}
+		marker: {color: Colour3}
 		}];
 		
 	layout = {
