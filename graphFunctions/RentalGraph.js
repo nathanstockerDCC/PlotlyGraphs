@@ -34,7 +34,7 @@ if (DataToUse == "Dunedin City"){
 			;}),
 		line: {width: 4},
 		name: 'Upper Quartile',
-		marker: {color: Colour3}			
+		marker: {color: Colour4}			
 		}
 		];
 		
