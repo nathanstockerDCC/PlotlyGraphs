@@ -199,14 +199,14 @@ else {
 		y: ApartmentsCollated,
 		name: "Apartments",
 		type: 'bar',
-		marker: {color: Colour3}
+		marker: {color: Colour4}
 		
         },{
 		x: SuburbsList,
 		y: RetirementVillageUnitsCollated,
 		name: "Retirement Village Units",
 		type: 'bar',
-		marker: {color: Colour4}
+		marker: {color: Colour5}
         }]
 
 	layout = {
