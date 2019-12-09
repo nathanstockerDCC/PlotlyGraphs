@@ -84,7 +84,7 @@ function DevTrendsByYearGraph(chartData){
 		y: yValuesTotal,
 		name: 'Total',
 		opacity: 0.7,
-		marker:{color:'#AAAAAA'},
+		marker: {color: Colour3},
 		type: 'bar'	
 	}],
 	
