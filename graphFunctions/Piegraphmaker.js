@@ -71,7 +71,7 @@ if(startYearValueTwo == "-" || endYearValueTwo == "-"){
 		text : x_type_split,
 //		textfont: {colors: [Colour2, Colour3, Colour1]},
 		hoverinfo: "label+value+percent+name",
-		marker: {colors: [Colour4, Colour2, Colour3]}
+		marker: {colors: [Colour3, Colour2, Colour4]}
 		}];
 
 	var layout = {
@@ -98,7 +98,7 @@ else {
 //		textfont: {color: Colour2},
 		domain: { x: [0, .5]},
 		hoverinfo: "label+value+percent+name",
-		marker: {colors: [Colour4, Colour2, Colour3]}
+		marker: {colors: [Colour3, Colour2, Colour4]}
 
 		},{
 		values: [HousesCollated_Comparison,UnitsCollated_Comparison,ApartmentsCollated_Comparison],
@@ -110,7 +110,7 @@ else {
 		text : x_type_split,
 		domain: { x: [0.5, 1] },
 		hoverinfo: "label+value+percent+name",
-		marker: {colors: [Colour4, Colour2, Colour3]}
+		marker: {colors: [Colour3, Colour2, Colour4]}
 		}];
 
 	var layout = {
