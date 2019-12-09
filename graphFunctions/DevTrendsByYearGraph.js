@@ -72,13 +72,13 @@ function DevTrendsByYearGraph(chartData){
 		y: yValuesApartments,
 		name: 'Apartments',
 		line: {width: 6,},
-		marker: {color: Colour5}
+		marker: {color: Colour4}
 	}, {
 		x: xValues,
 		y: yValuesRVUs,
 		name: 'Retirement Village Units',
 		line: {width: 6,},
-		marker: {color: Colour4}
+		marker: {color: Colour5}
 	}, {
 		x: xValues,
 		y: yValuesTotal,
