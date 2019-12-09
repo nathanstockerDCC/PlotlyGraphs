@@ -1,9 +1,9 @@
 var Colour1 = 'rgb(0, 133, 155)';
-var Colour2 = 'rgb(228, 0, 43)';
-var Colour3 = 'rgb(135, 2, 123)';
-var Colour4 = 'rgb(196, 112, 30)';
-var Colour5 = 'rgb(108, 114, 118)';
-
+var Colour2 = 'rgb(135, 2, 123)';
+var Colour3 = 'rgb(108, 114, 118)'; 
+var Colour4 = 'rgb(239, 113, 133)';
+var Colour5 = 'rgb(45, 204, 211)';
+// rgb(135, 2, 123) = purple; rgb(0, 133, 155) = DCC blue; rgb(108, 114, 118) = grey; rgb(196, 112, 30) = brown; rgb(45, 204, 211) = light teal; rgb(239, 113, 133) = ginger
 var Zooming = false;
 
 // Changing D3 default number formats
