@@ -28,10 +28,10 @@ function TimeToMilliseconds(amount, type) {
 		return amount * 86400000;
 	}
 	if (type == "Months") {
-		return amount * 2628000000;
+		return amount * 2635200000;
 	}
 	if (type == "Years") {
-		return amount * 31536000000;
+		return amount * 31556952000;
 	}
 	}
 	
