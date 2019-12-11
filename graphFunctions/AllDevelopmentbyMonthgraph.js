@@ -222,9 +222,9 @@ if (datatypetouse_Development_by_Month == "Total Dwellings Consented") {
 //			tickangle: 45,
 			type: 'date',
 			range: [StartDate, EndDate],
-			tickmode: 'linear',
+/* 			tickmode: 'linear',
 			dtick: dtickValue,
-			tick0: tick0Value,
+			tick0: tick0Value, */
 			tickformat: tickformatValue,
 			fixedrange: Zooming
 			},		
@@ -447,9 +447,9 @@ else if (datatypetouse_Development_by_Month == "Constructed Dwellings") {
 			tickangle: 45, 
 			type: 'date',
 			range: [StartDate, EndDate],
-/* 			tickmode: 'linear',
+			tickmode: 'linear',
 			dtick: dtickValue,
-			tick0: tick0Value, */
+			tick0: tick0Value,
 			tickformat: tickformatValue,
 			fixedrange: Zooming			
 			},
