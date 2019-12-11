@@ -120,6 +120,11 @@ else if (timeframe_Development_by_Month == "Years") {
 	}
 	xValues = xValuesRedone
 */
+	console.log("dTick = " + dtickValue)
+	console.log("tick0Value = " + tick0Value)
+	console.log("StartDate = " + StartDate)
+	
+
 
 	;}	
 else {
