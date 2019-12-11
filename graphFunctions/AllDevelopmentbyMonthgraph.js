@@ -102,7 +102,8 @@ else if (timeframe_Development_by_Month == "Years") {
 	EndDate.setDate(EndDate.getDate()+300);
 
 	dtickValue = TimeToMilliseconds(2, "Years");
-	tick0Value = StartDate+TimeToMilliseconds(300, "Days");
+	tick0Value = new Date(DateMinMax(filteredDates, "min"));
+//	tick0Value = StartDate+TimeToMilliseconds(300, "Days");
 //	tick0Value = StartDate;
 	tickformatValue = "%Y"
 
