@@ -423,7 +423,7 @@ else if (datatypetouse_Development_by_Month == "Value of Consented Construction"
 			tickangle: 45,
 			type: 'date',
 			range: [StartDate, EndDate],
-			tickmode: tickmodeValue,
+//			tickmode: tickmodeValue,
 			dtick: dtickValue,
 			tick0: tick0Value,
 			tickvals: TickValsArray,
