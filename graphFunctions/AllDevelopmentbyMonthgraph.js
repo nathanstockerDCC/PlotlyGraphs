@@ -44,6 +44,8 @@ if (chartData == null || chartData.length <= 0)
 var datatypetouse_Development_by_Month = $('#datatypedd_DevelopmentbyMonthgraph option:selected').text();
 var timeframe_Development_by_Month = $('#timeframe_DevelopmentbyMonthgraph option:selected').text();
 
+var TickValsArray = [];
+
 if (datatypetouse_Development_by_Month == "Constructed Dwellings" && timeframe_Development_by_Month == "Years") {
 	VisType = 'line';
 	xValues = $.map(chartData, function(data){
@@ -56,6 +58,7 @@ if (datatypetouse_Development_by_Month == "Constructed Dwellings" && timeframe_D
 	EndDate.setDate(EndDate.getDate()+250);
 	dtickValue = TimeToMilliseconds(2, "Years");
 	tick0Value = StartDate-TimeToMilliseconds(0.5, "Years");
+	tickmodeValue = "linear";
 	tickformatValue = "%Y"
 	
 	;}
@@ -73,6 +76,7 @@ else if (timeframe_Development_by_Month == "Months") {
 
 	dtickValue = TimeToMilliseconds(3, "Months");
 	tick0Value = StartDate-TimeToMilliseconds(0.5, "Months");
+	tickmodeValue = "linear";
 	tickformatValue = "%b '%y"
 	
 	xValuesRedone = [];
@@ -107,17 +111,15 @@ else if (timeframe_Development_by_Month == "Years") {
 //	tick0Value = StartDate;
 	tick0Value = new Date('Jun 01 1991')
 	tickformatValue = "%Y"
+	tickmodeValue = "array";
 
-	var NewArray = [];
+	var TickValsArray = [];
 
 	for (i = 0; i < filteredDates.length; i++) {
 		if (i % 2 == 0) {
-			NewArray.push(filteredDates[i]);
+			TickValsArray.push(filteredDates[i]);
 			;}
 		}
-	
-	console.log("Filtered Dates = " + filteredDates);
-	console.log("New Array = " + NewArray);
 	
 	
 /*	xValuesRedone = [];
@@ -155,6 +157,7 @@ else {
 	dtickValue = TimeToMilliseconds(3, "Months");
 	tick0Value = StartDate-TimeToMilliseconds(-2, "Months");
 	tickformatValue = "%b '%y"
+	tickmodeValue = "linear";
 
 	xValuesRedone = [];
 	for (x in xValues) {
@@ -237,6 +240,10 @@ if (datatypetouse_Development_by_Month == "Total Dwellings Consented") {
 /* 			tickmode: 'linear',
 			dtick: dtickValue,
 			tick0: tick0Value, */
+			tickmode: tickmodeValue,
+			dtick: dtickValue,
+			tick0: tick0Value,
+			tickvals: TickValsArray,
 			tickformat: tickformatValue,
 			fixedrange: Zooming
 			},		
@@ -338,9 +345,10 @@ else if (datatypetouse_Development_by_Month == "Consented Dwellings by Type") {
 			tickangle: 45,
 			type: 'date',
 			range: [StartDate, EndDate],
-			tickmode: 'linear',
+			tickmode: tickmodeValue,
 			dtick: dtickValue,
 			tick0: tick0Value,
+			tickvals: TickValsArray,
 			tickformat: tickformatValue,
 			fixedrange: Zooming
 			},
@@ -415,9 +423,10 @@ else if (datatypetouse_Development_by_Month == "Value of Consented Construction"
 			tickangle: 45,
 			type: 'date',
 			range: [StartDate, EndDate],
-			tickmode: 'linear',
+			tickmode: tickmodeValue,
 			dtick: dtickValue,
 			tick0: tick0Value,
+			tickvals: TickValsArray,
 			tickformat: tickformatValue,
 			fixedrange: Zooming
 			},
@@ -459,9 +468,10 @@ else if (datatypetouse_Development_by_Month == "Constructed Dwellings") {
 			tickangle: 45, 
 			type: 'date',
 			range: [StartDate, EndDate],
-			tickmode: 'linear',
+			tickmode: tickmodeValue,
 			dtick: dtickValue,
 			tick0: tick0Value,
+			tickvals: TickValsArray,
 			tickformat: tickformatValue,
 			fixedrange: Zooming			
 			},
