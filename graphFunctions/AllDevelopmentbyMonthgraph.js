@@ -108,6 +108,18 @@ else if (timeframe_Development_by_Month == "Years") {
 	tick0Value = new Date('Jun 01 1991')
 	tickformatValue = "%Y"
 
+	var NewArray = [];
+
+	for (i = 0; i < filteredDates.length; i++) {
+		if (i % 2 == 0) {
+			NewArray.push(filteredDates[i]);
+			;}
+		}
+	
+	console.log("Filtered Dates = " + filteredDates);
+	console.log("New Array = " + NewArray);
+	
+	
 /*	xValuesRedone = [];
 	for (x in xValues) {
 		if (xValues[x] == "") {
