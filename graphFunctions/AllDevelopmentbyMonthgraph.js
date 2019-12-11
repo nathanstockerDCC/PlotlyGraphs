@@ -370,7 +370,7 @@ else if (datatypetouse_Development_by_Month == "Value of Consented Construction"
 		type: VisType,
 		line: {width: 6,},
 		connectgaps: true,
-		marker: {color: Colour2}
+		marker: {color: Colour4}
 		
         },{
 		x: xValues,
