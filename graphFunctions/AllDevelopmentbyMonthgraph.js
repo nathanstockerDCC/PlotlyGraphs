@@ -97,9 +97,9 @@ else if (timeframe_Development_by_Month == "Years") {
 
 	var filteredDates = xValues.filter(function(e) { return e !== "" })
 	var StartDate = new Date(DateMinMax(filteredDates, "min"));
-//	StartDate.setDate(StartDate.getDate()-250);
+	StartDate.setDate(StartDate.getDate()-250);
 	var EndDate = new Date(DateMinMax(filteredDates, "max"));
-//	EndDate.setDate(EndDate.getDate()+250);
+	EndDate.setDate(EndDate.getDate()+250);
 
 	dtickValue = TimeToMilliseconds(2, "Years");
 //	tick0Value = StartDate-TimeToMilliseconds(0.5, "Years");
