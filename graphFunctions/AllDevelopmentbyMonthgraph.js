@@ -116,6 +116,7 @@ else if (timeframe_Development_by_Month == "Years") {
 	if (datatypetouse_Development_by_Month == "Constructed Dwellings")
 		{
 		tick0Value = new Date('Jun 01 2009');	
+		StartDate = new Date('Jun 01 2009');
 		}
 	else
 		{
