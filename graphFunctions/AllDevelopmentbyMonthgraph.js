@@ -432,7 +432,7 @@ else if (datatypetouse_Development_by_Month == "Constructed Dwellings") {
 			zeroline: false, 
 //			tickangle: 45, 
 			type: 'date',
-			range: ['2009-06-01', EndDate],
+			range: ['2009-01-01', EndDate],
 //			tickmode: tickmodeValue,
 			dtick: dtickValue,
 			tick0: '2009-06-01',
