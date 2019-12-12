@@ -421,6 +421,9 @@ else if (datatypetouse_Development_by_Month == "Constructed Dwellings") {
 		connectgaps: true,
 		marker: {color: Colour1}
         }];
+
+	console.log("dTick = "+dtickValue);
+	console.log("tick0 = "+tick0Value);
 	
 	layout = {
 		title: 'Constructed Dwellings',
