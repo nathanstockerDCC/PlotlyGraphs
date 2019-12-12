@@ -60,7 +60,7 @@ if (timeframe_Development_by_Month == "Months") {
 	EndDate.setDate(EndDate.getDate()+40);
 
 	dtickValue = TimeToMilliseconds(3, "Months");
-	tick0Value = DateMinMax(filteredDates, "max");
+	tick0Value = DateMinMax(filteredDates, "max")+16;
 //	tick0Value = new Date(DateMinMax(filteredDates, "max"));
 //	tick0Value.setDate(tick0Value.getDate()-16);
 	tickmodeValue = "linear";
