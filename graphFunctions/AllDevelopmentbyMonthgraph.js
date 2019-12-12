@@ -103,7 +103,7 @@ else if (timeframe_Development_by_Month == "Years") {
 			return data["Citywide Years Longterm Years"];
 		});
 
-	var filteredDates = xValues.filter(function(e) { return e !== "" })
+	var filteredDates = xValues.filter(function(e) { return e !== "" });
 	var StartDate = new Date(DateMinMax(filteredDates, "min"));
 	StartDate.setDate(StartDate.getDate()-300);
 	var EndDate = new Date(DateMinMax(filteredDates, "max"));
@@ -113,8 +113,8 @@ else if (timeframe_Development_by_Month == "Years") {
 //	tick0Value = new Date(DateMinMax(filteredDates, "min")-730.5);
 //	tick0Value = StartDate+TimeToMilliseconds(300, "Days");
 //	tick0Value = StartDate;
-	tick0Value = new Date(DateMinMax(filteredDates, "min"))
-	tickformatValue = "%Y"
+	tick0Value = new Date(DateMinMax(filteredDates, "min"));
+	tickformatValue = "%Y";
 	tickmodeValue = "array";
 
 	var TickValsArray = [];
