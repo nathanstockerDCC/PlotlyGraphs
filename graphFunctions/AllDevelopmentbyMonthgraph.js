@@ -46,17 +46,14 @@ var timeframe_Development_by_Month = $('#timeframe_DevelopmentbyMonthgraph optio
 
 var TickValsArray = [];
 
-if (datatypetouse_Development_by_Month == "Constructed Dwellings" && timeframe_Development_by_Month == "Years") {
+/* if (datatypetouse_Development_by_Month == "Constructed Dwellings" && timeframe_Development_by_Month == "Years") {
 	VisType = 'line';
 	xValues = $.map(chartData, function(data){
 			return data["Citywide Years Longterm Years"];
 		});
 	
 	var filteredDates = xValues.filter(function(e) { return e !== "" })
-/* 	var StartDate = new Date("01-07-2008");
-	var EndDate = new Date(DateMinMax(filteredDates, "max"));
-	EndDate.setDate(EndDate.getDate()+250);
- */	
+
 	var StartDate = new Date(DateMinMax(filteredDates, "min"));
 	StartDate.setDate(StartDate.getDate()-300);
 	var EndDate = new Date(DateMinMax(filteredDates, "max"));
@@ -64,12 +61,12 @@ if (datatypetouse_Development_by_Month == "Constructed Dwellings" && timeframe_D
 
 	dtickValue = TimeToMilliseconds(1, "Years");
 	tick0Value = new Date('Jun 01 2009')
-//	tick0Value = StartDate-TimeToMilliseconds(0.5, "Years");
 	tickmodeValue = "linear";
 	tickformatValue = "%Y"
 	
 	;}
-else if (timeframe_Development_by_Month == "Months") {
+else  */
+if (timeframe_Development_by_Month == "Months") {
 	VisType = 'bar';
 	xValues = $.map(chartData, function(data){
 			return data["Citywide All Months"];
@@ -127,25 +124,7 @@ else if (timeframe_Development_by_Month == "Years") {
 			TickValsArray.push(filteredDates[i]);
 			;}
 		}
-	
-	
-/*	xValuesRedone = [];
-	for (x in xValues) {
-		if (xValues[x] == "") {
-			xValuesRedone.push("");
-			}
-		else {
-			xNew = new Date(xValues[x])
-			xNew.setDate(xNew.getDate()-180)
-			xValuesRedone.push(new Date(xNew))
-			}
-	}
-	xValues = xValuesRedone
-*/
-	console.log("dTick = " + dtickValue)
-	console.log("tick0Value = " + tick0Value)
-	console.log("StartDate = " + StartDate)
-	
+
 
 
 	;}	
