@@ -57,13 +57,13 @@ if (datatypetouse_Development_by_Month == "Constructed Dwellings" && timeframe_D
 	var EndDate = new Date(DateMinMax(filteredDates, "max"));
 	EndDate.setDate(EndDate.getDate()+250);
  */	
-	var StartDate = new Date(DateMinMax(filteredDates, "max"));
-	StartDate.setDate(StartDate.getDate()-700);
+	var StartDate = new Date(DateMinMax(filteredDates, "min"));
+	StartDate.setDate(StartDate.getDate()-300);
 	var EndDate = new Date(DateMinMax(filteredDates, "max"));
-	EndDate.setDate(EndDate.getDate()+40);
+	EndDate.setDate(EndDate.getDate()+300);
 
-	dtickValue = TimeToMilliseconds(2, "Years");
-	tick0Value = new Date(DateMinMax(filteredDates, "max"));
+	dtickValue = TimeToMilliseconds(1, "Years");
+	tick0Value = new Date('Jun 01 2009')
 //	tick0Value = StartDate-TimeToMilliseconds(0.5, "Years");
 	tickmodeValue = "linear";
 	tickformatValue = "%Y"
