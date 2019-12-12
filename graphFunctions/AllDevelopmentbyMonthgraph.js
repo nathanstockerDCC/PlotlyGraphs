@@ -435,7 +435,7 @@ else if (datatypetouse_Development_by_Month == "Constructed Dwellings") {
 			range: [StartDate, EndDate],
 //			tickmode: tickmodeValue,
 			dtick: dtickValue,
-			tick0: tick0Value,
+			tick0: '2009-06-01',
 //			tickvals: TickValsArray,
 			tickformat: tickformatValue,
 			fixedrange: Zooming			
