@@ -433,7 +433,7 @@ else if (datatypetouse_Development_by_Month == "Constructed Dwellings") {
 //			tickmode: tickmodeValue,
 			dtick: dtickValue,
 			tick0: tick0Value,
-			tickvals: TickValsArray,
+//			tickvals: TickValsArray,
 			tickformat: tickformatValue,
 			fixedrange: Zooming			
 			},
