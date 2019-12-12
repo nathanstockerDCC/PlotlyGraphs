@@ -53,17 +53,11 @@ if (datatypetouse_Development_by_Month == "Constructed Dwellings" && timeframe_D
 		});
 	
 	var filteredDates = xValues.filter(function(e) { return e !== "" })
-/* 	var StartDate = new Date("01-07-2008");
+	var StartDate = new Date("01-07-2008");
 	var EndDate = new Date(DateMinMax(filteredDates, "max"));
-	EndDate.setDate(EndDate.getDate()+250); */
-	
-	var StartDate = new Date(DateMinMax(filteredDates, "min"));
-	StartDate.setDate(StartDate.getDate()-300);
-	var EndDate = new Date(DateMinMax(filteredDates, "max"));
-	EndDate.setDate(EndDate.getDate()+300);
-
-	dtickValue = TimeToMilliseconds(1, "Years");
-	tick0Value = StartDate
+	EndDate.setDate(EndDate.getDate()+250);
+	dtickValue = TimeToMilliseconds(2, "Years");
+	tick0Value = StartDate-TimeToMilliseconds(0.5, "Years");
 	tickmodeValue = "linear";
 	tickformatValue = "%Y"
 	
@@ -81,11 +75,11 @@ else if (timeframe_Development_by_Month == "Months") {
 	EndDate.setDate(EndDate.getDate()+40);
 
 	dtickValue = TimeToMilliseconds(3, "Months");
-	tick0Value = StartDate
+	tick0Value = StartDate-TimeToMilliseconds(0.5, "Months");
 	tickmodeValue = "linear";
 	tickformatValue = "%b '%y"
 	
-/* 	xValuesRedone = [];
+	xValuesRedone = [];
 	for (x in xValues) {
 		if (xValues[x] == "") {
 			xValuesRedone.push("");
@@ -96,7 +90,7 @@ else if (timeframe_Development_by_Month == "Months") {
 			xValuesRedone.push(new Date(xNew))
 			}
 	}
-	xValues = xValuesRedone */
+	xValues = xValuesRedone
 	
 	;}
 else if (timeframe_Development_by_Month == "Years") {
@@ -161,12 +155,11 @@ else {
 	EndDate.setDate(EndDate.getDate()+20);
 
 	dtickValue = TimeToMilliseconds(3, "Months");
-//	tick0Value = StartDate-TimeToMilliseconds(-2, "Months");
-	tick0Value = StartDate;
+	tick0Value = StartDate-TimeToMilliseconds(-2, "Months");
 	tickformatValue = "%b '%y"
 	tickmodeValue = "linear";
 
-/* 	xValuesRedone = [];
+	xValuesRedone = [];
 	for (x in xValues) {
 		if (xValues[x] == "") {
 			xValuesRedone.push("");
@@ -176,7 +169,7 @@ else {
 			xNew.setDate(xNew.getDate()+16)
 			xValuesRedone.push(new Date(xNew))
 			}
-	} */
+	}
 //	xValues = xValuesRedone
 	;}
 
@@ -248,7 +241,9 @@ if (datatypetouse_Development_by_Month == "Total Dwellings Consented") {
 			dtick: dtickValue,
 			tick0: tick0Value,
 //			tickmode: tickmodeValue,
-//			tickvals: TickValsArray,
+			dtick: dtickValue,
+			tick0: tick0Value,
+			tickvals: TickValsArray,
 			tickformat: tickformatValue,
 			fixedrange: Zooming
 			},		
@@ -353,7 +348,7 @@ else if (datatypetouse_Development_by_Month == "Consented Dwellings by Type") {
 //			tickmode: tickmodeValue,
 			dtick: dtickValue,
 			tick0: tick0Value,
-//			tickvals: TickValsArray,
+			tickvals: TickValsArray,
 			tickformat: tickformatValue,
 			fixedrange: Zooming
 			},
@@ -431,7 +426,7 @@ else if (datatypetouse_Development_by_Month == "Value of Consented Construction"
 //			tickmode: tickmodeValue,
 			dtick: dtickValue,
 			tick0: tick0Value,
-//			tickvals: TickValsArray,
+			tickvals: TickValsArray,
 			tickformat: tickformatValue,
 			fixedrange: Zooming
 			},
@@ -476,7 +471,7 @@ else if (datatypetouse_Development_by_Month == "Constructed Dwellings") {
 //			tickmode: tickmodeValue,
 			dtick: dtickValue,
 			tick0: tick0Value,
-//			tickvals: TickValsArray,
+			tickvals: TickValsArray,
 			tickformat: tickformatValue,
 			fixedrange: Zooming			
 			},
