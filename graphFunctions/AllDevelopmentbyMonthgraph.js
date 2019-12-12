@@ -308,8 +308,8 @@ else if (datatypetouse_Development_by_Month == "Consented Dwellings by Type") {
 //			tickmode: tickmodeValue,
 			dtick: dtickValue,
 			tick0: tick0Value,
-//			tickvals: TickValsArray,
-//			tickformat: tickformatValue,
+			tickvals: TickValsArray,
+			tickformat: tickformatValue,
 			fixedrange: Zooming
 			},
 		yaxis: {
@@ -386,8 +386,8 @@ else if (datatypetouse_Development_by_Month == "Value of Consented Construction"
 //			tickmode: tickmodeValue,
 			dtick: dtickValue,
 			tick0: tick0Value,
-//			tickvals: TickValsArray,
-//			tickformat: tickformatValue,
+			tickvals: TickValsArray,
+			tickformat: tickformatValue,
 			fixedrange: Zooming
 			},
 		yaxis: {
@@ -431,8 +431,8 @@ else if (datatypetouse_Development_by_Month == "Constructed Dwellings") {
 //			tickmode: tickmodeValue,
 			dtick: dtickValue,
 			tick0: tick0Value,
-//			tickvals: TickValsArray,
-//			tickformat: tickformatValue,
+			tickvals: TickValsArray,
+			tickformat: tickformatValue,
 			fixedrange: Zooming			
 			},
 		yaxis: {
