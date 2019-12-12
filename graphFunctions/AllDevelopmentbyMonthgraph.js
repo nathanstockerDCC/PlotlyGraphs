@@ -203,7 +203,9 @@ if (datatypetouse_Development_by_Month == "Total Dwellings Consented") {
 			dtick: dtickValue,
 			tick0: tick0Value,
 //			tickmode: tickmodeValue,
-//			tickvals: TickValsArray,
+			dtick: dtickValue,
+			tick0: tick0Value,
+			tickvals: TickValsArray,
 			tickformat: tickformatValue,
 			fixedrange: Zooming
 			},		
