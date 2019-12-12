@@ -194,16 +194,12 @@ if (datatypetouse_Development_by_Month == "Total Dwellings Consented") {
 		showlegend: false,
 		xaxis: {
 			zeroline: false, 
-//			tickangle: 45,
 			type: 'date',
 			range: [StartDate, EndDate],
-// 			tickmode: 'linear',
 			dtick: dtickValue,
 			tick0: tick0Value,
-//			tickmode: tickmodeValue,
 			dtick: dtickValue,
 			tick0: tick0Value,
-//			tickvals: TickValsArray,
 			tickformat: tickformatValue,
 			fixedrange: Zooming
 			},		
@@ -302,13 +298,10 @@ else if (datatypetouse_Development_by_Month == "Consented Dwellings by Type") {
 			xanchor: 'center'},
 		xaxis: {
 			zeroline: false, 
-			tickangle: 45,
 			type: 'date',
 			range: [StartDate, EndDate],
-//			tickmode: tickmodeValue,
 			dtick: dtickValue,
 			tick0: tick0Value,
-//			tickvals: TickValsArray,
 			tickformat: tickformatValue,
 			fixedrange: Zooming
 			},
@@ -380,12 +373,10 @@ else if (datatypetouse_Development_by_Month == "Value of Consented Construction"
 			xanchor: 'center'},
 		xaxis: {
 			zeroline: false, 
-			tickangle: 45,
 			type: 'date',
 			range: [StartDate, EndDate],
 			dtick: dtickValue,
 			tick0: tick0Value,
-//			tickvals: TickValsArray,
 			tickformat: tickformatValue,
 			fixedrange: Zooming
 			},
