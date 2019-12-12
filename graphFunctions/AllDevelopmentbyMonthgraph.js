@@ -44,8 +44,6 @@ if (chartData == null || chartData.length <= 0)
 var datatypetouse_Development_by_Month = $('#datatypedd_DevelopmentbyMonthgraph option:selected').text();
 var timeframe_Development_by_Month = $('#timeframe_DevelopmentbyMonthgraph option:selected').text();
 
-var TickValsArray = [];
-
 
 if (timeframe_Development_by_Month == "Months") {
 	VisType = 'bar';
@@ -57,11 +55,10 @@ if (timeframe_Development_by_Month == "Months") {
 	var StartDate = new Date(DateMinMax(filteredDates, "max"));
 	StartDate.setDate(StartDate.getDate()-745);
 	var EndDate = new Date(DateMinMax(filteredDates, "max"));
-	EndDate.setDate(EndDate.getDate()+40);
+	EndDate.setDate(EndDate.getDate()+20);
 
 	dtickValue = "M3";
 	tick0Value = DateMinMax(filteredDates, "max");
-	tickmodeValue = "linear";
 	tickformatValue = "%b '%y";
 	
 	;}
@@ -92,15 +89,6 @@ else if (timeframe_Development_by_Month == "Years") {
 		}
 		
 	tickformatValue = "%Y";
-	tickmodeValue = "array";
-
-	var TickValsArray = [];
-
-	for (i = 0; i < filteredDates.length; i++) {
-		if (i % 2 == 0) {
-			TickValsArray.push(filteredDates[i]);
-			;}
-		}
 
 	;}	
 else {
@@ -111,27 +99,13 @@ else {
 		
 	var filteredDates = xValues.filter(function(e) { return e !== "" })
 	var StartDate = new Date(DateMinMax(filteredDates, "max"));
-	StartDate.setDate(StartDate.getDate()-715);
+	StartDate.setDate(StartDate.getDate()-745);
 	var EndDate = new Date(DateMinMax(filteredDates, "max"));
 	EndDate.setDate(EndDate.getDate()+20);
 
 	dtickValue = TimeToMilliseconds(3, "Months");
 	tick0Value = StartDate-TimeToMilliseconds(-2, "Months");
 	tickformatValue = "%b '%y"
-	tickmodeValue = "linear";
-
-	xValuesRedone = [];
-	for (x in xValues) {
-		if (xValues[x] == "") {
-			xValuesRedone.push("");
-			}
-		else {
-			xNew = new Date(xValues[x])
-			xNew.setDate(xNew.getDate()+16)
-			xValuesRedone.push(new Date(xNew))
-			}
-	}
-	;}
 
 	
 StartDate = (new Date(StartDate)).getTime();
@@ -196,8 +170,6 @@ if (datatypetouse_Development_by_Month == "Total Dwellings Consented") {
 			zeroline: false, 
 			type: 'date',
 			range: [StartDate, EndDate],
-			dtick: dtickValue,
-			tick0: tick0Value,
 			dtick: dtickValue,
 			tick0: tick0Value,
 			tickformat: tickformatValue,
@@ -425,15 +397,11 @@ else if (datatypetouse_Development_by_Month == "Constructed Dwellings") {
 		yaxis: {
 			zeroline: false, 
 			rangemode: 'tozero',
-			fixedrange: Zooming,
-			paper_bgcolor: 'rgba(0,0,0,0)',
-  			plot_bgcolor: 'rgba(0,0,0,0)'
+			fixedrange: Zooming
 			}
 		}
 	;}
 	
-
-
 
 Plotly.newPlot('AllDevelopmentbyMonth', data, layout);
 }
