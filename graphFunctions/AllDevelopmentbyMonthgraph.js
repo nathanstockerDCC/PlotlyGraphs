@@ -61,8 +61,6 @@ if (timeframe_Development_by_Month == "Months") {
 
 	dtickValue = "M3";
 	tick0Value = DateMinMax(filteredDates, "max");
-//	tick0Value = new Date(DateMinMax(filteredDates, "max"));
-//	tick0Value.setDate(tick0Value.getDate()-16);
 	tickmodeValue = "linear";
 	tickformatValue = "%b '%y";
 	
@@ -133,7 +131,6 @@ else {
 			xValuesRedone.push(new Date(xNew))
 			}
 	}
-//	xValues = xValuesRedone
 	;}
 
 	
@@ -206,7 +203,7 @@ if (datatypetouse_Development_by_Month == "Total Dwellings Consented") {
 //			tickmode: tickmodeValue,
 			dtick: dtickValue,
 			tick0: tick0Value,
-			tickvals: TickValsArray,
+//			tickvals: TickValsArray,
 			tickformat: tickformatValue,
 			fixedrange: Zooming
 			},		
@@ -311,7 +308,7 @@ else if (datatypetouse_Development_by_Month == "Consented Dwellings by Type") {
 //			tickmode: tickmodeValue,
 			dtick: dtickValue,
 			tick0: tick0Value,
-			tickvals: TickValsArray,
+//			tickvals: TickValsArray,
 			tickformat: tickformatValue,
 			fixedrange: Zooming
 			},
@@ -386,10 +383,9 @@ else if (datatypetouse_Development_by_Month == "Value of Consented Construction"
 			tickangle: 45,
 			type: 'date',
 			range: [StartDate, EndDate],
-//			tickmode: tickmodeValue,
 			dtick: dtickValue,
 			tick0: tick0Value,
-			tickvals: TickValsArray,
+//			tickvals: TickValsArray,
 			tickformat: tickformatValue,
 			fixedrange: Zooming
 			},
@@ -423,24 +419,15 @@ else if (datatypetouse_Development_by_Month == "Constructed Dwellings") {
 		marker: {color: Colour1}
         }];
 
-	console.log("dTick = "+dtickValue);
-	console.log("tick0 = "+tick0Value);
-	console.log("StartDate = "+StartDate);
-	
 	layout = {
 		title: 'Constructed Dwellings',
 		showlegend: false,
 		xaxis: {
 			zeroline: false, 
-//			tickangle: 45, 
 			type: 'date',
-//			range: ['2008-09-01', EndDate],
 			range: [StartDate, EndDate],
-//			tickmode: tickmodeValue,
 			dtick: dtickValue,
-//			tick0: '2009-06-01',
 			tick0: tick0Value,
-//			tickvals: TickValsArray,
 			tickformat: tickformatValue,
 			fixedrange: Zooming			
 			},
