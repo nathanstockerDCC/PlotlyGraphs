@@ -106,6 +106,7 @@ else {
 	dtickValue = TimeToMilliseconds(3, "Months");
 	tick0Value = StartDate-TimeToMilliseconds(-2, "Months");
 	tickformatValue = "%b '%y"
+	;}	
 
 	
 StartDate = (new Date(StartDate)).getTime();
