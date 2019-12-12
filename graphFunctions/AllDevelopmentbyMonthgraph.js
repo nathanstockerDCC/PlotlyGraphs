@@ -109,7 +109,6 @@ else if (timeframe_Development_by_Month == "Years") {
 	var EndDate = new Date(DateMinMax(filteredDates, "max"));
 	EndDate.setDate(EndDate.getDate()+300);
 
-	dtickValue = TimeToMilliseconds(2, "Years");
 //	tick0Value = new Date(DateMinMax(filteredDates, "min")-730.5);
 //	tick0Value = StartDate+TimeToMilliseconds(300, "Days");
 //	tick0Value = StartDate;
@@ -117,10 +116,13 @@ else if (timeframe_Development_by_Month == "Years") {
 		{
 		tick0Value = new Date('Jun 01 2009');	
 		StartDate = new Date('Jun 01 2009');
+		StartDate.setDate(StartDate.getDate()-300);		
+		dtickValue = TimeToMilliseconds(1, "Years");
 		}
 	else
 		{
 		tick0Value = new Date('Jun 01 1991');	
+		dtickValue = TimeToMilliseconds(2, "Years");
 		}
 		
 	tickformatValue = "%Y";
