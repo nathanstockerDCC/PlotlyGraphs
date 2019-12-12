@@ -46,55 +46,24 @@ var timeframe_Development_by_Month = $('#timeframe_DevelopmentbyMonthgraph optio
 
 var TickValsArray = [];
 
-/* if (datatypetouse_Development_by_Month == "Constructed Dwellings" && timeframe_Development_by_Month == "Years") {
-	VisType = 'line';
-	xValues = $.map(chartData, function(data){
-			return data["Citywide Years Longterm Years"];
-		});
-	
-	var filteredDates = xValues.filter(function(e) { return e !== "" })
 
-	var StartDate = new Date(DateMinMax(filteredDates, "min"));
-	StartDate.setDate(StartDate.getDate()-300);
-	var EndDate = new Date(DateMinMax(filteredDates, "max"));
-	EndDate.setDate(EndDate.getDate()+300);
-
-	dtickValue = TimeToMilliseconds(1, "Years");
-	tick0Value = new Date('Jun 01 2009')
-	tickmodeValue = "linear";
-	tickformatValue = "%Y"
-	
-	;}
-else  */
 if (timeframe_Development_by_Month == "Months") {
 	VisType = 'bar';
 	xValues = $.map(chartData, function(data){
 			return data["Citywide All Months"];
 		});
 
-	var filteredDates = xValues.filter(function(e) { return e !== "" })
+	var filteredDates = xValues.filter(function(e) { return e !== "" });
 	var StartDate = new Date(DateMinMax(filteredDates, "max"));
 	StartDate.setDate(StartDate.getDate()-700);
 	var EndDate = new Date(DateMinMax(filteredDates, "max"));
 	EndDate.setDate(EndDate.getDate()+40);
 
 	dtickValue = TimeToMilliseconds(3, "Months");
-	tick0Value = StartDate-TimeToMilliseconds(0.5, "Months");
+	tick0Value = new Date(DateMinMax(filteredDates, "max"));
+	tick0Value.setDate(tick0Value.getDate()-700);
 	tickmodeValue = "linear";
-	tickformatValue = "%b '%y"
-	
-	xValuesRedone = [];
-	for (x in xValues) {
-		if (xValues[x] == "") {
-			xValuesRedone.push("");
-			}
-		else {
-			xNew = new Date(xValues[x])
-			xNew.setDate(xNew.getDate()+16)
-			xValuesRedone.push(new Date(xNew))
-			}
-	}
-	xValues = xValuesRedone
+	tickformatValue = "%b '%y";
 	
 	;}
 else if (timeframe_Development_by_Month == "Years") {
@@ -109,9 +78,7 @@ else if (timeframe_Development_by_Month == "Years") {
 	var EndDate = new Date(DateMinMax(filteredDates, "max"));
 	EndDate.setDate(EndDate.getDate()+300);
 
-//	tick0Value = new Date(DateMinMax(filteredDates, "min")-730.5);
-//	tick0Value = StartDate+TimeToMilliseconds(300, "Days");
-//	tick0Value = StartDate;
+
 	if (datatypetouse_Development_by_Month == "Constructed Dwellings")
 		{
 		tick0Value = new Date('Jun 01 2009');	
@@ -135,8 +102,6 @@ else if (timeframe_Development_by_Month == "Years") {
 			TickValsArray.push(filteredDates[i]);
 			;}
 		}
-
-
 
 	;}	
 else {
