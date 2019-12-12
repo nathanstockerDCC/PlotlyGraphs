@@ -59,7 +59,7 @@ if (timeframe_Development_by_Month == "Months") {
 	var EndDate = new Date(DateMinMax(filteredDates, "max"));
 	EndDate.setDate(EndDate.getDate()+40);
 
-	dtickValue = TimeToMilliseconds(3, "Months");
+	dtickValue = "M3";
 	tick0Value = DateMinMax(filteredDates, "max");
 //	tick0Value = new Date(DateMinMax(filteredDates, "max"));
 //	tick0Value.setDate(tick0Value.getDate()-16);
