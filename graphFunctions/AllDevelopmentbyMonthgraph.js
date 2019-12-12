@@ -113,7 +113,15 @@ else if (timeframe_Development_by_Month == "Years") {
 //	tick0Value = new Date(DateMinMax(filteredDates, "min")-730.5);
 //	tick0Value = StartDate+TimeToMilliseconds(300, "Days");
 //	tick0Value = StartDate;
-	tick0Value = new Date(DateMinMax(filteredDates, "min"));
+	if (datatypetouse_Development_by_Month == "Constructed Dwellings")
+		{
+		tick0Value = new Date('Jun 01 2009');	
+		}
+	else
+		{
+		tick0Value = new Date('Jun 01 1991');	
+		}
+		
 	tickformatValue = "%Y";
 	tickmodeValue = "array";
 
