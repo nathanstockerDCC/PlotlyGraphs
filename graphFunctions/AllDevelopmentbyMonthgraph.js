@@ -81,7 +81,7 @@ else if (timeframe_Development_by_Month == "Years") {
 
 	if (datatypetouse_Development_by_Month == "Constructed Dwellings")
 		{
-		tick0Value = new Date('2009-06-01');	
+		tick0Value = '2009-06-01';	
 		StartDate = new Date('2009-06-01');
 		StartDate.setDate(StartDate.getDate()-300);		
 		dtickValue = TimeToMilliseconds(1, "Years");
