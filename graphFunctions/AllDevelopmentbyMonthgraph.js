@@ -53,11 +53,18 @@ if (datatypetouse_Development_by_Month == "Constructed Dwellings" && timeframe_D
 		});
 	
 	var filteredDates = xValues.filter(function(e) { return e !== "" })
-	var StartDate = new Date("01-07-2008");
+/* 	var StartDate = new Date("01-07-2008");
 	var EndDate = new Date(DateMinMax(filteredDates, "max"));
 	EndDate.setDate(EndDate.getDate()+250);
+ */	
+	var StartDate = new Date(DateMinMax(filteredDates, "max"));
+	StartDate.setDate(StartDate.getDate()-700);
+	var EndDate = new Date(DateMinMax(filteredDates, "max"));
+	EndDate.setDate(EndDate.getDate()+40);
+
 	dtickValue = TimeToMilliseconds(2, "Years");
-	tick0Value = StartDate-TimeToMilliseconds(0.5, "Years");
+	tick0Value = new Date(DateMinMax(filteredDates, "max"));
+//	tick0Value = StartDate-TimeToMilliseconds(0.5, "Years");
 	tickmodeValue = "linear";
 	tickformatValue = "%Y"
 	
