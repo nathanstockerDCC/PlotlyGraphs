@@ -124,12 +124,8 @@ var graphdata = [{
 		link : [
 			{
 				linktext : "Datasource",
-				text : "Statistics New Zealand, Dunedin City Council, and .ID (.csv)",
+				text : "Statistics New Zealand, Dunedin City Council, and Rationale Ltd (.csv)",
 				url : "/dccgraphs/data/DwellingsCCCd.csv"
-			},{
-				linktext : "Forecast.ID website",
-				text : "Forecast.ID",
-				url : "http://forecast.idnz.co.nz/wellington"
 			}
 		]
 		
