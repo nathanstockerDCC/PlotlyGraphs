@@ -18,7 +18,7 @@ var graphdata = [{
 		],
 		link : [
 			{
-				linktext : "Datasource",
+				linktext : "<b>Datasource</b>",
 				text : "Statistics New Zealand and Dunedin City Council (.csv)",
 				url : "/dccgraphs/data/BCsAndPopulationGraph.csv"
 			}
