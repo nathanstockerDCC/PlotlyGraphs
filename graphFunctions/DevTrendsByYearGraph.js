@@ -36,7 +36,7 @@ function DevTrendsByYearGraph(chartData){
 		x: $.map(chartData, function(data){
 			return data["Annual Citywide Longterm Years"];}),
 		y: $.map(chartData, function(data){
-			return data["Annual Citywide Longterm Total New Dwellings"];});,
+			return data["Annual Citywide Longterm Total New Dwellings"];}),
 		name: 'Total',
 		opacity: 0.7,
 		marker: {color: Colour3},
