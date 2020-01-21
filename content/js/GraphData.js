@@ -51,7 +51,7 @@ var graphdata = [{
 		],
 		link : [
 			{
-				linktext : "Datasource",
+				linktext : "<b>Data source</b>",
 				text : "Statistics New Zealand (.csv)",
 				url : "/dccgraphs/data/SuburbBCDataAnnualbySuburb.csv"
 			}
@@ -80,7 +80,7 @@ var graphdata = [{
 		],
 		link : [
 			{
-				linktext : "Datasource",
+				linktext : "<b>Data source</b>",
 				text : "Statistics New Zealand and Dunedin City Council (.csv)",
 				url : "/dccgraphs/data/CitywideBCdataMonthly.csv"
 			}
@@ -98,7 +98,7 @@ var graphdata = [{
 		funcFile : "/dccgraphs/graphFunctions/DevTrendsByYearGraph.js",
 		link : [
 			{
-				linktext : "Datasource",
+				linktext : "<b>Data source</b>",
 				text : "Statistics New Zealand (.csv)",
 				url : "/dccgraphs/data/CitywideBCdataAnnual.csv"
 			}
@@ -123,7 +123,7 @@ var graphdata = [{
 		],
 		link : [
 			{
-				linktext : "Datasource",
+				linktext : "<b>Data source</b>",
 				text : "Statistics New Zealand, Dunedin City Council, and Rationale Ltd (.csv)",
 				url : "/dccgraphs/data/DwellingsCCCd.csv"
 			}
@@ -149,7 +149,7 @@ var graphdata = [{
 		],
 		link : [
 			{	
-				linktext : "Datasource",
+				linktext : "<b>Data source</b>",
 				text : "Infometrics (.csv)",
 				url : "/dccgraphs/data/Infometrics.csv"
 			}
@@ -192,7 +192,7 @@ var graphdata = [{
 		],
 		link : [
 			{
-				linktext : "Datasource",
+				linktext : "<b>Data source</b>",
 				text : "Statistics New Zealand (.csv)",
 				url : "/dccgraphs/data/DwellingTypeSplitAnnual.csv"
 			}
@@ -217,7 +217,7 @@ var graphdata = [{
 		],		
 		link : [
 			{
-				linktext : "Datasource",
+				linktext : "<b>Data source</b>",
 				text : "Infometrics (.csv)",
 				url : "/dccgraphs/data/HouseDataQuarterly.csv"
 			}
@@ -242,7 +242,7 @@ var graphdata = [{
 		],		
 		link : [
 			{
-				linktext : "Datasource",
+				linktext : "<b>Data source</b>",
 				text : "Statistics New Zealand (.csv)",
 				url : "/dccgraphs/data/RegionalByYear.csv"
 			}
@@ -267,13 +267,9 @@ var graphdata = [{
 		],	
 		link : [
 			{
-				linktext : "Datasource",
+				linktext : "<b>Data source</b>",
 				text : "Ministry of Business, Innovation and Employment (.csv)",
 				url : "/dccgraphs/data/RentalData.csv"
-			},{
-				linktext : "MBIE rental data website",
-				text : "Ministry of Business, Innovation and Employment",
-				url : "http://www.mbie.govt.nz/info-services/housing-property/sector-information-and-statistics/rental-bond-data"				
 			}
 		]
 	}, {
@@ -304,7 +300,7 @@ var graphdata = [{
 		],
 		link : [
 			{
-				linktext : "Datasource",
+				linktext : "<b>Data source</b>",
 				text : "Statistics New Zealand (.csv)",
 				url : "/dccgraphs/data/SuburbBCDataAnnualbyYear.csv"
 			}
