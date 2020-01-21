@@ -1,34 +1,6 @@
 function DevTrendsByYearGraph(chartData){
 
-	if (chartData == null || chartData.length <= 0)
-		return;
 
-	var dels = [];
-
-	function BlanksToRemove(arrY) {
-	 
-	i = 0;
-	dels = [];
-
-	while (i < arrY.length) {
-		if (arrY[i] == ''){
-			dels.push(i);
-			i++
-		;}
-	 
-		else {
-			i++
-		;}
-	}
-	;}
-
-	function RemoveBlanks(arr, deletes) {
-	 
-	for (var i = deletes.length-1; i >= 0; i--){
-		arr.splice(deletes[i],1)
-		;}
-	;}
-		
 	var xValues = $.map(chartData, function(data){
 			return data["Annual Citywide Longterm Years"];});
 
@@ -46,14 +18,6 @@ function DevTrendsByYearGraph(chartData){
 
 	var yValuesTotal = $.map(chartData, function(data){
 			return data["Annual Citywide Longterm Total New Dwellings"];});
-
-	BlanksToRemove(yValuesHouses);
-	RemoveBlanks(xValues, dels);
-	RemoveBlanks(yValuesHouses, dels);
-	RemoveBlanks(yValuesUnits, dels);
-	RemoveBlanks(yValuesApartments, dels);
-	RemoveBlanks(yValuesRVUs, dels);
-	RemoveBlanks(yValuesTotal, dels);
 	
 	data = [{
 		x: xValues,
