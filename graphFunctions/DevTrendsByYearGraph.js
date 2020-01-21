@@ -64,5 +64,5 @@ function DevTrendsByYearGraph(chartData){
 		};
 
 
-	Plotly.plot('Dev_Trends_by_Year', data, layout);
+	Plotly.newPlot('Dev_Trends_by_Year', data, layout);
 	} 
