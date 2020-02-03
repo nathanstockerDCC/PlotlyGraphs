@@ -223,31 +223,6 @@ var graphdata = [{
 			}
 		]
 	}, {
-		name : "Regional Info Graph",
-		id : "RegionalByYearGraph",
-		container : "RegionalByYear",
-		width : "100%",
-		height : "500px",
-		paper_bgcolor: 'rgba(0,0,0,0)',
-		plot_bgcolor: 'rgba(0,0,0,0)',
-		csv : "/dccgraphs/data/RegionalByYear.csv",
-		func : 'RegionalByYearGraph',
-		funcFile : "/dccgraphs/graphFunctions/RegionalByYear.js",
-		drop : [
-			{
-				text : "Choose a data type",
-				id : "Regional_DataType",
-				valtext : ["Total Dwellings","Houses","Units","Apartments","Retirement village units"]
-			}
-		],		
-		link : [
-			{
-				linktext : "<b>Data source</b>",
-				text : "Statistics New Zealand (.csv)",
-				url : "/dccgraphs/data/RegionalByYear.csv"
-			}
-		]
-	}, {
 		name : "Rental Graph",
 		id : "RentalGraph",
 		container : "RentGraph",
