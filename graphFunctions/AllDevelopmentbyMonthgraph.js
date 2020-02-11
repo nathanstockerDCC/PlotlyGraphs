@@ -52,7 +52,7 @@ if (timeframe_Development_by_Month == "Months") {
 		});
 
 	var filteredDates = xValues.filter(function(e) { return e !== "" });
-	var StartDate = new Date(DateMinMax(filteredDates, "max"));
+	var StartDate = new Date(DateMinMax(filteredDates, "min"));
 	StartDate.setDate(StartDate.getDate()-745);
 	var EndDate = new Date(DateMinMax(filteredDates, "max"));
 	EndDate.setDate(EndDate.getDate()+20);
