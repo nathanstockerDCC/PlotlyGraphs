@@ -167,6 +167,7 @@ if (datatypetouse_Development_by_Month == "Total Dwellings Consented") {
 	RemoveBlanks(xValues, dels);
 	RemoveBlanks(yValues, dels);
 
+	console.log("xValues2: " + xValues);
 	console.log("yValues2: " + yValues);
 	
 	data = [{
