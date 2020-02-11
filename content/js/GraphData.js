@@ -280,6 +280,24 @@ var graphdata = [{
 				url : "/dccgraphs/data/SuburbBCDataAnnualbyYear.csv"
 			}
 		]
+	}, {
+		name : "Population Graph",
+		id : "PopGraph",
+		container : "PopulationGraph",
+		width : "100%",
+		height : "500px",
+		paper_bgcolor: 'rgba(0,0,0,0)',
+		plot_bgcolor: 'rgba(0,0,0,0)',
+		csv : "/dccgraphs/data/Population.csv",
+		func : "PopGraph",
+		funcFile : "/dccgraphs/graphFunctions/PopGraph.js",
+		link : [
+			{
+				linktext : "<b>Data source</b>",
+				text : "Russell Jones / Dunedin City Council (.csv)",
+				url : "/dccgraphs/data/Population.csv"
+			}
+		]
 	}
 ];
 
