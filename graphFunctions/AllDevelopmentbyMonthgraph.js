@@ -92,6 +92,11 @@ else if (timeframe_Development_by_Month == "Years") {
 		tick0Value = '1991-01-01';	
 		dtickValue = TimeToMilliseconds(2, "Years");
 		}
+
+	console.log("xValues: " + xValues);
+	console.log("filteredDates: " + filteredDates);
+	console.log("StartDate: " + StartDate);
+	console.log("EndDate: " + EndDate);
 		
 	tickformatValue = "%Y";
 
