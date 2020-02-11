@@ -55,7 +55,7 @@ if (timeframe_Development_by_Month == "Months") {
 	var StartDate = new Date(DateMinMax(filteredDates, "max"));
 	StartDate.setDate(StartDate.getDate()-745);
 	var EndDate = new Date(DateMinMax(filteredDates, "max"));
-	EndDate.setDate(EndDate.getDate()+20);
+	EndDate.setDate(EndDate.getDate()+40);
 
 	console.log("xValues: " + xValues);
 	console.log("filteredDates: " + filteredDates);
