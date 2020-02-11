@@ -170,7 +170,7 @@ if (datatypetouse_Development_by_Month == "Total Dwellings Consented") {
 		xaxis: {
 			zeroline: false, 
 			type: 'date',
-			range: [StartDate, EndDate],
+//			range: [StartDate, EndDate],
 			dtick: dtickValue,
 			tick0: tick0Value,
 			tickformat: tickformatValue,
