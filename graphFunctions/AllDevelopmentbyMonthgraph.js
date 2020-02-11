@@ -84,7 +84,7 @@ else if (timeframe_Development_by_Month == "Years") {
 		}
 	else
 		{
-		tick0Value = '1991-06-01';	
+		tick0Value = '1991-01-01';	
 		dtickValue = TimeToMilliseconds(2, "Years");
 		}
 		
