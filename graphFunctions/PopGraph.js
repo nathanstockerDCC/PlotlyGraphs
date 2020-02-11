@@ -1,7 +1,7 @@
 function PopulationGraph(chartData){
 
 
-data = [{{
+data = [{
 	x: $.map(chartData, function(data){
 		return data["Year"]
 		;}),
@@ -22,8 +22,7 @@ data = [{{
 	name: 'Projected Population',
 	line: {width: 6},
 	marker: {color: Colour2}
-	}]
-;}
+	}];
 
 
 layout = {
