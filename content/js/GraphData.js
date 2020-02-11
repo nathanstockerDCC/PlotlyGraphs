@@ -291,6 +291,13 @@ var graphdata = [{
 		csv : "/dccgraphs/data/Population.csv",
 		func : "PopGraph",
 		funcFile : "/dccgraphs/graphFunctions/PopGraph.js",
+		drop : [
+			{
+				text : "Choose a data type",
+				id : "datatypedd_PopGraph",
+				valtext : ["Total","Growth", "Growth rate"]
+			}
+		],
 		link : [
 			{
 				linktext : "<b>Data source</b>",
