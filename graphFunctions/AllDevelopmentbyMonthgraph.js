@@ -55,7 +55,7 @@ if (timeframe_Development_by_Month == "Months") {
 	var StartDate = new Date(DateMinMax(filteredDates, "max"));
 	StartDate.setDate(StartDate.getDate()-745);
 	var EndDate = new Date(DateMinMax(filteredDates, "max"));
-	EndDate.setDate(EndDate.getDate()+40);
+	EndDate.setDate(EndDate.getDate()+20);
 
 	console.log("xValues: " + xValues);
 	console.log("filteredDates: " + filteredDates);
@@ -161,10 +161,14 @@ if (datatypetouse_Development_by_Month == "Total Dwellings Consented") {
 			return data[TimeframeConverted+"Total New Dwellings"];
 		});
 
+	console.log("yValues1: " + yValues);
+
 	BlanksToRemove(yValues);
 	RemoveBlanks(xValues, dels);
 	RemoveBlanks(yValues, dels);
-			
+
+	console.log("yValues2: " + yValues);
+	
 	data = [{
 		x: xValues,
 		y: yValues,
