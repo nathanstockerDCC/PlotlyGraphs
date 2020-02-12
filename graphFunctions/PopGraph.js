@@ -106,18 +106,16 @@ layout = {
 		tick0: 0,
 		dtick: 5,
 		tickangle: 45,
-		fixedrange: Zooming,
-		tickformat: tickformatValue,
+		fixedrange: Zooming
 		},
 	yaxis: {
 		zeroline: false,
 		fixedrange: Zooming,
 		range: yRange
+		tickformat: tickformatValue
 		}, 
 	}
 
-
-		
 Plotly.newPlot('PopulationGraph', data, layout);
 	
 ;} 
