@@ -87,7 +87,7 @@ else {
 	}];
 	
 	yRange = [-0.5,1.5];
-	tickformatValue = "";
+	tickformatValue = "%";
 	
 	;}
 	
