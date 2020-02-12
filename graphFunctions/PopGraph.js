@@ -24,7 +24,8 @@ if (DataToUse == "Total"){
 			;}),
 		name: 'Projected population',
 		line: {width: 6},
-		marker: {color: Colour2}
+		marker: {color: Colour2},
+		hovertemplate: '%{y:0.2%}',
 	}];
 	
 	yRange = [0,150000];
@@ -86,7 +87,7 @@ else {
 		marker: {color: Colour2}
 	}];
 	
-	yRange = [-0.5,1.5];
+	yRange = [-0.005,0.015];
 	tickformatValue = "%";
 	
 	;}
