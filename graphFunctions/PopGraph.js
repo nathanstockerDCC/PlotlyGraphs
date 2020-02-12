@@ -27,7 +27,7 @@ if (DataToUse == "Total"){
 		marker: {color: Colour2}
 	}];
 	
-	yRange = [0,150];
+	yRange = [0,150000];
 	
 	;}
 	
@@ -85,6 +85,7 @@ else {
 	}];
 	
 	yRange = [-0.5,1.5];
+	tickformatValue = "i";
 	
 	;}
 	
@@ -97,8 +98,20 @@ layout = {
 		y: '-0.25',
 		x: '0.5',
 		xanchor: 'center'},
-	xaxis: {zeroline: false, tickmode: 'linear', tick0: 0, dtick: 5, tickangle: 45, fixedrange: Zooming},
-	yaxis: {zeroline: false, fixedrange: Zooming, range: yRange}, 
+	xaxis: {
+		zeroline: false,
+		tickmode: 'linear',
+		tick0: 0,
+		dtick: 5,
+		tickangle: 45,
+		fixedrange: Zooming,
+		tickformat: tickformatValue,
+		},
+	yaxis: {
+		zeroline: false,
+		fixedrange: Zooming,
+		range: yRange
+		}, 
 	}
 
 
