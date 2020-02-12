@@ -1,4 +1,4 @@
-function PopulationGraph(chartData){
+function PopGraph(chartData){
 
 var DataToUse = $('#datatypedd_PopGraph option:selected').text();
 
