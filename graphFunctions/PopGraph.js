@@ -28,6 +28,7 @@ if (DataToUse == "Total"){
 	}];
 	
 	yRange = [0,150000];
+	tickformatValue = "";
 	
 	;}
 	
@@ -57,6 +58,7 @@ else if (DataToUse == "Growth"){
 	}];
 
 	yRange = [-500,2000];
+	tickformatValue = "";
 	
 	;}
 	
@@ -85,7 +87,7 @@ else {
 	}];
 	
 	yRange = [-0.5,1.5];
-	tickformatValue = "i";
+	tickformatValue = "";
 	
 	;}
 	
