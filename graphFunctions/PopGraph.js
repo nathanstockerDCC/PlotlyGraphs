@@ -11,7 +11,7 @@ if (DataToUse == "Total"){
 		y: $.map(chartData, function(data){
 			return data["EstimatedPopulation_Total"]
 			;}),
-		name: 'Estimated Population',
+		name: 'Estimated population',
 		line: {width: 6},
 		marker: {color: Colour1}		
 		},{
@@ -22,10 +22,13 @@ if (DataToUse == "Total"){
 		y: $.map(chartData, function(data){
 			return data["ProjectedPopulation_Total"]
 			;}),
-		name: 'Projected Population',
+		name: 'Projected population',
 		line: {width: 6},
 		marker: {color: Colour2}
 	}];
+	
+	yRange = [0,150];
+	
 	;}
 	
 else if (DataToUse == "Growth"){
@@ -37,7 +40,7 @@ else if (DataToUse == "Growth"){
 		y: $.map(chartData, function(data){
 			return data["EstimatedPopulation_AbsoluteGrowth"]
 			;}),
-		name: 'Estimated Population Growth',
+		name: 'Estimated population growth',
 		line: {width: 6},
 		marker: {color: Colour1}		
 		},{
@@ -48,10 +51,13 @@ else if (DataToUse == "Growth"){
 		y: $.map(chartData, function(data){
 			return data["ProjectedPopulation_AbsoluteGrowth"]
 			;}),
-		name: 'Projected Population Growth',
+		name: 'Projected population growth',
 		line: {width: 6},
 		marker: {color: Colour2}
 	}];
+
+	yRange = [-500,2000];
+	
 	;}
 	
 else {	
@@ -62,7 +68,7 @@ else {
 		y: $.map(chartData, function(data){
 			return data["EstimatedPopulation_GrowthRate"]
 			;}),
-		name: 'Estimated Growth Rate',
+		name: 'Estimated growth rate',
 		line: {width: 6},
 		marker: {color: Colour1}		
 		},{
@@ -73,10 +79,13 @@ else {
 		y: $.map(chartData, function(data){
 			return data["ProjectedPopulation_GrowthRate"]
 			;}),
-		name: 'Projected Growth Rate',
+		name: 'Projected growth rate',
 		line: {width: 6},
 		marker: {color: Colour2}
 	}];
+	
+	yRange = [-0.5,1.5];
+	
 	;}
 	
 	
@@ -89,7 +98,7 @@ layout = {
 		x: '0.5',
 		xanchor: 'center'},
 	xaxis: {zeroline: false, tickmode: 'linear', tick0: 0, dtick: 5, tickangle: 45, fixedrange: Zooming},
-	yaxis: {zeroline: false, fixedrange: Zooming, rangemode: "tozero"}, 
+	yaxis: {zeroline: false, fixedrange: Zooming, range: yRange}, 
 	}
 
 
