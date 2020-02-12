@@ -25,7 +25,7 @@ if (DataToUse == "Total"){
 		name: 'Projected population',
 		line: {width: 6},
 		marker: {color: Colour2},
-		hovertemplate: '%{y:0.2%}',
+		hovertemplate: ''
 	}];
 	
 	yRange = [0,150000];
@@ -55,7 +55,8 @@ else if (DataToUse == "Growth"){
 			;}),
 		name: 'Projected population growth',
 		line: {width: 6},
-		marker: {color: Colour2}
+		marker: {color: Colour2},
+		hovertemplate: ''
 	}];
 
 	yRange = [-500,2000];
@@ -84,11 +85,12 @@ else {
 			;}),
 		name: 'Projected growth rate',
 		line: {width: 6},
-		marker: {color: Colour2}
+		marker: {color: Colour2},
+		hovertemplate: '%{y:0.2%}'
 	}];
 	
 	yRange = [-0.005,0.015];
-	tickformatValue = "%";
+	tickformatValue = "0.1%";
 	
 	;}
 	
