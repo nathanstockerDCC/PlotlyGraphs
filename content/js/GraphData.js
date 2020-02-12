@@ -295,7 +295,7 @@ var graphdata = [{
 			{
 				text : "Choose a data type",
 				id : "datatypedd_PopGraph",
-				valtext : ["Total","Growth", "Growth rate"]
+				valtext : ["Growth", "Growth rate","Total"]
 			}
 		],
 		link : [
