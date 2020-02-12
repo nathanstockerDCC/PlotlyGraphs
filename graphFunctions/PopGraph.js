@@ -25,11 +25,11 @@ if (DataToUse == "Total"){
 		name: 'Projected population',
 		line: {width: 6},
 		marker: {color: Colour2},
-		hovertemplate: ''
+		hovertemplate: ','
 	}];
 	
 	yRange = [0,150000];
-	tickformatValue = "";
+	tickformatValue = ",";
 	
 	;}
 	
@@ -56,11 +56,11 @@ else if (DataToUse == "Growth"){
 		name: 'Projected population growth',
 		line: {width: 6},
 		marker: {color: Colour2},
-		hovertemplate: ''
+		hovertemplate: ','
 	}];
 
 	yRange = [-500,2000];
-	tickformatValue = "";
+	tickformatValue = ",";
 	
 	;}
 	
