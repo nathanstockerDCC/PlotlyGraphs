@@ -28,7 +28,7 @@ if (DataToUse == "Total"){
 		hovertemplate: ','
 	}];
 	
-	yRange = [0,150000];
+	yRange = [109000,151000];
 	tickformatValue = ",";
 	
 	;}
