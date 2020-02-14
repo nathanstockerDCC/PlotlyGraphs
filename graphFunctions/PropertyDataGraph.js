@@ -142,6 +142,7 @@ function PropertyDataGraph(chartData){
 			showlegend: false,
 			xaxis: {
 				zeroline: false,
+				ticktext: x,
 				tickmode: 'linear',
 				tick0: 0,
 				dtick: 4,
