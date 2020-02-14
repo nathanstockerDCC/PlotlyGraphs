@@ -7,7 +7,7 @@ function PropertyDataGraph(chartData){
 	if (DataType == "House sales")
 		{yAxisFormat = '';}
 	else if (DataType == "Growth rate")
-		{yAxisFormat = '%';};
+		{yAxisFormat = '%';}
 	else 
 		{yAxisFormat = '$,s';};
 	
