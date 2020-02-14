@@ -129,9 +129,9 @@ else {
 		xaxis: {
 			fixedrange: Zooming, 
 			zeroline: false, 
-			tickmode: 'linear', 
-			tick0: 0,
-			dtick: 24,
+//			tickmode: 'linear', 
+//			tick0: 0,
+//			dtick: 24,
 			tickangle: 45},
 		yaxis: {
 			fixedrange: Zooming, 
