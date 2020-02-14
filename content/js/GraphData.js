@@ -212,7 +212,7 @@ var graphdata = [{
 			{
 				text : "Choose a data type",
 				id : "PropertySales_DataType",
-				valtext : ["Median House Price","Number of House Sales","Both"]
+				valtext : ["Median House Price","Number of House Sales","Both","Growth rate"]
 			}
 		],		
 		link : [
@@ -237,7 +237,7 @@ var graphdata = [{
 			{
 				text : "Choose a data type",
 				id : "TypeDD_RentalGraph",
-				valtext : ["Dunedin City", "Mean Rent Comparison"]
+				valtext : ["Dunedin City", "Mean Rent Comparison", "Growth rate"]
 			}
 		],	
 		link : [
