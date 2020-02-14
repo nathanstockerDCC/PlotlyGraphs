@@ -62,6 +62,47 @@ if (DataToUse == "Dunedin City"){
 		};
 
 	}
+
+else if (DataToUse == "Growth rate"){
+	data = {
+		x: $.map(chartData, function(data){
+			return data["YearToMonth"]
+			;}),
+		y: $.map(chartData, function(data){
+			return data["Annual increase in mean rental costs"]
+			;}),
+		line: {width: 4},
+		name: 'Lower Quartile',
+		marker: {color: Colour1}
+        };
+		
+	layout = {
+		title: 'Rental Costs',
+		showlegend: true,
+		legend: {
+			orientation: 'h',
+			y: '-0.25',
+			x: '0.5',
+			xanchor: 'center'},
+		xaxis: {
+			fixedrange: Zooming, 
+			zeroline: false, 
+			tickangle: 45,
+			tickmode: 'linear', 
+			tick0: 0,
+			dtick: 'M24',
+			tickformat: "%Y"},
+		yaxis: {
+			fixedrange: Zooming, 
+			zeroline: false,
+			tickformat: '0.1%', 
+			rangemode: "tozero"}
+		};
+
+	}
+
+
+
 	
 else {
 	
@@ -148,6 +189,3 @@ else {
 
 Plotly.newPlot('RentGraph', data, layout);
 }
-
-
-
