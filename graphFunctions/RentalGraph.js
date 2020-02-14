@@ -130,8 +130,8 @@ else {
 			fixedrange: Zooming, 
 			zeroline: false, 
 			tickmode: 'linear', 
-			tick0: 0,
-			dtick: 4,
+			tick0: 1,
+			dtick: 24,
 			tickangle: 45},
 		yaxis: {
 			fixedrange: Zooming, 
