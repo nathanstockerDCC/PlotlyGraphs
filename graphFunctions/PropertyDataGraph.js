@@ -84,8 +84,7 @@ function PropertyDataGraph(chartData){
 			type: 'line',
 			name: 'Quarterly growth rate',
 			line: {width: 6},
-			marker: {color: Colour1},
-			yaxis: 'y2'		
+			marker: {color: Colour1}
 		},{
 		x: $.map(chartData, function(data){
 				return data["Quarter"];
@@ -100,8 +99,8 @@ function PropertyDataGraph(chartData){
 			}];
 			
 		layout = {
-			title: DataType,
-			showlegend: false,
+			title: "House price growth",
+			showlegend: true,
 			xaxis: {
 				zeroline: false,
 				tickmode: 'linear',
