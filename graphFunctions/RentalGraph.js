@@ -129,6 +129,7 @@ else {
 		xaxis: {
 			fixedrange: Zooming, 
 			zeroline: false, 
+			type: 'date',
 			tickmode: 'linear', 
 			tick0: 1,
 			dtick: 24,
