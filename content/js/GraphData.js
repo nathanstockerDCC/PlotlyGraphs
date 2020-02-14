@@ -237,7 +237,7 @@ var graphdata = [{
 			{
 				text : "Choose a data type",
 				id : "TypeDD_RentalGraph",
-				valtext : ["Dunedin City", "Mean Rent Comparison", "Growth rate"]
+				valtext : ["Average rental cost", "Growth rate", "Comparison with other cities"]
 			}
 		],	
 		link : [
