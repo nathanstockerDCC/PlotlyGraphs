@@ -4,7 +4,7 @@ function RentalGraph(chartData){
 var DataToUse = $('#TypeDD_RentalGraph option:selected').text();
 
 
-if (DataToUse == "Dunedin City"){
+if (DataToUse == "Average rental cost"){
 	data = [{
 		x: $.map(chartData, function(data){
 			return data["YearToMonth"]
