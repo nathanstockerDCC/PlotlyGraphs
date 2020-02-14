@@ -108,7 +108,7 @@ function PropertyDataGraph(chartData){
 				xanchor: 'center'
 				},
 			xaxis: {
-				zeroline: false,
+				zeroline: true,
 				tickmode: 'linear',
 				tick0: 0,
 				dtick: 4,
