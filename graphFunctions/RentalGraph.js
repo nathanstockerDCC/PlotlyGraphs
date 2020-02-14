@@ -51,8 +51,8 @@ if (DataToUse == "Dunedin City"){
 			zeroline: false, 
 			tickmode: 'linear', 
 			tick0: 0,
-			dtick: 24,
-			tickangle: 45},
+			dtick: 'M24',
+			tickformat: "%Y"},
 		yaxis: {
 			fixedrange: Zooming, 
 			zeroline: false,
@@ -133,8 +133,7 @@ else {
 			tickmode: 'linear', 
 			tick0: 1,
 			dtick: 'M24',
-			tickformat: "%b '%y",
-			tickangle: 45},
+			tickformat: "%Y"},
 		yaxis: {
 			fixedrange: Zooming, 
 			zeroline: false,
