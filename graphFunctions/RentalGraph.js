@@ -95,7 +95,7 @@ else if (DataToUse == "Growth rate"){
 		yaxis: {
 			fixedrange: Zooming, 
 			zeroline: false,
-			tickformat: '0.1%', 
+			tickformat: '%', 
 			rangemode: "tozero"}
 		};
 
