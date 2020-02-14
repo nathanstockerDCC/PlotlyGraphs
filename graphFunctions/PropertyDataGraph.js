@@ -18,7 +18,7 @@ function PropertyDataGraph(chartData){
 				return data["Quarter"];
 				}),
 			y: $.map(chartData, function(data){
-				return data["Median house price"];
+				return data["Median house prices"];
 				}),
 			type: 'line',
 			name: 'Median house price',
@@ -73,6 +73,52 @@ function PropertyDataGraph(chartData){
 		
 		;}
 	
+	else if (DataType == "Growth rate"){
+		data = [{
+			x: $.map(chartData, function(data){
+				return data["Quarter"];
+				}),
+			y: $.map(chartData, function(data){
+				return data["Quarterly growth rate"];
+				}),
+			type: 'line',
+			name: 'Quarterly growth rate',
+			line: {width: 6},
+			marker: {color: Colour1},
+			yaxis: 'y2'		
+		},{
+		x: $.map(chartData, function(data){
+				return data["Quarter"];
+				}),
+			y: $.map(chartData, function(data){
+				return data["Annual growth rate"];
+				}),
+			type: 'line',
+			name: 'Annual growth rate',
+			line: {width: 6},
+			marker: {color: Colour3}
+			}];
+			
+		layout = {
+			title: DataType,
+			showlegend: false,
+			xaxis: {
+				zeroline: false,
+				tickmode: 'linear',
+				tick0: 0,
+				dtick: 4,
+				tickangle: 45,
+				fixedrange: Zooming
+				},
+			yaxis: {
+				zeroline: false,
+				fixedrange: Zooming,
+				rangemode: "tozero",
+				tickformat: yAxisFormat
+				}
+		};
+		;}
+
 	else {
 		data = [{
 			x: $.map(chartData, function(data){
