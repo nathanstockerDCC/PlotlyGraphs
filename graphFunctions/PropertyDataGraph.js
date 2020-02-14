@@ -71,7 +71,7 @@ function PropertyDataGraph(chartData){
 				}
 			};
 		
-		;}
+		}
 	
 	else if (DataType == "Growth rate"){
 		data = [{
@@ -117,7 +117,7 @@ function PropertyDataGraph(chartData){
 				tickformat: yAxisFormat
 				}
 		};
-		;}
+		}
 
 	else {
 		data = [{
