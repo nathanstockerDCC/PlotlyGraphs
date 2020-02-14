@@ -132,7 +132,8 @@ else {
 			type: 'date',
 			tickmode: 'linear', 
 			tick0: 1,
-			dtick: 24,
+			dtick: 'M24',
+			tickformatValue = "%b '%y"
 			tickangle: 45},
 		yaxis: {
 			fixedrange: Zooming, 
