@@ -18,7 +18,7 @@ function PropertyDataGraph(chartData){
 				return data["Quarter"];
 				}),
 			y: $.map(chartData, function(data){
-				return data["Median House Price"];
+				return data["Median house price"];
 				}),
 			type: 'line',
 			name: 'Median house price',
@@ -30,7 +30,7 @@ function PropertyDataGraph(chartData){
 				return data["Quarter"];
 				}),
 			y: $.map(chartData, function(data){
-				return data["Number of House Sales"];
+				return data["House sales"];
 				}),
 			type: 'bar',
 			name: 'House sales',
@@ -38,7 +38,7 @@ function PropertyDataGraph(chartData){
 			}];
 			
 		layout = {
-			title: "House Sales and Median Price",
+			title: "House sales and median prices",
 			showlegend: true,
 			legend: {
 				orientation: 'h',
