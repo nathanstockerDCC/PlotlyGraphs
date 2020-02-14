@@ -149,8 +149,8 @@ function PropertyDataGraph(chartData){
 				rangemode: "tozero",
 				tickformat: yAxisFormat
 				}
-		};
-		;}
+			};
+		}
 			
 
 
