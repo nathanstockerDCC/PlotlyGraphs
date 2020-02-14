@@ -4,13 +4,13 @@ function PropertyDataGraph(chartData){
 	
 	var yAxisFormat = '';
 	
-	if (DataType == "Number of House Sales")
+	if (DataType == "House sales")
 		{yAxisFormat = '';}
 	else 
 		{yAxisFormat = '$,s';};
 	
 	
- 	if (DataType == "Both"){
+ 	if (DataType == "House prices and sales"){
 		data = [{
 			x: $.map(chartData, function(data){
 				return data["Quarter"];
@@ -19,7 +19,7 @@ function PropertyDataGraph(chartData){
 				return data["Median House Price"];
 				}),
 			type: 'line',
-			name: 'Median House Price',
+			name: 'Median house price',
 			line: {width: 6},
 			marker: {color: Colour1},
 			yaxis: 'y2'		
@@ -31,7 +31,7 @@ function PropertyDataGraph(chartData){
 				return data["Number of House Sales"];
 				}),
 			type: 'bar',
-			name: 'House Sales',
+			name: 'House sales',
 			marker: {color: Colour3}
 			}];
 			
@@ -59,7 +59,7 @@ function PropertyDataGraph(chartData){
 				return data[DataType];
 				}),
 			type: 'line',
-			name: 'Property Sales',
+			name: 'Property sales',
 			line: {width: 6},
 			marker: {color: Colour1}
 			}];
