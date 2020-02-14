@@ -212,7 +212,7 @@ var graphdata = [{
 			{
 				text : "Choose a data type",
 				id : "PropertySales_DataType",
-				valtext : ["House prices","House sales","House prices and sales","Growth rate"]
+				valtext : ["Median house prices","House sales","House prices and sales","Growth rate"]
 			}
 		],		
 		link : [
