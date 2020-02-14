@@ -49,6 +49,7 @@ if (DataToUse == "Dunedin City"){
 		xaxis: {
 			fixedrange: Zooming, 
 			zeroline: false, 
+			tickangle: 45,
 			tickmode: 'linear', 
 			tick0: 0,
 			dtick: 'M24',
@@ -128,7 +129,8 @@ else {
 			xanchor: 'center'},
 		xaxis: {
 			fixedrange: Zooming, 
-			zeroline: false, 
+			zeroline: false,
+			tickangle: 45,
 			type: 'date',
 			tickmode: 'linear', 
 			tick0: 1,
