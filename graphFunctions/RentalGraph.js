@@ -64,7 +64,7 @@ if (DataToUse == "Dunedin City"){
 	}
 
 else if (DataToUse == "Growth rate"){
-	data = {
+	data = [{
 		x: $.map(chartData, function(data){
 			return data["YearToMonth"]
 			;}),
@@ -72,9 +72,9 @@ else if (DataToUse == "Growth rate"){
 			return data["Annual increase in mean rental costs"]
 			;}),
 		line: {width: 4},
-		name: 'Lower Quartile',
+		name: 'Annual increase in mean rental costs',
 		marker: {color: Colour1}
-        };
+        }];
 		
 	layout = {
 		title: 'Rental Costs',
@@ -101,9 +101,6 @@ else if (DataToUse == "Growth rate"){
 
 	}
 
-
-
-	
 else {
 	
 	data = [{
