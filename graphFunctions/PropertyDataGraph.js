@@ -65,7 +65,7 @@ function PropertyDataGraph(chartData){
 	layout = {
 		title: DataType,
 		showlegend: false,
-		xaxis: {zeroline: false, tickmode: 'linear', tick0: 0, dtick: 4, tickangle: 45, fixedrange: Zooming},
+		xaxis: {zeroline: false,tickangle: 45, fixedrange: Zooming},
 		yaxis: {zeroline: false, fixedrange: Zooming, rangemode: "tozero", tickformat: LeftAxisFormat}
 	};
 	;}
