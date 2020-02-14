@@ -133,7 +133,7 @@ else {
 			tickmode: 'linear', 
 			tick0: 1,
 			dtick: 'M24',
-			tickformatValue = "%b '%y",
+			tickformat = "%b '%y",
 			tickangle: 45},
 		yaxis: {
 			fixedrange: Zooming, 
