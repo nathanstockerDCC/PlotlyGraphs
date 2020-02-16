@@ -218,7 +218,7 @@ else {
 			tickmode: 'linear', 
 			tick0: 0, 
 			dtick: 1,  
-			tickangle: 30, 
+			tickangle: 20, 
 			automargin: true,
 			categoryorder: 'category ascending',
 			fixedrange: Zooming},
