@@ -13,7 +13,7 @@ var graphdata = [{
 			{
 				text : "Choose a data type",
 				id : "datatypedd_BCs_and_pop_growth_graph",
-				valtext : ["Consented Dwellings","Constructed Dwellings"]
+				valtext : ["Consented dwellings","Constructed dwellings"]
 			}
 		],
 		link : [
