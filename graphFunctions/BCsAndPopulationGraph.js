@@ -7,12 +7,12 @@ Years = $.map(chartData, function(data){
 data = [{
 		x: Years,
 		y: $.map(chartData, function(data){
-			return data["Consented dwellings"];
+			return data["Household growth"];
 		}),
 		line: {width: 6},
-		name: "Consented dwellings",
+		name: "Household growth",
 		visible: 'true',
-		marker: {color: Colour1}
+		marker: {color: Colour3}
 		
         },{
 			
@@ -30,13 +30,13 @@ data = [{
 			
 		x: Years,
 		y: $.map(chartData, function(data){
-			return data["Household growth"];
+			return data["Consented dwellings"];
 		}),
 		line: {width: 6},
 		connectgaps: true,
 		visible: 'true',
-		name: 'Household growth',
-		marker: {color: Colour3},
+		name: 'Consented dwellings',
+		marker: {color: Colour1},
 
 		},{
 			
@@ -60,6 +60,7 @@ layout = {
 			orientation: 'h',
 			y: '-0.25',
 			x: '0.5',
+			title: 'Click to show/hide'
 			xanchor: 'center'},
 		xaxis: {
 			fixedrange: Zooming, 
@@ -68,6 +69,7 @@ layout = {
 			tick0 : 1,
 			dtick: 2,
 			tickangle: 45,
+			autorange: true,
 //			range: xRange,
 			title: "Year ending 30 June"},
 			
