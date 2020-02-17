@@ -74,6 +74,7 @@ layout = {
 			
 		yaxis: {
 			fixedrange: Zooming, 
+			autorange: true,
 			zeroline: false}
 	};
 
