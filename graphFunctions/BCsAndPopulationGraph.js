@@ -60,7 +60,7 @@ layout = {
 			orientation: 'h',
 			y: '-0.25',
 			x: '0.5',
-			title: 'Click to show/hide'
+			title: 'Click to show/hide',
 			xanchor: 'center'},
 		xaxis: {
 			fixedrange: Zooming, 
@@ -70,7 +70,6 @@ layout = {
 			dtick: 2,
 			tickangle: 45,
 			autorange: true,
-//			range: xRange,
 			title: "Year ending 30 June"},
 			
 		yaxis: {
