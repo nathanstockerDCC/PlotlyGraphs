@@ -21,6 +21,7 @@ data = [{
 		}),
 		line: {width: 6},
 		name: DataType,
+		visible: 'legendonly',
 		marker: {color: Colour1}
 		
         },{
