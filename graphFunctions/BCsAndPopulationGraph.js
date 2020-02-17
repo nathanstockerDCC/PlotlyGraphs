@@ -1,45 +1,60 @@
-
 function BCsAndPopulationGraph(chartData){
-
-var DataType = $('#datatypedd_BCs_and_pop_growth_graph option:selected').text();
 
 Years = $.map(chartData, function(data){
 			return data["Year"];
 			});
 
-if (DataType == "Consented Dwellings"){
-	xRange = [1990.5, Years[Years.length]]
-		;}
-else {
-	xRange = [2008.5, Years[Years.length]]
-	;}
-
 data = [{
 		x: Years,
 		y: $.map(chartData, function(data){
-			return data[DataType];
+			return data["Consented dwellings"];
 		}),
 		line: {width: 6},
-		name: DataType,
-		visible: 'legendonly',
+		name: "Consented dwellings",
+		visible: 'true',
 		marker: {color: Colour1}
 		
         },{
 			
 		x: Years,
 		y: $.map(chartData, function(data){
-			return data["HouseholdGrowth"];
+			return data["Constructed dwellings"];
 		}),
 		line: {width: 6},
 		connectgaps: true,
-		name: 'Approx. Household Growth',
+		visible: 'legendonly',
+		name: 'Constructed dwellings',
 		marker: {color: Colour2},
+
+		},{
+			
+		x: Years,
+		y: $.map(chartData, function(data){
+			return data["Household growth"];
+		}),
+		line: {width: 6},
+		connectgaps: true,
+		visible: 'true',
+		name: 'Household growth',
+		marker: {color: Colour3},
+
+		},{
+			
+		x: Years,
+		y: $.map(chartData, function(data){
+			return data["Projected dwelling growth"];
+		}),
+		line: {width: 6},
+		connectgaps: true,
+		visible: 'legendonly',
+		name: 'Projected dwelling growth',
+		marker: {color: Colour4},
 
 		}];
 
 		
 layout = {
-		title: DataType+' and Household Growth',
+		title: 'Development and growth trends',
 		showlegend: true,
 		legend: {
 			orientation: 'h',
@@ -53,7 +68,7 @@ layout = {
 			tick0 : 1,
 			dtick: 2,
 			tickangle: 45,
-			range: xRange,
+//			range: xRange,
 			title: "Year ending 30 June"},
 			
 		yaxis: {
