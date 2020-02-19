@@ -48,12 +48,16 @@ ProjectedDwellingGrowthData = $.map(chartData, function(data){
 			return data["Projected dwelling growth"];
 			});			
 			
+console.log(ConsentedDwellingsData)			
+
 BlanksToRemove(Years);
 RemoveBlanks(HouseholdGrowthData, dels);
 RemoveBlanks(ConstructedDwellingsData, dels);
 RemoveBlanks(ConsentedDwellingsData, dels);
 RemoveBlanks(ProjectedDwellingGrowthData, dels);
 RemoveBlanks(Years, dels);
+
+console.log(ConsentedDwellingsData)			
 
 			
 data = [{
