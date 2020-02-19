@@ -9,13 +9,6 @@ var graphdata = [{
 		csv : "/dccgraphs/data/BCsAndPopulationGraph.csv",
 		func : "BCsAndPopulationGraph",
 		funcFile : "/dccgraphs/graphFunctions/BCsAndPopulationGraph.js",
-		drop : [
-			{
-				text : "Choose a data type",
-				id : "datatypedd_BCs_and_pop_growth_graph",
-				valtext : ["Consented dwellings","Constructed dwellings"]
-			}
-		],
 		link : [
 			{
 				linktext : "<b>Datasource</b>",
