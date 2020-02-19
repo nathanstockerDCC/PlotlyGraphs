@@ -1,34 +1,44 @@
 function BCsAndPopulationGraph(chartData){
 
-var dels = [];
-
 function BlanksToRemove(arrY) {
  
-i = 0;
-dels = [];
+	i = 0;
+	dels = [];
 
-while (i < arrY.length) {
-	if (arrY[i] == ''){
-    dels.push(i);
-    i++
-    ;}
- 
-	else {
-	i++
+	while (i < arrY.length) {
+		if (arrY[i] == ''){
+		dels.push(i);
+		i++
+		;}
+	 
+		else {
+		i++
+		;}
+
+	}
+
 	;}
-
-}
-
-;}
 
 function RemoveBlanks(arr, deletes) {
  
-for (var i = deletes.length-1; i >= 0; i--){
-	arr.splice(deletes[i],1)
+	for (var i = deletes.length-1; i >= 0; i--){
+		arr.splice(deletes[i],1)
+		;}
 	;}
-;}
 
-Years = $.map(chartData, function(data){
+Years_HouseholdGrowth = $.map(chartData, function(data){
+			return data["Year"];
+			});
+
+Years_ConstructedDwellings = $.map(chartData, function(data){
+			return data["Year"];
+			});
+
+Years_ConsentedDwellings = $.map(chartData, function(data){
+			return data["Year"];
+			});
+
+Years_ProjectedDwellingGrowth = $.map(chartData, function(data){
 			return data["Year"];
 			});
 			
@@ -48,24 +58,25 @@ ProjectedDwellingGrowthData = $.map(chartData, function(data){
 			return data["Projected dwelling growth"];
 			});			
 			
-console.log(ConsentedDwellingsData)			
-
 BlanksToRemove(HouseholdGrowthData);
 RemoveBlanks(HouseholdGrowthData, dels);
+RemoveBlanks(Years_HouseholdGrowth, dels);
+
 BlanksToRemove(ConstructedDwellingsData);
 RemoveBlanks(ConstructedDwellingsData, dels);
+RemoveBlanks(Years_ConstructedDwellings, dels);
+
 BlanksToRemove(ConsentedDwellingsData);
 RemoveBlanks(ConsentedDwellingsData, dels);
+RemoveBlanks(Years_ConsentedDwellings, dels);
+
 BlanksToRemove(ProjectedDwellingGrowthData);
 RemoveBlanks(ProjectedDwellingGrowthData, dels);
-BlanksToRemove(Years);
-RemoveBlanks(Years, dels);
-
-console.log(ConsentedDwellingsData)			
+RemoveBlanks(Years_ProjectedDwellingGrowth, dels);
 
 			
 data = [{
-		x: Years,
+		x: Years_HouseholdGrowth,
 		y: HouseholdGrowthData,
 		line: {width: 6},
 		name: "Household growth",
@@ -74,7 +85,7 @@ data = [{
 		
         },{
 			
-		x: Years,
+		x: Years_ConstructedDwellings,
 		y: ConstructedDwellingsData,
 		line: {width: 6},
 		connectgaps: true,
@@ -84,7 +95,7 @@ data = [{
 
 		},{
 			
-		x: Years,
+		x: Years_ConsentedDwellings,
 		y: ConsentedDwellingsData,
 		line: {width: 6},
 		connectgaps: true,
@@ -94,7 +105,7 @@ data = [{
 
 		},{
 			
-		x: Years,
+		x: Years_ProjectedDwellingGrowth,
 		y: ProjectedDwellingGrowthData,
 		line: {width: 6},
 		connectgaps: true,
