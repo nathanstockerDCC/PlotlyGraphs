@@ -1,14 +1,64 @@
 function BCsAndPopulationGraph(chartData){
 
+var dels = [];
+
+function BlanksToRemove(arrY) {
+ 
+i = 0;
+dels = [];
+
+while (i < arrY.length) {
+	if (arrY[i] == ''){
+    dels.push(i);
+    i++
+    ;}
+ 
+	else {
+	i++
+	;}
+
+}
+
+;}
+
+function RemoveBlanks(arr, deletes) {
+ 
+for (var i = deletes.length-1; i >= 0; i--){
+	arr.splice(deletes[i],1)
+	;}
+;}
+
 Years = $.map(chartData, function(data){
 			return data["Year"];
 			});
+			
+HouseholdGrowthData = $.map(chartData, function(data){
+			return data["Household growth"];
+			});
+		
+ConstructedDwellingsData = $.map(chartData, function(data){
+			return data["Constructed dwellings"];
+			});	
+		
+ConsentedDwellingsData = $.map(chartData, function(data){
+			return data["Consented dwellings"];
+			});
 
+ProjectedDwellingGrowthData = $.map(chartData, function(data){
+			return data["Projected dwelling growth"];
+			});			
+			
+BlanksToRemove(Years);
+RemoveBlanks(HouseholdGrowthData, dels);
+RemoveBlanks(ConstructedDwellingsData, dels);
+RemoveBlanks(ConsentedDwellingsData, dels);
+RemoveBlanks(ProjectedDwellingGrowthData, dels);
+RemoveBlanks(Years, dels);
+
+			
 data = [{
 		x: Years,
-		y: $.map(chartData, function(data){
-			return data["Household growth"];
-		}),
+		y: HouseholdGrowthData,
 		line: {width: 6},
 		name: "Household growth",
 		visible: 'true',
@@ -17,9 +67,7 @@ data = [{
         },{
 			
 		x: Years,
-		y: $.map(chartData, function(data){
-			return data["Constructed dwellings"];
-		}),
+		y: ConstructedDwellingsData,
 		line: {width: 6},
 		connectgaps: true,
 		visible: 'legendonly',
@@ -29,9 +77,7 @@ data = [{
 		},{
 			
 		x: Years,
-		y: $.map(chartData, function(data){
-			return data["Consented dwellings"];
-		}),
+		y: ConsentedDwellingsData,
 		line: {width: 6},
 		connectgaps: true,
 		visible: 'true',
@@ -41,9 +87,7 @@ data = [{
 		},{
 			
 		x: Years,
-		y: $.map(chartData, function(data){
-			return data["Projected dwelling growth"];
-		}),
+		y: ProjectedDwellingGrowthData,
 		line: {width: 6},
 		connectgaps: true,
 		visible: 'legendonly',
