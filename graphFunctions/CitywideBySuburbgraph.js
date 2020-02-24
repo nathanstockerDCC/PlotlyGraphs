@@ -13,7 +13,7 @@ function t(){
 window.onload = t;
 window.onresize = t;
 
-console.log(t)
+console.log(t())
 
 var StartYear_Citywide_by_SuburbText = $('#dropdownStartYear_Citywide_by_Suburb option:selected').text();
 var EndYear_Citywide_by_SuburbText = $('#dropdownEndYear_Citywide_by_Suburb option:selected').text();
