@@ -18,9 +18,11 @@ var WindowWidth = t();
 console.log(WindowWidth);
 	
 if (WindowWidth < 900)
-	{dTickValue = 2;}
+	{dTickValue = 2,
+	tick0Value = 2;}
 else 
-	{dTickValue = 1;}
+	{dTickValue = 1,
+	tick0Value = 1;}
 
 var StartYear_Citywide_by_SuburbText = $('#dropdownStartYear_Citywide_by_Suburb option:selected').text();
 var EndYear_Citywide_by_SuburbText = $('#dropdownEndYear_Citywide_by_Suburb option:selected').text();
@@ -159,7 +161,7 @@ if (datatypetouse_Citywide_by_Suburb == "Total Dwellings Consented") {
 		xaxis: {
 			zeroline: false, 
 			tickmode: 'linear', 
-			tick0: 0, 
+			tick0: tick0Value, 
 			dtick: dTickValue, 
 			tickangle: 25, 
 			categoryorder: 'category ascending',
@@ -184,7 +186,7 @@ else if (datatypetouse_Citywide_by_Suburb == "Value of Consented Construction") 
 		xaxis: {
 			zeroline: false, 
 			tickmode: 'linear', 
-			tick0: 0, 
+			tick0: tick0Value, 
 			dtick: dTickValue, 
 			tickangle: 25, 
 			categoryorder: 'category ascending',
@@ -238,7 +240,7 @@ else {
 		xaxis: {
 			zeroline: false, 
 			tickmode: 'linear', 
-			tick0: 0, 
+			tick0: tick0Value, 
 			dtick: dTickValue,  
 			tickangle: 25, 
 			automargin: true,
