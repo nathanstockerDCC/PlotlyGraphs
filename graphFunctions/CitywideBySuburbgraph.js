@@ -13,7 +13,14 @@ function t(){
 window.onload = t;
 window.onresize = t;
 
-console.log(t())
+var WindowWidth = t();
+	
+console.log(WindowWidth);
+	
+if (WindowWidth < 900)
+	{dTickValue = 2;}
+else 
+	{dTickValue = 1;}
 
 var StartYear_Citywide_by_SuburbText = $('#dropdownStartYear_Citywide_by_Suburb option:selected').text();
 var EndYear_Citywide_by_SuburbText = $('#dropdownEndYear_Citywide_by_Suburb option:selected').text();
@@ -153,7 +160,7 @@ if (datatypetouse_Citywide_by_Suburb == "Total Dwellings Consented") {
 			zeroline: false, 
 			tickmode: 'linear', 
 			tick0: 0, 
-			dtick: 1, 
+			dtick: dTickValue, 
 			tickangle: 25, 
 			categoryorder: 'category ascending',
 			automargin: true,
@@ -178,7 +185,7 @@ else if (datatypetouse_Citywide_by_Suburb == "Value of Consented Construction") 
 			zeroline: false, 
 			tickmode: 'linear', 
 			tick0: 0, 
-			dtick: 1, 
+			dtick: dTickValue, 
 			tickangle: 25, 
 			categoryorder: 'category ascending',
 			automargin: true,
@@ -232,7 +239,7 @@ else {
 			zeroline: false, 
 			tickmode: 'linear', 
 			tick0: 0, 
-			dtick: 1,  
+			dtick: dTickValue,  
 			tickangle: 25, 
 			automargin: true,
 			categoryorder: 'category ascending',
