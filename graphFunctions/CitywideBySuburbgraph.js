@@ -1,5 +1,20 @@
 function CitywideBySuburbgraph(chartData){
 
+var w = window,
+    d = document,
+    e = d.documentElement,
+    g = d.getElementsByTagName('body')[0],
+    x = w.innerWidth || e.clientWidth || g.clientWidth,
+
+function t(){
+    return x;
+}
+
+window.onload = t;
+window.onresize = t;
+
+console.log(t)
+
 var StartYear_Citywide_by_SuburbText = $('#dropdownStartYear_Citywide_by_Suburb option:selected').text();
 var EndYear_Citywide_by_SuburbText = $('#dropdownEndYear_Citywide_by_Suburb option:selected').text();
 var StartYear_Citywide_by_SuburbValue = $('#dropdownStartYear_Citywide_by_Suburb option:selected').val();
