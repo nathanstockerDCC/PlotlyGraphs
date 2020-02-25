@@ -1,0 +1,58 @@
+---
+layout: default
+title: Residential graphs
+---
+
+<div class="blurb">
+	<h1>Dunedin graphs</h1>		
+	</br>
+	<p></p>
+</div>
+
+<p>
+The graphs below show data on a range of development indicators. <br>
+They can be explored by adjusting the axes (to show more/less data), hovering over contents (to show exact values), clicking on the labels in the legends (to turn data on/off), and by using the available drop-down options.<br>
+The underlying data can be downloaded using the links under 'data source'.<br>
+For more information, please contact planning@dcc.govt.nz. 
+</p>
+
+<iframe src="https://nathanstockerDCC.github.io/dccgraphs/SingleGraph.html?graph=DevMonthYearRollingInfo" height="610" width="100%"></iframe>
+
+<iframe src="https://nathanstockerDCC.github.io/dccgraphs/SingleGraph.html?graph=CitywideInfo" height="675" width="100%"></iframe>
+
+<iframe src="https://nathanstockerDCC.github.io/dccgraphs/SingleGraph.html?graph=DwellingTypePie" height="730" width="100%"></iframe>
+<p> Note: For this graph, 'units' includes retirement village units </p>
+
+<iframe src="https://nathanstockerDCC.github.io/dccgraphs/SingleGraph.html?graph=BCsAndPopulationGraph" height="490" width="100%"></iframe>
+<p>
+This graph shows the number of dwellings for which building consents have been granted, as well as estimated population increase. <br>
+This is meant to provide a rough indication of over-supply and under-supply of housing over time. <br>
+Due to the population data available, this graph uses years from July-June rather than calendar years. <br>
+As a result, values may seem different to those on other graphs on this website.<br>
+Consented housing capacity is estimated by multiplying the number of consented dwellings by the average Dunedin City household size.<br>
+In addition to population growth, extra demand for dwellings will also arise from changes of household formation (e.g. the trend for smaller households).<br>
+</p>
+
+<iframe src="https://nathanstockerDCC.github.io/dccgraphs/SingleGraph.html?graph=InfometricsGraph" height="560" width="100%"></iframe>
+<p>
+This graph presents indices of housing affordability to show how this has changed over time. Lower values indicate more affordable housing.
+The housing affordability index is the ratio of the average house value to average annual earnings.<br>
+The rental affordability index is the ratio of the average weekly rent to average weekly earnings.<br>
+</p>
+
+<iframe src="https://nathanstockerDCC.github.io/dccgraphs/SingleGraph.html?graph=PropertyDataGraph" height="550" width="100%"></iframe>
+
+<iframe src="https://nathanstockerDCC.github.io/dccgraphs/SingleGraph.html?graph=RentalGraph" height="550" width="100%"></iframe>
+<p>
+This graph presents estimates of rental costs over time, using a 12 month rolling average. 
+Each point on the graph reflects the average rent of the 12 months to that date. 
+The rental costs are estimated using data comes from MBIE's tenancy bond database, which records all new rental bonds that are lodged with MBIE.
+</p>
+
+<iframe src="https://nathanstockerDCC.github.io/dccgraphs/SingleGraph.html?graph=PopGraph" height="550" width="100%"></iframe>
+
+<p>
+Data sourcesThis work includes customised Statistics New Zealand's data which are licensed by Statistics New Zealand for re-use under the Creative Commons Attribution 3.0 New Zealand licence.<br>
+This work includes data from the Ministry of Business, Innovation and Employment, which are licensed for re-use under the Creative Commons Attribution 3.0 New Zealand licence.<br>
+This work includes data from Infometrics, prepared for Dunedin City Council.
+</p>
