@@ -115,7 +115,18 @@ else {
 		name: 'Dunedin City',
 		visible: 'true',
 		marker: {width: 100, color: Colour1}
-        },{
+ 		},{
+		x: $.map(chartData, function(data){
+			return data["YearToMonth"]
+			;}),
+		y: $.map(chartData, function(data){
+			return data["Palmerston North"]
+			;}),
+		type: 'line',
+		name: 'Palmerston North',
+		visible: 'true',
+		marker: {color: Colour5}		
+		},{
 		x: $.map(chartData, function(data){
 			return data["YearToMonth"]
 			;}),
@@ -126,18 +137,18 @@ else {
 		name: 'Tauranga',
 		visible: 'true',
 		marker: {color: Colour2}	
-        },{
+		},{
 		x: $.map(chartData, function(data){
 			return data["YearToMonth"]
 			;}),
 		y: $.map(chartData, function(data){
-			return data["Christchurch"]
+			return data["Hamilton"]
 			;}),
 		type: 'line',
-		name: 'Christchurch',
-		visible: 'legendonly',
-		marker: {color: Colour4}			
-        },{
+		name: 'Hamilton',
+		visible: 'true',
+		marker: {color: Colour4}	
+		},{
 		x: $.map(chartData, function(data){
 			return data["YearToMonth"]
 			;}),
@@ -158,30 +169,21 @@ else {
 		type: 'line',
 		name: 'Wellington',
 		visible: 'legendonly',
-		marker: {color: Colour5}			
-	},{
-		x: $.map(chartData, function(data){
-			return data["YearToMonth"]
-			;}),
-		y: $.map(chartData, function(data){
-			return data["Hamilton"]
-			;}),
-		type: 'line',
-		name: 'Hamilton',
-		visible: 'true',
-		marker: {color: 'rgb(0, 0, 255)'}			
-	},{
-		x: $.map(chartData, function(data){
-			return data["YearToMonth"]
-			;}),
-		y: $.map(chartData, function(data){
-			return data["Palmerston North"]
-			;}),
-		type: 'line',
-		name: 'Palmerston North',
-		visible: 'true',
 		marker: {color: 'rgb(12, 210, 8)'}			
-	},{
+		
+        },{
+		x: $.map(chartData, function(data){
+			return data["YearToMonth"]
+			;}),
+		y: $.map(chartData, function(data){
+			return data["Christchurch"]
+			;}),
+		type: 'line',
+		name: 'Christchurch',
+		visible: 'legendonly',
+		marker: {color: 'rgb(0, 0, 255)'}	
+	
+		},{
 		x: $.map(chartData, function(data){
 			return data["YearToMonth"]
 			;}),
@@ -192,7 +194,7 @@ else {
 		name: 'Auckland',
 		visible: 'legendonly',
 		marker: {color: 'rgb(255, 51, 193)'}			
-	}
+		}
 		];
 		
 	layout = {
