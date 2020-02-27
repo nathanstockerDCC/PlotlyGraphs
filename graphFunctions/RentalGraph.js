@@ -213,6 +213,7 @@ else {
 			tickmode: 'linear', 
 			tick0: 1,
 			dtick: 'M24',
+			hoverformat: '%B %Y',
 			tickformat: "%Y"},
 		yaxis: {
 			fixedrange: Zooming, 
