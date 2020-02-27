@@ -142,7 +142,7 @@ else {
 			return data["National"]
 			;}),
 		type: 'line',
-		name: 'National',
+		name: 'New Zealand',
 		marker: {color: Colour4}			
         },{
 		x: $.map(chartData, function(data){
@@ -152,9 +152,39 @@ else {
 			return data["Wellington"]
 			;}),
 		type: 'line',
-		name: 'Wellington Region',
+		name: 'Wellington',
 		marker: {color: Colour5}			
-		}
+	},{
+		x: $.map(chartData, function(data){
+			return data["YearToMonth"]
+			;}),
+		y: $.map(chartData, function(data){
+			return data["Hamilton"]
+			;}),
+		type: 'line',
+		name: 'Hamilton',
+		marker: {color: 'rgb(0, 0, 255)'}			
+	},{
+		x: $.map(chartData, function(data){
+			return data["YearToMonth"]
+			;}),
+		y: $.map(chartData, function(data){
+			return data["Palmerston North"]
+			;}),
+		type: 'line',
+		name: 'Palmerston North',
+		marker: {color: 'rgb(12, 210, 8)'}			
+	},{
+		x: $.map(chartData, function(data){
+			return data["YearToMonth"]
+			;}),
+		y: $.map(chartData, function(data){
+			return data["Tauranga"]
+			;}),
+		type: 'line',
+		name: 'Tauranga',
+		marker: {color: 'rgb(255, 128, 0)'}			
+	}
 		];
 		
 	layout = {
