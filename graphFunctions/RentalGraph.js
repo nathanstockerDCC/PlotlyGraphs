@@ -113,16 +113,18 @@ else {
 		type: 'line',
 		line: {width: 5},
 		name: 'Dunedin City',
+		visible: 'true',
 		marker: {width: 100, color: Colour1}
         },{
 		x: $.map(chartData, function(data){
 			return data["YearToMonth"]
 			;}),
 		y: $.map(chartData, function(data){
-			return data["Auckland"]
+			return data["Tauranga"]
 			;}),
 		type: 'line',
-		name: 'Auckland',
+		name: 'Tauranga',
+		visible: 'true',
 		marker: {color: Colour2}	
         },{
 		x: $.map(chartData, function(data){
@@ -133,7 +135,8 @@ else {
 			;}),
 		type: 'line',
 		name: 'Christchurch',
-		marker: {color: Colour3}			
+		visible: 'legendonly',
+		marker: {color: Colour4}			
         },{
 		x: $.map(chartData, function(data){
 			return data["YearToMonth"]
@@ -143,7 +146,8 @@ else {
 			;}),
 		type: 'line',
 		name: 'New Zealand',
-		marker: {color: Colour4}			
+		visible: 'true',
+		marker: {color: Colour3}			
         },{
 		x: $.map(chartData, function(data){
 			return data["YearToMonth"]
@@ -153,6 +157,7 @@ else {
 			;}),
 		type: 'line',
 		name: 'Wellington',
+		visible: 'legendonly',
 		marker: {color: Colour5}			
 	},{
 		x: $.map(chartData, function(data){
@@ -163,6 +168,7 @@ else {
 			;}),
 		type: 'line',
 		name: 'Hamilton',
+		visible: 'true',
 		marker: {color: 'rgb(0, 0, 255)'}			
 	},{
 		x: $.map(chartData, function(data){
@@ -173,17 +179,19 @@ else {
 			;}),
 		type: 'line',
 		name: 'Palmerston North',
+		visible: 'true',
 		marker: {color: 'rgb(12, 210, 8)'}			
 	},{
 		x: $.map(chartData, function(data){
 			return data["YearToMonth"]
 			;}),
 		y: $.map(chartData, function(data){
-			return data["Tauranga"]
+			return data["Auckland"]
 			;}),
 		type: 'line',
-		name: 'Tauranga',
-		marker: {color: 'rgb(255, 128, 0)'}			
+		name: 'Auckland',
+		visible: 'legendonly',
+		marker: {color: 'rgb(255, 51, 193)'}			
 	}
 		];
 		
