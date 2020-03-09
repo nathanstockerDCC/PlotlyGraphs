@@ -156,7 +156,7 @@ if (datatypetouse_Citywide_by_Suburb == "Total Dwellings Consented") {
         }];
 
 	layout = {
-		title: 'Total Dwellings Consented by Suburb'+" ("+StartYear_Citywide_by_SuburbText+"-"+EndYear_Citywide_by_SuburbText+")",
+		title: 'Total dwellings consented by suburb'+" ("+StartYear_Citywide_by_SuburbText+"-"+EndYear_Citywide_by_SuburbText+")",
 		showlegend: false,
 		xaxis: {
 			zeroline: false, 
@@ -181,7 +181,7 @@ else if (datatypetouse_Citywide_by_Suburb == "Value of Consented Construction") 
         }];
 
 	layout = {
-		title: 'Value of Consented Construction by Suburb'+" ("+StartYear_Citywide_by_SuburbText+"-"+EndYear_Citywide_by_SuburbText+")",
+		title: 'Value of consented construction by suburb'+" ("+StartYear_Citywide_by_SuburbText+"-"+EndYear_Citywide_by_SuburbText+")",
 		showlegend: false,
 		xaxis: {
 			zeroline: false, 
@@ -234,7 +234,7 @@ else {
         }]
 
 	layout = {
-		title: 'Dwellings Consented by Type and Suburb'+" ("+StartYear_Citywide_by_SuburbText+"-"+EndYear_Citywide_by_SuburbText+")",
+		title: 'Dwellings consented by type and suburb'+" ("+StartYear_Citywide_by_SuburbText+"-"+EndYear_Citywide_by_SuburbText+")",
 		showlegend: true,
 //		legend: {orientation: 'h', y: '-0.25'},
 		xaxis: {
