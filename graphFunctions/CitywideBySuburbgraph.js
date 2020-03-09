@@ -234,7 +234,7 @@ else {
         }]
 
 	layout = {
-		title: 'Dwellings Consented by Type and Suburb',
+		title: 'Dwellings Consented by Type and Suburb'+" ("+StartYear_Citywide_by_SuburbText+"-"+EndYear_Citywide_by_SuburbText+")",
 		showlegend: true,
 //		legend: {orientation: 'h', y: '-0.25'},
 		xaxis: {
