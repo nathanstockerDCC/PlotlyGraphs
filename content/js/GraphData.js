@@ -39,7 +39,7 @@ var graphdata = [{
 			},{
 				text : "Choose a data type",
 				id : "datatypedd_CitywideBySuburbgraph",
-				valtext : ["Total Dwellings Consented","Consented Dwellings by Type", "Value of Consented Construction"]
+				valtext : ["Total dwellings consented","Consented dwellings by type", "Value of consented construction"]
 			}
 		],
 		link : [
@@ -64,7 +64,7 @@ var graphdata = [{
 			{
 				text : "Choose a data type",
 				id : "datatypedd_DevelopmentbyMonthgraph",
-				valtext : ["Total Dwellings Consented","Consented Dwellings by Type", "Value of Consented Construction", "Constructed Dwellings"]
+				valtext : ["Total dwellings consented","Consented dwellings by type", "Value of consented construction", "Constructed dwellings"]
 			},{
 				text : "Choose a timeframe",
 				id : "timeframe_DevelopmentbyMonthgraph",
@@ -111,7 +111,7 @@ var graphdata = [{
 			{
 				text : "Choose an extra dataset",
 				id : "DwellingsCCCd_ExtraDataType",
-				valtext : ["-","Consented Dwellings","Projected Dwellings"]
+				valtext : ["-","Consented dwellings","Projected dwellings"]
 			}
 		],
 		link : [
@@ -137,7 +137,7 @@ var graphdata = [{
 			{
 				text : "Choose a data type",
 				id : "InfometricsGraph_Datatype",
-				valtext : ["Housing Affordability Index","Rental Affordability Index"]
+				valtext : ["Housing affordability index","Rental affordability index"]
 			}
 		],
 		link : [
