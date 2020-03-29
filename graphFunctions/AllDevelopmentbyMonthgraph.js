@@ -80,7 +80,7 @@ else if (timeframe_Development_by_Month == "Years") {
 	EndDate.setDate(EndDate.getDate()+300);
 
 
-	if (datatypetouse_Development_by_Month == "Constructed Dwellings")
+	if (datatypetouse_Development_by_Month == "Constructed dwellings")
 		{
 		tick0Value = '2010-01-01';	
 		StartDate = new Date('2010-01-01');
@@ -155,7 +155,7 @@ for (var i = deletes.length-1; i >= 0; i--){
 ;}
 
 	
-if (datatypetouse_Development_by_Month == "Total Dwellings Consented") {
+if (datatypetouse_Development_by_Month == "Total dwellings consented") {
 
 	var yValues = $.map(chartData, function(data){
 			return data[TimeframeConverted+"Total New Dwellings"];
@@ -180,7 +180,7 @@ if (datatypetouse_Development_by_Month == "Total Dwellings Consented") {
         }];
 
 	layout = {
-		title: 'Total Dwellings Consented',
+		title: 'Total dwellings consented',
 		showlegend: false,
 		xaxis: {
 			zeroline: false, 
@@ -199,7 +199,7 @@ if (datatypetouse_Development_by_Month == "Total Dwellings Consented") {
 		}
 	;}
 	
-else if (datatypetouse_Development_by_Month == "Consented Dwellings by Type") {
+else if (datatypetouse_Development_by_Month == "Consented dwellings by type") {
 
 	var yValuesHouses = $.map(chartData, function(data){
 		return data[TimeframeConverted+"New Houses"];
@@ -260,7 +260,7 @@ else if (datatypetouse_Development_by_Month == "Consented Dwellings by Type") {
         },{
 		x: xValues,
 		y: yValuesRVUs,
-		name: "Retirement Village Units",
+		name: "Retirement village units",
 		type: 'line',
 		connectgaps: true,
 		line: {width: 5,},
@@ -277,7 +277,7 @@ else if (datatypetouse_Development_by_Month == "Consented Dwellings by Type") {
         }];
 
 	layout = {
-		title: 'Consented Dwellings by Type',
+		title: 'Consented dwellings by type',
 		showlegend: true,
 		legend: {
 			orientation: 'h',
@@ -303,7 +303,7 @@ else if (datatypetouse_Development_by_Month == "Consented Dwellings by Type") {
 	;}
 
 	
-else if (datatypetouse_Development_by_Month == "Value of Consented Construction") {
+else if (datatypetouse_Development_by_Month == "Value of consented construction") {
 
 	var yValuesResid = $.map(chartData, function(data){
 		return data[TimeframeConverted+"Residential Buildings"];
@@ -326,7 +326,7 @@ else if (datatypetouse_Development_by_Month == "Value of Consented Construction"
 	data = [{
 		x: xValues,
 		y: yValuesResid,
-		name: "Residential Buildings",
+		name: "Residential buildings",
 		type: VisType,
 		line: {width: 6,},
 		connectgaps: true,
@@ -335,7 +335,7 @@ else if (datatypetouse_Development_by_Month == "Value of Consented Construction"
         },{
 		x: xValues,
 		y: yValuesNonResid,
-		name: "NonResidential Construction",
+		name: "Non-residential construction",
 		type: VisType,
 		line: {width: 6,},
 		connectgaps: true,
@@ -344,7 +344,7 @@ else if (datatypetouse_Development_by_Month == "Value of Consented Construction"
         },{
 		x: xValues,
 		y: yValuesTotal,
-		name: "Total Construction Value",
+		name: "Total construction value",
 		type: 'line',
 		line: {width: 6,},
 		connectgaps: true,
@@ -352,7 +352,7 @@ else if (datatypetouse_Development_by_Month == "Value of Consented Construction"
         }];
 
 	layout = {
-		title: 'Value of Consented Construction',
+		title: 'Value of consented construction',
 		showlegend: true,
 		legend: {
 			orientation: 'h',
@@ -378,7 +378,7 @@ else if (datatypetouse_Development_by_Month == "Value of Consented Construction"
 		}
 	;}
 	
-else if (datatypetouse_Development_by_Month == "Constructed Dwellings") {
+else if (datatypetouse_Development_by_Month == "Constructed dwellings") {
 
 	var yValues = $.map(chartData, function(data){
 		return data[TimeframeConverted+"Constructed Dwellings"];
@@ -391,7 +391,7 @@ else if (datatypetouse_Development_by_Month == "Constructed Dwellings") {
 	data = [{
 		x: xValues,
 		y: yValues,
-		name: "Constructed Dwellings",
+		name: "Constructed dwellings",
 		type: VisType,
 		line: {width: 6,},
 		connectgaps: true,
@@ -399,7 +399,7 @@ else if (datatypetouse_Development_by_Month == "Constructed Dwellings") {
         }];
 
 	layout = {
-		title: 'Constructed Dwellings',
+		title: 'Constructed dwellings',
 		showlegend: false,
 		xaxis: {
 			zeroline: false, 
