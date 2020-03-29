@@ -15,14 +15,14 @@ function PropertyDataGraph(chartData){
 				return data["Quarter"];
 				});
 	
- 	if (DataType == "House prices and sales"){
+ 	if (DataType == "House values and sales"){
 		data = [{
 			x: xData,
 			y: $.map(chartData, function(data){
-				return data["Median house prices"];
+				return data["Average house value"];
 				}),
 			type: 'line',
-			name: 'Median house price',
+			name: 'Average house values',
 			line: {width: 6},
 			marker: {color: Colour1},
 			yaxis: 'y2'		
@@ -37,7 +37,7 @@ function PropertyDataGraph(chartData){
 			}];
 			
 		layout = {
-			title: "House sales and median prices",
+			title: "House sales and average values",
 			showlegend: true,
 			legend: {
 				orientation: 'h',
@@ -94,7 +94,7 @@ function PropertyDataGraph(chartData){
 			}];
 			
 		layout = {
-			title: "House price growth",
+			title: "House value growth",
 			showlegend: true,
 			legend: {
 				orientation: 'h',
