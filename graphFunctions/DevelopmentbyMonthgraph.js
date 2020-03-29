@@ -8,7 +8,7 @@ if (chartData == null || chartData.length <= 0)
 var datatypetouse_Development_by_Month = $('#datatypedd_DevelopmentbyMonthgraph option:selected').text();
 
 
-if (datatypetouse_Development_by_Month == "" || datatypetouse_Development_by_Month == "Total Dwellings Consented") {
+if (datatypetouse_Development_by_Month == "" || datatypetouse_Development_by_Month == "Total dwellings consented") {
 
 	MonthsLength = $.map(chartData, function(data){return data["Citywide Months Longterm Months"];}).length
 
@@ -24,7 +24,7 @@ if (datatypetouse_Development_by_Month == "" || datatypetouse_Development_by_Mon
         }];
 
 	layout = {
-		title: 'Total Dwellings Consented by Month',
+		title: 'Total dwellings consented by month',
 		showlegend: false,
 		xaxis: {zeroline: false, tickmode: 'auto', tickangle: 45, fixedrange: Zooming, range: [MonthsLength-24.6,MonthsLength]},		
 		yaxis: {zeroline: false, fixedrange: Zooming, range: [0,160]},
@@ -73,7 +73,7 @@ else {
 		y: $.map(chartData, function(data){
 			return data["Citywide Months Longterm Retirement Village Units"];
 		}),
-		name: "Retirement Village Units",
+		name: "Retirement village units",
 		type: 'bar',
 		marker: {color: Colour4}
         }];
@@ -81,7 +81,7 @@ else {
 	MonthsLength = $.map(chartData, function(data){return data["Citywide Months Longterm Months"];}).length 
 	
 	layout = {
-		title: 'Consented Dwellings by Type and Month',
+		title: 'Consented dwellings by type and month',
 		showlegend: true,
 		legend: {orientation: 'h', y: '-0.25'},
 		xaxis: {
