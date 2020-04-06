@@ -19,7 +19,7 @@ function PropertyDataGraph(chartData){
 		data = [{
 			x: xData,
 			y: $.map(chartData, function(data){
-				return data["Average house value"];
+				return data["Average house values"];
 				}),
 			type: 'line',
 			name: 'Average house values',
