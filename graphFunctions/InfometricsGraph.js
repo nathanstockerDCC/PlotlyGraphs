@@ -108,11 +108,10 @@ RemoveBlanks(yValuesNZ, dels);
 			xanchor: 'center'},
 		xaxis : {
 			fixedrange : Zooming,
+			type: 'date',
+			dtick: "M3",
+			tickformat: "%b '%y",
 			zeroline : false,
-			tickmode : 'linear', 
-			tick0 : xValues[0], 
-			dtick : 1,
-			tickangle : 45
 		},
 			yaxis : {
 			fixedrange : Zooming,
