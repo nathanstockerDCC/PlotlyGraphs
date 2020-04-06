@@ -24,8 +24,7 @@ if (DataToUse == "Total"){
 			;}),
 		name: 'Projected population',
 		line: {width: 6},
-		marker: {color: Colour2},
-		hovertemplate: ','
+		marker: {color: Colour2}
 	}];
 	
 	yRange = [109000,151000];
@@ -55,8 +54,7 @@ else if (DataToUse == "Growth"){
 			;}),
 		name: 'Projected population growth',
 		line: {width: 6},
-		marker: {color: Colour2},
-		hovertemplate: ','
+		marker: {color: Colour2}
 	}];
 
 	yRange = [-500,2000];
@@ -74,7 +72,8 @@ else {
 			;}),
 		name: 'Estimated growth rate',
 		line: {width: 6},
-		marker: {color: Colour1}		
+		marker: {color: Colour1},
+		hovertemplate: '%{y:0.2%}'
 		},{
 			
 		x: $.map(chartData, function(data){
@@ -87,7 +86,7 @@ else {
 		line: {width: 6},
 		marker: {color: Colour2},
 		hovertemplate: '%{y:0.2%}'
-	}];
+		}];
 	
 	yRange = [-0.005,0.015];
 	tickformatValue = "0.1%";
