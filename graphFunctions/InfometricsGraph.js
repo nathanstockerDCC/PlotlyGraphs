@@ -5,14 +5,6 @@ function InfometricsGraph(chartData) {
 	var EndofString = DataToUseWithSpaces.slice(-6);
 
 	RangeValues = [];
-	YearUsed = "";
-
-	if (DataToUseWithSpaces == "Housing affordability index") {
-		YearUsed = "YearThree"
-	};
-	if (DataToUseWithSpaces == "Rental affordability index") {
-		YearUsed = "YearOne"
-	};
 
 	document.getElementById("ExtraReferences").innerHTML = "";
 
@@ -75,7 +67,7 @@ var yValuesNZ = $.map(chartData, function (data) {
 			});
 
 var xValues = $.map(chartData, function (data) {
-				return data[YearUsed];
+				return data["Quarter"];
 			});
 
 BlanksToRemove(yValuesDunedin);
