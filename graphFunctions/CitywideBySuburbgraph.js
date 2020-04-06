@@ -146,7 +146,7 @@ var SuburbsList = $.map(chartData, function(data){
 	var CategoryOrderType = CategoryOrderType || 'trace';
 			
 			
-if (datatypetouse_Citywide_by_Suburb == "Total Dwellings Consented") {
+if (datatypetouse_Citywide_by_Suburb == "Total dwellings consented") {
 
 	data = [{
 		x: SuburbsList,
@@ -171,7 +171,7 @@ if (datatypetouse_Citywide_by_Suburb == "Total Dwellings Consented") {
 		}
 	;}
 			
-else if (datatypetouse_Citywide_by_Suburb == "Value of Consented Construction") {
+else if (datatypetouse_Citywide_by_Suburb == "Value of consented construction") {
 
 	data = [{
 		x: SuburbsList,
