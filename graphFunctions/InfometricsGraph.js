@@ -7,16 +7,16 @@ function InfometricsGraph(chartData) {
 	RangeValues = [];
 	YearUsed = "";
 
-	if (DataToUseWithSpaces == "Housing Affordability Index") {
+	if (DataToUseWithSpaces == "Housing affordability index") {
 		YearUsed = "YearThree"
 	};
-	if (DataToUseWithSpaces == "Rental Affordability Index") {
+	if (DataToUseWithSpaces == "Rental affordability index") {
 		YearUsed = "YearOne"
 	};
 
 	document.getElementById("ExtraReferences").innerHTML = "";
 
-	if (DataToUseWithSpaces == "Rental Affordability Index") {
+	if (DataToUseWithSpaces == "Rental affordability index") {
 		var textdiv = document.getElementById("ExtraReferences");
 		var aTag = document.createElement('a');
 		aTag.setAttribute('href', "http://ecoprofile.infometrics.co.nz/Dunedin%20City/StandardOfLiving/RentalAffordability");
@@ -25,7 +25,7 @@ function InfometricsGraph(chartData) {
 		textdiv.appendChild(aTag); ;
 	}
 
-	if (DataToUseWithSpaces == "Housing Affordability Index") {
+	if (DataToUseWithSpaces == "Housing affordability index") {
 		var textdiv = document.getElementById("ExtraReferences");
 		var aTag = document.createElement('a');
 		aTag.setAttribute('href', "http://ecoprofile.infometrics.co.nz/Dunedin%20City/StandardOfLiving/Housing_Affordability");
