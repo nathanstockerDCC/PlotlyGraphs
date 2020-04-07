@@ -6,6 +6,7 @@ function InfometricsGraph(chartData) {
 
 	RangeValues = [];
 
+	/*
 	document.getElementById("ExtraReferences").innerHTML = "";
 
 	if (DataToUseWithSpaces == "Rental affordability index") {
@@ -25,6 +26,7 @@ function InfometricsGraph(chartData) {
 		aTag.innerHTML = "Housing Affordability Index";
 		textdiv.appendChild(aTag); ;
 	}
+	*/
 
 	
 
