@@ -81,7 +81,7 @@ RemoveBlanks(yValuesNZ, dels);
 
 			x : xValues,
 			y : yValuesDunedin,
-			line: {width: 6},
+			line: {width: 4},
 			name : "Dunedin",
 			marker : {
 				color : Colour1
@@ -91,7 +91,7 @@ RemoveBlanks(yValuesNZ, dels);
 
 			x : xValues,
 			y : yValuesNZ,
-			line: {width: 6},
+			line: {width: 4},
 			name : "New Zealand",
 			marker : {
 				color : Colour2
