@@ -146,12 +146,12 @@ var graphdata = [{
 				text : "Infometrics (.csv)",
 				url : "/dccgraphs/data/Infometrics.csv"
 			}
-		],
+		]/*,
 		div : [
 			{
 				id : "ExtraReferences"
 			}
-		]
+		]*/
 
 	}, {
 		name : "Dwelling Type Over Time",
