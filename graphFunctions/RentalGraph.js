@@ -53,6 +53,7 @@ if (DataToUse == "Average rental cost"){
 			tickmode: 'linear', 
 			tick0: 0,
 			dtick: 'M24',
+			hoverformat: '%B %Y',
 			tickformat: "%Y"},
 		yaxis: {
 			fixedrange: Zooming, 
@@ -91,6 +92,7 @@ else if (DataToUse == "Growth rate"){
 			tickmode: 'linear', 
 			tick0: 0,
 			dtick: 'M24',
+			hoverformat: '%B %Y',
 			tickformat: "%Y"},
 		yaxis: {
 			fixedrange: Zooming, 
