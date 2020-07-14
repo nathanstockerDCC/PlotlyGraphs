@@ -1,4 +1,25 @@
 function PropertyDataGraph(chartData){
+
+	var w = window,
+		d = document,
+		e = d.documentElement,
+		g = d.getElementsByTagName('body')[0],
+		x = w.innerWidth || e.clientWidth || g.clientWidth;
+
+	function t(){
+		return x;
+	}
+
+	window.onload = t;
+	window.onresize = t;
+
+	var WindowWidth = t();
+		
+	if (WindowWidth < 500)
+		{dTickValue = 20;}
+	else 
+		{dTickValue = 4;}
+
 	
 	var DataType = $('#PropertySales_DataType option:selected').text();
 	
@@ -48,7 +69,7 @@ function PropertyDataGraph(chartData){
 				zeroline: false,
 				tickmode: 'linear',
 				tick0: 0,
-				dtick: 4,
+				dtick: dTickValue,
 				tickangle: 45,
 				fixedrange: Zooming
 				},
@@ -106,7 +127,7 @@ function PropertyDataGraph(chartData){
 				zeroline: true,
 				tickmode: 'linear',
 				tick0: 0,
-				dtick: 4,
+				dtick: dTickValue,
 				tickangle: 45,
 				fixedrange: Zooming
 				},
@@ -138,7 +159,7 @@ function PropertyDataGraph(chartData){
 				ticktext: xData,
 				tickmode: 'linear',
 				tick0: 0,
-				dtick: 4,
+				dtick: dTickValue,
 				tickangle: 45,
 				fixedrange: Zooming
 				},

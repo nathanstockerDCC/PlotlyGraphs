@@ -1,5 +1,26 @@
 function RentalGraph(chartData){
 	
+var w = window,
+    d = document,
+    e = d.documentElement,
+    g = d.getElementsByTagName('body')[0],
+    x = w.innerWidth || e.clientWidth || g.clientWidth;
+
+function t(){
+    return x;
+}
+
+window.onload = t;
+window.onresize = t;
+
+var WindowWidth = t();
+
+	
+if (WindowWidth < 500)
+	{dTickValue = "M60";}
+else 
+	{dTickValue = "M24";}
+
 
 var DataToUse = $('#TypeDD_RentalGraph option:selected').text();
 
@@ -52,7 +73,7 @@ if (DataToUse == "Average rental cost"){
 			tickangle: 45,
 			tickmode: 'linear', 
 			tick0: 0,
-			dtick: 'M24',
+			dtick: dTickValue,
 			hoverformat: '%B %Y',
 			tickformat: "%Y"},
 		yaxis: {
@@ -91,7 +112,7 @@ else if (DataToUse == "Growth rate"){
 			tickangle: 45,
 			tickmode: 'linear', 
 			tick0: 0,
-			dtick: 'M24',
+			dtick: dTickValue,
 			hoverformat: '%B %Y',
 			tickformat: "%Y"},
 		yaxis: {
@@ -214,7 +235,7 @@ else {
 			type: 'date',
 			tickmode: 'linear', 
 			tick0: 1,
-			dtick: 'M24',
+			dtick: dTickValue,
 			hoverformat: '%B %Y',
 			tickformat: "%Y"},
 		yaxis: {

@@ -1,5 +1,28 @@
 function BCsAndPopulationGraph(chartData){
 
+var w = window,
+    d = document,
+    e = d.documentElement,
+    g = d.getElementsByTagName('body')[0],
+    x = w.innerWidth || e.clientWidth || g.clientWidth;
+
+function t(){
+    return x;
+}
+
+window.onload = t;
+window.onresize = t;
+
+var WindowWidth = t();
+	
+console.log(WindowWidth);
+	
+if (WindowWidth < 500)
+	{dtickValue = 5;}
+else 
+	{dtickValue = 2;}
+
+	
 function BlanksToRemove(arrY) {
  
 	i = 0;
@@ -130,7 +153,7 @@ layout = {
 			zeroline: false, 
 			tickmode: 'linear', 
 			tick0 : 1,
-			dtick: 2,
+			dtick: dtickValue,
 			tickangle: 45,
 			autorange: true,
 			title: "Year ending 30 June"},

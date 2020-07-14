@@ -37,7 +37,22 @@ function TimeToMilliseconds(amount, type) {
 	
 	
 function AllDevelopmentbyMonthgraph(chartData){
-	
+
+var w = window,
+    d = document,
+    e = d.documentElement,
+    g = d.getElementsByTagName('body')[0],
+    x = w.innerWidth || e.clientWidth || g.clientWidth;
+
+function t(){
+    return x;
+}
+
+window.onload = t;
+window.onresize = t;
+
+var WindowWidth = t();
+		
 if (chartData == null || chartData.length <= 0)
 		return;
 
@@ -56,13 +71,12 @@ if (timeframe_Development_by_Month == "Months") {
 	StartDate.setDate(StartDate.getDate()-745);
 	var EndDate = new Date(DateMinMax(filteredDates, "max"));
 	EndDate.setDate(EndDate.getDate()+20);
-
-	console.log("xValues: " + xValues);
-	console.log("filteredDates: " + filteredDates);
-	console.log("StartDate: " + StartDate);
-	console.log("EndDate: " + EndDate);
 	
-	dtickValue = "M3";
+	if (WindowWidth < 500)
+		dtickValue = "M6";
+	else 
+		dtickValue = "M3";
+
 	tick0Value = DateMinMax(filteredDates, "max");
 	tickformatValue = "%b '%y";
 	
@@ -85,19 +99,20 @@ else if (timeframe_Development_by_Month == "Years") {
 		tick0Value = '2010-01-01';	
 		StartDate = new Date('2010-01-01');
 		StartDate.setDate(StartDate.getDate()-300);		
-		dtickValue = TimeToMilliseconds(1, "Years");
+		if (WindowWidth < 500)
+			{dtickValue = TimeToMilliseconds(4, "Years");}
+		else 
+			{dtickValue = TimeToMilliseconds(1, "Years");}
 		}
 	else
 		{
 		tick0Value = '1991-01-01';	
-		dtickValue = TimeToMilliseconds(2, "Years");
+		if (WindowWidth < 500)
+			{dtickValue = TimeToMilliseconds(5, "Years");}
+		else 
+			{dtickValue = TimeToMilliseconds(2, "Years");}
 		}
 
-	console.log("xValues: " + xValues);
-	console.log("filteredDates: " + filteredDates);
-	console.log("StartDate: " + StartDate);
-	console.log("EndDate: " + EndDate);
-		
 	tickformatValue = "%Y";
 
 	;}	
@@ -113,7 +128,11 @@ else {
 	var EndDate = new Date(DateMinMax(filteredDates, "max"));
 	EndDate.setDate(EndDate.getDate()+20);
 
-	dtickValue = TimeToMilliseconds(3, "Months");
+	if (WindowWidth < 500)
+		dtickValue = "M6";
+	else 
+		dtickValue = "M3";
+	
 	tick0Value = StartDate-TimeToMilliseconds(-2, "Months");
 	tickformatValue = "%b '%y"
 	;}	
@@ -161,14 +180,9 @@ if (datatypetouse_Development_by_Month == "Total dwellings consented") {
 			return data[TimeframeConverted+"Total New Dwellings"];
 		});
 
-	console.log("yValues1: " + yValues);
-
 	BlanksToRemove(yValues);
 	RemoveBlanks(xValues, dels);
 	RemoveBlanks(yValues, dels);
-
-	console.log("xValues2: " + xValues);
-	console.log("yValues2: " + yValues);
 	
 	data = [{
 		x: xValues,
