@@ -60,7 +60,7 @@ var datatypetouse_Development_by_Month = $('#datatypedd_DevelopmentbyMonthgraph 
 var timeframe_Development_by_Month = $('#timeframe_DevelopmentbyMonthgraph option:selected').text();
 
 
-if (timeframe_Development_by_Month == "Months") {
+if (timeframe_Development_by_Month == "Months" || timeframe_Development_by_Month == "Year to date") {
 	VisType = 'bar';
 	xValues = $.map(chartData, function(data){
 			return data["Citywide All Months"];
@@ -142,7 +142,12 @@ StartDate = (new Date(StartDate)).getTime();
 EndDate = (new Date(EndDate)).getTime();
 
 	
-TimeframeConverted = "Citywide "+timeframe_Development_by_Month+" Longterm ";
+if (timeframe_Development_by_Month == "Year to date") {
+	TimeframeConverted = "Citywide YTD "
+	;}
+else {
+	TimeframeConverted = "Citywide "+timeframe_Development_by_Month+" Longterm "
+	;}
 
 var dels = [];
 
