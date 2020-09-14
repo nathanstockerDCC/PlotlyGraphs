@@ -6,14 +6,14 @@ var graphdata = [{
 		height : "500px",
 		paper_bgcolor: 'rgba(0,0,0,0)',
 		plot_bgcolor: 'rgba(0,0,0,0)',
-		csv : "/dccgraphs/data/BCsAndPopulationGraph.csv",
+		csv : "/PlotlyGraphs/data/BCsAndPopulationGraph.csv",
 		func : "BCsAndPopulationGraph",
-		funcFile : "/dccgraphs/graphFunctions/BCsAndPopulationGraph.js",
+		funcFile : "/PlotlyGraphs/graphFunctions/BCsAndPopulationGraph.js",
 		link : [
 			{
 				linktext : "<b>Datasource</b>",
 				text : "Statistics New Zealand and Dunedin City Council (.csv)",
-				url : "/dccgraphs/data/BCsAndPopulationGraph.csv"
+				url : "/PlotlyGraphs/data/BCsAndPopulationGraph.csv"
 			}
 		]
 	}, {
@@ -24,9 +24,9 @@ var graphdata = [{
 		height : "500px",
 		paper_bgcolor: 'rgba(0,0,0,0)',
 		plot_bgcolor: 'rgba(0,0,0,0)',
-		csv : "/dccgraphs/data/SuburbBCDataAnnualbySuburb.csv",
+		csv : "/PlotlyGraphs/data/SuburbBCDataAnnualbySuburb.csv",
 		func : "CitywideBySuburbgraph",
-		funcFile : "/dccgraphs/graphFunctions/CitywideBySuburbgraph.js",
+		funcFile : "/PlotlyGraphs/graphFunctions/CitywideBySuburbgraph.js",
 		drop : [
 			{
 				text : "Start year",
@@ -46,7 +46,7 @@ var graphdata = [{
 			{
 				linktext : "<b>Data source</b>",
 				text : "Statistics New Zealand (.csv)",
-				url : "/dccgraphs/data/SuburbBCDataAnnualbySuburb.csv"
+				url : "/PlotlyGraphs/data/SuburbBCDataAnnualbySuburb.csv"
 			}
 		]
 	}, {
@@ -57,9 +57,9 @@ var graphdata = [{
 		height : "500px",
 		paper_bgcolor: 'rgba(0,0,0,0)',
 		plot_bgcolor: 'rgba(0,0,0,0)',
-		csv : "/dccgraphs/data/CitywideBCdataMonthly.csv",
+		csv : "/PlotlyGraphs/data/CitywideBCdataMonthly.csv",
 		func : 'AllDevelopmentbyMonthgraph',
-		funcFile : "/dccgraphs/graphFunctions/AllDevelopmentbyMonthgraph.js",
+		funcFile : "/PlotlyGraphs/graphFunctions/AllDevelopmentbyMonthgraph.js",
 		drop : [
 			{
 				text : "Choose a data type",
@@ -75,7 +75,7 @@ var graphdata = [{
 			{
 				linktext : "<b>Data source</b>",
 				text : "Statistics New Zealand and Dunedin City Council (.csv)",
-				url : "/dccgraphs/data/CitywideBCdataMonthly.csv"
+				url : "/PlotlyGraphs/data/CitywideBCdataMonthly.csv"
 			}
 		]
 	}, {
@@ -86,14 +86,14 @@ var graphdata = [{
 		height : "500px",
 		paper_bgcolor: 'rgba(0,0,0,0)',
 		plot_bgcolor: 'rgba(0,0,0,0)',
-		csv : "/dccgraphs/data/CitywideBCdataAnnual.csv",
+		csv : "/PlotlyGraphs/data/CitywideBCdataAnnual.csv",
 		func : 'DevTrendsByYearGraph',
-		funcFile : "/dccgraphs/graphFunctions/DevTrendsByYearGraph.js",
+		funcFile : "/PlotlyGraphs/graphFunctions/DevTrendsByYearGraph.js",
 		link : [
 			{
 				linktext : "<b>Data source</b>",
 				text : "Statistics New Zealand (.csv)",
-				url : "/dccgraphs/data/CitywideBCdataAnnual.csv"
+				url : "/PlotlyGraphs/data/CitywideBCdataAnnual.csv"
 			}
 		]
 	}, {
@@ -104,9 +104,9 @@ var graphdata = [{
 		height : "500px",
 		paper_bgcolor: 'rgba(0,0,0,0)',
 		plot_bgcolor: 'rgba(0,0,0,0)',
-		csv : "/dccgraphs/data/DwellingsCCCd.csv",
+		csv : "/PlotlyGraphs/data/DwellingsCCCd.csv",
 		func : 'DwellingsCCCd',
-		funcFile : "/dccgraphs/graphFunctions/DwellingsCCCd.js",
+		funcFile : "/PlotlyGraphs/graphFunctions/DwellingsCCCd.js",
 		drop : [
 			{
 				text : "Choose an extra dataset",
@@ -118,7 +118,7 @@ var graphdata = [{
 			{
 				linktext : "<b>Data source</b>",
 				text : "Statistics New Zealand, Dunedin City Council, and Rationale Ltd (.csv)",
-				url : "/dccgraphs/data/DwellingsCCCd.csv"
+				url : "/PlotlyGraphs/data/DwellingsCCCd.csv"
 			}
 		]
 		
@@ -130,9 +130,9 @@ var graphdata = [{
 		height : "500px",
 		paper_bgcolor: 'rgba(0,0,0,0)',
 		plot_bgcolor: 'rgba(0,0,0,0)',
-		csv : "/dccgraphs/data/Infometrics.csv",
+		csv : "/PlotlyGraphs/data/Infometrics.csv",
 		func : "InfometricsGraph",
-		funcFile : "/dccgraphs/graphFunctions/InfometricsGraph.js",
+		funcFile : "/PlotlyGraphs/graphFunctions/InfometricsGraph.js",
 		drop : [
 			{
 				text : "Choose a data type",
@@ -144,7 +144,7 @@ var graphdata = [{
 			{	
 				linktext : "<b>Data source</b>",
 				text : "Infometrics (.csv)",
-				url : "/dccgraphs/data/Infometrics.csv"
+				url : "/PlotlyGraphs/data/Infometrics.csv"
 			}
 		]/*,
 		div : [
@@ -161,9 +161,9 @@ var graphdata = [{
 		height : "500px",
 		paper_bgcolor: 'rgba(0,0,0,0)',
 		plot_bgcolor: 'rgba(0,0,0,0)',
-		csv : "/dccgraphs/data/DwellingTypeSplitAnnual.csv",
+		csv : "/PlotlyGraphs/data/DwellingTypeSplitAnnual.csv",
 		func : 'piegraphmaker',
-		funcFile : "/dccgraphs/graphFunctions/Piegraphmaker.js",
+		funcFile : "/PlotlyGraphs/graphFunctions/Piegraphmaker.js",
 		drop : [
 			{
 				text : "Start year",
@@ -187,7 +187,7 @@ var graphdata = [{
 			{
 				linktext : "<b>Data source</b>",
 				text : "Statistics New Zealand (.csv)",
-				url : "/dccgraphs/data/DwellingTypeSplitAnnual.csv"
+				url : "/PlotlyGraphs/data/DwellingTypeSplitAnnual.csv"
 			}
 		]
 	}, {
@@ -198,9 +198,9 @@ var graphdata = [{
 		height : "500px",
 		paper_bgcolor: 'rgba(0,0,0,0)',
 		plot_bgcolor: 'rgba(0,0,0,0)',
-		csv : "/dccgraphs/data/HouseDataQuarterly.csv",
+		csv : "/PlotlyGraphs/data/HouseDataQuarterly.csv",
 		func : 'PropertyDataGraph',
-		funcFile : "/dccgraphs/graphFunctions/PropertyDataGraph.js",
+		funcFile : "/PlotlyGraphs/graphFunctions/PropertyDataGraph.js",
 		drop : [
 			{
 				text : "Choose a data type",
@@ -212,7 +212,7 @@ var graphdata = [{
 			{
 				linktext : "<b>Data source</b>",
 				text : "Infometrics (.csv)",
-				url : "/dccgraphs/data/HouseDataQuarterly.csv"
+				url : "/PlotlyGraphs/data/HouseDataQuarterly.csv"
 			}
 		]
 	}, {
@@ -223,9 +223,9 @@ var graphdata = [{
 		height : "500px",
 		paper_bgcolor: 'rgba(0,0,0,0)',
 		plot_bgcolor: 'rgba(0,0,0,0)',
-		csv : "/dccgraphs/data/RentalData.csv",
+		csv : "/PlotlyGraphs/data/RentalData.csv",
 		func : 'RentalGraph',
-		funcFile : "/dccgraphs/graphFunctions/RentalGraph.js",
+		funcFile : "/PlotlyGraphs/graphFunctions/RentalGraph.js",
 		drop : [
 			{
 				text : "Choose a data type",
@@ -237,7 +237,7 @@ var graphdata = [{
 			{
 				linktext : "<b>Data source</b>",
 				text : "Ministry of Business, Innovation and Employment (.csv)",
-				url : "/dccgraphs/data/RentalData.csv"
+				url : "/PlotlyGraphs/data/RentalData.csv"
 			}
 		]
 	}, {
@@ -248,9 +248,9 @@ var graphdata = [{
 		height : "500px",
 		paper_bgcolor: 'rgba(0,0,0,0)',
 		plot_bgcolor: 'rgba(0,0,0,0)',
-		csv : "/dccgraphs/data/SuburbBCDataAnnualbyYear.csv",
+		csv : "/PlotlyGraphs/data/SuburbBCDataAnnualbyYear.csv",
 		func : "SuburbAnnualDataGraph",
-		funcFile : "/dccgraphs/graphFunctions/SuburbAnnualDataGraph.js",
+		funcFile : "/PlotlyGraphs/graphFunctions/SuburbAnnualDataGraph.js",
 		drop : [
 			{
 				text : "Choose an area",
@@ -270,7 +270,7 @@ var graphdata = [{
 			{
 				linktext : "<b>Data source</b>",
 				text : "Statistics New Zealand (.csv)",
-				url : "/dccgraphs/data/SuburbBCDataAnnualbyYear.csv"
+				url : "/PlotlyGraphs/data/SuburbBCDataAnnualbyYear.csv"
 			}
 		]
 	}, {
@@ -281,9 +281,9 @@ var graphdata = [{
 		height : "500px",
 		paper_bgcolor: 'rgba(0,0,0,0)',
 		plot_bgcolor: 'rgba(0,0,0,0)',
-		csv : "/dccgraphs/data/Population.csv",
+		csv : "/PlotlyGraphs/data/Population.csv",
 		func : "PopGraph",
-		funcFile : "/dccgraphs/graphFunctions/PopGraph.js",
+		funcFile : "/PlotlyGraphs/graphFunctions/PopGraph.js",
 		drop : [
 			{
 				text : "Choose a data type",
@@ -295,7 +295,7 @@ var graphdata = [{
 			{
 				linktext : "<b>Data source</b>",
 				text : "Russell Jones / Dunedin City Council (.csv)",
-				url : "/dccgraphs/data/Population.csv"
+				url : "/PlotlyGraphs/data/Population.csv"
 			}
 		]
 	}
