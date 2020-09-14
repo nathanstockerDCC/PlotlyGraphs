@@ -149,7 +149,7 @@ function getUrlVars()
     return vars;
 }
 
-$.getScript("/dccgraphs/content/js/GraphData.js", function(data) {
+$.getScript("/PlotlyGraphs/content/js/GraphData.js", function(data) {
 	dataReady();
 });
 
