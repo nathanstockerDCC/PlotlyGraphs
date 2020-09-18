@@ -147,9 +147,9 @@ else {
 		
 	var filteredDates = xValues.filter(function(e) { return e !== "" })
 	var StartDate = new Date(DateMinMax(filteredDates, "max"));
-	StartDate.setDate(StartDate.getDate()-745);
+	StartDate.setDate(StartDate.getDate());
 	var EndDate = new Date(DateMinMax(filteredDates, "max"));
-	EndDate.setDate(EndDate.getDate()+20);
+	EndDate.setDate(EndDate.getDate());
 
 	if (WindowWidth < 500)
 		dtickValue = "M6";
