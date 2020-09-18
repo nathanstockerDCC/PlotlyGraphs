@@ -90,9 +90,9 @@ else if (timeframe_Development_by_Month == "Year to date") {
 	
 	var filteredDates = xValues.filter(function(e) { return e !== "" });
 	var StartDate = new Date(DateMinMax(filteredDates, "min"));
-	StartDate.setDate(StartDate.getDate()-300);
+	StartDate.setDate(StartDate.getDate());
 	var EndDate = new Date(DateMinMax(filteredDates, "max"));
-	EndDate.setDate(EndDate.getDate()+300);
+	EndDate.setDate(EndDate.getDate());
 	
 	if (WindowWidth < 500)
 		dtickValue = "M6";
@@ -147,9 +147,9 @@ else {
 		
 	var filteredDates = xValues.filter(function(e) { return e !== "" })
 	var StartDate = new Date(DateMinMax(filteredDates, "max"));
-	StartDate.setDate(StartDate.getDate());
+	StartDate.setDate(StartDate.getDate()-745);
 	var EndDate = new Date(DateMinMax(filteredDates, "max"));
-	EndDate.setDate(EndDate.getDate());
+	EndDate.setDate(EndDate.getDate()+20);
 
 	if (WindowWidth < 500)
 		dtickValue = "M6";
