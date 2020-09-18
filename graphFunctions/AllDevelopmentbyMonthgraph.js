@@ -60,7 +60,7 @@ var datatypetouse_Development_by_Month = $('#datatypedd_DevelopmentbyMonthgraph 
 var timeframe_Development_by_Month = $('#timeframe_DevelopmentbyMonthgraph option:selected').text();
 
 
-if (timeframe_Development_by_Month == "Months" {
+if (timeframe_Development_by_Month == "Months") {
 	VisType = 'bar';
 	xValues = $.map(chartData, function(data){
 			return data["Citywide All Months"];
