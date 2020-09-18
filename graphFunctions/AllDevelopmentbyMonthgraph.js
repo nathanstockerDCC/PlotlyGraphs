@@ -60,7 +60,7 @@ var datatypetouse_Development_by_Month = $('#datatypedd_DevelopmentbyMonthgraph 
 var timeframe_Development_by_Month = $('#timeframe_DevelopmentbyMonthgraph option:selected').text();
 
 
-if (timeframe_Development_by_Month == "Months" || timeframe_Development_by_Month == "Year to date") {
+if (timeframe_Development_by_Month == "Months" {
 	VisType = 'bar';
 	xValues = $.map(chartData, function(data){
 			return data["Citywide All Months"];
@@ -81,6 +81,29 @@ if (timeframe_Development_by_Month == "Months" || timeframe_Development_by_Month
 	tickformatValue = "%b '%y";
 	
 	;}
+
+else if (timeframe_Development_by_Month == "Year to date") {
+	VisType = 'bar';
+	xValues = $.map(chartData, function(data){
+			return data["Citywide All Months"];
+		});
+	
+	var filteredDates = xValues.filter(function(e) { return e !== "" });
+	var StartDate = new Date(DateMinMax(filteredDates, "min"));
+	StartDate.setDate(StartDate.getDate()-300);
+	var EndDate = new Date(DateMinMax(filteredDates, "max"));
+	EndDate.setDate(EndDate.getDate()+300);
+	
+	if (WindowWidth < 500)
+		dtickValue = "M6";
+	else 
+		dtickValue = "M3";
+
+	tick0Value = DateMinMax(filteredDates, "max");
+	tickformatValue = "%b '%y";
+	
+	;}
+	
 else if (timeframe_Development_by_Month == "Years") {
 	VisType = 'bar';
 	xValues = $.map(chartData, function(data){
