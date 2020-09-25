@@ -71,7 +71,7 @@ if (DataToUse == "Total"){
 		}
 		];
 	
-	yRange = [109000,151000];
+	yRange = [109000,161000];
 	tickformatValue = ",";
 	
 	;}
