@@ -36,17 +36,40 @@ if (DataToUse == "Total"){
 		line: {width: 6},
 		marker: {color: Colour1}		
 		},{
-			
+
 		x: $.map(chartData, function(data){
 			return data["Year"]
 			;}),
 		y: $.map(chartData, function(data){
-			return data["ProjectedPopulation_Total"]
+			return data["ProjectedPopulation_Total_Low"]
 			;}),
-		name: 'Projected population',
+		name: 'Projected population (low growth scenario)',
+		line: {width: 6},
+		marker: {color: Colour3}
+		},{
+
+		x: $.map(chartData, function(data){
+			return data["Year"]
+			;}),
+		y: $.map(chartData, function(data){
+			return data["ProjectedPopulation_Total_Medium"]
+			;}),
+		name: 'Projected population (medium growth scenario)',
 		line: {width: 6},
 		marker: {color: Colour2}
-	}];
+		},{
+
+		x: $.map(chartData, function(data){
+			return data["Year"]
+			;}),
+		y: $.map(chartData, function(data){
+			return data["ProjectedPopulation_Total_High"]
+			;}),
+		name: 'Projected population (high growth scenario)',
+		line: {width: 6},
+		marker: {color: Colour4}
+		}
+		];
 	
 	yRange = [109000,151000];
 	tickformatValue = ",";
@@ -65,18 +88,41 @@ else if (DataToUse == "Growth"){
 		name: 'Estimated population growth',
 		line: {width: 6},
 		marker: {color: Colour1}		
-		},{
-			
+		},{	
+
 		x: $.map(chartData, function(data){
 			return data["Year"]
 			;}),
 		y: $.map(chartData, function(data){
-			return data["ProjectedPopulation_AbsoluteGrowth"]
+			return data["ProjectedPopulation_AbsoluteGrowth_Low"]
 			;}),
-		name: 'Projected population growth',
+		name: 'Projected population growth (low growth scenario)',
+		line: {width: 6},
+		marker: {color: Colour3}
+		},{	
+
+		x: $.map(chartData, function(data){
+			return data["Year"]
+			;}),
+		y: $.map(chartData, function(data){
+			return data["ProjectedPopulation_AbsoluteGrowth_Medium"]
+			;}),
+		name: 'Projected population growth (medium growth scenario)',
 		line: {width: 6},
 		marker: {color: Colour2}
-	}];
+		},{	
+
+		x: $.map(chartData, function(data){
+			return data["Year"]
+			;}),
+		y: $.map(chartData, function(data){
+			return data["ProjectedPopulation_AbsoluteGrowth_High"]
+			;}),
+		name: 'Projected population growth (high growth scenario)',
+		line: {width: 6},
+		marker: {color: Colour4}
+		}
+		];
 
 	yRange = [-500,2000];
 	tickformatValue = ",";
@@ -101,13 +147,38 @@ else {
 			return data["Year"]
 			;}),
 		y: $.map(chartData, function(data){
-			return data["ProjectedPopulation_GrowthRate"]
+			return data["ProjectedPopulation_GrowthRate_Low"]
 			;}),
-		name: 'Projected growth rate',
+		name: 'Projected growth rate (low growth scenario)',
+		line: {width: 6},
+		marker: {color: Colour3},
+		hovertemplate: '%{y:0.2%}'
+		},{
+			
+		x: $.map(chartData, function(data){
+			return data["Year"]
+			;}),
+		y: $.map(chartData, function(data){
+			return data["ProjectedPopulation_GrowthRate_Medium"]
+			;}),
+		name: 'Projected growth rate (medium growth scenario)',
 		line: {width: 6},
 		marker: {color: Colour2},
 		hovertemplate: '%{y:0.2%}'
-		}];
+		},{
+			
+		x: $.map(chartData, function(data){
+			return data["Year"]
+			;}),
+		y: $.map(chartData, function(data){
+			return data["ProjectedPopulation_GrowthRate_High"]
+			;}),
+		name: 'Projected growth rate (high growth scenario)',
+		line: {width: 6},
+		marker: {color: Colour4},
+		hovertemplate: '%{y:0.2%}'
+		}
+		];
 	
 	yRange = [-0.005,0.015];
 	tickformatValue = "0.1%";
