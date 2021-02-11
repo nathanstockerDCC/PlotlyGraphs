@@ -77,9 +77,6 @@ ConsentedDwellingsData = $.map(chartData, function(data){
 			return data["Consented dwellings"];
 			});
 
-ProjectedDwellingGrowthData = $.map(chartData, function(data){
-			return data["Projected dwelling growth"];
-			});			
 			
 BlanksToRemove(HouseholdGrowthData);
 RemoveBlanks(HouseholdGrowthData, dels);
@@ -92,10 +89,6 @@ RemoveBlanks(Years_ConstructedDwellings, dels);
 BlanksToRemove(ConsentedDwellingsData);
 RemoveBlanks(ConsentedDwellingsData, dels);
 RemoveBlanks(Years_ConsentedDwellings, dels);
-
-BlanksToRemove(ProjectedDwellingGrowthData);
-RemoveBlanks(ProjectedDwellingGrowthData, dels);
-RemoveBlanks(Years_ProjectedDwellingGrowth, dels);
 
 			
 data = [{
@@ -126,16 +119,6 @@ data = [{
 		name: 'Consented dwellings',
 		marker: {color: Colour1},
 
-		},{
-			
-		x: Years_ProjectedDwellingGrowth,
-		y: ProjectedDwellingGrowthData,
-		line: {width: 6},
-		connectgaps: true,
-		visible: 'legendonly',
-		name: 'Projected dwelling growth',
-		marker: {color: Colour4},
-
 		}];
 
 		
@@ -152,7 +135,7 @@ layout = {
 			fixedrange: Zooming, 
 			zeroline: false, 
 			tickmode: 'linear', 
-			tick0 : 1,
+			tick0 : 0,
 			dtick: dtickValue,
 			tickangle: 45,
 			autorange: true,
