@@ -97,8 +97,9 @@ data = [{
 		visible: 'true',
 		type: 'bar',
 		name: "Household growth",
-		marker: {color: Colour3}
-		
+		marker: {
+				color: Colour3
+				}	
         },{
 			
 		x: Years_ConstructedDwellings,
@@ -107,7 +108,10 @@ data = [{
 		visible: 'legendonly',
 		type: 'bar',
 		name: 'Constructed dwellings',
-		marker: {color: Colour2},
+		marker: {
+				color: 'rgba(0,0,0,0)',
+				line: {color: Colour2, width: 2}
+				},
 
 		},{
 			
@@ -117,7 +121,10 @@ data = [{
 		visible: 'true',
 		type: 'bar',
 		name: 'Consented dwellings',
-		marker: {color: Colour1},
+		marker: {
+				color: 'rgba(0,0,0,0)',
+				line: {color: Colour1, width: 2}
+				},
 
 		}];
 
