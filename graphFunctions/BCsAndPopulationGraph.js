@@ -94,18 +94,18 @@ RemoveBlanks(Years_ConsentedDwellings, dels);
 data = [{
 		x: Years_HouseholdGrowth,
 		y: HouseholdGrowthData,
-		line: {width: 6},
-		name: "Household growth",
 		visible: 'true',
+		type: 'bar',
+		name: "Household growth",
 		marker: {color: Colour3}
 		
         },{
 			
 		x: Years_ConstructedDwellings,
 		y: ConstructedDwellingsData,
-		line: {width: 6},
 		connectgaps: true,
 		visible: 'legendonly',
+		type: 'bar',
 		name: 'Constructed dwellings',
 		marker: {color: Colour2},
 
@@ -113,9 +113,9 @@ data = [{
 			
 		x: Years_ConsentedDwellings,
 		y: ConsentedDwellingsData,
-		line: {width: 6},
 		connectgaps: true,
 		visible: 'true',
+		type: 'bar',
 		name: 'Consented dwellings',
 		marker: {color: Colour1},
 
@@ -125,6 +125,7 @@ data = [{
 layout = {
 		title: 'Development and growth trends',
 		showlegend: true,
+		barmode: 'stack',
 		legend: {
 			orientation: 'h',
 			y: '-0.25',
