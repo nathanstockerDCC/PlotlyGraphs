@@ -125,7 +125,7 @@ data = [{
 layout = {
 		title: 'Development and growth trends',
 		showlegend: true,
-		barmode: 'stack',
+		barmode: 'overlaid',
 		legend: {
 			orientation: 'h',
 			y: '-0.25',
