@@ -129,9 +129,9 @@ else if (timeframe_Development_by_Month == "Years") {
 		}
 	else
 		{
-		tick0Value = '1991-01-01';	
+		tick0Value = '1992-01-01';	
 		if (WindowWidth < 500)
-			{dtickValue = TimeToMilliseconds(5, "Years");}
+			{dtickValue = TimeToMilliseconds(4, "Years");}
 		else 
 			{dtickValue = TimeToMilliseconds(2, "Years");}
 		}
