@@ -186,12 +186,12 @@ else {
 
 	
 var yRangeDict = {};
-yRangeDict["PopulationGrowth"] = [-500,2000];
-yRangeDict["PopulationGrowth rate"] = [-0.005,0.015];
-yRangeDict["PopulationTotal"] = [109000,161000];
-yRangeDict["HouseholdsGrowth"] = [-200,800];
-yRangeDict["HouseholdsGrowth rate"] = [-0.005,0.015];
-yRangeDict["HouseholdsTotal"] = [40000,65000];
+yRangeDict["PopulationGrowth"] = [-490,2010];
+yRangeDict["PopulationGrowth rate"] = [-0.0049,0.0151];
+yRangeDict["PopulationTotal"] = [108900,161010];
+yRangeDict["HouseholdsGrowth"] = [-190,810];
+yRangeDict["HouseholdsGrowth rate"] = [-0.0049,0.0151];
+yRangeDict["HouseholdsTotal"] = [39990,65010];
 
 	
 layout = {
