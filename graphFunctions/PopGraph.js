@@ -74,6 +74,7 @@ if (DataTypeToUse == "Total"){
 		];
 	
 //	yRange = [109000,161000];
+	RangeMode = 'tozero';
 	tickformatValue = ",";
 	
 	;}
@@ -127,6 +128,7 @@ else if (DataTypeToUse == "Growth"){
 		];
 
 //	yRange = [-500,2000];
+	RangeMode = 'normal';
 	tickformatValue = ",";
 	
 	;}
@@ -183,11 +185,12 @@ else {
 		];
 	
 //	yRange = [-0.005,0.015];
+	RangeMode = 'normal';
 	tickformatValue = "0.1%";
 	
 	;}
 	
-	
+
 layout = {
 	title: DataSeriesToUse + ' trends',
 	showlegend: true,
@@ -207,6 +210,7 @@ layout = {
 	yaxis: {
 		zeroline: false,
 		fixedrange: Zooming,
+		rangemode: RangeMode,
 //		range: yRange,
 		tickformat: tickformatValue
 		}, 
