@@ -73,7 +73,7 @@ if (DataTypeToUse == "Total"){
 		}
 		];
 	
-	yRange = [109000,161000];
+//	yRange = [109000,161000];
 	tickformatValue = ",";
 	
 	;}
@@ -87,7 +87,7 @@ else if (DataTypeToUse == "Growth"){
 		y: $.map(chartData, function(data){
 			return data["Estimated" + DataSeriesToUse + "_AbsoluteGrowth"]
 			;}),
-		name: 'Estimated ' + DataSeriesToUse.toLowerCase() + ' growth',
+		name: 'Estimated growth',
 		line: {width: 6},
 		marker: {color: Colour1}		
 		},{	
@@ -98,7 +98,7 @@ else if (DataTypeToUse == "Growth"){
 		y: $.map(chartData, function(data){
 			return data["Projected" + DataSeriesToUse + "_AbsoluteGrowth_Low"]
 			;}),
-		name: 'Projected ' + DataSeriesToUse.toLowerCase() + ' growth (low growth scenario)',
+		name: 'Projected growth (low growth scenario)',
 		line: {width: 6},
 		marker: {color: Colour3}
 		},{	
@@ -109,7 +109,7 @@ else if (DataTypeToUse == "Growth"){
 		y: $.map(chartData, function(data){
 			return data["Projected" + DataSeriesToUse + "_AbsoluteGrowth_Medium"]
 			;}),
-		name: 'Projected ' + DataSeriesToUse.toLowerCase() + ' growth (medium growth scenario)',
+		name: 'Projected growth (medium growth scenario)',
 		line: {width: 6},
 		marker: {color: Colour2}
 		},{	
@@ -120,13 +120,13 @@ else if (DataTypeToUse == "Growth"){
 		y: $.map(chartData, function(data){
 			return data["Projected" + DataSeriesToUse + "_AbsoluteGrowth_High"]
 			;}),
-		name: 'Projected ' + DataSeriesToUse.toLowerCase() + ' growth (high growth scenario)',
+		name: 'Projected growth (high growth scenario)',
 		line: {width: 6},
 		marker: {color: Colour4}
 		}
 		];
 
-	yRange = [-500,2000];
+//	yRange = [-500,2000];
 	tickformatValue = ",";
 	
 	;}
@@ -182,14 +182,14 @@ else {
 		}
 		];
 	
-	yRange = [-0.005,0.015];
+//	yRange = [-0.005,0.015];
 	tickformatValue = "0.1%";
 	
 	;}
 	
 	
 layout = {
-	title: DataSeriesToUse.toLowerCase() + ' trends',
+	title: DataSeriesToUse + ' trends',
 	showlegend: true,
 	legend: {
 		orientation: 'h',
