@@ -73,8 +73,6 @@ if (DataTypeToUse == "Total"){
 		}
 		];
 	
-//	yRange = [109000,161000];
-	RangeMode = 'tozero';
 	tickformatValue = ",";
 	
 	;}
@@ -127,8 +125,6 @@ else if (DataTypeToUse == "Growth"){
 		}
 		];
 
-//	yRange = [-500,2000];
-	RangeMode = 'normal';
 	tickformatValue = ",";
 	
 	;}
@@ -184,13 +180,20 @@ else {
 		}
 		];
 	
-//	yRange = [-0.005,0.015];
-	RangeMode = 'normal';
 	tickformatValue = "0.1%";
 	
 	;}
-	
 
+	
+var yRangeDict = {};
+yRangeDict["PopulationGrowth"] = [-500,2000];
+yRangeDict["PopulationGrowth rate"] = [-0.005,0.015];
+yRangeDict["PopulationTotal"] = [109000,161000];
+yRangeDict["HouseholdsGrowth"] = [-200,800];
+yRangeDict["HouseholdsGrowth rate"] = [-0.005,0.015];
+yRangeDict["HouseholdsTotal"] = [40000,65000];
+
+	
 layout = {
 	title: DataSeriesToUse + ' trends',
 	showlegend: true,
@@ -210,8 +213,7 @@ layout = {
 	yaxis: {
 		zeroline: false,
 		fixedrange: Zooming,
-		rangemode: RangeMode,
-//		range: yRange,
+		range: yRangeDict[DataSeriesToUse+DataTypeToUse],
 		tickformat: tickformatValue
 		}, 
 	}
