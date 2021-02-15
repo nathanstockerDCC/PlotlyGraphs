@@ -207,7 +207,7 @@ layout = {
 	yaxis: {
 		zeroline: false,
 		fixedrange: Zooming,
-		range: yRange,
+//		range: yRange,
 		tickformat: tickformatValue
 		}, 
 	}
