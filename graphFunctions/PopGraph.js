@@ -21,18 +21,20 @@ if (WindowWidth < 500)
 else 
 	{dTickValue = 5;}
 
-var DataToUse = $('#datatypedd_PopGraph option:selected').text();
+var DataSeriesToUse = $('#dataseriesdd_PopGraph option:selected').text();
+var DataTypeToUse = $('#datatypedd_PopGraph option:selected').text();
 
-if (DataToUse == "Total"){
+
+if (DataTypeToUse == "Total"){
 		
 	data = [{
 		x: $.map(chartData, function(data){
 			return data["Year"]
 			;}),
 		y: $.map(chartData, function(data){
-			return data["EstimatedPopulation_Total"]
+			return data["Estimated" + DataSeriesToUse + "_Total"]
 			;}),
-		name: 'Estimated population',
+		name: 'Estimated ' + DataSeriesToUse.toLowerCase(),
 		line: {width: 6},
 		marker: {color: Colour1}		
 		},{
@@ -41,9 +43,9 @@ if (DataToUse == "Total"){
 			return data["Year"]
 			;}),
 		y: $.map(chartData, function(data){
-			return data["ProjectedPopulation_Total_Low"]
+			return data["Projected" + DataSeriesToUse + "_Total_Low"]
 			;}),
-		name: 'Projected population (low growth scenario)',
+		name: 'Projected ' + DataSeriesToUse.toLowerCase() + ' (low growth scenario)',
 		line: {width: 6},
 		marker: {color: Colour3}
 		},{
@@ -52,9 +54,9 @@ if (DataToUse == "Total"){
 			return data["Year"]
 			;}),
 		y: $.map(chartData, function(data){
-			return data["ProjectedPopulation_Total_Medium"]
+			return data["Projected" + DataSeriesToUse + "_Total_Medium"]
 			;}),
-		name: 'Projected population (medium growth scenario)',
+		name: 'Projected ' + DataSeriesToUse.toLowerCase() + ' (medium growth scenario)',
 		line: {width: 6},
 		marker: {color: Colour2}
 		},{
@@ -63,9 +65,9 @@ if (DataToUse == "Total"){
 			return data["Year"]
 			;}),
 		y: $.map(chartData, function(data){
-			return data["ProjectedPopulation_Total_High"]
+			return data["Projected" + DataSeriesToUse + "_Total_High"]
 			;}),
-		name: 'Projected population (high growth scenario)',
+		name: 'Projected ' + DataSeriesToUse.toLowerCase() + ' (high growth scenario)',
 		line: {width: 6},
 		marker: {color: Colour4}
 		}
@@ -76,16 +78,16 @@ if (DataToUse == "Total"){
 	
 	;}
 	
-else if (DataToUse == "Growth"){
+else if (DataTypeToUse == "Growth"){
 		
 	data = [{
 		x: $.map(chartData, function(data){
 			return data["Year"]
 			;}),
 		y: $.map(chartData, function(data){
-			return data["EstimatedPopulation_AbsoluteGrowth"]
+			return data["Estimated" + DataSeriesToUse + "_AbsoluteGrowth"]
 			;}),
-		name: 'Estimated population growth',
+		name: 'Estimated ' + DataSeriesToUse.toLowerCase() + ' growth',
 		line: {width: 6},
 		marker: {color: Colour1}		
 		},{	
@@ -94,9 +96,9 @@ else if (DataToUse == "Growth"){
 			return data["Year"]
 			;}),
 		y: $.map(chartData, function(data){
-			return data["ProjectedPopulation_AbsoluteGrowth_Low"]
+			return data["Projected" + DataSeriesToUse + "_AbsoluteGrowth_Low"]
 			;}),
-		name: 'Projected population growth (low growth scenario)',
+		name: 'Projected ' + DataSeriesToUse.toLowerCase() + ' growth (low growth scenario)',
 		line: {width: 6},
 		marker: {color: Colour3}
 		},{	
@@ -105,9 +107,9 @@ else if (DataToUse == "Growth"){
 			return data["Year"]
 			;}),
 		y: $.map(chartData, function(data){
-			return data["ProjectedPopulation_AbsoluteGrowth_Medium"]
+			return data["Projected" + DataSeriesToUse + "_AbsoluteGrowth_Medium"]
 			;}),
-		name: 'Projected population growth (medium growth scenario)',
+		name: 'Projected ' + DataSeriesToUse.toLowerCase() + ' growth (medium growth scenario)',
 		line: {width: 6},
 		marker: {color: Colour2}
 		},{	
@@ -116,9 +118,9 @@ else if (DataToUse == "Growth"){
 			return data["Year"]
 			;}),
 		y: $.map(chartData, function(data){
-			return data["ProjectedPopulation_AbsoluteGrowth_High"]
+			return data["Projected" + DataSeriesToUse + "_AbsoluteGrowth_High"]
 			;}),
-		name: 'Projected population growth (high growth scenario)',
+		name: 'Projected ' + DataSeriesToUse.toLowerCase() + ' growth (high growth scenario)',
 		line: {width: 6},
 		marker: {color: Colour4}
 		}
@@ -135,7 +137,7 @@ else {
 			return data["Year"]
 			;}),
 		y: $.map(chartData, function(data){
-			return data["EstimatedPopulation_GrowthRate"]
+			return data["Estimated" + DataSeriesToUse + "_GrowthRate"]
 			;}),
 		name: 'Estimated growth rate',
 		line: {width: 6},
@@ -147,7 +149,7 @@ else {
 			return data["Year"]
 			;}),
 		y: $.map(chartData, function(data){
-			return data["ProjectedPopulation_GrowthRate_Low"]
+			return data["Projected" + DataSeriesToUse + "_GrowthRate_Low"]
 			;}),
 		name: 'Projected growth rate (low growth scenario)',
 		line: {width: 6},
@@ -159,7 +161,7 @@ else {
 			return data["Year"]
 			;}),
 		y: $.map(chartData, function(data){
-			return data["ProjectedPopulation_GrowthRate_Medium"]
+			return data["Projected" + DataSeriesToUse + "_GrowthRate_Medium"]
 			;}),
 		name: 'Projected growth rate (medium growth scenario)',
 		line: {width: 6},
@@ -171,7 +173,7 @@ else {
 			return data["Year"]
 			;}),
 		y: $.map(chartData, function(data){
-			return data["ProjectedPopulation_GrowthRate_High"]
+			return data["Projected" + DataSeriesToUse + "_GrowthRate_High"]
 			;}),
 		name: 'Projected growth rate (high growth scenario)',
 		line: {width: 6},
@@ -187,7 +189,7 @@ else {
 	
 	
 layout = {
-	title: 'Population trends',
+	title: DataSeriesToUse.toLowerCase() + ' trends',
 	showlegend: true,
 	legend: {
 		orientation: 'h',
