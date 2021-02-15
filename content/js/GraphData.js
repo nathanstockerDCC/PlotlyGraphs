@@ -286,6 +286,13 @@ var graphdata = [{
 		funcFile : "/PlotlyGraphs/graphFunctions/PopGraph.js",
 		drop : [
 			{
+				text : "Choose a data series",
+				id : "dataseriesdd_PopGraph",
+				valtext : ["Population", "Households"]
+			}
+		],
+		drop : [
+			{
 				text : "Choose a data type",
 				id : "datatypedd_PopGraph",
 				valtext : ["Growth", "Growth rate","Total"]
