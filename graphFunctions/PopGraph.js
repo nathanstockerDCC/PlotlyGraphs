@@ -186,12 +186,12 @@ else {
 
 	
 var yRangeDict = {};
-yRangeDict["PopulationGrowth"] = [-510,210];
+yRangeDict["PopulationGrowth"] = [-510,2100];
 yRangeDict["PopulationGrowth rate"] = [-0.0051,0.0151];
 yRangeDict["PopulationTotal"] = [108900,161010];
 yRangeDict["HouseholdsGrowth"] = [-210,810];
 yRangeDict["HouseholdsGrowth rate"] = [-0.0051,0.0151];
-yRangeDict["HouseholdsTotal"] = [39900,65100];
+yRangeDict["HouseholdsTotal"] = [39500,65500];
 
 	
 layout = {
