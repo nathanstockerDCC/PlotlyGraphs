@@ -524,16 +524,16 @@ else if (datatypetouse_Development_by_Month == "Consented dwellings by zone") {
 
 	RemoveBlanks(xValues, dels);
 
-	RemoveBlanks(TownshipAndSettlement, dels);
-	RemoveBlanks(InnerCityResidential, dels);
-	RemoveBlanks(GeneralResidential2, dels);
-	RemoveBlanks(GeneralResidential1, dels);
-	RemoveBlanks(LargeLotResidential, dels);
-	RemoveBlanks(LowDensityResidential, dels);
-	RemoveBlanks(CommercialandMixedUse, dels);
-	RemoveBlanks(Rural, dels);
-	RemoveBlanks(RuralResidential, dels);
-	RemoveBlanks(OtherZones, dels);
+	RemoveBlanks(yValuesTownshipAndSettlement, dels);
+	RemoveBlanks(yValuesInnerCityResidential, dels);
+	RemoveBlanks(yValuesGeneralResidential2, dels);
+	RemoveBlanks(yValuesGeneralResidential1, dels);
+	RemoveBlanks(yValuesLargeLotResidential, dels);
+	RemoveBlanks(yValuesLowDensityResidential, dels);
+	RemoveBlanks(yValuesCommercialandMixedUse, dels);
+	RemoveBlanks(yValuesRural, dels);
+	RemoveBlanks(yValuesRuralResidential, dels);
+	RemoveBlanks(yValuesOtherZones, dels);
 
 	
 	data = [{
