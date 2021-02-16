@@ -575,7 +575,7 @@ else if (datatypetouse_Development_by_Month == "Consented dwellings by zone") {
         },{
 		x: xValues,
 		y: yValuesCommercialandMixedUse,
-		name: "Commercial and Mixed Use"",
+		name: "Commercial and Mixed Use",
 		marker: {color: Colour3},
 		stackgroup: 'one'
         },{
