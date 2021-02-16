@@ -3,6 +3,11 @@ var Colour2 = 'rgb(135, 2, 123)'; // Purple
 var Colour3 = 'rgb(170, 170, 170)'; // Grey 
 var Colour4 = 'rgb(239, 113, 133)'; // Ginger
 var Colour5 = 'rgb(45, 204, 211)'; // Teal
+var Colour6 = 'rgb(0, 178, 169)'; // Greenish blue
+var Colour7 = 'rgb(175, 39, 47)'; // Dark red
+var Colour8 = 'rgb(196, 112, 30)'; // Brownish yellow
+var Colour9 = 'rgb(155, 34, 66)'; // Maroonish 
+var Colour10 = 'rgb(228, 0, 43)'; // Red
 
 var Zooming = false;
 
