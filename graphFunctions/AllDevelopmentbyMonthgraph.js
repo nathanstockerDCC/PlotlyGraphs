@@ -552,13 +552,13 @@ else if (datatypetouse_Development_by_Month == "Consented dwellings by zone") {
         },{
 		x: xValues,
 		y: yValuesGeneralResidential2,
-		name: "GeneralResidential2",
+		name: "General Residential 2",
 		marker: {color: Colour3},
 		stackgroup: 'one'
         },{
 		x: xValues,
 		y: yValuesGeneralResidential1,
-		name: "GeneralResidential1",
+		name: "General Residential 1",
 		marker: {color: Colour4},
 		stackgroup: 'one'
         },{
@@ -601,7 +601,12 @@ else if (datatypetouse_Development_by_Month == "Consented dwellings by zone") {
 
 	layout = {
 		title: 'Consented dwellings by zone',
-		showlegend: false,
+		showlegend: true,
+		legend: {
+			orientation: 'h',
+			y: '-0.25',
+			x: '0.5',
+			xanchor: 'center'},
 		xaxis: {
 			zeroline: false, 
 			type: 'date',
