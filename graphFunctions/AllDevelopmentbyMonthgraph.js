@@ -127,6 +127,14 @@ else if (timeframe_Development_by_Month == "Years") {
 		else 
 			{dtickValue = TimeToMilliseconds(1, "Years");}
 		}
+	else if (datatypetouse_Development_by_Month == "Consented dwellings by greenfield/brownfield" || datatypetouse_Development_by_Month == "Consented dwellings by zone")
+		{
+		tick0Value = '2002-01-01';	
+		if (WindowWidth < 500)
+			{dtickValue = TimeToMilliseconds(6, "Years");}
+		else 
+			{dtickValue = TimeToMilliseconds(2, "Years");}
+		}
 	else
 		{
 		tick0Value = '1992-01-01';	
@@ -135,7 +143,7 @@ else if (timeframe_Development_by_Month == "Years") {
 		else 
 			{dtickValue = TimeToMilliseconds(2, "Years");}
 		}
-
+	
 	tickformatValue = "%Y";
 
 	;}	
@@ -442,6 +450,156 @@ else if (datatypetouse_Development_by_Month == "Constructed dwellings") {
 
 	layout = {
 		title: 'Constructed dwellings',
+		showlegend: false,
+		xaxis: {
+			zeroline: false, 
+			type: 'date',
+			range: [StartDate, EndDate],
+			dtick: dtickValue,
+			tick0: tick0Value,
+			tickformat: tickformatValue,
+			fixedrange: Zooming			
+			},
+		yaxis: {
+			zeroline: false, 
+			rangemode: 'tozero',
+			fixedrange: Zooming
+			}
+		}
+	;}
+	
+else if (datatypetouse_Development_by_Month == "Consented dwellings by zone") {
+
+	var yValuesTownshipAndSettlement = $.map(chartData, function(data){
+		return data[TimeframeConverted+"Township And Settlement"];
+		});
+
+	var yValuesInnerCityResidential = $.map(chartData, function(data){
+		return data[TimeframeConverted+"Inner City Residential"];
+		});
+
+	var yValuesGeneralResidential2 = $.map(chartData, function(data){
+		return data[TimeframeConverted+"General Residential 2"];
+		});
+
+	var yValuesGeneralResidential1 = $.map(chartData, function(data){
+		return data[TimeframeConverted+"General Residential 1"];
+		});
+
+	var yValuesLargeLotResidential = $.map(chartData, function(data){
+		return data[TimeframeConverted+"Large Lot Residential"];
+		});
+
+	var yValuesLowDensityResidential = $.map(chartData, function(data){
+		return data[TimeframeConverted+"Low Density Residential"];
+		});
+
+	var yValuesCommercialandMixedUse = $.map(chartData, function(data){
+		return data[TimeframeConverted+"Commercial and Mixed Use"];
+		});
+
+	var yValuesRural = $.map(chartData, function(data){
+		return data[TimeframeConverted+"Rural"];
+		});
+
+	var yValuesRuralResidential = $.map(chartData, function(data){
+		return data[TimeframeConverted+"Rural Residential"];
+		});		
+
+	var yValuesOtherZones = $.map(chartData, function(data){
+		return data[TimeframeConverted+"Other zones"];
+		});		
+
+	
+	BlanksToRemove(yValuesTownshipAndSettlement);
+	BlanksToRemove(yValuesInnerCityResidential);
+	BlanksToRemove(yValuesGeneralResidential2);
+	BlanksToRemove(yValuesGeneralResidential1);
+	BlanksToRemove(yValuesLargeLotResidential);
+	BlanksToRemove(yValuesLowDensityResidential);
+	BlanksToRemove(yValuesCommercialandMixedUse);
+	BlanksToRemove(yValuesRural);
+	BlanksToRemove(yValuesRuralResidential);
+	BlanksToRemove(yValuesOtherZones);
+
+	RemoveBlanks(xValues, dels);
+
+	RemoveBlanks(TownshipAndSettlement, dels);
+	RemoveBlanks(InnerCityResidential, dels);
+	RemoveBlanks(GeneralResidential2, dels);
+	RemoveBlanks(GeneralResidential1, dels);
+	RemoveBlanks(LargeLotResidential, dels);
+	RemoveBlanks(LowDensityResidential, dels);
+	RemoveBlanks(CommercialandMixedUse, dels);
+	RemoveBlanks(Rural, dels);
+	RemoveBlanks(RuralResidential, dels);
+	RemoveBlanks(OtherZones, dels);
+
+	
+	data = [{
+		x: xValues,
+		y: yValuesTownshipAndSettlement,
+		name: "Township and Settlement",
+		marker: {color: Colour1},
+		stackgroup: 'one'
+        },{
+		x: xValues,
+		y: yValuesInnerCityResidential,
+		name: "Inner City Residential",
+		marker: {color: Colour2},
+		stackgroup: 'one'
+        },{
+		x: xValues,
+		y: yValuesGeneralResidential2,
+		name: "GeneralResidential2",
+		marker: {color: Colour3},
+		stackgroup: 'one'
+        },{
+		x: xValues,
+		y: yValuesGeneralResidential1,
+		name: "GeneralResidential1",
+		marker: {color: Colour3},
+		stackgroup: 'one'
+        },{
+		x: xValues,
+		y: yValuesLargeLotResidential,
+		name: "Large Lot Residential",
+		marker: {color: Colour3},
+		stackgroup: 'one'
+        },{
+		x: xValues,
+		y: yValuesLowDensityResidential,
+		name: "Low Density Residential",
+		marker: {color: Colour3},
+		stackgroup: 'one'
+        },{
+		x: xValues,
+		y: yValuesCommercialandMixedUse,
+		name: "Commercial and Mixed Use"",
+		marker: {color: Colour3},
+		stackgroup: 'one'
+        },{
+		x: xValues,
+		y: yValuesRural,
+		name: "Rural",
+		marker: {color: Colour3},
+		stackgroup: 'one'
+        },{
+		x: xValues,
+		y: yValuesRuralResidential,
+		name: "Rural Residential",
+		marker: {color: Colour3},
+		stackgroup: 'one'
+        },{
+		x: xValues,
+		y: yValuesOtherZones,
+		name: "Other zones",
+		marker: {color: Colour3},
+		stackgroup: 'one'
+        }];
+
+	layout = {
+		title: 'Consented dwellings by zone',
 		showlegend: false,
 		xaxis: {
 			zeroline: false, 
