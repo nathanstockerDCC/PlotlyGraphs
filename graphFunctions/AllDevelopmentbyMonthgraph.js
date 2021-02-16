@@ -97,7 +97,7 @@ else if (timeframe_Development_by_Month == "Year to date") {
 	if (WindowWidth < 500)
 		dtickValue = "M6";
 	else 
-		dtickValue = "M3";
+		dtickValue = "M6";
 
 	tick0Value = DateMinMax(filteredDates, "max");
 	tickformatValue = "%b '%y";
@@ -130,6 +130,7 @@ else if (timeframe_Development_by_Month == "Years") {
 	else if (datatypetouse_Development_by_Month == "Consented dwellings by greenfield/brownfield" || datatypetouse_Development_by_Month == "Consented dwellings by zone")
 		{
 		tick0Value = '2002-01-01';	
+		StartDate = new Date('2002-01-01');
 		if (WindowWidth < 500)
 			{dtickValue = TimeToMilliseconds(6, "Years");}
 		else 
