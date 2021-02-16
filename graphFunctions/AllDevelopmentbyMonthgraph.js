@@ -471,7 +471,7 @@ else if (datatypetouse_Development_by_Month == "Constructed dwellings") {
 else if (datatypetouse_Development_by_Month == "Consented dwellings by zone") {
 
 	var yValuesTownshipAndSettlement = $.map(chartData, function(data){
-		return data[TimeframeConverted+"Township And Settlement"];
+		return data[TimeframeConverted+"Township and Settlement"];
 		});
 
 	var yValuesInnerCityResidential = $.map(chartData, function(data){
@@ -558,43 +558,43 @@ else if (datatypetouse_Development_by_Month == "Consented dwellings by zone") {
 		x: xValues,
 		y: yValuesGeneralResidential1,
 		name: "GeneralResidential1",
-		marker: {color: Colour3},
+		marker: {color: Colour4},
 		stackgroup: 'one'
         },{
 		x: xValues,
 		y: yValuesLargeLotResidential,
 		name: "Large Lot Residential",
-		marker: {color: Colour3},
+		marker: {color: Colour5},
 		stackgroup: 'one'
         },{
 		x: xValues,
 		y: yValuesLowDensityResidential,
 		name: "Low Density Residential",
-		marker: {color: Colour3},
+		marker: {color: Colour6},
 		stackgroup: 'one'
         },{
 		x: xValues,
 		y: yValuesCommercialandMixedUse,
 		name: "Commercial and Mixed Use",
-		marker: {color: Colour3},
+		marker: {color: Colour7},
 		stackgroup: 'one'
         },{
 		x: xValues,
 		y: yValuesRural,
 		name: "Rural",
-		marker: {color: Colour3},
+		marker: {color: Colour8},
 		stackgroup: 'one'
         },{
 		x: xValues,
 		y: yValuesRuralResidential,
 		name: "Rural Residential",
-		marker: {color: Colour3},
+		marker: {color: Colour9},
 		stackgroup: 'one'
         },{
 		x: xValues,
 		y: yValuesOtherZones,
 		name: "Other zones",
-		marker: {color: Colour3},
+		marker: {color: Colour10},
 		stackgroup: 'one'
         }];
 
