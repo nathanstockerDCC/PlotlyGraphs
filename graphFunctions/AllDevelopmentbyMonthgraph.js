@@ -285,6 +285,7 @@ else if (datatypetouse_Development_by_Month == "Consented dwellings by type") {
 		x: xValues,
 		y: yValuesHouses,
 		name: "Houses",
+		hoverlabel: {namelength :-1},
 		type: 'line',
 		connectgaps: true,
 		line: {width: 5,},
@@ -294,6 +295,7 @@ else if (datatypetouse_Development_by_Month == "Consented dwellings by type") {
 		x: xValues,
 		y: yValuesUnits,
 		name: "Units",
+		hoverlabel: {namelength :-1},
 		type: 'line',
 		connectgaps: true,
 		line: {width: 5,},
@@ -303,6 +305,7 @@ else if (datatypetouse_Development_by_Month == "Consented dwellings by type") {
 		x: xValues,
 		y: yValuesApartments,
 		name: "Apartments",
+		hoverlabel: {namelength :-1},
 		type: 'line',
 		connectgaps: true,
 		line: {width: 5,},
@@ -312,6 +315,7 @@ else if (datatypetouse_Development_by_Month == "Consented dwellings by type") {
 		x: xValues,
 		y: yValuesRVUs,
 		name: "Retirement village units",
+		hoverlabel: {namelength :-1},
 		type: 'line',
 		connectgaps: true,
 		line: {width: 5,},
@@ -378,6 +382,7 @@ else if (datatypetouse_Development_by_Month == "Value of consented construction"
 		x: xValues,
 		y: yValuesResid,
 		name: "Residential buildings",
+		hoverlabel: {namelength :-1},
 		type: VisType,
 		line: {width: 6,},
 		connectgaps: true,
@@ -387,6 +392,7 @@ else if (datatypetouse_Development_by_Month == "Value of consented construction"
 		x: xValues,
 		y: yValuesNonResid,
 		name: "Non-residential construction",
+		hoverlabel: {namelength :-1},
 		type: VisType,
 		line: {width: 6,},
 		connectgaps: true,
@@ -396,6 +402,7 @@ else if (datatypetouse_Development_by_Month == "Value of consented construction"
 		x: xValues,
 		y: yValuesTotal,
 		name: "Total construction value",
+		hoverlabel: {namelength :-1},
 		type: 'line',
 		line: {width: 6,},
 		connectgaps: true,
@@ -549,54 +556,63 @@ else if (datatypetouse_Development_by_Month == "Consented dwellings by zone") {
 		y: yValuesInnerCityResidential,
 		name: "Inner City Residential",
 		marker: {color: Colour2},
+		hoverlabel: {namelength :-1},
 		stackgroup: 'one'
         },{
 		x: xValues,
 		y: yValuesGeneralResidential2,
 		name: "General Residential 2",
 		marker: {color: Colour3},
+		hoverlabel: {namelength :-1},
 		stackgroup: 'one'
         },{
 		x: xValues,
 		y: yValuesGeneralResidential1,
 		name: "General Residential 1",
 		marker: {color: Colour4},
+		hoverlabel: {namelength :-1},
 		stackgroup: 'one'
         },{
 		x: xValues,
 		y: yValuesLargeLotResidential,
 		name: "Large Lot Residential",
 		marker: {color: Colour5},
+		hoverlabel: {namelength :-1},
 		stackgroup: 'one'
         },{
 		x: xValues,
 		y: yValuesLowDensityResidential,
 		name: "Low Density Residential",
 		marker: {color: Colour6},
+		hoverlabel: {namelength :-1},
 		stackgroup: 'one'
         },{
 		x: xValues,
 		y: yValuesCommercialandMixedUse,
 		name: "Commercial and Mixed Use",
 		marker: {color: Colour7},
+		hoverlabel: {namelength :-1},
 		stackgroup: 'one'
         },{
 		x: xValues,
 		y: yValuesRural,
 		name: "Rural",
 		marker: {color: Colour8},
+		hoverlabel: {namelength :-1},
 		stackgroup: 'one'
         },{
 		x: xValues,
 		y: yValuesRuralResidential,
 		name: "Rural Residential",
 		marker: {color: Colour9},
+		hoverlabel: {namelength :-1},
 		stackgroup: 'one'
         },{
 		x: xValues,
 		y: yValuesOtherZones,
 		name: "Other zones",
 		marker: {color: Colour10},
+		hoverlabel: {namelength :-1},
 		stackgroup: 'one'
         }];
 
