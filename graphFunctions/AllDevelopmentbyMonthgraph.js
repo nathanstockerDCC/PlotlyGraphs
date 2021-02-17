@@ -360,10 +360,14 @@ else if (datatypetouse_Development_by_Month == "Consented dwellings by type") {
 	
 else if (datatypetouse_Development_by_Month == "Value of consented construction") {
 
-	var yValuesResid = $.map(chartData, function(data){
-		return data[TimeframeConverted+"Residential Buildings"];
+	var yValuesNewResid = $.map(chartData, function(data){
+		return data[TimeframeConverted+"New Residential Buildings"];
 		});
-	
+
+	var yValuesAlteredResid = $.map(chartData, function(data){
+		return data[TimeframeConverted+"Altered Residential Buildings"];
+		});
+		
 	var yValuesNonResid = $.map(chartData, function(data){
 		return data[TimeframeConverted+"NonResidential Construction"];
 		});
@@ -374,20 +378,30 @@ else if (datatypetouse_Development_by_Month == "Value of consented construction"
 	
 	BlanksToRemove(yValuesResid);
 	RemoveBlanks(xValues, dels);
-	RemoveBlanks(yValuesResid, dels);
+	RemoveBlanks(yValuesNewResid, dels);
+	RemoveBlanks(yValuesAlteredResid, dels);
 	RemoveBlanks(yValuesNonResid, dels);
 	RemoveBlanks(yValuesTotal, dels);
 
 	data = [{
 		x: xValues,
-		y: yValuesResid,
-		name: "Residential buildings",
+		y: yValuesNewResid,
+		name: "New Residential buildings",
 		hoverlabel: {namelength :-1},
 		type: VisType,
-		stackgroup: 'one',
 		line: {width: 6,},
 		connectgaps: true,
 		marker: {color: Colour1}
+		
+        },{
+		x: xValues,
+		y: yValuesAlteredResid,
+		name: "Residential alterations",
+		hoverlabel: {namelength :-1},
+		type: VisType,
+		line: {width: 6,},
+		connectgaps: true,
+		marker: {color: Colour4}
 		
         },{
 		x: xValues,
@@ -395,7 +409,6 @@ else if (datatypetouse_Development_by_Month == "Value of consented construction"
 		name: "Non-residential construction",
 		hoverlabel: {namelength :-1},
 		type: VisType,
-		stackgroup: 'one',
 		line: {width: 6,},
 		connectgaps: true,
 		marker: {color: Colour3}
