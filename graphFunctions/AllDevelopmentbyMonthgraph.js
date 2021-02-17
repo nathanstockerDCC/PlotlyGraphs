@@ -420,6 +420,7 @@ else if (datatypetouse_Development_by_Month == "Value of consented construction"
 		x: xValues,
 		y: yValuesTotal,
 		name: "Total construction value",
+		visible: 'legendonly',
 		hoverlabel: {namelength :-1},
 		type: 'line',
 		line: {width: 6,},
