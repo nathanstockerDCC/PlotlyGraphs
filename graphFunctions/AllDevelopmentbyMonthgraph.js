@@ -384,6 +384,7 @@ else if (datatypetouse_Development_by_Month == "Value of consented construction"
 		name: "Residential buildings",
 		hoverlabel: {namelength :-1},
 		type: VisType,
+		stackgroup: 'one',
 		line: {width: 6,},
 		connectgaps: true,
 		marker: {color: Colour1}
@@ -394,6 +395,7 @@ else if (datatypetouse_Development_by_Month == "Value of consented construction"
 		name: "Non-residential construction",
 		hoverlabel: {namelength :-1},
 		type: VisType,
+		stackgroup: 'one',
 		line: {width: 6,},
 		connectgaps: true,
 		marker: {color: Colour3}
