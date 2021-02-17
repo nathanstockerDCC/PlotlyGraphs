@@ -376,7 +376,10 @@ else if (datatypetouse_Development_by_Month == "Value of consented construction"
 		return data[TimeframeConverted+"Total Construction Value"];
 		});
 	
-	BlanksToRemove(yValuesResid);
+	BlanksToRemove(yValuesNewResid);
+	BlanksToRemove(yValuesAlteredResid);
+	BlanksToRemove(yValuesNonResid);
+	BlanksToRemove(yValuesTotal);
 	RemoveBlanks(xValues, dels);
 	RemoveBlanks(yValuesNewResid, dels);
 	RemoveBlanks(yValuesAlteredResid, dels);
