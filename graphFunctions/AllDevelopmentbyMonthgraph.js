@@ -542,7 +542,7 @@ else if (datatypetouse_Development_by_Month == "Consented dwellings by zone") {
 		y: yValuesTownshipAndSettlement,
 		name: "Township and Settlement",
 		marker: {color: Colour1},
-		hoverlabel: {namelength :-1}
+		hoverlabel: {namelength :-1},
 		stackgroup: 'one'
         },{
 		x: xValues,
