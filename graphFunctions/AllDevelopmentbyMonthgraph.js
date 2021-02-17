@@ -414,6 +414,7 @@ else if (datatypetouse_Development_by_Month == "Value of consented construction"
 		name: "Non-residential construction",
 		hoverlabel: {namelength :-1},
 		type: VisType,
+		stackgroup: 'two',
 		line: {width: 6,},
 		connectgaps: true,
 		marker: {color: Colour3}
