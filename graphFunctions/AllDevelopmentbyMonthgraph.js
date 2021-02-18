@@ -66,7 +66,15 @@ if (timeframe_Development_by_Month == "Months") {
 			return data["All Months"];
 		});
 	
+	// to remove recent years not in purchased BC dataset
+	var yValuesExampleData = $.map(chartData, function(data){
+		return data[TimeframeConverted+"Other zones"];
+		});		
+	BlanksToRemove(yValuesExampleData);
+	RemoveBlanks(xValues, dels);
+
 	var filteredDates = xValues.filter(function(e) { return e !== "" });
+	
 	var StartDate = new Date(DateMinMax(filteredDates, "max"));
 	StartDate.setDate(StartDate.getDate()-745);
 	var EndDate = new Date(DateMinMax(filteredDates, "max"));
