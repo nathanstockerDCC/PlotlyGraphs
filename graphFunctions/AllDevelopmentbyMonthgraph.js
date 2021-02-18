@@ -389,10 +389,9 @@ else if (datatypetouse_Development_by_Month == "Value of consented construction"
 	data = [{
 		x: xValues,
 		y: yValuesNewResid,
-		name: "New Residential buildings",
+		name: "New residential buildings",
 		hoverlabel: {namelength :-1},
 		type: VisType,
-		stackgroup: 'one',
 		line: {width: 6,},
 		connectgaps: true,
 		marker: {color: Colour1}
@@ -403,7 +402,6 @@ else if (datatypetouse_Development_by_Month == "Value of consented construction"
 		name: "Residential alterations",
 		hoverlabel: {namelength :-1},
 		type: VisType,
-		stackgroup: 'one',
 		line: {width: 6,},
 		connectgaps: true,
 		marker: {color: Colour4}
@@ -412,9 +410,9 @@ else if (datatypetouse_Development_by_Month == "Value of consented construction"
 		x: xValues,
 		y: yValuesNonResid,
 		name: "Non-residential construction",
+		visible: 'legendonly',
 		hoverlabel: {namelength :-1},
 		type: VisType,
-		stackgroup: 'two',
 		line: {width: 6,},
 		connectgaps: true,
 		marker: {color: Colour3}
