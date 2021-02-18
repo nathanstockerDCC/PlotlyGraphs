@@ -63,7 +63,7 @@ var timeframe_Development_by_Month = $('#timeframe_DevelopmentbyMonthgraph optio
 if (timeframe_Development_by_Month == "Months") {
 	VisType = 'bar';
 	xValues = $.map(chartData, function(data){
-			return data["Citywide All Months"];
+			return data["All Months"];
 		});
 	
 	var filteredDates = xValues.filter(function(e) { return e !== "" });
@@ -85,7 +85,7 @@ if (timeframe_Development_by_Month == "Months") {
 else if (timeframe_Development_by_Month == "Year to date") {
 	VisType = 'line';
 	xValues = $.map(chartData, function(data){
-			return data["Citywide All Months"];
+			return data["All Months"];
 		});
 	
 	var filteredDates = xValues.filter(function(e) { return e !== "" });
@@ -107,7 +107,7 @@ else if (timeframe_Development_by_Month == "Year to date") {
 else if (timeframe_Development_by_Month == "Years") {
 	VisType = 'bar';
 	xValues = $.map(chartData, function(data){
-			return data["Citywide Years Longterm Years"];
+			return data["Years Years"];
 		});
 
 	var filteredDates = xValues.filter(function(e) { return e !== "" });
@@ -160,7 +160,7 @@ else if (timeframe_Development_by_Month == "Years") {
 else {
 	VisType = 'line';
 	xValues = $.map(chartData, function(data){
-			return data["Citywide All Months"];
+			return data["All Months"];
 		});
 		
 	var filteredDates = xValues.filter(function(e) { return e !== "" })
@@ -184,10 +184,10 @@ EndDate = (new Date(EndDate)).getTime();
 
 	
 if (timeframe_Development_by_Month == "Year to date") {
-	TimeframeConverted = "Citywide YTD "
+	TimeframeConverted = "YTD "
 	;}
 else {
-	TimeframeConverted = "Citywide "+timeframe_Development_by_Month+" Longterm "
+	TimeframeConverted = ""+timeframe_Development_by_Month+" "
 	;}
 
 var dels = [];
