@@ -360,6 +360,10 @@ else if (datatypetouse_Development_by_Month == "Consented dwellings by type") {
 	
 else if (datatypetouse_Development_by_Month == "Value of consented construction") {
 
+	var yValuesTotalResid = $.map(chartData, function(data){
+		return data[TimeframeConverted+"Total Residential Buildings"];
+		});
+
 	var yValuesNewResid = $.map(chartData, function(data){
 		return data[TimeframeConverted+"New Residential Buildings"];
 		});
@@ -376,17 +380,30 @@ else if (datatypetouse_Development_by_Month == "Value of consented construction"
 		return data[TimeframeConverted+"Total Construction Value"];
 		});
 	
+	BlanksToRemove(yValuesTotalResid);
 	BlanksToRemove(yValuesNewResid);
 	BlanksToRemove(yValuesAlteredResid);
 	BlanksToRemove(yValuesNonResid);
 	BlanksToRemove(yValuesTotal);
 	RemoveBlanks(xValues, dels);
+	RemoveBlanks(yValuesTotalResid, dels);
 	RemoveBlanks(yValuesNewResid, dels);
 	RemoveBlanks(yValuesAlteredResid, dels);
 	RemoveBlanks(yValuesNonResid, dels);
 	RemoveBlanks(yValuesTotal, dels);
 
-	data = [{
+	data = [
+	{
+		x: xValues,
+		y: yValuesTotalResid,
+		name: "Residential buildings - total",
+		visible: 'legendonly',
+		hoverlabel: {namelength :-1},
+		type: VisType,
+		line: {width: 6,},
+		connectgaps: true,
+		marker: {color: Colour5}		
+        },{
 		x: xValues,
 		y: yValuesNewResid,
 		name: "New residential buildings",
