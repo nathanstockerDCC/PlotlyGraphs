@@ -512,6 +512,73 @@ else if (datatypetouse_Development_by_Month == "Constructed dwellings") {
 			}
 		}
 	;}
+
+	
+else if (datatypetouse_Development_by_Month == "Consented dwellings by greenfield/brownfield") {
+
+	var yValuesGreenfield = $.map(chartData, function(data){
+		return data[TimeframeConverted+"Greenfield"];
+		});
+
+	var yValuesIntensification = $.map(chartData, function(data){
+		return data[TimeframeConverted+"Intensification"];
+		});
+
+	
+	BlanksToRemove(yValuesGreenfield);
+	BlanksToRemove(yValuesIntensification);
+	RemoveBlanks(xValues, dels);
+	RemoveBlanks(yValuesGreenfield, dels);
+	RemoveBlanks(yValuesIntensification, dels);
+
+	data = [
+	{
+		x: xValues,
+		y: yValuesGreenfield,
+		name: "Greenfield",
+		hoverlabel: {namelength :-1},
+		type: VisType,
+		line: {width: 6,},
+		connectgaps: true,
+		marker: {color: Colour1}		
+        },{
+		x: xValues,
+		y: yValuesIntensification,
+		name: "Brownfield",
+		hoverlabel: {namelength :-1},
+		type: VisType,
+		line: {width: 6,},
+		connectgaps: true,
+		marker: {color: Colour2}
+        }];
+
+	layout = {
+		title: 'Consented dwellings by development type',
+		showlegend: true,
+		legend: {
+			orientation: 'h',
+			y: '-0.25',
+			x: '0.5',
+			xanchor: 'center'},
+		xaxis: {
+			zeroline: false, 
+			type: 'date',
+			range: [StartDate, EndDate],
+			dtick: dtickValue,
+			tick0: tick0Value,
+			tickformat: tickformatValue,
+			fixedrange: Zooming
+			},
+		yaxis: {
+			zeroline: false, 
+			rangemode: 'tozero',
+			fixedrange: Zooming,
+			tickformat: '$,s', 
+			hoverformat: '$,.4s'
+			}
+		}
+	;}
+
 	
 else if (datatypetouse_Development_by_Month == "Consented dwellings by zone") {
 
