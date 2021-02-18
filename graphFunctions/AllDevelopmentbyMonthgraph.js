@@ -139,7 +139,7 @@ else if (timeframe_Development_by_Month == "Years") {
 	else if (datatypetouse_Development_by_Month == "Consented dwellings by greenfield/brownfield")
 		{
 		tick0Value = '2014-01-01';	
-		StartDate = new Date('2014-01-01');
+		StartDate = new Date('2013-06-01');
 		if (WindowWidth < 500)
 			{dtickValue = TimeToMilliseconds(2, "Years");}
 		else 
