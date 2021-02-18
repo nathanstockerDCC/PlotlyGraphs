@@ -83,7 +83,7 @@ if (timeframe_Development_by_Month == "Months") {
 	;}
 
 else if (timeframe_Development_by_Month == "Year to date") {
-	VisType = 'bar';
+	VisType = 'line';
 	xValues = $.map(chartData, function(data){
 			return data["Citywide All Months"];
 		});
@@ -127,7 +127,7 @@ else if (timeframe_Development_by_Month == "Years") {
 		else 
 			{dtickValue = TimeToMilliseconds(1, "Years");}
 		}
-	else if (datatypetouse_Development_by_Month == "Consented dwellings by greenfield/brownfield" || datatypetouse_Development_by_Month == "Consented dwellings by zone")
+	else if (datatypetouse_Development_by_Month == "Consented dwellings by zone")
 		{
 		tick0Value = '2002-01-01';	
 		StartDate = new Date('2002-01-01');
@@ -135,6 +135,15 @@ else if (timeframe_Development_by_Month == "Years") {
 			{dtickValue = TimeToMilliseconds(6, "Years");}
 		else 
 			{dtickValue = TimeToMilliseconds(2, "Years");}
+		}
+	else if (datatypetouse_Development_by_Month == "Consented dwellings by greenfield/brownfield")
+		{
+		tick0Value = '2014-01-01';	
+		StartDate = new Date('2014-01-01');
+		if (WindowWidth < 500)
+			{dtickValue = TimeToMilliseconds(2, "Years");}
+		else 
+			{dtickValue = TimeToMilliseconds(1, "Years");}
 		}
 	else
 		{
