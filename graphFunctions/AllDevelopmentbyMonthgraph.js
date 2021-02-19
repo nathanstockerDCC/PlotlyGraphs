@@ -79,7 +79,7 @@ if (timeframe_Development_by_Month == "Months") {
 			});		
 		BlanksToRemove(yValuesExampleData);
 		RemoveBlanks(xValues, dels);
-	};
+	;}
 	
 	var filteredDates = xValues.filter(function(e) { return e !== "" });
 	
@@ -111,7 +111,7 @@ else if (timeframe_Development_by_Month == "Year to date") {
 			});		
 		BlanksToRemove(yValuesExampleData);
 		RemoveBlanks(xValues, dels);
-	};
+	;}
 	
 	var filteredDates = xValues.filter(function(e) { return e !== "" });
 	var StartDate = new Date(DateMinMax(filteredDates, "min"));
@@ -142,7 +142,7 @@ else if (timeframe_Development_by_Month == "Years") {
 			});		
 		BlanksToRemove(yValuesExampleData);
 		RemoveBlanks(xValues, dels);
-	};
+	;}
 		
 	var filteredDates = xValues.filter(function(e) { return e !== "" });
 	var StartDate = new Date(DateMinMax(filteredDates, "min"));
