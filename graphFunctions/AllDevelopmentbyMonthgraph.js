@@ -59,6 +59,12 @@ if (chartData == null || chartData.length <= 0)
 var datatypetouse_Development_by_Month = $('#datatypedd_DevelopmentbyMonthgraph option:selected').text();
 var timeframe_Development_by_Month = $('#timeframe_DevelopmentbyMonthgraph option:selected').text();
 
+if (timeframe_Development_by_Month == "Year to date") {
+	TimeframeConverted = "YTD "
+	;}
+else {
+	TimeframeConverted = ""+timeframe_Development_by_Month+" "
+	;}
 
 if (timeframe_Development_by_Month == "Months") {
 	VisType = 'bar';
@@ -210,13 +216,6 @@ else {
 StartDate = (new Date(StartDate)).getTime();
 EndDate = (new Date(EndDate)).getTime();
 
-	
-if (timeframe_Development_by_Month == "Year to date") {
-	TimeframeConverted = "YTD "
-	;}
-else {
-	TimeframeConverted = ""+timeframe_Development_by_Month+" "
-	;}
 
 var dels = [];
 
