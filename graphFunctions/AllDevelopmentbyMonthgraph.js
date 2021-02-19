@@ -129,6 +129,15 @@ else if (timeframe_Development_by_Month == "Years") {
 			return data["Years Years"];
 		});
 
+	// to remove recent years not in purchased BC dataset
+	if (datatypetouse_Development_by_Month == "Consented dwellings by greenfield/brownfield" || datatypetouse_Development_by_Month == "Consented dwellings by zone"){
+		var yValuesExampleData = $.map(chartData, function(data){
+			return data[TimeframeConverted+"Other zones"];
+			});		
+		BlanksToRemove(yValuesExampleData);
+		RemoveBlanks(xValues, dels);
+	};
+		
 	var filteredDates = xValues.filter(function(e) { return e !== "" });
 	var StartDate = new Date(DateMinMax(filteredDates, "min"));
 	StartDate.setDate(StartDate.getDate()-300);
