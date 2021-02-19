@@ -68,19 +68,18 @@ else {
 
 if (timeframe_Development_by_Month == "Months") {
 	VisType = 'bar';
-	xValues = $.map(chartData, function(data){
-			return data["All Months"];
-		});
 	
-	// to remove recent years not in purchased BC dataset
 	if (datatypetouse_Development_by_Month == "Consented dwellings by greenfield/brownfield" || datatypetouse_Development_by_Month == "Consented dwellings by zone"){
-		var yValuesExampleData = $.map(chartData, function(data){
-			return data[TimeframeConverted+"Other zones"];
-			});		
-		BlanksToRemove(yValuesExampleData);
-		RemoveBlanks(xValues, dels);
-	;}
-	
+		xValues = $.map(chartData, function(data){
+			return data["Purchased data Months"];
+			});
+		;}
+	else {
+		xValues = $.map(chartData, function(data){
+			return data["All Months"];
+			});
+		;}
+
 	var filteredDates = xValues.filter(function(e) { return e !== "" });
 	
 	var StartDate = new Date(DateMinMax(filteredDates, "max"));
@@ -100,18 +99,17 @@ if (timeframe_Development_by_Month == "Months") {
 
 else if (timeframe_Development_by_Month == "Year to date") {
 	VisType = 'line';
-	xValues = $.map(chartData, function(data){
-			return data["All Months"];
-		});
-	
-	// to remove recent years not in purchased BC dataset
+
 	if (datatypetouse_Development_by_Month == "Consented dwellings by greenfield/brownfield" || datatypetouse_Development_by_Month == "Consented dwellings by zone"){
-		var yValuesExampleData = $.map(chartData, function(data){
-			return data[TimeframeConverted+"Other zones"];
-			});		
-		BlanksToRemove(yValuesExampleData);
-		RemoveBlanks(xValues, dels);
-	;}
+		xValues = $.map(chartData, function(data){
+			return data["Purchased data Months"];
+			});
+		;}
+	else {
+		xValues = $.map(chartData, function(data){
+			return data["All Months"];
+			});
+		;}
 	
 	var filteredDates = xValues.filter(function(e) { return e !== "" });
 	var StartDate = new Date(DateMinMax(filteredDates, "min"));
@@ -131,19 +129,18 @@ else if (timeframe_Development_by_Month == "Year to date") {
 	
 else if (timeframe_Development_by_Month == "Years") {
 	VisType = 'bar';
-	xValues = $.map(chartData, function(data){
-			return data["Years Years"];
-		});
 
-	// to remove recent years not in purchased BC dataset
 	if (datatypetouse_Development_by_Month == "Consented dwellings by greenfield/brownfield" || datatypetouse_Development_by_Month == "Consented dwellings by zone"){
-		var yValuesExampleData = $.map(chartData, function(data){
-			return data[TimeframeConverted+"Other zones"];
-			});		
-		BlanksToRemove(yValuesExampleData);
-		RemoveBlanks(xValues, dels);
-	;}
-		
+		xValues = $.map(chartData, function(data){
+			return data["Purchased data Years"];
+			});
+		;}
+	else {
+		xValues = $.map(chartData, function(data){
+			return data["All Years"];
+			});
+		;}
+	
 	var filteredDates = xValues.filter(function(e) { return e !== "" });
 	var StartDate = new Date(DateMinMax(filteredDates, "min"));
 	StartDate.setDate(StartDate.getDate()-300);
