@@ -237,7 +237,8 @@ else {
 			tick0: 1,
 			dtick: dTickValue,
 			hoverformat: '%B %Y',
-			tickformat: "%Y"},
+			tickformat: "%Y",
+			title: "Year to date"},
 		yaxis: {
 			fixedrange: Zooming, 
 			zeroline: false,
