@@ -75,7 +75,8 @@ if (DataToUse == "Average rental cost"){
 			tick0: 0,
 			dtick: dTickValue,
 			hoverformat: '%B %Y',
-			tickformat: "%Y"},
+			tickformat: "%Y",
+			title: "Year to date"},
 		yaxis: {
 			fixedrange: Zooming, 
 			zeroline: false,
@@ -114,7 +115,8 @@ else if (DataToUse == "Growth rate"){
 			tick0: 0,
 			dtick: dTickValue,
 			hoverformat: '%B %Y',
-			tickformat: "%Y"},
+			tickformat: "%Y",
+			title: "Year to date"},
 		yaxis: {
 			fixedrange: Zooming, 
 			zeroline: false,
