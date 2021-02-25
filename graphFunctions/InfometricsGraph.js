@@ -18,7 +18,7 @@ var WindowWidth = t();
 if (WindowWidth < 500)
 	{dTickValue = "M36";}
 else 
-	{dTickValue = "M12";}
+	{dTickValue = "M36";}
 
 var DataToUseWithSpaces = $('#InfometricsGraph_Datatype option:selected').text();
 var DataToUse = DataToUseWithSpaces.replace(/ /g, "");
@@ -28,7 +28,6 @@ RangeValues = [];
 
 /*
 document.getElementById("ExtraReferences").innerHTML = "";
-
 if (DataToUseWithSpaces == "Rental affordability index") {
 	var textdiv = document.getElementById("ExtraReferences");
 	var aTag = document.createElement('a');
@@ -37,7 +36,6 @@ if (DataToUseWithSpaces == "Rental affordability index") {
 	aTag.innerHTML = "Rental Affordability Index";
 	textdiv.appendChild(aTag); ;
 }
-
 if (DataToUseWithSpaces == "Housing affordability index") {
 	var textdiv = document.getElementById("ExtraReferences");
 	var aTag = document.createElement('a');
@@ -124,12 +122,12 @@ RemoveBlanks(yValuesNZ, dels);
 if (DataToUseWithSpaces == "Rental affordability index")
 	{
 	rangemodeValue = "normal",
-	rangeValue = [0.2, 0.4]
+	rangeValue = [0.14, 0.31]
 	;}
 else
 	{
-	rangemodeValue = "tozero",
-	rangeValue = ""
+	rangemodeValue = "normal",
+	rangeValue = [1.9, 8.1]
 	;}
 
 	layout = {
@@ -144,7 +142,7 @@ else
 			fixedrange : Zooming,
 			type: 'date',
 			dtick: dTickValue,
-			tick0: "2000-06-30",
+			tick0: "2002-06-30",
 			tickformat: "%b '%y",
 			zeroline : false,
 		},
