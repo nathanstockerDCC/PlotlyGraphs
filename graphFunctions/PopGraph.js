@@ -71,7 +71,6 @@ if (DataTypeToUse == "Total"){
 		marker: {color: Colour4}
 		}
 		];
-	;}
 		
 	tickformatValue = ",";
 	
