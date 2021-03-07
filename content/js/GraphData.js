@@ -289,7 +289,7 @@ var graphdata = [{
 			{
 				text : "Choose a data series",
 				id : "dataseriesdd_PopGraph",
-				valtext : ["Population", "Households"]
+				valtext : ["Population", "Population by age", "Households"]
 			},
 			{
 				text : "Choose a data type",
