@@ -69,7 +69,7 @@ else {
 if (timeframe_Development_by_Month == "Months") {
 	VisType = 'bar';
 	
-	if (datatypetouse_Development_by_Month == "Consented dwellings by greenfield/brownfield" || datatypetouse_Development_by_Month == "Consented dwellings by zone"){
+	if (datatypetouse_Development_by_Month == "Consented dwellings by development type" || datatypetouse_Development_by_Month == "Consented dwellings by zone"){
 		xValues = $.map(chartData, function(data){
 			return data["Purchased data Months"];
 			});
@@ -100,7 +100,7 @@ if (timeframe_Development_by_Month == "Months") {
 else if (timeframe_Development_by_Month == "Year to date") {
 	VisType = 'line';
 
-	if (datatypetouse_Development_by_Month == "Consented dwellings by greenfield/brownfield" || datatypetouse_Development_by_Month == "Consented dwellings by zone"){
+	if (datatypetouse_Development_by_Month == "Consented dwellings by development type" || datatypetouse_Development_by_Month == "Consented dwellings by zone"){
 		xValues = $.map(chartData, function(data){
 			return data["Purchased data Months"];
 			});
@@ -130,7 +130,7 @@ else if (timeframe_Development_by_Month == "Year to date") {
 else if (timeframe_Development_by_Month == "Years") {
 	VisType = 'bar';
 
-	if (datatypetouse_Development_by_Month == "Consented dwellings by greenfield/brownfield" || datatypetouse_Development_by_Month == "Consented dwellings by zone"){
+	if (datatypetouse_Development_by_Month == "Consented dwellings by development type" || datatypetouse_Development_by_Month == "Consented dwellings by zone"){
 		xValues = $.map(chartData, function(data){
 			return data["Purchased data Years"];
 			});
@@ -167,7 +167,7 @@ else if (timeframe_Development_by_Month == "Years") {
 		else 
 			{dtickValue = TimeToMilliseconds(2, "Years");}
 		}
-	else if (datatypetouse_Development_by_Month == "Consented dwellings by greenfield/brownfield")
+	else if (datatypetouse_Development_by_Month == "Consented dwellings by development type")
 		{
 		tick0Value = '2014-01-01';	
 		StartDate = new Date('2013-06-01');
@@ -548,7 +548,7 @@ else if (datatypetouse_Development_by_Month == "Constructed dwellings") {
 	;}
 
 	
-else if (datatypetouse_Development_by_Month == "Consented dwellings by greenfield/brownfield") {
+else if (datatypetouse_Development_by_Month == "Consented dwellings by development type") {
 
 	var yValuesGreenfield = $.map(chartData, function(data){
 		return data[TimeframeConverted+"Greenfield"];
