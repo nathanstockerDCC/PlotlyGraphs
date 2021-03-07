@@ -24,9 +24,8 @@ else
 var DataSeriesToUse = $('#dataseriesdd_PopGraph option:selected').text();
 var DataTypeToUse = $('#datatypedd_PopGraph option:selected').text();
 
-
 if (DataTypeToUse == "Total"){
-		
+
 	data = [{
 		x: $.map(chartData, function(data){
 			return data["Year"]
@@ -72,7 +71,8 @@ if (DataTypeToUse == "Total"){
 		marker: {color: Colour4}
 		}
 		];
-	
+	;}
+		
 	tickformatValue = ",";
 	
 	;}
@@ -184,15 +184,116 @@ else {
 	
 	;}
 
+var PopByAgeDict = {
+	"Total": ["Total", "population"],
+	"Growth": ["AbsoluteGrowth", "growth for population"],
+	"Growth rate": ["GrowthRate", "growth rate for population"]
+	};
+
+if (DataSeriesToUse == "Population by age"){
+	data = [{
+		x: $.map(chartData, function(data){
+			return data["Year"]
+			;}),
+		y: $.map(chartData, function(data){
+			return data["Estimated_0_14_"+PopByAgeDict[DataTypeToUse][0]+"_Medium"]
+			;}),
+		name: 'Estimated '+PopByAgeDict[DataTypeToUse][1]+' aged 0-14',
+		line: {width: 6},
+		marker: {color: Colour1}		
+		},{
+
+		x: $.map(chartData, function(data){
+			return data["Year"]
+			;}),
+		y: $.map(chartData, function(data){
+			return data["Estimated_15_24_"+PopByAgeDict[DataTypeToUse][0]+"_Medium"]
+			;}),
+		name: 'Estimated '+PopByAgeDict[DataTypeToUse][1]+' aged 15-24',
+		line: {width: 6},
+		marker: {color: Colour3}
+		},{
+
+		x: $.map(chartData, function(data){
+			return data["Year"]
+			;}),
+		y: $.map(chartData, function(data){
+			return data["Estimated_25_64_"+PopByAgeDict[DataTypeToUse][0]+"_Medium"]
+			;}),
+		name: 'Estimated '+PopByAgeDict[DataTypeToUse][1]+' aged 25-64',
+		line: {width: 6},
+		marker: {color: Colour2}
+		},{
+
+		x: $.map(chartData, function(data){
+			return data["Year"]
+			;}),
+		y: $.map(chartData, function(data){
+			return data["Estimated_65_plus_"+PopByAgeDict[DataTypeToUse][0]+"_Medium"]
+			;}),
+		name: 'Estimated '+PopByAgeDict[DataTypeToUse][1]+' aged 65+',
+		line: {width: 6},
+		marker: {color: Colour4}
+		},{
+
+		x: $.map(chartData, function(data){
+			return data["Year"]
+			;}),
+		y: $.map(chartData, function(data){
+			return data["Projected_0_14_"+PopByAgeDict[DataTypeToUse][0]+"_Medium"]
+			;}),
+		name: 'Projected '+PopByAgeDict[DataTypeToUse][1]+' aged 0-14',
+		line: {width: 6, dash: 'dashdot'},
+		marker: {color: Colour1}		
+		},{
+
+		x: $.map(chartData, function(data){
+			return data["Year"]
+			;}),
+		y: $.map(chartData, function(data){
+			return data["Projected_15_24_"+PopByAgeDict[DataTypeToUse][0]+"_Medium"]
+			;}),
+		name: 'Projected '+PopByAgeDict[DataTypeToUse][1]+' aged 15-24',
+		line: {width: 6, dash: 'dashdot'},
+		marker: {color: Colour3}
+		},{
+
+		x: $.map(chartData, function(data){
+			return data["Year"]
+			;}),
+		y: $.map(chartData, function(data){
+			return data["Projected_25_64_"+PopByAgeDict[DataTypeToUse][0]+"_Medium"]
+			;}),
+		name: 'Projected '+PopByAgeDict[DataTypeToUse][1]+' aged 25-64',
+		line: {width: 6, dash: 'dashdot'},
+		marker: {color: Colour2}
+		},{
+
+		x: $.map(chartData, function(data){
+			return data["Year"]
+			;}),
+		y: $.map(chartData, function(data){
+			return data["Projected_65_plus_"+PopByAgeDict[DataTypeToUse][0]+"_Medium"]
+			;}),
+		name: 'Projected '+PopByAgeDict[DataTypeToUse][1]+' aged 65+',
+		line: {width: 6, dash: 'dashdot'},
+		marker: {color: Colour4}
+		}
+		];		
+	
+;}
+	
 	
 var yRangeDict = {};
-yRangeDict["PopulationGrowth"] = [-510,2100];
-yRangeDict["PopulationGrowth rate"] = [-0.0051,0.0151];
-yRangeDict["PopulationTotal"] = [108900,161010];
-yRangeDict["HouseholdsGrowth"] = [-210,810];
-yRangeDict["HouseholdsGrowth rate"] = [-0.0051,0.0151];
-yRangeDict["HouseholdsTotal"] = [39500,65500];
-
+yRangeDict["Population" + "Growth"] = [-510,2100];
+yRangeDict["Population" + "Growth rate"] = [-0.0051,0.0151];
+yRangeDict["Population" + "Total"] = [108900,161010];
+yRangeDict["Households" + "Growth"] = [-210,810];
+yRangeDict["Households" + "Growth rate"] = [-0.0051,0.0151];
+yRangeDict["Households" + "Total"] = [39500,65500];
+yRangeDict["Population by age" + "Growth"] = [-600,1500];
+yRangeDict["Population by age" + "Growth rate"] = [-0.02,0.04];
+yRangeDict["Population by age" + "Total"] = [0,65000];
 	
 layout = {
 	title: DataSeriesToUse + ' trends',
