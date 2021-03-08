@@ -277,7 +277,8 @@ if (DataSeriesToUse == "Population by age"){
 		RemoveBlanks(yValues_0_14_projected, dels);		
 		RemoveBlanks(yValues_15_24_projected, dels);		
 		RemoveBlanks(yValues_25_64_projected, dels);		
-		RemoveBlanks(yValues_65_plus_projected, dels);		
+		RemoveBlanks(yValues_65_plus_projected, dels);
+		console.log(testRange);
 		
 		data = [{
 			x: xValues,
