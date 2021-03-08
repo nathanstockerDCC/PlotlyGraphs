@@ -21,6 +21,7 @@ if (WindowWidth < 500)
 else 
 	{dTickValue = 5;}
 
+
 var DataSeriesToUse = $('#dataseriesdd_PopGraph option:selected').text();
 var DataTypeToUse = $('#datatypedd_PopGraph option:selected').text();
 
@@ -185,8 +186,8 @@ else {
 
 var PopByAgeDict = {
 	"Total": ["Total", "population"],
-	"Growth": ["AbsoluteGrowth", "growth for population"],
-	"Growth rate": ["GrowthRate", "growth rate for population"]
+	"Growth": ["AbsoluteGrowth", "growth:"],
+	"Growth rate": ["GrowthRate", "growth rate:"]
 	};
 
 if (DataSeriesToUse == "Population by age"){
@@ -336,7 +337,9 @@ if (DataSeriesToUse == "Population by age"){
 			type: 'bar',
 			marker: {color: Colour4}
 			}
-			];				
+			];
+
+		dTickValue = 1;
 	;}
 
 ;}
@@ -349,9 +352,9 @@ yRangeDict["Population" + "Total"] = [108900,161010];
 yRangeDict["Households" + "Growth"] = [-210,810];
 yRangeDict["Households" + "Growth rate"] = [-0.0051,0.0151];
 yRangeDict["Households" + "Total"] = [39500,65500];
-yRangeDict["Population by age" + "Growth"] = [-2500,8000];
+yRangeDict["Population by age" + "Growth"] = [-2600,8100];
 yRangeDict["Population by age" + "Growth rate"] = [-0.11,0.35];
-yRangeDict["Population by age" + "Total"] = [0,150000];
+yRangeDict["Population by age" + "Total"] = [0,155000];
 	
 layout = {
 	title: DataSeriesToUse + ' trends',
