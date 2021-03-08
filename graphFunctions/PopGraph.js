@@ -294,7 +294,7 @@ if (DataSeriesToUse == "Population by age"){
 	else {
 		data = [{
 			x: $.map(chartData, function(data){
-				return data["Year"]
+				return data["YearRange"]
 				;}),
 			y: $.map(chartData, function(data){
 				return data["YearRange_0_14_"+PopByAgeDict[DataTypeToUse][0]+"_Medium"]
@@ -305,7 +305,7 @@ if (DataSeriesToUse == "Population by age"){
 			},{
 
 			x: $.map(chartData, function(data){
-				return data["Year"]
+				return data["YearRange"]
 				;}),
 			y: $.map(chartData, function(data){
 				return data["YearRange_15_24_"+PopByAgeDict[DataTypeToUse][0]+"_Medium"]
@@ -316,7 +316,7 @@ if (DataSeriesToUse == "Population by age"){
 			},{
 
 			x: $.map(chartData, function(data){
-				return data["Year"]
+				return data["YearRange"]
 				;}),
 			y: $.map(chartData, function(data){
 				return data["YearRange_25_64_"+PopByAgeDict[DataTypeToUse][0]+"_Medium"]
@@ -327,7 +327,7 @@ if (DataSeriesToUse == "Population by age"){
 			},{
 
 			x: $.map(chartData, function(data){
-				return data["Year"]
+				return data["YearRange"]
 				;}),
 			y: $.map(chartData, function(data){
 				return data["YearRange_65_plus_"+PopByAgeDict[DataTypeToUse][0]+"_Medium"]
@@ -349,9 +349,9 @@ yRangeDict["Population" + "Total"] = [108900,161010];
 yRangeDict["Households" + "Growth"] = [-210,810];
 yRangeDict["Households" + "Growth rate"] = [-0.0051,0.0151];
 yRangeDict["Households" + "Total"] = [39500,65500];
-yRangeDict["Population by age" + "Growth"] = [-600,1500];
-yRangeDict["Population by age" + "Growth rate"] = [-0.02,0.04];
-yRangeDict["Population by age" + "Total"] = [0,70000];
+yRangeDict["Population by age" + "Growth"] = [-2500,8000];
+yRangeDict["Population by age" + "Growth rate"] = [-0.11,0.35];
+yRangeDict["Population by age" + "Total"] = [0,150000];
 	
 layout = {
 	title: DataSeriesToUse + ' trends',
