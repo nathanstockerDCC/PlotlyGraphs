@@ -256,7 +256,19 @@ if (DataSeriesToUse == "Population by age"){
 			return data["Projected_65_plus_"+PopByAgeDict[DataTypeToUse][0]+"_Medium"];
 			});
 				
-		BlanksToRemove(yValues_0_14_estimated);
+
+		testRange = []
+		var i;
+		for (i = 0; i < yValues_0_14_estimated.length; i++) {
+			if (isNaN(yValues_0_14_estimated[i]) && isNaN(yValues_0_14_projected[i])) {
+				testRange.push(yValues_0_14_estimated[i] + yValues_0_14_projected[i]);
+				}
+			else {
+				testRange.push(1) 
+				;} 
+		 
+			}				
+		BlanksToRemove(testRange);
 		RemoveBlanks(xValues, dels);
 		RemoveBlanks(yValues_0_14_estimated, dels);		
 		RemoveBlanks(yValues_15_24_estimated, dels);		
@@ -355,6 +367,7 @@ if (DataSeriesToUse == "Population by age"){
 		var yValues_65_plus = $.map(chartData, function(data){
 			return data["YearRange_65_plus_"+PopByAgeDict[DataTypeToUse][0]+"_Medium"];
 			});
+
 
 		BlanksToRemove(yValues_0_14);
 		RemoveBlanks(xValues, dels);
