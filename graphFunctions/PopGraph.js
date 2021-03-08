@@ -289,7 +289,7 @@ if (DataSeriesToUse == "Population by age"){
 			marker: {color: Colour4}
 			}
 			];		
-		:}
+		;}
 	
 	else {
 		data = [{
