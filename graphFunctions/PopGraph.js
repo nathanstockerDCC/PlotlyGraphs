@@ -190,96 +190,155 @@ var PopByAgeDict = {
 	};
 
 if (DataSeriesToUse == "Population by age"){
-	data = [{
-		x: $.map(chartData, function(data){
-			return data["Year"]
-			;}),
-		y: $.map(chartData, function(data){
-			return data["Estimated_0_14_"+PopByAgeDict[DataTypeToUse][0]+"_Medium"]
-			;}),
-		name: 'Estimated '+PopByAgeDict[DataTypeToUse][1]+' aged 0-14',
-		line: {width: 6},
-		marker: {color: Colour1}		
-		},{
-
-		x: $.map(chartData, function(data){
-			return data["Year"]
-			;}),
-		y: $.map(chartData, function(data){
-			return data["Estimated_15_24_"+PopByAgeDict[DataTypeToUse][0]+"_Medium"]
-			;}),
-		name: 'Estimated '+PopByAgeDict[DataTypeToUse][1]+' aged 15-24',
-		line: {width: 6},
-		marker: {color: Colour3}
-		},{
-
-		x: $.map(chartData, function(data){
-			return data["Year"]
-			;}),
-		y: $.map(chartData, function(data){
-			return data["Estimated_25_64_"+PopByAgeDict[DataTypeToUse][0]+"_Medium"]
-			;}),
-		name: 'Estimated '+PopByAgeDict[DataTypeToUse][1]+' aged 25-64',
-		line: {width: 6},
-		marker: {color: Colour2}
-		},{
-
-		x: $.map(chartData, function(data){
-			return data["Year"]
-			;}),
-		y: $.map(chartData, function(data){
-			return data["Estimated_65_plus_"+PopByAgeDict[DataTypeToUse][0]+"_Medium"]
-			;}),
-		name: 'Estimated '+PopByAgeDict[DataTypeToUse][1]+' aged 65+',
-		line: {width: 6},
-		marker: {color: Colour4}
-		},{
-
-		x: $.map(chartData, function(data){
-			return data["Year"]
-			;}),
-		y: $.map(chartData, function(data){
-			return data["Projected_0_14_"+PopByAgeDict[DataTypeToUse][0]+"_Medium"]
-			;}),
-		name: 'Projected '+PopByAgeDict[DataTypeToUse][1]+' aged 0-14',
-		line: {width: 6, dash: 'dashdot'},
-		marker: {color: Colour1}		
-		},{
-
-		x: $.map(chartData, function(data){
-			return data["Year"]
-			;}),
-		y: $.map(chartData, function(data){
-			return data["Projected_15_24_"+PopByAgeDict[DataTypeToUse][0]+"_Medium"]
-			;}),
-		name: 'Projected '+PopByAgeDict[DataTypeToUse][1]+' aged 15-24',
-		line: {width: 6, dash: 'dashdot'},
-		marker: {color: Colour3}
-		},{
-
-		x: $.map(chartData, function(data){
-			return data["Year"]
-			;}),
-		y: $.map(chartData, function(data){
-			return data["Projected_25_64_"+PopByAgeDict[DataTypeToUse][0]+"_Medium"]
-			;}),
-		name: 'Projected '+PopByAgeDict[DataTypeToUse][1]+' aged 25-64',
-		line: {width: 6, dash: 'dashdot'},
-		marker: {color: Colour2}
-		},{
-
-		x: $.map(chartData, function(data){
-			return data["Year"]
-			;}),
-		y: $.map(chartData, function(data){
-			return data["Projected_65_plus_"+PopByAgeDict[DataTypeToUse][0]+"_Medium"]
-			;}),
-		name: 'Projected '+PopByAgeDict[DataTypeToUse][1]+' aged 65+',
-		line: {width: 6, dash: 'dashdot'},
-		marker: {color: Colour4}
-		}
-		];		
 	
+	if (DataTypeToUse == "Total"){
+		data = [{
+			x: $.map(chartData, function(data){
+				return data["Year"]
+				;}),
+			y: $.map(chartData, function(data){
+				return data["Estimated_0_14_"+PopByAgeDict[DataTypeToUse][0]+"_Medium"]
+				;}),
+			name: 'Estimated '+PopByAgeDict[DataTypeToUse][1]+' aged 0-14',
+			line: {width: 4},
+			stackgroup: 'one',
+			marker: {color: Colour1}		
+			},{
+
+			x: $.map(chartData, function(data){
+				return data["Year"]
+				;}),
+			y: $.map(chartData, function(data){
+				return data["Estimated_15_24_"+PopByAgeDict[DataTypeToUse][0]+"_Medium"]
+				;}),
+			name: 'Estimated '+PopByAgeDict[DataTypeToUse][1]+' aged 15-24',
+			line: {width: 4},
+			stackgroup: 'one',
+			marker: {color: Colour3}
+			},{
+
+			x: $.map(chartData, function(data){
+				return data["Year"]
+				;}),
+			y: $.map(chartData, function(data){
+				return data["Estimated_25_64_"+PopByAgeDict[DataTypeToUse][0]+"_Medium"]
+				;}),
+			name: 'Estimated '+PopByAgeDict[DataTypeToUse][1]+' aged 25-64',
+			line: {width: 4},
+			stackgroup: 'one',
+			marker: {color: Colour2}
+			},{
+
+			x: $.map(chartData, function(data){
+				return data["Year"]
+				;}),
+			y: $.map(chartData, function(data){
+				return data["Estimated_65_plus_"+PopByAgeDict[DataTypeToUse][0]+"_Medium"]
+				;}),
+			name: 'Estimated '+PopByAgeDict[DataTypeToUse][1]+' aged 65+',
+			line: {width: 4},
+			stackgroup: 'one',
+			marker: {color: Colour4}
+			},{
+
+			x: $.map(chartData, function(data){
+				return data["Year"]
+				;}),
+			y: $.map(chartData, function(data){
+				return data["Projected_0_14_"+PopByAgeDict[DataTypeToUse][0]+"_Medium"]
+				;}),
+			name: 'Projected '+PopByAgeDict[DataTypeToUse][1]+' aged 0-14',
+			line: {width: 4, dash: 'dashdot'},
+			stackgroup: 'one',
+			marker: {color: Colour1}		
+			},{
+
+			x: $.map(chartData, function(data){
+				return data["Year"]
+				;}),
+			y: $.map(chartData, function(data){
+				return data["Projected_15_24_"+PopByAgeDict[DataTypeToUse][0]+"_Medium"]
+				;}),
+			name: 'Projected '+PopByAgeDict[DataTypeToUse][1]+' aged 15-24',
+			line: {width: 4, dash: 'dashdot'},
+			stackgroup: 'one',
+			marker: {color: Colour3}
+			},{
+
+			x: $.map(chartData, function(data){
+				return data["Year"]
+				;}),
+			y: $.map(chartData, function(data){
+				return data["Projected_25_64_"+PopByAgeDict[DataTypeToUse][0]+"_Medium"]
+				;}),
+			name: 'Projected '+PopByAgeDict[DataTypeToUse][1]+' aged 25-64',
+			line: {width: 4, dash: 'dashdot'},
+			stackgroup: 'one',
+			marker: {color: Colour2}
+			},{
+
+			x: $.map(chartData, function(data){
+				return data["Year"]
+				;}),
+			y: $.map(chartData, function(data){
+				return data["Projected_65_plus_"+PopByAgeDict[DataTypeToUse][0]+"_Medium"]
+				;}),
+			name: 'Projected '+PopByAgeDict[DataTypeToUse][1]+' aged 65+',
+			line: {width: 4, dash: 'dashdot'},
+			stackgroup: 'one',
+			marker: {color: Colour4}
+			}
+			];		
+		:}
+	
+	else {
+		data = [{
+			x: $.map(chartData, function(data){
+				return data["Year"]
+				;}),
+			y: $.map(chartData, function(data){
+				return data["YearRange_0_14_"+PopByAgeDict[DataTypeToUse][0]+"_Medium"]
+				;}),
+			name: 'Estimated '+PopByAgeDict[DataTypeToUse][1]+' aged 0-14',
+			type: 'bar',
+			marker: {color: Colour1}		
+			},{
+
+			x: $.map(chartData, function(data){
+				return data["Year"]
+				;}),
+			y: $.map(chartData, function(data){
+				return data["YearRange_15_24_"+PopByAgeDict[DataTypeToUse][0]+"_Medium"]
+				;}),
+			name: 'Estimated '+PopByAgeDict[DataTypeToUse][1]+' aged 15-24',
+			type: 'bar',
+			marker: {color: Colour3}
+			},{
+
+			x: $.map(chartData, function(data){
+				return data["Year"]
+				;}),
+			y: $.map(chartData, function(data){
+				return data["YearRange_25_64_"+PopByAgeDict[DataTypeToUse][0]+"_Medium"]
+				;}),
+			name: 'Estimated '+PopByAgeDict[DataTypeToUse][1]+' aged 25-64',
+			type: 'bar',
+			marker: {color: Colour2}
+			},{
+
+			x: $.map(chartData, function(data){
+				return data["Year"]
+				;}),
+			y: $.map(chartData, function(data){
+				return data["YearRange_65_plus_"+PopByAgeDict[DataTypeToUse][0]+"_Medium"]
+				;}),
+			name: 'Estimated '+PopByAgeDict[DataTypeToUse][1]+' aged 65+',
+			type: 'bar',
+			marker: {color: Colour4}
+			}
+			];				
+	;}
+
 ;}
 	
 	
@@ -292,7 +351,7 @@ yRangeDict["Households" + "Growth rate"] = [-0.0051,0.0151];
 yRangeDict["Households" + "Total"] = [39500,65500];
 yRangeDict["Population by age" + "Growth"] = [-600,1500];
 yRangeDict["Population by age" + "Growth rate"] = [-0.02,0.04];
-yRangeDict["Population by age" + "Total"] = [0,65000];
+yRangeDict["Population by age" + "Total"] = [0,70000];
 	
 layout = {
 	title: DataSeriesToUse + ' trends',
