@@ -346,10 +346,10 @@ if (DataSeriesToUse == "Population by age"){
 
 if (DataSeriesToUse == "Population by age"){
 	TickAngleValue = 0
-	:}
+	;}
 else {
 	TickAngleValue = 45
-	:}
+	;}
 
 	
 	
