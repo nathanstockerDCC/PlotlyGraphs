@@ -21,6 +21,32 @@ if (WindowWidth < 500)
 else 
 	{dTickValue = 5;}
 
+function BlanksToRemove(arrY) {
+ 
+	i = 0;
+	dels = [];
+
+	while (i < arrY.length) {
+		if (arrY[i] == ''){
+		dels.push(i);
+		i++
+		;}
+	 
+		else {
+		i++
+		;}
+
+	}
+
+	;}
+
+function RemoveBlanks(arr, deletes) {
+ 
+	for (var i = deletes.length-1; i >= 0; i--){
+		arr.splice(deletes[i],1)
+		;}
+	;}
+	
 
 var DataSeriesToUse = $('#dataseriesdd_PopGraph option:selected').text();
 var DataTypeToUse = $('#datatypedd_PopGraph option:selected').text();
