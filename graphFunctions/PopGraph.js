@@ -260,11 +260,11 @@ if (DataSeriesToUse == "Population by age"){
 		testRange = []
 		var i;
 		for (i = 0; i < yValues_0_14_estimated.length; i++) {
-			if (isNaN(yValues_0_14_estimated[i]) && isNaN(yValues_0_14_projected[i])) {
-				testRange.push(yValues_0_14_estimated[i] + yValues_0_14_projected[i]);
+			if (yValues_0_14_estimated[i] > 0 || yValues_0_14_projected[i] > 0 ) {
+				testRange.concat(1) 
 				}
 			else {
-				testRange.push(1) 
+				testRange.concat(yValues_0_14_estimated[i] + yValues_0_14_projected[i]);
 				;} 
 		 
 			}				
@@ -277,8 +277,7 @@ if (DataSeriesToUse == "Population by age"){
 		RemoveBlanks(yValues_0_14_projected, dels);		
 		RemoveBlanks(yValues_15_24_projected, dels);		
 		RemoveBlanks(yValues_25_64_projected, dels);		
-		RemoveBlanks(yValues_65_plus_projected, dels);
-		console.log(testRange);
+		RemoveBlanks(yValues_65_plus_projected, dels);		
 		
 		data = [{
 			x: xValues,
