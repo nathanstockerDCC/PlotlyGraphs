@@ -258,13 +258,14 @@ if (DataSeriesToUse == "Population by age"){
 				
 
 		testRange = []
+		testAdd = [,]
 		var i;
 		for (i = 0; i < yValues_0_14_estimated.length; i++) {
 			if (yValues_0_14_estimated[i] > 0 || yValues_0_14_projected[i] > 0 ) {
 				testRange.concat(1) 
 				}
 			else {
-				testRange.concat(yValues_0_14_estimated[i] + yValues_0_14_projected[i]);
+				testRange.concat(testAdd[0]);
 				;} 
 		 
 			}				
