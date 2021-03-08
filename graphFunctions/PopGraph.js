@@ -343,6 +343,14 @@ if (DataSeriesToUse == "Population by age"){
 	;}
 
 ;}
+
+if (DataSeriesToUse == "Population by age"){
+	TickAngleValue = 0
+	:}
+else {
+	TickAngleValue = 45
+	:}
+
 	
 	
 var yRangeDict = {};
@@ -369,7 +377,7 @@ layout = {
 		tickmode: 'linear',
 		tick0: 0,
 		dtick: dTickValue,
-		tickangle: 45,
+		tickangle: TickAngleValue,
 		fixedrange: Zooming
 		},
 	yaxis: {
