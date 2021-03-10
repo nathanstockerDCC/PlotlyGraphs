@@ -413,10 +413,12 @@ if (DataSeriesToUse == "Population by age"){
 ;}
 
 if (DataSeriesToUse == "Population by age"){
-	TickAngleValue = 0
+	TickAngleValue = 0,
+	RangeVal = [1996, 2043]
 	;}
 else {
-	TickAngleValue = 45
+	TickAngleValue = 45,
+	RangeVal = []
 	;}
 
 	
@@ -446,6 +448,7 @@ layout = {
 		tick0: 0,
 		dtick: dTickValue,
 		tickangle: TickAngleValue,
+		range : RangeVal,
 		fixedrange: Zooming
 		},
 	yaxis: {
