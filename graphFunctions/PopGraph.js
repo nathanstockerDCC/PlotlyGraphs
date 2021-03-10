@@ -418,7 +418,7 @@ if (DataSeriesToUse == "Population by age"){
 	;}
 else {
 	TickAngleValue = 45,
-	RangeVal = []
+	RangeVal = ["2000-2009", "2010-2019" , "2020-2029", "2030-2039"]
 	;}
 
 	
