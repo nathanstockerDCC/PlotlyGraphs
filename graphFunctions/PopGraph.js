@@ -21,31 +21,31 @@ if (WindowWidth < 500)
 else 
 	{dTickValue = 5;}
 
-# function BlanksToRemove(arrY) {
+// function BlanksToRemove(arrY) {
  
-	# i = 0;
-	# dels = [];
+	// i = 0;
+	// dels = [];
 
-	# while (i < arrY.length) {
-		# if (arrY[i] == ''){
-		# dels.push(i);
-		# i++
-		# ;}
+	// while (i < arrY.length) {
+		// if (arrY[i] == ''){
+		// dels.push(i);
+		// i++
+		// ;}
 	 
-		# else {
-		# i++
-		# ;}
+		// else {
+		// i++
+		// ;}
 
-	# }
+	// }
 
-	# ;}
+	// ;}
 
-# function RemoveBlanks(arr, deletes) {
+// function RemoveBlanks(arr, deletes) {
  
-	# for (var i = deletes.length-1; i >= 0; i--){
-		# arr.splice(deletes[i],1)
-		# ;}
-	# ;}
+	// for (var i = deletes.length-1; i >= 0; i--){
+		// arr.splice(deletes[i],1)
+		// ;}
+	// ;}
 	
 
 var DataSeriesToUse = $('#dataseriesdd_PopGraph option:selected').text();
@@ -257,28 +257,28 @@ if (DataSeriesToUse == "Population by age"){
 			});
 				
 
-		# testRange = []
-		# testAdd = [,]
-		# var i;
-		# for (i = 0; i < yValues_0_14_estimated.length; i++) {
-			# if (yValues_0_14_estimated[i] > 0 || yValues_0_14_projected[i] > 0 ) {
-				# testRange.concat(1) 
-				# }
-			# else {
-				# testRange.concat(testAdd[0]);
-				# ;} 
+		// testRange = []
+		// testAdd = [,]
+		// var i;
+		// for (i = 0; i < yValues_0_14_estimated.length; i++) {
+			// if (yValues_0_14_estimated[i] > 0 || yValues_0_14_projected[i] > 0 ) {
+				// testRange.concat(1) 
+				// }
+			// else {
+				// testRange.concat(testAdd[0]);
+				// ;} 
 		 
-			# }				
-		# BlanksToRemove(testRange);
-		# RemoveBlanks(xValues, dels);
-		# RemoveBlanks(yValues_0_14_estimated, dels);		
-		# RemoveBlanks(yValues_15_24_estimated, dels);		
-		# RemoveBlanks(yValues_25_64_estimated, dels);		
-		# RemoveBlanks(yValues_65_plus_estimated, dels);		
-		# RemoveBlanks(yValues_0_14_projected, dels);		
-		# RemoveBlanks(yValues_15_24_projected, dels);		
-		# RemoveBlanks(yValues_25_64_projected, dels);		
-		# RemoveBlanks(yValues_65_plus_projected, dels);		
+			// }				
+		// BlanksToRemove(testRange);
+		// RemoveBlanks(xValues, dels);
+		// RemoveBlanks(yValues_0_14_estimated, dels);		
+		// RemoveBlanks(yValues_15_24_estimated, dels);		
+		// RemoveBlanks(yValues_25_64_estimated, dels);		
+		// RemoveBlanks(yValues_65_plus_estimated, dels);		
+		// RemoveBlanks(yValues_0_14_projected, dels);		
+		// RemoveBlanks(yValues_15_24_projected, dels);		
+		// RemoveBlanks(yValues_25_64_projected, dels);		
+		// RemoveBlanks(yValues_65_plus_projected, dels);		
 		
 		data = [{
 			x: xValues,
@@ -370,12 +370,12 @@ if (DataSeriesToUse == "Population by age"){
 			});
 
 
-		# BlanksToRemove(yValues_0_14);
-		# RemoveBlanks(xValues, dels);
-		# RemoveBlanks(yValues_0_14, dels);		
-		# RemoveBlanks(yValues_15_24, dels);		
-		# RemoveBlanks(yValues_25_64, dels);		
-		# RemoveBlanks(yValues_65_plus, dels);		
+		// BlanksToRemove(yValues_0_14);
+		// RemoveBlanks(xValues, dels);
+		// RemoveBlanks(yValues_0_14, dels);		
+		// RemoveBlanks(yValues_15_24, dels);		
+		// RemoveBlanks(yValues_25_64, dels);		
+		// RemoveBlanks(yValues_65_plus, dels);		
 
 		data = [{
 			x: xValues,
