@@ -273,7 +273,7 @@ if (DataSeriesToUse == "Population by age"){
 			},{
 
 			x: xValues.slice(xValues.indexOf("1996"), 1+xValues.indexOf("2017")),
-			y: yValues_15_24_estimated.slice(xValues.indexOf("1996"), 1+xValues.indexOf("2017")),
+			y: yValues_15_24_estimated.slice((xValues.indexOf(PopByAgeDict["EstimatesStartDate"]), 1+xValues.indexOf(PopByAgeDict["EstimatesEndDate"])),
 			name: 'Estimated '+PopByAgeDict[DataTypeToUse][1]+' aged 15-24',
 			line: {width: 4},
 			stackgroup: 'one',
@@ -281,7 +281,7 @@ if (DataSeriesToUse == "Population by age"){
 			},{
 
 			x: xValues.slice(xValues.indexOf("1996"), 1+xValues.indexOf("2017")),
-			y: yValues_25_64_estimated.slice(xValues.indexOf("1996"), 1+xValues.indexOf("2017")),
+			y: yValues_25_64_estimated.slice(xValues.indexOf(PopByAgeDict["EstimatesStartDate"]), 1+xValues.indexOf(PopByAgeDict["EstimatesEndDate"])),
 			name: 'Estimated '+PopByAgeDict[DataTypeToUse][1]+' aged 25-64',
 			line: {width: 4},
 			stackgroup: 'one',
@@ -289,14 +289,14 @@ if (DataSeriesToUse == "Population by age"){
 			},{
 
 			x: xValues.slice(xValues.indexOf("1996"), 1+xValues.indexOf("2017")),
-			y: yValues_65_plus_estimated.slice(xValues.indexOf("1996"), 1+xValues.indexOf("2017")),
+			y: yValues_65_plus_estimated.slice(xValues.indexOf(PopByAgeDict["EstimatesStartDate"]), 1+xValues.indexOf(PopByAgeDict["EstimatesEndDate"])),
 			name: 'Estimated '+PopByAgeDict[DataTypeToUse][1]+' aged 65+',
 			line: {width: 4},
 			stackgroup: 'one',
 			marker: {color: Colour4}
 			},{
 
-			x: xValues.slice(xValues.indexOf("2018"), 1+xValues.indexOf("2043")),
+			x: xValues.slice(xValues.indexOf("2017"), 1+xValues.indexOf("2043")),
 			y: yValues_0_14_projected.slice(xValues.indexOf(PopByAgeDict["ProjectionsStartDate"]), 1+xValues.indexOf(PopByAgeDict["ProjectionsEndDate"])),
 			name: 'Projected '+PopByAgeDict[DataTypeToUse][1]+' aged 0-14',
 			line: {width: 4, dash: 'dashdot'},
@@ -304,24 +304,24 @@ if (DataSeriesToUse == "Population by age"){
 			marker: {color: Colour1}		
 			},{
 
-			x: xValues.slice(xValues.indexOf("2018"), 1+xValues.indexOf("2043")),
-			y: yValues_15_24_projected.slice(xValues.indexOf("2018"), 1+xValues.indexOf("2043")),
+			x: xValues.slice(xValues.indexOf("2017"), 1+xValues.indexOf("2043")),
+			y: yValues_15_24_projected.slice(xValues.indexOf(PopByAgeDict["ProjectionsStartDate"]), 1+xValues.indexOf(PopByAgeDict["ProjectionsEndDate"])),
 			name: 'Projected '+PopByAgeDict[DataTypeToUse][1]+' aged 15-24',
 			line: {width: 4, dash: 'dashdot'},
 			stackgroup: 'two',
 			marker: {color: Colour3}
 			},{
 
-			x: xValues.slice(xValues.indexOf("2018"), 1+xValues.indexOf("2043")),
-			y: yValues_25_64_projected.slice(xValues.indexOf("2018"), 1+xValues.indexOf("2043")),
+			x: xValues.slice(xValues.indexOf("2017"), 1+xValues.indexOf("2043")),
+			y: yValues_25_64_projected.slice(xValues.indexOf(PopByAgeDict["ProjectionsStartDate"]), 1+xValues.indexOf(PopByAgeDict["ProjectionsEndDate"])),
 			name: 'Projected '+PopByAgeDict[DataTypeToUse][1]+' aged 25-64',
 			line: {width: 4, dash: 'dashdot'},
 			stackgroup: 'two',
 			marker: {color: Colour2}
 			},{
 
-			x: xValues.slice(xValues.indexOf("2018"), 1+xValues.indexOf("2043")),
-			y: yValues_65_plus_projected.slice(xValues.indexOf("2018"), 1+xValues.indexOf("2043")),
+			x: xValues.slice(xValues.indexOf("2017"), 1+xValues.indexOf("2043")),
+			y: yValues_65_plus_projected.slice(xValues.indexOf(PopByAgeDict["ProjectionsStartDate"]), 1+xValues.indexOf(PopByAgeDict["ProjectionsEndDate"])),
 			name: 'Projected '+PopByAgeDict[DataTypeToUse][1]+' aged 65+',
 			line: {width: 4, dash: 'dashdot'},
 			stackgroup: 'two',
