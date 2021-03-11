@@ -281,64 +281,64 @@ if (DataSeriesToUse == "Population by age"){
 		RemoveBlanks(yValues_65_plus_projected, dels);		 */
 		
 		data = [{
-			x: xValues,
-			y: yValues_0_14_estimated,
+			x: xValues.splice(xValues.indexOf(1996), xValues.indexOf(2017)),
+			y: yValues_0_14_estimated.splice(xValues.indexOf(1996), xValues.indexOf(2017)),
 			name: 'Estimated '+PopByAgeDict[DataTypeToUse][1]+' aged 0-14',
 			line: {width: 4},
 			stackgroup: 'one',
 			marker: {color: Colour1}		
 			},{
 
-			x: xValues,
-			y: yValues_15_24_estimated,
+			x: xValues.splice(xValues.indexOf(1996), xValues.indexOf(2017)),
+			y: yValues_15_24_estimated.splice(xValues.indexOf(1996), xValues.indexOf(2017)),
 			name: 'Estimated '+PopByAgeDict[DataTypeToUse][1]+' aged 15-24',
 			line: {width: 4},
 			stackgroup: 'one',
 			marker: {color: Colour3}
 			},{
 
-			x: xValues,
-			y: yValues_25_64_estimated,
+			x: xValues.splice(xValues.indexOf(1996), xValues.indexOf(2017)),
+			y: yValues_25_64_estimated.splice(xValues.indexOf(1996), xValues.indexOf(2017)),
 			name: 'Estimated '+PopByAgeDict[DataTypeToUse][1]+' aged 25-64',
 			line: {width: 4},
 			stackgroup: 'one',
 			marker: {color: Colour2}
 			},{
 
-			x: xValues,
-			y: yValues_65_plus_estimated,
+			x: xValues.splice(xValues.indexOf(1996), xValues.indexOf(2017)),
+			y: yValues_65_plus_estimated.splice(xValues.indexOf(1996), xValues.indexOf(2017)),
 			name: 'Estimated '+PopByAgeDict[DataTypeToUse][1]+' aged 65+',
 			line: {width: 4},
 			stackgroup: 'one',
 			marker: {color: Colour4}
 			},{
 
-			x: xValues,
-			y: yValues_0_14_projected,
+			x: xValues.splice(xValues.indexOf(2018), xValues.indexOf(2043)),
+			y: yValues_0_14_projected.splice(xValues.indexOf(2018), xValues.indexOf(2043)),
 			name: 'Projected '+PopByAgeDict[DataTypeToUse][1]+' aged 0-14',
 			line: {width: 4, dash: 'dashdot'},
 			stackgroup: 'two',
 			marker: {color: Colour1}		
 			},{
 
-			x: xValues,
-			y: yValues_15_24_projected,
+			x: xValues.splice(xValues.indexOf(2018), xValues.indexOf(2043)),
+			y: yValues_15_24_projected.splice(xValues.indexOf(2018), xValues.indexOf(2043)),
 			name: 'Projected '+PopByAgeDict[DataTypeToUse][1]+' aged 15-24',
 			line: {width: 4, dash: 'dashdot'},
 			stackgroup: 'two',
 			marker: {color: Colour3}
 			},{
 
-			x: xValues,
-			y: yValues_25_64_projected,
+			x: xValues.splice(xValues.indexOf(2018), xValues.indexOf(2043)),
+			y: yValues_25_64_projected.splice(xValues.indexOf(2018), xValues.indexOf(2043)),
 			name: 'Projected '+PopByAgeDict[DataTypeToUse][1]+' aged 25-64',
 			line: {width: 4, dash: 'dashdot'},
 			stackgroup: 'two',
 			marker: {color: Colour2}
 			},{
 
-			x: xValues,
-			y: yValues_65_plus_projected,
+			x: xValues.splice(xValues.indexOf(2018), xValues.indexOf(2043)),
+			y: yValues_65_plus_projected.splice(xValues.indexOf(2018), xValues.indexOf(2043)),
 			name: 'Projected '+PopByAgeDict[DataTypeToUse][1]+' aged 65+',
 			line: {width: 4, dash: 'dashdot'},
 			stackgroup: 'two',
