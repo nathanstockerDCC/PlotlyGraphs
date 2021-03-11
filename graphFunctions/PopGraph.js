@@ -228,7 +228,7 @@ if (DataSeriesToUse == "Population by age"){
 		
 		var xValues = ($.map(chartData, function(data){
 			return data["Year"];
-			})).splice(PopByAgeDict[EstimatesStartDate"],PopByAgeDict[ProjectionsEndDate]);
+			})).splice(PopByAgeDict["EstimatesStartDate"],PopByAgeDict["ProjectionsEndDate"]);
 			
 		var yValues_0_14_estimated = ($.map(chartData, function(data){
 			return data["Estimated_0_14_"+PopByAgeDict[DataTypeToUse][0]+"_Medium"];
