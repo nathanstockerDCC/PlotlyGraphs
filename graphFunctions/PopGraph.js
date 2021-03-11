@@ -418,7 +418,7 @@ if (DataSeriesToUse == "Population by age"){
 	;}
 else {
 	TickAngleValue = 45,
-	RangeVal = [0, 1, 2, 3]
+	RangeVal = [0, 3]
 	;}
 
 	
