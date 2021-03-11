@@ -255,41 +255,36 @@ if (DataSeriesToUse == "Population by age"){
 			x: xValues,
 			y: yValues_2000,
 			name: '2000',
-			line: {width: 4},
-			stackgroup: 'one',
+			type: 'bar',
 			marker: {color: Colour1}		
 			},{
 
 			x: xValues,
 			y: yValues_2010,
 			name: '2010',
-			line: {width: 4},
-			stackgroup: 'one',
-			marker: {color: Colour1}		
+			type: 'bar',
+			marker: {color: Colour2}		
 			},{
 
 			x: xValues,
 			y: yValues_2020,
 			name: '2020',
-			line: {width: 4},
-			stackgroup: 'one',
-			marker: {color: Colour2}
+			type: 'bar',
+			marker: {color: Colour3}
 			},{
 
 			x: xValues,
 			y: yValues_2030,
 			name: '2030',
-			line: {width: 4},
-			stackgroup: 'one',
+			type: 'bar',
 			marker: {color: Colour4}
 			},{
 
 			x: xValues,
 			y: yValues_2040,
 			name: '2040',
-			line: {width: 4, dash: 'dashdot'},
-			stackgroup: 'two',
-			marker: {color: Colour1}		
+			type: 'bar',
+			marker: {color: Colour5}		
 			}
 			];		
 		;}
@@ -361,12 +356,12 @@ if (DataSeriesToUse == "Population by age"){
 
 if (DataSeriesToUse == "Population by age" && DataTypeToUse == "Total"){
 	TickAngleValue = 0,
-	RangeVal = [1996, 2043]
+	RangeVal = []
 	;}
 
 else if (DataSeriesToUse == "Population by age" && DataTypeToUse != "Total"){
 	TickAngleValue = 0,
-	RangeVal = []
+	RangeVal = [0,3]
 	;}
 	
 else {
