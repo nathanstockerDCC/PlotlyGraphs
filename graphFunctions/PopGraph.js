@@ -21,7 +21,7 @@ if (WindowWidth < 500)
 else 
 	{dTickValue = 5;}
 
-/* function BlanksToRemove(arrY) {
+function BlanksToRemove(arrY) {
  
 	i = 0;
 	dels = [];
@@ -45,7 +45,7 @@ function RemoveBlanks(arr, deletes) {
 	for (var i = deletes.length-1; i >= 0; i--){
 		arr.slice(deletes[i],1)
 		;}
-	;} */
+	;}
 	
 
 var DataSeriesToUse = $('#dataseriesdd_PopGraph option:selected').text();
@@ -312,12 +312,12 @@ if (DataSeriesToUse == "Population by age"){
 			});
 
 
-/* 		BlanksToRemove(yValues_0_14);
+		BlanksToRemove(yValues_0_14);
 		RemoveBlanks(xValues, dels);
 		RemoveBlanks(yValues_0_14, dels);		
 		RemoveBlanks(yValues_15_24, dels);		
 		RemoveBlanks(yValues_25_64, dels);		
-		RemoveBlanks(yValues_65_plus, dels);		 */
+		RemoveBlanks(yValues_65_plus, dels);		
 
 		data = [{
 			x: xValues,
@@ -359,7 +359,7 @@ if (DataSeriesToUse == "Population by age" && DataTypeToUse == "Total"){
 	RangeVal = []
 
 	console.log(xValues)
-	console.log(yValues_0_14)
+	console.log(yValues_2000)
 	;}
 
 else if (DataSeriesToUse == "Population by age" && DataTypeToUse != "Total"){
@@ -387,15 +387,15 @@ yRangeDict["Population by age" + "Growth rate"] = [-0.11,0.35];
 yRangeDict["Population by age" + "Total"] = [0,70000];
 	
 var TitleDict = {};
-yRangeDict["Population" + "Growth"] = "Population growth trends";
-yRangeDict["Population" + "Growth rate"] = "Population growth rate trends";
-yRangeDict["Population" + "Total"] = "Population trends";
-yRangeDict["Households" + "Growth"] = "Household growth trends";
-yRangeDict["Households" + "Growth rate"] = "Household growth rate trends";
-yRangeDict["Households" + "Total"] = "Household trends";
-yRangeDict["Population by age" + "Growth"] = "Population growth by age trends";
-yRangeDict["Population by age" + "Growth rate"] = "Population growth rate by age trends";
-yRangeDict["Population by age" + "Total"] = "Population by age trends";
+TitleDict["Population" + "Growth"] = "Population growth trends";
+TitleDict["Population" + "Growth rate"] = "Population growth rate trends";
+TitleDict["Population" + "Total"] = "Population trends";
+TitleDict["Households" + "Growth"] = "Household growth trends";
+TitleDict["Households" + "Growth rate"] = "Household growth rate trends";
+TitleDict["Households" + "Total"] = "Household trends";
+TitleDict["Population by age" + "Growth"] = "Population growth by age trends";
+TitleDict["Population by age" + "Growth rate"] = "Population growth rate by age trends";
+TitleDict["Population by age" + "Total"] = "Population by age trends";
 
 
 	
