@@ -357,6 +357,9 @@ if (DataSeriesToUse == "Population by age" && DataTypeToUse == "Total"){
 	TickAngleValue = 0,
 	dTickValue = 1;
 	RangeVal = []
+
+	console.log(xValues)
+	console.log(yValues_0_14)
 	;}
 
 else if (DataSeriesToUse == "Population by age" && DataTypeToUse != "Total"){
@@ -393,6 +396,7 @@ yRangeDict["Households" + "Total"] = "Household trends";
 yRangeDict["Population by age" + "Growth"] = "Population growth by age trends";
 yRangeDict["Population by age" + "Growth rate"] = "Population growth rate by age trends";
 yRangeDict["Population by age" + "Total"] = "Population by age trends";
+
 
 	
 layout = {
