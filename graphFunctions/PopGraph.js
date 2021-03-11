@@ -226,41 +226,41 @@ if (DataSeriesToUse == "Population by age"){
 	
 	if (DataTypeToUse == "Total"){
 		
-		var xValues = ($.map(chartData, function(data){
+		var xValues = $.map(chartData, function(data){
 			return data["Year"];
-			})).splice(PopByAgeDict[EstimatesStartDate],PopByAgeDict[ProjectionsEndDate]);
+			});
 			
-		var yValues_0_14_estimated = ($.map(chartData, function(data){
+		var yValues_0_14_estimated = $.map(chartData, function(data){
 			return data["Estimated_0_14_"+PopByAgeDict[DataTypeToUse][0]+"_Medium"];
-			})).splice(PopByAgeDict[EstimatesStartDate],PopByAgeDict[EstimatesEndDate]);
+			});
 			
-		var yValues_15_24_estimated = ($.map(chartData, function(data){
+		var yValues_15_24_estimated = $.map(chartData, function(data){
 			return data["Estimated_15_24_"+PopByAgeDict[DataTypeToUse][0]+"_Medium"];
-			})).splice(PopByAgeDict[EstimatesStartDate],PopByAgeDict[EstimatesEndDate]);
+			});
 			
-		var yValues_25_64_estimated = ($.map(chartData, function(data){
+		var yValues_25_64_estimated = $.map(chartData, function(data){
 			return data["Estimated_25_64_"+PopByAgeDict[DataTypeToUse][0]+"_Medium"];
-			})).splice(PopByAgeDict[EstimatesStartDate],PopByAgeDict[EstimatesEndDate]);
+			});
 			
-		var yValues_65_plus_estimated = ($.map(chartData, function(data){
+		var yValues_65_plus_estimated = $.map(chartData, function(data){
 			return data["Estimated_65_plus_"+PopByAgeDict[DataTypeToUse][0]+"_Medium"];
-			})).splice(PopByAgeDict[EstimatesStartDate],PopByAgeDict[EstimatesEndDate]);
+			});
 			
-		var yValues_0_14_projected = ($.map(chartData, function(data){
+		var yValues_0_14_projected = $.map(chartData, function(data){
 			return data["Projected_0_14_"+PopByAgeDict[DataTypeToUse][0]+"_Medium"];
-			})).splice(PopByAgeDict[ProjectionsStartDate],PopByAgeDict[ProjectionsEndDate]);
+			});
 			
-		var yValues_15_24_projected = ($.map(chartData, function(data){
+		var yValues_15_24_projected = $.map(chartData, function(data){
 			return data["Projected_15_24_"+PopByAgeDict[DataTypeToUse][0]+"_Medium"];
-			})).splice(PopByAgeDict[ProjectionsStartDate],PopByAgeDict[ProjectionsEndDate]);
+			});
 			
-		var yValues_25_64_projected = ($.map(chartData, function(data){
+		var yValues_25_64_projected = $.map(chartData, function(data){
 			return data["Projected_25_64_"+PopByAgeDict[DataTypeToUse][0]+"_Medium"];
-			})).splice(PopByAgeDict[ProjectionsStartDate],PopByAgeDict[ProjectionsEndDate]);
+			});
 			
-		var yValues_65_plus_projected = ($.map(chartData, function(data){
+		var yValues_65_plus_projected = $.map(chartData, function(data){
 			return data["Projected_65_plus_"+PopByAgeDict[DataTypeToUse][0]+"_Medium"];
-			})).splice(PopByAgeDict[ProjectionsStartDate],PopByAgeDict[ProjectionsEndDate]);
+			});
 				
 
 /* 		testRange = []
@@ -288,8 +288,8 @@ if (DataSeriesToUse == "Population by age"){
 		
 		console.log("xValues: " + xValues);
 		console.log("yValues: " + yValues_0_14_estimated);
-//		console.log("NewX: " + xValues.splice(xValues.indexOf(1996), xValues.indexOf(2017)));
-//		console.log("NewY: " + yValues_0_14_estimated.splice(xValues.indexOf(1996), xValues.indexOf(2017)));
+		console.log("NewX: " + xValues.splice(xValues.indexOf(1996), xValues.indexOf(2017)));
+		console.log("NewY: " + yValues_0_14_estimated.splice(xValues.indexOf(1996), xValues.indexOf(2017)));
 		
 		data = [{
 			x: xValues.splice(xValues.indexOf(1996), xValues.indexOf(2017)),
