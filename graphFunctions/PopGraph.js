@@ -21,7 +21,7 @@ if (WindowWidth < 500)
 else 
 	{dTickValue = 5;}
 
-function BlanksToRemove(arrY) {
+/* function BlanksToRemove(arrY) {
  
 	i = 0;
 	dels = [];
@@ -45,7 +45,7 @@ function RemoveBlanks(arr, deletes) {
 	for (var i = deletes.length-1; i >= 0; i--){
 		arr.slice(deletes[i],1)
 		;}
-	;}
+	;} */
 	
 
 var DataSeriesToUse = $('#dataseriesdd_PopGraph option:selected').text();
@@ -211,9 +211,9 @@ else {
 	;}
 
 var PopByAgeDict = {
-	"Total": ["Total", "population"],
-	"Growth": ["AbsoluteGrowth", "growth:"],
-	"Growth rate": ["GrowthRate", "growth rate:"]
+	"Total": ["Total", ""],
+	"Growth": ["AbsoluteGrowth", "growth"],
+	"Growth rate": ["GrowthRate", "growth rate"]
 	};
 
 	
@@ -263,7 +263,7 @@ if (DataSeriesToUse == "Population by age"){
 			y: yValues_2010,
 			name: '2010',
 			type: 'bar',
-			marker: {color: Colour2}		
+			marker: {color: Colour5}		
 			},{
 
 			x: xValues,
@@ -284,7 +284,7 @@ if (DataSeriesToUse == "Population by age"){
 			y: yValues_2040,
 			name: '2040',
 			type: 'bar',
-			marker: {color: Colour5}		
+			marker: {color: Colour2}		
 			}
 			];		
 		;}
@@ -312,40 +312,40 @@ if (DataSeriesToUse == "Population by age"){
 			});
 
 
-		BlanksToRemove(yValues_0_14);
+/* 		BlanksToRemove(yValues_0_14);
 		RemoveBlanks(xValues, dels);
 		RemoveBlanks(yValues_0_14, dels);		
 		RemoveBlanks(yValues_15_24, dels);		
 		RemoveBlanks(yValues_25_64, dels);		
-		RemoveBlanks(yValues_65_plus, dels);		
+		RemoveBlanks(yValues_65_plus, dels);		 */
 
 		data = [{
 			x: xValues,
 			y: yValues_0_14,
-			name: 'Estimated '+PopByAgeDict[DataTypeToUse][1]+' aged 0-14',
+			name: 'Aged 0-14',
 			type: 'bar',
 			marker: {color: Colour1}		
 			},{
 
 			x: xValues,
 			y: yValues_15_24,
-			name: 'Estimated '+PopByAgeDict[DataTypeToUse][1]+' aged 15-24',
+			name: 'Aged 15-24',
 			type: 'bar',
-			marker: {color: Colour3}
+			marker: {color: Colour5}
 			},{
 
 			x: xValues,
 			y: yValues_25_64,
-			name: 'Estimated '+PopByAgeDict[DataTypeToUse][1]+' aged 25-64',
+			name: 'Aged 25-64',
 			type: 'bar',
-			marker: {color: Colour2}
+			marker: {color: Colour4}
 			},{
 
 			x: xValues,
 			y: yValues_65_plus,
-			name: 'Estimated '+PopByAgeDict[DataTypeToUse][1]+' aged 65+',
+			name: 'Aged 65+',
 			type: 'bar',
-			marker: {color: Colour4}
+			marker: {color: Colour2}
 			}
 			];
 
@@ -367,7 +367,6 @@ else if (DataSeriesToUse == "Population by age" && DataTypeToUse != "Total"){
 	
 else {
 	TickAngleValue = 45,
-	dTickValue = 1;
 	RangeVal = []
 	;}
 
@@ -382,10 +381,22 @@ yRangeDict["Households" + "Growth rate"] = [-0.0051,0.0151];
 yRangeDict["Households" + "Total"] = [39500,65500];
 yRangeDict["Population by age" + "Growth"] = [-2600,8100];
 yRangeDict["Population by age" + "Growth rate"] = [-0.11,0.35];
-yRangeDict["Population by age" + "Total"] = [0,175000];
+yRangeDict["Population by age" + "Total"] = [0,70000];
+	
+var TitleDict = {};
+yRangeDict["Population" + "Growth"] = "Population growth trends";
+yRangeDict["Population" + "Growth rate"] = "Population growth rate trends";
+yRangeDict["Population" + "Total"] = "Population trends";
+yRangeDict["Households" + "Growth"] = "Household growth trends";
+yRangeDict["Households" + "Growth rate"] = "Household growth rate trends";
+yRangeDict["Households" + "Total"] = "Household trends";
+yRangeDict["Population by age" + "Growth"] = "Population growth by age trends";
+yRangeDict["Population by age" + "Growth rate"] = "Population growth rate by age trends";
+yRangeDict["Population by age" + "Total"] = "Population by age trends";
+
 	
 layout = {
-	title: DataSeriesToUse + ' trends',
+	title: TitleDict[DataSeriesToUse+DataTypeToUse],
 	showlegend: true,
 	legend: {
 		orientation: 'h',
