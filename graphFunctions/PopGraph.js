@@ -414,11 +414,18 @@ if (DataSeriesToUse == "Population by age"){
 
 if (DataSeriesToUse == "Population by age"){
 	TickAngleValue = 0,
-	RangeVal = [1996, 2043]
+	
+	if (DataTypeToUse == "Total") {
+		RangeVal = [1996, 2043]
+		;}
+	else {
+		RangeVal = []
+		;}
+	
 	;}
 else {
 	TickAngleValue = 45,
-	RangeVal = [0, 3]
+	RangeVal = []
 	;}
 
 	
