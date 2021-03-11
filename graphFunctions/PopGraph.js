@@ -349,23 +349,25 @@ if (DataSeriesToUse == "Population by age"){
 			}
 			];
 
-		dTickValue = 1;
 	;}
 
 ;}
 
 if (DataSeriesToUse == "Population by age" && DataTypeToUse == "Total"){
 	TickAngleValue = 0,
+	dTickValue = 1;
 	RangeVal = []
 	;}
 
 else if (DataSeriesToUse == "Population by age" && DataTypeToUse != "Total"){
 	TickAngleValue = 0,
-	RangeVal = [0,3]
+	dTickValue = 1;
+	RangeVal = []
 	;}
 	
 else {
 	TickAngleValue = 45,
+	dTickValue = 1;
 	RangeVal = []
 	;}
 
