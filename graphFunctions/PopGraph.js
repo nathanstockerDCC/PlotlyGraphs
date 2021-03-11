@@ -317,7 +317,7 @@ if (DataSeriesToUse == "Population by age"){
 			y: yValues_0_14_projected,
 			name: 'Projected '+PopByAgeDict[DataTypeToUse][1]+' aged 0-14',
 			line: {width: 4, dash: 'dashdot'},
-			stackgroup: 'one',
+			stackgroup: 'two',
 			marker: {color: Colour1}		
 			},{
 
@@ -325,7 +325,7 @@ if (DataSeriesToUse == "Population by age"){
 			y: yValues_15_24_projected,
 			name: 'Projected '+PopByAgeDict[DataTypeToUse][1]+' aged 15-24',
 			line: {width: 4, dash: 'dashdot'},
-			stackgroup: 'one',
+			stackgroup: 'two',
 			marker: {color: Colour3}
 			},{
 
@@ -333,7 +333,7 @@ if (DataSeriesToUse == "Population by age"){
 			y: yValues_25_64_projected,
 			name: 'Projected '+PopByAgeDict[DataTypeToUse][1]+' aged 25-64',
 			line: {width: 4, dash: 'dashdot'},
-			stackgroup: 'one',
+			stackgroup: 'two',
 			marker: {color: Colour2}
 			},{
 
@@ -341,7 +341,7 @@ if (DataSeriesToUse == "Population by age"){
 			y: yValues_65_plus_projected,
 			name: 'Projected '+PopByAgeDict[DataTypeToUse][1]+' aged 65+',
 			line: {width: 4, dash: 'dashdot'},
-			stackgroup: 'one',
+			stackgroup: 'two',
 			marker: {color: Colour4}
 			}
 			];		
