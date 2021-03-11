@@ -213,48 +213,54 @@ else {
 var PopByAgeDict = {
 	"Total": ["Total", "population"],
 	"Growth": ["AbsoluteGrowth", "growth:"],
-	"Growth rate": ["GrowthRate", "growth rate:"]
+	"Growth rate": ["GrowthRate", "growth rate:"],
+	"EstimatesStartDate" : 1996,
+	"EstimatesEndDate" : 2017,
+	"ProjectionsStartDate" : 2018,
+	"ProjectionsEndDate" : 2043
 	};
 
+	
+	
 if (DataSeriesToUse == "Population by age"){
 	
 	if (DataTypeToUse == "Total"){
 		
-		var xValues = $.map(chartData, function(data){
+		var xValues = ($.map(chartData, function(data){
 			return data["Year"];
-			});
+			})).splice(PopByAgeDict[EstimatesStartDate],PopByAgeDict[ProjectionsEndDate]);
 			
-		var yValues_0_14_estimated = $.map(chartData, function(data){
+		var yValues_0_14_estimated = ($.map(chartData, function(data){
 			return data["Estimated_0_14_"+PopByAgeDict[DataTypeToUse][0]+"_Medium"];
-			});
+			})).splice(PopByAgeDict[EstimatesStartDate],PopByAgeDict[EstimatesEndDate]);
 			
-		var yValues_15_24_estimated = $.map(chartData, function(data){
+		var yValues_15_24_estimated = ($.map(chartData, function(data){
 			return data["Estimated_15_24_"+PopByAgeDict[DataTypeToUse][0]+"_Medium"];
-			});
+			})).splice(PopByAgeDict[EstimatesStartDate],PopByAgeDict[EstimatesEndDate]);
 			
-		var yValues_25_64_estimated = $.map(chartData, function(data){
+		var yValues_25_64_estimated = ($.map(chartData, function(data){
 			return data["Estimated_25_64_"+PopByAgeDict[DataTypeToUse][0]+"_Medium"];
-			});
+			})).splice(PopByAgeDict[EstimatesStartDate],PopByAgeDict[EstimatesEndDate]);
 			
-		var yValues_65_plus_estimated = $.map(chartData, function(data){
+		var yValues_65_plus_estimated = ($.map(chartData, function(data){
 			return data["Estimated_65_plus_"+PopByAgeDict[DataTypeToUse][0]+"_Medium"];
-			});
+			})).splice(PopByAgeDict[EstimatesStartDate],PopByAgeDict[EstimatesEndDate]);
 			
-		var yValues_0_14_projected = $.map(chartData, function(data){
+		var yValues_0_14_projected = ($.map(chartData, function(data){
 			return data["Projected_0_14_"+PopByAgeDict[DataTypeToUse][0]+"_Medium"];
-			});
+			})).splice(PopByAgeDict[ProjectionsStartDate],PopByAgeDict[ProjectionsEndDate]);
 			
-		var yValues_15_24_projected = $.map(chartData, function(data){
+		var yValues_15_24_projected = ($.map(chartData, function(data){
 			return data["Projected_15_24_"+PopByAgeDict[DataTypeToUse][0]+"_Medium"];
-			});
+			})).splice(PopByAgeDict[ProjectionsStartDate],PopByAgeDict[ProjectionsEndDate]);
 			
-		var yValues_25_64_projected = $.map(chartData, function(data){
+		var yValues_25_64_projected = ($.map(chartData, function(data){
 			return data["Projected_25_64_"+PopByAgeDict[DataTypeToUse][0]+"_Medium"];
-			});
+			})).splice(PopByAgeDict[ProjectionsStartDate],PopByAgeDict[ProjectionsEndDate]);
 			
-		var yValues_65_plus_projected = $.map(chartData, function(data){
+		var yValues_65_plus_projected = ($.map(chartData, function(data){
 			return data["Projected_65_plus_"+PopByAgeDict[DataTypeToUse][0]+"_Medium"];
-			});
+			})).splice(PopByAgeDict[ProjectionsStartDate],PopByAgeDict[ProjectionsEndDate]);
 				
 
 /* 		testRange = []
@@ -281,68 +287,69 @@ if (DataSeriesToUse == "Population by age"){
 		RemoveBlanks(yValues_65_plus_projected, dels);		 */
 		
 		console.log("xValues: " + xValues);
-		console.log("NewX: " + xValues.splice(xValues.indexOf(1996), xValues.indexOf(2017)));
-		console.log("NewY: " + yValues_0_14_estimated.splice(xValues.indexOf(1996), xValues.indexOf(2017)));
+		console.log("yValues: " + yValues_0_14_estimated);
+//		console.log("NewX: " + xValues.splice(xValues.indexOf(1996), xValues.indexOf(2017)));
+//		console.log("NewY: " + yValues_0_14_estimated.splice(xValues.indexOf(1996), xValues.indexOf(2017)));
 		
 		data = [{
-			x: xValues.splice(xValues.indexOf(1996), xValues.indexOf(2017)),
-			y: yValues_0_14_estimated.splice(xValues.indexOf(1996), xValues.indexOf(2017)),
+			x: xValues,
+			y: yValues_0_14_estimated,
 			name: 'Estimated '+PopByAgeDict[DataTypeToUse][1]+' aged 0-14',
 			line: {width: 4},
 			stackgroup: 'one',
 			marker: {color: Colour1}		
 			},{
 
-			x: xValues.splice(xValues.indexOf(1996), xValues.indexOf(2017)),
-			y: yValues_15_24_estimated.splice(xValues.indexOf(1996), xValues.indexOf(2017)),
+			x: xValues,
+			y: yValues_15_24_estimated,
 			name: 'Estimated '+PopByAgeDict[DataTypeToUse][1]+' aged 15-24',
 			line: {width: 4},
 			stackgroup: 'one',
 			marker: {color: Colour3}
 			},{
 
-			x: xValues.splice(xValues.indexOf(1996), xValues.indexOf(2017)),
-			y: yValues_25_64_estimated.splice(xValues.indexOf(1996), xValues.indexOf(2017)),
+			x: xValues,
+			y: yValues_25_64_estimated,
 			name: 'Estimated '+PopByAgeDict[DataTypeToUse][1]+' aged 25-64',
 			line: {width: 4},
 			stackgroup: 'one',
 			marker: {color: Colour2}
 			},{
 
-			x: xValues.splice(xValues.indexOf(1996), xValues.indexOf(2017)),
-			y: yValues_65_plus_estimated.splice(xValues.indexOf(1996), xValues.indexOf(2017)),
+			x: xValues,
+			y: yValues_65_plus_estimated,
 			name: 'Estimated '+PopByAgeDict[DataTypeToUse][1]+' aged 65+',
 			line: {width: 4},
 			stackgroup: 'one',
 			marker: {color: Colour4}
 			},{
 
-			x: xValues.splice(xValues.indexOf(2018), xValues.indexOf(2043)),
-			y: yValues_0_14_projected.splice(xValues.indexOf(2018), xValues.indexOf(2043)),
+			x: xValues,
+			y: yValues_0_14_projected,
 			name: 'Projected '+PopByAgeDict[DataTypeToUse][1]+' aged 0-14',
 			line: {width: 4, dash: 'dashdot'},
 			stackgroup: 'two',
 			marker: {color: Colour1}		
 			},{
 
-			x: xValues.splice(xValues.indexOf(2018), xValues.indexOf(2043)),
-			y: yValues_15_24_projected.splice(xValues.indexOf(2018), xValues.indexOf(2043)),
+			x: xValues,
+			y: yValues_15_24_projected,
 			name: 'Projected '+PopByAgeDict[DataTypeToUse][1]+' aged 15-24',
 			line: {width: 4, dash: 'dashdot'},
 			stackgroup: 'two',
 			marker: {color: Colour3}
 			},{
 
-			x: xValues.splice(xValues.indexOf(2018), xValues.indexOf(2043)),
-			y: yValues_25_64_projected.splice(xValues.indexOf(2018), xValues.indexOf(2043)),
+			x: xValues,
+			y: yValues_25_64_projected,
 			name: 'Projected '+PopByAgeDict[DataTypeToUse][1]+' aged 25-64',
 			line: {width: 4, dash: 'dashdot'},
 			stackgroup: 'two',
 			marker: {color: Colour2}
 			},{
 
-			x: xValues.splice(xValues.indexOf(2018), xValues.indexOf(2043)),
-			y: yValues_65_plus_projected.splice(xValues.indexOf(2018), xValues.indexOf(2043)),
+			x: xValues,
+			y: yValues_65_plus_projected,
 			name: 'Projected '+PopByAgeDict[DataTypeToUse][1]+' aged 65+',
 			line: {width: 4, dash: 'dashdot'},
 			stackgroup: 'two',
