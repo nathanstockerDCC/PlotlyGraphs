@@ -250,7 +250,14 @@ if (DataSeriesToUse == "Population by age"){
 			return data["2040"];
 			});
 
-			
+		BlanksToRemove(xValues);
+		RemoveBlanks(xValues, dels);
+		RemoveBlanks(yValues_2000, dels);		
+		RemoveBlanks(yValues_2010, dels);		
+		RemoveBlanks(yValues_2020, dels);		
+		RemoveBlanks(yValues_2030, dels);	
+		RemoveBlanks(yValues_2040, dels);	
+		
 		data = [{
 			x: xValues,
 			y: yValues_2000,
@@ -312,7 +319,7 @@ if (DataSeriesToUse == "Population by age"){
 			});
 
 
-		BlanksToRemove(yValues_0_14);
+		BlanksToRemove(xValues);
 		RemoveBlanks(xValues, dels);
 		RemoveBlanks(yValues_0_14, dels);		
 		RemoveBlanks(yValues_15_24, dels);		
@@ -387,15 +394,15 @@ yRangeDict["Population by age" + "Growth rate"] = [-0.11,0.35];
 yRangeDict["Population by age" + "Total"] = [0,70000];
 	
 var TitleDict = {};
-TitleDict["Population" + "Growth"] = "Population growth trends";
-TitleDict["Population" + "Growth rate"] = "Population growth rate trends";
-TitleDict["Population" + "Total"] = "Population trends";
-TitleDict["Households" + "Growth"] = "Household growth trends";
-TitleDict["Households" + "Growth rate"] = "Household growth rate trends";
-TitleDict["Households" + "Total"] = "Household trends";
-TitleDict["Population by age" + "Growth"] = "Population growth by age trends";
-TitleDict["Population by age" + "Growth rate"] = "Population growth rate by age trends";
-TitleDict["Population by age" + "Total"] = "Population by age trends";
+TitleDict["Population" + "Growth"] = "Population growth";
+TitleDict["Population" + "Growth rate"] = "Population growth rate";
+TitleDict["Population" + "Total"] = "Population";
+TitleDict["Households" + "Growth"] = "Household growth";
+TitleDict["Households" + "Growth rate"] = "Household growth rate";
+TitleDict["Households" + "Total"] = "Household";
+TitleDict["Population by age" + "Growth"] = "Population growth by age";
+TitleDict["Population by age" + "Growth rate"] = "Population growth rate by age";
+TitleDict["Population by age" + "Total"] = "Population by age";
 
 
 	
