@@ -257,7 +257,7 @@ if (DataSeriesToUse == "Population by age"){
 			});
 				
 
-		testRange = []
+/* 		testRange = []
 		testAdd = [,]
 		var i;
 		for (i = 0; i < yValues_0_14_estimated.length; i++) {
@@ -278,7 +278,7 @@ if (DataSeriesToUse == "Population by age"){
 		RemoveBlanks(yValues_0_14_projected, dels);		
 		RemoveBlanks(yValues_15_24_projected, dels);		
 		RemoveBlanks(yValues_25_64_projected, dels);		
-		RemoveBlanks(yValues_65_plus_projected, dels);		
+		RemoveBlanks(yValues_65_plus_projected, dels);		 */
 		
 		data = [{
 			x: xValues,
@@ -438,7 +438,7 @@ yRangeDict["Households" + "Growth rate"] = [-0.0051,0.0151];
 yRangeDict["Households" + "Total"] = [39500,65500];
 yRangeDict["Population by age" + "Growth"] = [-2600,8100];
 yRangeDict["Population by age" + "Growth rate"] = [-0.11,0.35];
-yRangeDict["Population by age" + "Total"] = [0,155000];
+yRangeDict["Population by age" + "Total"] = [0,175000];
 	
 layout = {
 	title: DataSeriesToUse + ' trends',
