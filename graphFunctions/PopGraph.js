@@ -223,8 +223,8 @@ if (DataSeriesToUse == "Population by age"){
 	if (DataTypeToUse == "Total"){
 		
 		var xValues = $.map(chartData, function(data){
-			return data["AgeRange"]
-			;}),
+			return data["AgeRange"];
+			});
 			
 		var yValues_2000 = $.map(chartData, function(data){
 			return data["2000"];
