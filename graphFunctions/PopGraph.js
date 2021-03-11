@@ -43,7 +43,7 @@ function BlanksToRemove(arrY) {
 function RemoveBlanks(arr, deletes) {
  
 	for (var i = deletes.length-1; i >= 0; i--){
-		arr.slice(deletes[i],1)
+		arr.splice(deletes[i],1)
 		;}
 	;}
 	
