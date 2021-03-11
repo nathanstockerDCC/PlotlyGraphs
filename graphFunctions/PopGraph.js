@@ -273,7 +273,7 @@ if (DataSeriesToUse == "Population by age"){
 			},{
 
 			x: xValues.slice(xValues.indexOf("1996"), 1+xValues.indexOf("2017")),
-			y: yValues_15_24_estimated.slice((xValues.indexOf(PopByAgeDict["EstimatesStartDate"]), 1+xValues.indexOf(PopByAgeDict["EstimatesEndDate"])),
+			y: yValues_15_24_estimated.slice(xValues.indexOf(PopByAgeDict["EstimatesStartDate"]), 1+xValues.indexOf(PopByAgeDict["EstimatesEndDate"])),
 			name: 'Estimated '+PopByAgeDict[DataTypeToUse][1]+' aged 15-24',
 			line: {width: 4},
 			stackgroup: 'one',
