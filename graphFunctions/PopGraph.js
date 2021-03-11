@@ -288,7 +288,8 @@ if (DataSeriesToUse == "Population by age"){
 		
 		console.log("xValues: " + xValues);
 		console.log("yValues: " + yValues_0_14_estimated);
-		console.log("NewX: " + xValues.splice(xValues.indexOf(1996), xValues.indexOf(2017)));
+		NewX =  xValues.splice(xValues.indexOf(1996), xValues.indexOf(2017))
+		console.log("NewX: " + NewX);
 		console.log("NewY: " + yValues_0_14_estimated.splice(xValues.indexOf(1996), xValues.indexOf(2017)));
 		
 		data = [{
