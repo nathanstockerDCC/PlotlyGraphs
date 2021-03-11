@@ -61,7 +61,7 @@ if (DataTypeToUse == "Total"){
 			return data["Estimated" + DataSeriesToUse + "_Total"]
 			;}),
 		name: 'Estimated ' + DataSeriesToUse.toLowerCase(),
-		line: {width: 6},
+		line: {width: 4},
 		marker: {color: Colour1}		
 		},{
 
@@ -72,7 +72,7 @@ if (DataTypeToUse == "Total"){
 			return data["Projected" + DataSeriesToUse + "_Total_Low"]
 			;}),
 		name: 'Projected ' + DataSeriesToUse.toLowerCase() + ' (low growth scenario)',
-		line: {width: 6},
+		line: {width: 4},
 		marker: {color: Colour3}
 		},{
 
@@ -83,7 +83,7 @@ if (DataTypeToUse == "Total"){
 			return data["Projected" + DataSeriesToUse + "_Total_Medium"]
 			;}),
 		name: 'Projected ' + DataSeriesToUse.toLowerCase() + ' (medium growth scenario)',
-		line: {width: 6},
+		line: {width: 4},
 		marker: {color: Colour2}
 		},{
 
@@ -94,7 +94,7 @@ if (DataTypeToUse == "Total"){
 			return data["Projected" + DataSeriesToUse + "_Total_High"]
 			;}),
 		name: 'Projected ' + DataSeriesToUse.toLowerCase() + ' (high growth scenario)',
-		line: {width: 6},
+		line: {width: 4},
 		marker: {color: Colour4}
 		}
 		];
@@ -213,11 +213,7 @@ else {
 var PopByAgeDict = {
 	"Total": ["Total", "population"],
 	"Growth": ["AbsoluteGrowth", "growth:"],
-	"Growth rate": ["GrowthRate", "growth rate:"],
-	"EstimatesStartDate" : "1996",
-	"EstimatesEndDate" : "2018",
-	"ProjectionsStartDate" : "2018",
-	"ProjectionsEndDate" : "2043"
+	"Growth rate": ["GrowthRate", "growth rate:"]
 	};
 
 	
@@ -227,57 +223,49 @@ if (DataSeriesToUse == "Population by age"){
 	if (DataTypeToUse == "Total"){
 		
 		var xValues = $.map(chartData, function(data){
-			return data["Year"];
-			});
+			return data["AgeRange"]
+			;}),
 			
-		var yValues_0_14_estimated = $.map(chartData, function(data){
-			return data["Estimated_0_14_"+PopByAgeDict[DataTypeToUse][0]+"_Medium"];
+		var yValues_2000 = $.map(chartData, function(data){
+			return data["2000"];
 			});
+
 			
-		var yValues_15_24_estimated = $.map(chartData, function(data){
-			return data["Estimated_15_24_"+PopByAgeDict[DataTypeToUse][0]+"_Medium"];
+		var yValues_2010 = $.map(chartData, function(data){
+			return data["2010"];
 			});
+
 			
-		var yValues_25_64_estimated = $.map(chartData, function(data){
-			return data["Estimated_25_64_"+PopByAgeDict[DataTypeToUse][0]+"_Medium"];
+		var yValues_2020 = $.map(chartData, function(data){
+			return data["2020"];
 			});
+
 			
-		var yValues_65_plus_estimated = $.map(chartData, function(data){
-			return data["Estimated_65_plus_"+PopByAgeDict[DataTypeToUse][0]+"_Medium"];
+		var yValues_2030 = $.map(chartData, function(data){
+			return data["2030"];
 			});
+
 			
-		var yValues_0_14_projected = $.map(chartData, function(data){
-			return data["Projected_0_14_"+PopByAgeDict[DataTypeToUse][0]+"_Medium"];
+		var yValues_2040 = $.map(chartData, function(data){
+			return data["2040"];
 			});
+
 			
-		var yValues_15_24_projected = $.map(chartData, function(data){
-			return data["Projected_15_24_"+PopByAgeDict[DataTypeToUse][0]+"_Medium"];
-			});
-			
-		var yValues_25_64_projected = $.map(chartData, function(data){
-			return data["Projected_25_64_"+PopByAgeDict[DataTypeToUse][0]+"_Medium"];
-			});
-			
-		var yValues_65_plus_projected = $.map(chartData, function(data){
-			return data["Projected_65_plus_"+PopByAgeDict[DataTypeToUse][0]+"_Medium"];
-			});
-				
-		
 		data = [{
-			x: xValues.slice(xValues.indexOf("1996"), 1+xValues.indexOf("2018")),
-			y: yValues_0_14_estimated.slice(xValues.indexOf(PopByAgeDict["EstimatesStartDate"]), 1+xValues.indexOf(PopByAgeDict["EstimatesEndDate"])),
-			name: 'Estimated '+PopByAgeDict[DataTypeToUse][1]+' aged 0-14',
+			x: xValues,
+			y: yValues_2000,
+			name: '2000',
 			line: {width: 4},
 			stackgroup: 'one',
 			marker: {color: Colour1}		
 			},{
 
-			x: xValues.slice(xValues.indexOf("1996"), 1+xValues.indexOf("2018")),
-			y: yValues_15_24_estimated.slice(xValues.indexOf(PopByAgeDict["EstimatesStartDate"]), 1+xValues.indexOf(PopByAgeDict["EstimatesEndDate"])),
-			name: 'Estimated '+PopByAgeDict[DataTypeToUse][1]+' aged 15-24',
+			x: xValues,
+			y: yValues_2010,
+			name: '2005',
 			line: {width: 4},
 			stackgroup: 'one',
-			marker: {color: Colour3}
+			marker: {color: Colour1}		
 			},{
 
 			x: xValues.slice(xValues.indexOf("1996"), 1+xValues.indexOf("2018")),
