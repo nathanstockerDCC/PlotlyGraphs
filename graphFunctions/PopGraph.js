@@ -280,6 +280,10 @@ if (DataSeriesToUse == "Population by age"){
 		RemoveBlanks(yValues_25_64_projected, dels);		
 		RemoveBlanks(yValues_65_plus_projected, dels);		 */
 		
+		console.log("xValues: " + xValues);
+		console.log("NewX: " + xValues.splice(xValues.indexOf(1996), xValues.indexOf(2017)));
+		console.log("NewY: " + yValues_0_14_estimated.splice(xValues.indexOf(1996), xValues.indexOf(2017)));
+		
 		data = [{
 			x: xValues.splice(xValues.indexOf(1996), xValues.indexOf(2017)),
 			y: yValues_0_14_estimated.splice(xValues.indexOf(1996), xValues.indexOf(2017)),
