@@ -113,7 +113,7 @@ else if (DataTypeToUse == "Growth"){
 			return data["Estimated" + DataSeriesToUse + "_AbsoluteGrowth"]
 			;}),
 		name: 'Estimated growth',
-		line: {width: 6},
+		line: {width: 4},
 		marker: {color: Colour1}		
 		},{	
 
@@ -124,7 +124,7 @@ else if (DataTypeToUse == "Growth"){
 			return data["Projected" + DataSeriesToUse + "_AbsoluteGrowth_Low"]
 			;}),
 		name: 'Projected growth (low growth scenario)',
-		line: {width: 6},
+		line: {width: 4},
 		marker: {color: Colour3}
 		},{	
 
@@ -135,7 +135,7 @@ else if (DataTypeToUse == "Growth"){
 			return data["Projected" + DataSeriesToUse + "_AbsoluteGrowth_Medium"]
 			;}),
 		name: 'Projected growth (medium growth scenario)',
-		line: {width: 6},
+		line: {width: 4},
 		marker: {color: Colour2}
 		},{	
 
@@ -146,7 +146,7 @@ else if (DataTypeToUse == "Growth"){
 			return data["Projected" + DataSeriesToUse + "_AbsoluteGrowth_High"]
 			;}),
 		name: 'Projected growth (high growth scenario)',
-		line: {width: 6},
+		line: {width: 4},
 		marker: {color: Colour4}
 		}
 		];
@@ -164,7 +164,7 @@ else {
 			return data["Estimated" + DataSeriesToUse + "_GrowthRate"]
 			;}),
 		name: 'Estimated growth rate',
-		line: {width: 6},
+		line: {width: 4},
 		marker: {color: Colour1},
 		hovertemplate: '%{y:0.2%}'
 		},{
@@ -176,7 +176,7 @@ else {
 			return data["Projected" + DataSeriesToUse + "_GrowthRate_Low"]
 			;}),
 		name: 'Projected growth rate (low growth scenario)',
-		line: {width: 6},
+		line: {width: 4},
 		marker: {color: Colour3},
 		hovertemplate: '%{y:0.2%}'
 		},{
@@ -188,7 +188,7 @@ else {
 			return data["Projected" + DataSeriesToUse + "_GrowthRate_Medium"]
 			;}),
 		name: 'Projected growth rate (medium growth scenario)',
-		line: {width: 6},
+		line: {width: 4},
 		marker: {color: Colour2},
 		hovertemplate: '%{y:0.2%}'
 		},{
@@ -200,7 +200,7 @@ else {
 			return data["Projected" + DataSeriesToUse + "_GrowthRate_High"]
 			;}),
 		name: 'Projected growth rate (high growth scenario)',
-		line: {width: 6},
+		line: {width: 4},
 		marker: {color: Colour4},
 		hovertemplate: '%{y:0.2%}'
 		}
@@ -262,58 +262,34 @@ if (DataSeriesToUse == "Population by age"){
 
 			x: xValues,
 			y: yValues_2010,
-			name: '2005',
+			name: '2010',
 			line: {width: 4},
 			stackgroup: 'one',
 			marker: {color: Colour1}		
 			},{
 
-			x: xValues.slice(xValues.indexOf("1996"), 1+xValues.indexOf("2018")),
-			y: yValues_25_64_estimated.slice(xValues.indexOf(PopByAgeDict["EstimatesStartDate"]), 1+xValues.indexOf(PopByAgeDict["EstimatesEndDate"])),
-			name: 'Estimated '+PopByAgeDict[DataTypeToUse][1]+' aged 25-64',
+			x: xValues,
+			y: yValues_2020,
+			name: '2020',
 			line: {width: 4},
 			stackgroup: 'one',
 			marker: {color: Colour2}
 			},{
 
-			x: xValues.slice(xValues.indexOf("1996"), 1+xValues.indexOf("2018")),
-			y: yValues_65_plus_estimated.slice(xValues.indexOf(PopByAgeDict["EstimatesStartDate"]), 1+xValues.indexOf(PopByAgeDict["EstimatesEndDate"])),
-			name: 'Estimated '+PopByAgeDict[DataTypeToUse][1]+' aged 65+',
+			x: xValues,
+			y: yValues_2030,
+			name: '2030',
 			line: {width: 4},
 			stackgroup: 'one',
 			marker: {color: Colour4}
 			},{
 
-			x: xValues.slice(xValues.indexOf("2018"), 1+xValues.indexOf("2043")),
-			y: yValues_0_14_projected.slice(xValues.indexOf(PopByAgeDict["ProjectionsStartDate"]), 1+xValues.indexOf(PopByAgeDict["ProjectionsEndDate"])),
-			name: 'Projected '+PopByAgeDict[DataTypeToUse][1]+' aged 0-14',
+			x: xValues,
+			y: yValues_2040,
+			name: '2040',
 			line: {width: 4, dash: 'dashdot'},
 			stackgroup: 'two',
 			marker: {color: Colour1}		
-			},{
-
-			x: xValues.slice(xValues.indexOf("2018"), 1+xValues.indexOf("2043")),
-			y: yValues_15_24_projected.slice(xValues.indexOf(PopByAgeDict["ProjectionsStartDate"]), 1+xValues.indexOf(PopByAgeDict["ProjectionsEndDate"])),
-			name: 'Projected '+PopByAgeDict[DataTypeToUse][1]+' aged 15-24',
-			line: {width: 4, dash: 'dashdot'},
-			stackgroup: 'two',
-			marker: {color: Colour3}
-			},{
-
-			x: xValues.slice(xValues.indexOf("2018"), 1+xValues.indexOf("2043")),
-			y: yValues_25_64_projected.slice(xValues.indexOf(PopByAgeDict["ProjectionsStartDate"]), 1+xValues.indexOf(PopByAgeDict["ProjectionsEndDate"])),
-			name: 'Projected '+PopByAgeDict[DataTypeToUse][1]+' aged 25-64',
-			line: {width: 4, dash: 'dashdot'},
-			stackgroup: 'two',
-			marker: {color: Colour2}
-			},{
-
-			x: xValues.slice(xValues.indexOf("2018"), 1+xValues.indexOf("2043")),
-			y: yValues_65_plus_projected.slice(xValues.indexOf(PopByAgeDict["ProjectionsStartDate"]), 1+xValues.indexOf(PopByAgeDict["ProjectionsEndDate"])),
-			name: 'Projected '+PopByAgeDict[DataTypeToUse][1]+' aged 65+',
-			line: {width: 4, dash: 'dashdot'},
-			stackgroup: 'two',
-			marker: {color: Colour4}
 			}
 			];		
 		;}
