@@ -297,7 +297,7 @@ if (DataSeriesToUse == "Population by age"){
 			},{
 
 			x: xValues.slice(xValues.indexOf("2018"), 1+xValues.indexOf("2043")),
-			y: yValues_0_14_projected.(xValues.indexOf(PopByAgeDict["ProjectionsStartDate"]), 1+xValues.indexOf(PopByAgeDict["ProjectionsEndDate"])),
+			y: yValues_0_14_projected.slice(xValues.indexOf(PopByAgeDict["ProjectionsStartDate"]), 1+xValues.indexOf(PopByAgeDict["ProjectionsEndDate"])),
 			name: 'Projected '+PopByAgeDict[DataTypeToUse][1]+' aged 0-14',
 			line: {width: 4, dash: 'dashdot'},
 			stackgroup: 'two',
