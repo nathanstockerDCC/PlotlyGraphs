@@ -267,6 +267,7 @@ if (datatypetouse_Development_by_Month == "Total dwellings consented") {
 		title: 'Total dwellings consented',
 		showlegend: false,
 		xaxis: {
+			rangeslider: {},
 			zeroline: false, 
 			type: 'date',
 			range: [StartDate, EndDate],
@@ -373,6 +374,7 @@ else if (datatypetouse_Development_by_Month == "Consented dwellings by type") {
 			x: '0.5',
 			xanchor: 'center'},
 		xaxis: {
+			rangeslider: {},
 			zeroline: false, 
 			type: 'date',
 			range: [StartDate, EndDate],
@@ -488,6 +490,7 @@ else if (datatypetouse_Development_by_Month == "Value of consented construction"
 			x: '0.5',
 			xanchor: 'center'},
 		xaxis: {
+			rangeslider: {},
 			zeroline: false, 
 			type: 'date',
 			range: [StartDate, EndDate],
@@ -531,6 +534,7 @@ else if (datatypetouse_Development_by_Month == "Constructed dwellings") {
 		title: 'Constructed dwellings',
 		showlegend: false,
 		xaxis: {
+			rangeslider: {},
 			zeroline: false, 
 			type: 'date',
 			range: [StartDate, EndDate],
@@ -595,6 +599,7 @@ else if (datatypetouse_Development_by_Month == "Consented dwellings by developme
 			x: '0.5',
 			xanchor: 'center'},
 		xaxis: {
+			rangeslider: {},
 			zeroline: false, 
 			type: 'date',
 			range: [StartDate, EndDate],
@@ -761,6 +766,7 @@ else if (datatypetouse_Development_by_Month == "Consented dwellings by zone") {
 			x: '0.5',
 			xanchor: 'center'},
 		xaxis: {
+			rangeslider: {},
 			zeroline: false, 
 			type: 'date',
 			range: [StartDate, EndDate],
