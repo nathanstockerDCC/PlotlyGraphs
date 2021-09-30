@@ -270,7 +270,7 @@ if (datatypetouse_Development_by_Month == "Total dwellings consented") {
 			zeroline: false, 
 			type: 'date',
 			range: [StartDate, EndDate],
-			dtick: dtickValue,
+//			dtick: dtickValue,
 			tick0: tick0Value,
 			tickformat: tickformatValue,
 			fixedrange: Zooming
@@ -491,7 +491,7 @@ else if (datatypetouse_Development_by_Month == "Value of consented construction"
 			zeroline: false, 
 			type: 'date',
 			range: [StartDate, EndDate],
-			dtick: dtickValue,
+//			dtick: dtickValue,
 			tick0: tick0Value,
 			tickformat: tickformatValue,
 			fixedrange: Zooming
@@ -534,7 +534,7 @@ else if (datatypetouse_Development_by_Month == "Constructed dwellings") {
 			zeroline: false, 
 			type: 'date',
 			range: [StartDate, EndDate],
-			dtick: dtickValue,
+//			dtick: dtickValue,
 			tick0: tick0Value,
 			tickformat: tickformatValue,
 			fixedrange: Zooming			
@@ -598,7 +598,7 @@ else if (datatypetouse_Development_by_Month == "Consented dwellings by developme
 			zeroline: false, 
 			type: 'date',
 			range: [StartDate, EndDate],
-			dtick: dtickValue,
+//			dtick: dtickValue,
 			tick0: tick0Value,
 			tickformat: tickformatValue,
 			fixedrange: Zooming
@@ -764,7 +764,7 @@ else if (datatypetouse_Development_by_Month == "Consented dwellings by zone") {
 			zeroline: false, 
 			type: 'date',
 			range: [StartDate, EndDate],
-			dtick: dtickValue,
+//			dtick: dtickValue,
 			tick0: tick0Value,
 			tickformat: tickformatValue,
 			fixedrange: Zooming			
