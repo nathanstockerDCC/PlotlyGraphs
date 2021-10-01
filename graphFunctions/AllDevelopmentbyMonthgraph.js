@@ -101,7 +101,7 @@ if (timeframe_Development_by_Month == "Months") {
 
 else if (timeframe_Development_by_Month == "Year to date") {
 	VisType = 'line';
-	rangeSliderVis = false;
+	rangeSliderVis = true;
 
 	if (datatypetouse_Development_by_Month == "Consented dwellings by development type" || datatypetouse_Development_by_Month == "Consented dwellings by zone"){
 		xValues = $.map(chartData, function(data){
