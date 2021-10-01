@@ -605,7 +605,7 @@ else if (datatypetouse_Development_by_Month == "Consented dwellings by developme
 			x: '0.5',
 			xanchor: 'center'},
 		xaxis: {
-			rangeslider: {visible: rangeSliderVis},
+			rangeslider: {visible: false},
 			zeroline: false, 
 			type: 'date',
 			range: [StartDate, EndDate],
