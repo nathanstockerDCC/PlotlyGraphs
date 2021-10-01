@@ -68,7 +68,7 @@ else {
 
 if (timeframe_Development_by_Month == "Months") {
 	VisType = 'bar';
-	rangeSliderVis = 'true';
+	rangeSliderVis = true;
 
 	
 	if (datatypetouse_Development_by_Month == "Consented dwellings by development type" || datatypetouse_Development_by_Month == "Consented dwellings by zone"){
@@ -101,7 +101,7 @@ if (timeframe_Development_by_Month == "Months") {
 
 else if (timeframe_Development_by_Month == "Year to date") {
 	VisType = 'line';
-	rangeSliderVis = 'false';
+	rangeSliderVis = false;
 
 	if (datatypetouse_Development_by_Month == "Consented dwellings by development type" || datatypetouse_Development_by_Month == "Consented dwellings by zone"){
 		xValues = $.map(chartData, function(data){
@@ -132,7 +132,7 @@ else if (timeframe_Development_by_Month == "Year to date") {
 	
 else if (timeframe_Development_by_Month == "Years") {
 	VisType = 'bar';
-	rangeSliderVis = 'false';
+	rangeSliderVis = false;
 
 	if (datatypetouse_Development_by_Month == "Consented dwellings by development type" || datatypetouse_Development_by_Month == "Consented dwellings by zone"){
 		xValues = $.map(chartData, function(data){
@@ -194,7 +194,7 @@ else if (timeframe_Development_by_Month == "Years") {
 	;}	
 else {
 	VisType = 'line';
-	rangeSliderVis = 'false';
+	rangeSliderVis = false;
 
 	xValues = $.map(chartData, function(data){
 			return data["All Months"];
@@ -605,7 +605,7 @@ else if (datatypetouse_Development_by_Month == "Consented dwellings by developme
 			x: '0.5',
 			xanchor: 'center'},
 		xaxis: {
-			rangeslider: {visible: false},
+			rangeslider: {visible: rangeSliderVis},
 			zeroline: false, 
 			type: 'date',
 			range: [StartDate, EndDate],
