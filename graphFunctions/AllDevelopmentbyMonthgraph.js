@@ -68,6 +68,8 @@ else {
 
 if (timeframe_Development_by_Month == "Months") {
 	VisType = 'bar';
+	rangeSliderVis = 'true';
+
 	
 	if (datatypetouse_Development_by_Month == "Consented dwellings by development type" || datatypetouse_Development_by_Month == "Consented dwellings by zone"){
 		xValues = $.map(chartData, function(data){
@@ -99,6 +101,7 @@ if (timeframe_Development_by_Month == "Months") {
 
 else if (timeframe_Development_by_Month == "Year to date") {
 	VisType = 'line';
+	rangeSliderVis = 'false';
 
 	if (datatypetouse_Development_by_Month == "Consented dwellings by development type" || datatypetouse_Development_by_Month == "Consented dwellings by zone"){
 		xValues = $.map(chartData, function(data){
@@ -129,6 +132,7 @@ else if (timeframe_Development_by_Month == "Year to date") {
 	
 else if (timeframe_Development_by_Month == "Years") {
 	VisType = 'bar';
+	rangeSliderVis = 'false';
 
 	if (datatypetouse_Development_by_Month == "Consented dwellings by development type" || datatypetouse_Development_by_Month == "Consented dwellings by zone"){
 		xValues = $.map(chartData, function(data){
@@ -190,6 +194,8 @@ else if (timeframe_Development_by_Month == "Years") {
 	;}	
 else {
 	VisType = 'line';
+	rangeSliderVis = 'false';
+
 	xValues = $.map(chartData, function(data){
 			return data["All Months"];
 		});
@@ -267,7 +273,7 @@ if (datatypetouse_Development_by_Month == "Total dwellings consented") {
 		title: 'Total dwellings consented',
 		showlegend: false,
 		xaxis: {
-			rangeslider: {},
+			rangeslider: {visible: rangeSliderVis},
 			zeroline: false, 
 			type: 'date',
 			range: [StartDate, EndDate],
@@ -374,7 +380,7 @@ else if (datatypetouse_Development_by_Month == "Consented dwellings by type") {
 			x: '0.5',
 			xanchor: 'center'},
 		xaxis: {
-			rangeslider: {},
+			rangeslider: {visible: rangeSliderVis},
 			zeroline: false, 
 			type: 'date',
 			range: [StartDate, EndDate],
@@ -490,7 +496,7 @@ else if (datatypetouse_Development_by_Month == "Value of consented construction"
 			x: '0.5',
 			xanchor: 'center'},
 		xaxis: {
-			rangeslider: {},
+			rangeslider: {visible: rangeSliderVis},
 			zeroline: false, 
 			type: 'date',
 			range: [StartDate, EndDate],
@@ -534,7 +540,7 @@ else if (datatypetouse_Development_by_Month == "Constructed dwellings") {
 		title: 'Constructed dwellings',
 		showlegend: false,
 		xaxis: {
-			rangeslider: {},
+			rangeslider: {visible: rangeSliderVis},
 			zeroline: false, 
 			type: 'date',
 			range: [StartDate, EndDate],
@@ -599,7 +605,7 @@ else if (datatypetouse_Development_by_Month == "Consented dwellings by developme
 			x: '0.5',
 			xanchor: 'center'},
 		xaxis: {
-			rangeslider: {},
+			rangeslider: {visible: rangeSliderVis},
 			zeroline: false, 
 			type: 'date',
 			range: [StartDate, EndDate],
@@ -766,7 +772,7 @@ else if (datatypetouse_Development_by_Month == "Consented dwellings by zone") {
 			x: '0.5',
 			xanchor: 'center'},
 		xaxis: {
-			rangeslider: {},
+			rangeslider: {visible: rangeSliderVis},
 			zeroline: false, 
 			type: 'date',
 			range: [StartDate, EndDate],
