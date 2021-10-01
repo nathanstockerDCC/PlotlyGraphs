@@ -115,8 +115,9 @@ else if (timeframe_Development_by_Month == "Year to date") {
 		;}
 	
 	var filteredDates = xValues.filter(function(e) { return e !== "" });
-	var StartDate = new Date(DateMinMax(filteredDates, "min"));
-	StartDate.setDate(StartDate.getDate()+345);
+
+	var StartDate = new Date(DateMinMax(filteredDates, "max"));
+	StartDate.setDate(StartDate.getDate()-745);
 	var EndDate = new Date(DateMinMax(filteredDates, "max"));
 	EndDate.setDate(EndDate.getDate()+20);
 	
