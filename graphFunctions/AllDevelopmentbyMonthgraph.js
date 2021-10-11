@@ -56,6 +56,16 @@ var WindowWidth = t();
 if (chartData == null || chartData.length <= 0)
 		return;
 
+var datatypetouse_Development_by_Month = $('#datatypedd_DevelopmentbyMonthgraph option:selected').text();
+var timeframe_Development_by_Month = $('#timeframe_DevelopmentbyMonthgraph option:selected').text();
+
+if (timeframe_Development_by_Month == "Year to date") {
+	TimeframeConverted = "YTD "
+	;}
+else {
+	TimeframeConverted = ""+timeframe_Development_by_Month+" "
+	;}
+
 if (timeframe_Development_by_Month == "Years" && datatypetouse_Development_by_Month != "Constructed dwellings" && datatypetouse_Development_by_Month != "Consented dwellings by development type") {
 	var selectorOptions = {
 		buttons: [{
@@ -129,16 +139,6 @@ else if (timeframe_Development_by_Month == "Months" || timeframe_Development_by_
 		};
 	;}		
 	
-
-var datatypetouse_Development_by_Month = $('#datatypedd_DevelopmentbyMonthgraph option:selected').text();
-var timeframe_Development_by_Month = $('#timeframe_DevelopmentbyMonthgraph option:selected').text();
-
-if (timeframe_Development_by_Month == "Year to date") {
-	TimeframeConverted = "YTD "
-	;}
-else {
-	TimeframeConverted = ""+timeframe_Development_by_Month+" "
-	;}
 
 if (timeframe_Development_by_Month == "Months") {
 	VisType = 'bar';
