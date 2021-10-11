@@ -67,7 +67,7 @@ else {
 	;}
 
 if (timeframe_Development_by_Month == "Years" && datatypetouse_Development_by_Month != "Constructed dwellings" && datatypetouse_Development_by_Month != "Consented dwellings by development type") {
-	var selectorOptions = {
+	var updatemenus = [{
 		buttons: [{
 			step: 'year',
 			stepmode: 'backward',
@@ -81,15 +81,23 @@ if (timeframe_Development_by_Month == "Years" && datatypetouse_Development_by_Mo
 		}, {
 			step: 'all',
 		}],
+		direction: 'left',
+        pad: {'r': 10, 't': 10},
+        showactive: true,
+        type: 'buttons',
+        x: 0.1,
+        xanchor: 'left',
+        y: 1.1,
+        yanchor: 'top'
 		};
-	;}
+	;}]
 	
 else if (timeframe_Development_by_Month == "Years") {
-	var selectorOptions = false;
+	var updatemenus = false;
 	;}	
 
 else if (timeframe_Development_by_Month == "Months" && datatypetouse_Development_by_Month != "Consented dwellings by development type") {
-	var selectorOptions = {
+	var updatemenus = [{
 		buttons: [{
 			step: 'year',
 			stepmode: 'backward',
@@ -113,11 +121,19 @@ else if (timeframe_Development_by_Month == "Months" && datatypetouse_Development
 		}, {
 			step: 'all',
 		}],
-		};
+		direction: 'left',
+        pad: {'r': 10, 't': 10},
+        showactive: true,
+        type: 'buttons',
+        x: 0.1,
+        xanchor: 'left',
+        y: 1.1,
+        yanchor: 'top'
+		}];
 	;}	
 	
 else if (timeframe_Development_by_Month == "Months" || timeframe_Development_by_Month == "Year to date") {
-	var selectorOptions = {
+	var updatemenus = [{
 		buttons: [{
 			step: 'year',
 			stepmode: 'backward',
@@ -136,7 +152,15 @@ else if (timeframe_Development_by_Month == "Months" || timeframe_Development_by_
 		}, {
 			step: 'all',
 		}],
-		};
+		direction: 'left',
+        pad: {'r': 10, 't': 10},
+        showactive: true,
+        type: 'buttons',
+        x: 0.1,
+        xanchor: 'left',
+        y: 1.1,
+        yanchor: 'top'
+		}];
 	;}		
 	
 
@@ -365,7 +389,7 @@ if (datatypetouse_Development_by_Month == "Total dwellings consented") {
 		annotations: annotations,
 		xaxis: {
 			rangeslider: {visible: rangeSliderVis},
-			rangeselector: selectorOptions,
+			updatemenus: updatemenus,
 			zeroline: false, 
 			type: 'date',
 			range: [StartDate, EndDate],
@@ -474,7 +498,7 @@ else if (datatypetouse_Development_by_Month == "Consented dwellings by type") {
 			xanchor: 'center'},
 		xaxis: {
 			rangeslider: {visible: rangeSliderVis},
-			rangeselector: selectorOptions,
+			updatemenus: updatemenus,
 			zeroline: false, 
 			type: 'date',
 			range: [StartDate, EndDate],
@@ -592,7 +616,7 @@ else if (datatypetouse_Development_by_Month == "Value of consented construction"
 			xanchor: 'center'},
 		xaxis: {
 			rangeslider: {visible: rangeSliderVis},
-			rangeselector: selectorOptions,
+			updatemenus: updatemenus,
 			zeroline: false, 
 			type: 'date',
 			range: [StartDate, EndDate],
@@ -638,7 +662,7 @@ else if (datatypetouse_Development_by_Month == "Constructed dwellings") {
 		annotations: annotations,
 		xaxis: {
 			rangeslider: {visible: rangeSliderVis},
-			rangeselector: selectorOptions,
+			updatemenus: updatemenus,
 			zeroline: false, 
 			type: 'date',
 			range: [StartDate, EndDate],
@@ -705,7 +729,7 @@ else if (datatypetouse_Development_by_Month == "Consented dwellings by developme
 			xanchor: 'center'},
 		xaxis: {
 			rangeslider: {visible: rangeSliderVis},
-			rangeselector: selectorOptions,
+			updatemenus: updatemenus,
 			zeroline: false, 
 			type: 'date',
 			range: [StartDate, EndDate],
@@ -874,7 +898,7 @@ else if (datatypetouse_Development_by_Month == "Consented dwellings by zone") {
 			xanchor: 'center'},
 		xaxis: {
 			rangeslider: {visible: rangeSliderVis},
-			rangeselector: selectorOptions,
+			updatemenus: updatemenus,
 			zeroline: false, 
 			type: 'date',
 			range: [StartDate, EndDate],
