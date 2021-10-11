@@ -144,7 +144,7 @@ var annotations = [
     {
       text: 'Date range:',
       x: 0,
-      y: 1.085,
+      y: 1,
       yref: 'paper',
       align: 'left',
       showarrow: false
