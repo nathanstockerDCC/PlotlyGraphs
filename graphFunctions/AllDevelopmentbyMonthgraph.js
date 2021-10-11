@@ -89,11 +89,11 @@ if (timeframe_Development_by_Month == "Years" && datatypetouse_Development_by_Mo
         xanchor: 'left',
         y: 1.1,
         yanchor: 'top'
-		};
-	;}]
+		}]
+	;}
 	
 else if (timeframe_Development_by_Month == "Years") {
-	var updatemenus = false;
+	var updatemenus = false
 	;}	
 
 else if (timeframe_Development_by_Month == "Months" && datatypetouse_Development_by_Month != "Consented dwellings by development type") {
@@ -129,8 +129,8 @@ else if (timeframe_Development_by_Month == "Months" && datatypetouse_Development
         xanchor: 'left',
         y: 1.1,
         yanchor: 'top'
-		}];
-	;}	
+		}]
+	;}
 	
 else if (timeframe_Development_by_Month == "Months" || timeframe_Development_by_Month == "Year to date") {
 	var updatemenus = [{
@@ -160,8 +160,8 @@ else if (timeframe_Development_by_Month == "Months" || timeframe_Development_by_
         xanchor: 'left',
         y: 1.1,
         yanchor: 'top'
-		}];
-	;}		
+		}]
+	;}
 	
 
 var annotations = [
