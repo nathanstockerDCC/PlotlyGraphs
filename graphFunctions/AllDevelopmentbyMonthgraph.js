@@ -56,7 +56,7 @@ var WindowWidth = t();
 if (chartData == null || chartData.length <= 0)
 		return;
 
-if (timeframe_Development_by_Month == "Years" and datatypetouse_Development_by_Month != "Constructed dwellings" and datatypetouse_Development_by_Month != "Consented dwellings by development type") {
+if (timeframe_Development_by_Month == "Years" && datatypetouse_Development_by_Month != "Constructed dwellings" && datatypetouse_Development_by_Month != "Consented dwellings by development type") {
 	var selectorOptions = {
 		buttons: [{
 			step: 'year',
@@ -78,7 +78,7 @@ else if (timeframe_Development_by_Month == "Years") {
 	var selectorOptions = false;
 	;}	
 
-else if (timeframe_Development_by_Month == "Months" and datatypetouse_Development_by_Month != "Consented dwellings by development type") {
+else if (timeframe_Development_by_Month == "Months" && datatypetouse_Development_by_Month != "Consented dwellings by development type") {
 	var selectorOptions = {
 		buttons: [{
 			step: 'year',
@@ -106,7 +106,7 @@ else if (timeframe_Development_by_Month == "Months" and datatypetouse_Developmen
 		};
 	;}	
 	
-else if (timeframe_Development_by_Month == "Months" or timeframe_Development_by_Month == "Year to date") {
+else if (timeframe_Development_by_Month == "Months" || timeframe_Development_by_Month == "Year to date") {
 	var selectorOptions = {
 		buttons: [{
 			step: 'year',
