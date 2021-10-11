@@ -142,7 +142,8 @@ else if (timeframe_Development_by_Month == "Months" || timeframe_Development_by_
 
 if (timeframe_Development_by_Month == "Months") {
 	VisType = 'bar';
-	rangeSliderVis = true;
+//	rangeSliderVis = true;
+	rangeSliderVis = false;
 
 	
 	if (datatypetouse_Development_by_Month == "Consented dwellings by development type" || datatypetouse_Development_by_Month == "Consented dwellings by zone"){
@@ -175,7 +176,8 @@ if (timeframe_Development_by_Month == "Months") {
 
 else if (timeframe_Development_by_Month == "Year to date") {
 	VisType = 'line';
-	rangeSliderVis = true;
+//	rangeSliderVis = true;
+	rangeSliderVis = false;
 
 	if (datatypetouse_Development_by_Month == "Consented dwellings by development type" || datatypetouse_Development_by_Month == "Consented dwellings by zone"){
 		xValues = $.map(chartData, function(data){
