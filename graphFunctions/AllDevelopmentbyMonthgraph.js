@@ -142,13 +142,14 @@ else if (timeframe_Development_by_Month == "Months" || timeframe_Development_by_
 
 var annotations = [
     {
-      text: 'Date range:',
-      x: 0,
-      y: 1.085,
-      yref: 'paper',
-	  xref: 'paper',
-      align: 'left',
-      showarrow: false
+	text: 'Date range:',
+	x: 0,
+	y: 1.085,
+	yref: 'paper',
+	xref: 'paper',
+	xanchor: 'left',
+	align: 'left',
+	showarrow: false
     }
 ]
 	
