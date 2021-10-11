@@ -56,6 +56,32 @@ var WindowWidth = t();
 if (chartData == null || chartData.length <= 0)
 		return;
 
+var selectorOptions = {
+    buttons: [{
+        step: 'month',
+        stepmode: 'backward',
+        count: 1,
+        label: '1m'
+    }, {
+        step: 'month',
+        stepmode: 'backward',
+        count: 6,
+        label: '6m'
+    }, {
+        step: 'year',
+        stepmode: 'todate',
+        count: 1,
+        label: 'YTD'
+    }, {
+        step: 'year',
+        stepmode: 'backward',
+        count: 1,
+        label: '1y'
+    }, {
+        step: 'all',
+    }],
+};
+
 var datatypetouse_Development_by_Month = $('#datatypedd_DevelopmentbyMonthgraph option:selected').text();
 var timeframe_Development_by_Month = $('#timeframe_DevelopmentbyMonthgraph option:selected').text();
 
@@ -275,6 +301,7 @@ if (datatypetouse_Development_by_Month == "Total dwellings consented") {
 		showlegend: false,
 		xaxis: {
 			rangeslider: {visible: rangeSliderVis},
+			rangeselector: selectorOptions,
 			zeroline: false, 
 			type: 'date',
 			range: [StartDate, EndDate],
@@ -382,6 +409,7 @@ else if (datatypetouse_Development_by_Month == "Consented dwellings by type") {
 			xanchor: 'center'},
 		xaxis: {
 			rangeslider: {visible: rangeSliderVis},
+			rangeselector: selectorOptions,
 			zeroline: false, 
 			type: 'date',
 			range: [StartDate, EndDate],
@@ -498,6 +526,7 @@ else if (datatypetouse_Development_by_Month == "Value of consented construction"
 			xanchor: 'center'},
 		xaxis: {
 			rangeslider: {visible: rangeSliderVis},
+			rangeselector: selectorOptions,
 			zeroline: false, 
 			type: 'date',
 			range: [StartDate, EndDate],
@@ -542,6 +571,7 @@ else if (datatypetouse_Development_by_Month == "Constructed dwellings") {
 		showlegend: false,
 		xaxis: {
 			rangeslider: {visible: rangeSliderVis},
+			rangeselector: selectorOptions,
 			zeroline: false, 
 			type: 'date',
 			range: [StartDate, EndDate],
@@ -607,6 +637,7 @@ else if (datatypetouse_Development_by_Month == "Consented dwellings by developme
 			xanchor: 'center'},
 		xaxis: {
 			rangeslider: {visible: rangeSliderVis},
+			rangeselector: selectorOptions,
 			zeroline: false, 
 			type: 'date',
 			range: [StartDate, EndDate],
@@ -774,6 +805,7 @@ else if (datatypetouse_Development_by_Month == "Consented dwellings by zone") {
 			xanchor: 'center'},
 		xaxis: {
 			rangeslider: {visible: rangeSliderVis},
+			rangeselector: selectorOptions,
 			zeroline: false, 
 			type: 'date',
 			range: [StartDate, EndDate],
