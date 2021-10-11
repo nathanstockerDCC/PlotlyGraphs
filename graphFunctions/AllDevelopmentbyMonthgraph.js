@@ -360,7 +360,7 @@ if (datatypetouse_Development_by_Month == "Total dwellings consented") {
 	layout = {
 		title: 'Total dwellings consented',
 		showlegend: false,
-		annotations: annonations,
+		annotations: annotations,
 		xaxis: {
 			rangeslider: {visible: rangeSliderVis},
 			rangeselector: selectorOptions,
@@ -464,7 +464,7 @@ else if (datatypetouse_Development_by_Month == "Consented dwellings by type") {
 	layout = {
 		title: 'Consented dwellings by type',
 		showlegend: true,
-		annotations: annonations,
+		annotations: annotations,
 		legend: {
 			orientation: 'h',
 			y: '-0.25',
@@ -582,7 +582,7 @@ else if (datatypetouse_Development_by_Month == "Value of consented construction"
 	layout = {
 		title: 'Value of consented construction',
 		showlegend: true,
-		annotations: annonations,
+		annotations: annotations,
 		legend: {
 			orientation: 'h',
 			y: '-0.25',
@@ -633,7 +633,7 @@ else if (datatypetouse_Development_by_Month == "Constructed dwellings") {
 	layout = {
 		title: 'Constructed dwellings',
 		showlegend: false,
-		annotations: annonations,
+		annotations: annotations,
 		xaxis: {
 			rangeslider: {visible: rangeSliderVis},
 			rangeselector: selectorOptions,
@@ -695,7 +695,7 @@ else if (datatypetouse_Development_by_Month == "Consented dwellings by developme
 	layout = {
 		title: 'Consented dwellings by development type',
 		showlegend: true,
-		annotations: annonations,
+		annotations: annotations,
 		legend: {
 			orientation: 'h',
 			y: '-0.25',
@@ -864,7 +864,7 @@ else if (datatypetouse_Development_by_Month == "Consented dwellings by zone") {
 	layout = {
 		title: 'Consented dwellings by zone',
 		showlegend: true,
-		annotations: annonations,
+		annotations: annotations,
 		legend: {
 			orientation: 'h',
 			y: '-0.25',
