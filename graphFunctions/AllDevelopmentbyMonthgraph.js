@@ -56,31 +56,79 @@ var WindowWidth = t();
 if (chartData == null || chartData.length <= 0)
 		return;
 
-var selectorOptions = {
-    buttons: [{
-        step: 'month',
-        stepmode: 'backward',
-        count: 1,
-        label: '1m'
-    }, {
-        step: 'month',
-        stepmode: 'backward',
-        count: 6,
-        label: '6m'
-    }, {
-        step: 'year',
-        stepmode: 'todate',
-        count: 1,
-        label: 'YTD'
-    }, {
-        step: 'year',
-        stepmode: 'backward',
-        count: 1,
-        label: '1y'
-    }, {
-        step: 'all',
-    }],
-};
+if (timeframe_Development_by_Month == "Years" and datatypetouse_Development_by_Month != "Constructed dwellings" and datatypetouse_Development_by_Month != "Consented dwellings by development type") {
+	var selectorOptions = {
+		buttons: [{
+			step: 'year',
+			stepmode: 'backward',
+			count: 10,
+			label: '10 years'
+		}, {
+			step: 'year',
+			stepmode: 'backward',
+			count: 20,
+			label: '20 years'
+		}, {
+			step: 'all',
+		}],
+		};
+	;}
+	
+else if (timeframe_Development_by_Month == "Years") {
+	var selectorOptions = false;
+	;}	
+
+else if (timeframe_Development_by_Month == "Months" and datatypetouse_Development_by_Month != "Consented dwellings by development type") {
+	var selectorOptions = {
+		buttons: [{
+			step: 'year',
+			stepmode: 'backward',
+			count: 1,
+			label: '1 year'
+		}, {
+			step: 'year',
+			stepmode: 'backward',
+			count: 2,
+			label: '2 years'
+		}, {
+			step: 'year',
+			stepmode: 'backward',
+			count: 5,
+			label: '5 years'
+		}, {
+			step: 'year',
+			stepmode: 'backward',
+			count: 10,
+			label: '10 years'
+		}, {
+			step: 'all',
+		}],
+		};
+	;}	
+	
+else if (timeframe_Development_by_Month == "Months" or timeframe_Development_by_Month == "Year to date") {
+	var selectorOptions = {
+		buttons: [{
+			step: 'year',
+			stepmode: 'backward',
+			count: 1,
+			label: '1 year'
+		}, {
+			step: 'year',
+			stepmode: 'backward',
+			count: 2,
+			label: '2 years'
+		}, {
+			step: 'year',
+			stepmode: 'backward',
+			count: 5,
+			label: '5 years'
+		}, {
+			step: 'all',
+		}],
+		};
+	;}		
+	
 
 var datatypetouse_Development_by_Month = $('#datatypedd_DevelopmentbyMonthgraph option:selected').text();
 var timeframe_Development_by_Month = $('#timeframe_DevelopmentbyMonthgraph option:selected').text();
