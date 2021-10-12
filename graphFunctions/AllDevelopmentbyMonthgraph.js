@@ -355,7 +355,7 @@ if (datatypetouse_Development_by_Month == "Total dwellings consented") {
 		x: xValues,
 		y: yValues,
 		type: VisType,
-//		line: {width: 6,},
+		line: {width: 2,},
 		connectgaps: true,
 		marker: {color: Colour1}
         }];
@@ -421,7 +421,7 @@ else if (datatypetouse_Development_by_Month == "Consented dwellings by type") {
 		hoverlabel: {namelength :-1},
 		type: 'line',
 		connectgaps: true,
-//		line: {width: 5,},
+		line: {width: 2,},
 		marker: {color: Colour1}
 		
         },{
@@ -431,7 +431,7 @@ else if (datatypetouse_Development_by_Month == "Consented dwellings by type") {
 		hoverlabel: {namelength :-1},
 		type: 'line',
 		connectgaps: true,
-//		line: {width: 5,},
+		line: {width: 2,},
 		marker: {color: Colour2}
 		
         },{
@@ -441,7 +441,7 @@ else if (datatypetouse_Development_by_Month == "Consented dwellings by type") {
 		hoverlabel: {namelength :-1},
 		type: 'line',
 		connectgaps: true,
-//		line: {width: 5,},
+		line: {width: 2,},
 		marker: {color: Colour4}
 		
         },{
@@ -451,7 +451,7 @@ else if (datatypetouse_Development_by_Month == "Consented dwellings by type") {
 		hoverlabel: {namelength :-1},
 		type: 'line',
 		connectgaps: true,
-//		line: {width: 5,},
+		line: {width: 2,},
 		marker: {color: Colour5}
 		 
         },{
@@ -536,7 +536,7 @@ else if (datatypetouse_Development_by_Month == "Value of consented construction"
 		visible: 'legendonly',
 		hoverlabel: {namelength :-1},
 		type: VisType,
-//		line: {width: 6,},
+		line: {width: 2,},
 		connectgaps: true,
 		marker: {color: Colour5}		
         },{
@@ -545,7 +545,7 @@ else if (datatypetouse_Development_by_Month == "Value of consented construction"
 		name: "New residential buildings",
 		hoverlabel: {namelength :-1},
 		type: VisType,
-//		line: {width: 6,},
+		line: {width: 2,},
 		connectgaps: true,
 		marker: {color: Colour1}
 		
@@ -555,7 +555,7 @@ else if (datatypetouse_Development_by_Month == "Value of consented construction"
 		name: "Residential alterations",
 		hoverlabel: {namelength :-1},
 		type: VisType,
-//		line: {width: 6,},
+		line: {width: 2,},
 		connectgaps: true,
 		marker: {color: Colour4}
 		
@@ -566,7 +566,7 @@ else if (datatypetouse_Development_by_Month == "Value of consented construction"
 		visible: 'legendonly',
 		hoverlabel: {namelength :-1},
 		type: VisType,
-//		line: {width: 6,},
+		line: {width: 2,},
 		connectgaps: true,
 		marker: {color: Colour3}
 		
@@ -577,7 +577,7 @@ else if (datatypetouse_Development_by_Month == "Value of consented construction"
 		visible: 'legendonly',
 		hoverlabel: {namelength :-1},
 		type: 'line',
-//		line: {width: 5,},
+		line: {width: 2,},
 		connectgaps: true,
 		marker: {color: Colour2}
         }];
@@ -628,7 +628,7 @@ else if (datatypetouse_Development_by_Month == "Constructed dwellings") {
 		y: yValues,
 		name: "Constructed dwellings",
 		type: VisType,
-//		line: {width: 6,},
+		line: {width: 2,},
 		connectgaps: true,
 		marker: {color: Colour1}
         }];
@@ -681,7 +681,7 @@ else if (datatypetouse_Development_by_Month == "Consented dwellings by developme
 		name: "Greenfield",
 		hoverlabel: {namelength :-1},
 		type: VisType,
-//		line: {width: 6,},
+		line: {width: 2,},
 		connectgaps: true,
 		marker: {color: Colour1}		
         },{
@@ -690,7 +690,7 @@ else if (datatypetouse_Development_by_Month == "Consented dwellings by developme
 		name: "Brownfield",
 		hoverlabel: {namelength :-1},
 		type: VisType,
-//		line: {width: 6,},
+		line: {width: 2,},
 		connectgaps: true,
 		marker: {color: Colour2}
         }];
