@@ -502,6 +502,7 @@ else if (datatypetouse_Development_by_Month == "Consented dwellings by type") {
 		title: 'Consented dwellings by type',
 		showlegend: true,
 		annotations: annotations,
+		barmode: 'stack',
 		legend: {
 			orientation: 'h',
 			y: '-0.25',
@@ -521,8 +522,7 @@ else if (datatypetouse_Development_by_Month == "Consented dwellings by type") {
 		yaxis: {
 			zeroline: false, 
 			rangemode: 'tozero',
-			fixedrange: Zooming,
-			barmode: 'stack'
+			fixedrange: Zooming
 			}
 		}
 	;}
