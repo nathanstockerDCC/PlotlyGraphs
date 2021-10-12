@@ -387,9 +387,9 @@ if (datatypetouse_Development_by_Month == "Total dwellings consented") {
 		title: 'Total dwellings consented',
 		showlegend: false,
 		annotations: annotations,
+		updatemenus: updatemenus,
 		xaxis: {
 			rangeslider: {visible: rangeSliderVis},
-			updatemenus: updatemenus,
 			zeroline: false, 
 			type: 'date',
 			range: [StartDate, EndDate],
@@ -491,6 +491,7 @@ else if (datatypetouse_Development_by_Month == "Consented dwellings by type") {
 		title: 'Consented dwellings by type',
 		showlegend: true,
 		annotations: annotations,
+		updatemenus: updatemenus,
 		legend: {
 			orientation: 'h',
 			y: '-0.25',
@@ -498,7 +499,6 @@ else if (datatypetouse_Development_by_Month == "Consented dwellings by type") {
 			xanchor: 'center'},
 		xaxis: {
 			rangeslider: {visible: rangeSliderVis},
-			updatemenus: updatemenus,
 			zeroline: false, 
 			type: 'date',
 			range: [StartDate, EndDate],
@@ -609,6 +609,7 @@ else if (datatypetouse_Development_by_Month == "Value of consented construction"
 		title: 'Value of consented construction',
 		showlegend: true,
 		annotations: annotations,
+		updatemenus: updatemenus,
 		legend: {
 			orientation: 'h',
 			y: '-0.25',
@@ -616,7 +617,6 @@ else if (datatypetouse_Development_by_Month == "Value of consented construction"
 			xanchor: 'center'},
 		xaxis: {
 			rangeslider: {visible: rangeSliderVis},
-			updatemenus: updatemenus,
 			zeroline: false, 
 			type: 'date',
 			range: [StartDate, EndDate],
@@ -660,9 +660,9 @@ else if (datatypetouse_Development_by_Month == "Constructed dwellings") {
 		title: 'Constructed dwellings',
 		showlegend: false,
 		annotations: annotations,
+		updatemenus: updatemenus,
 		xaxis: {
 			rangeslider: {visible: rangeSliderVis},
-			updatemenus: updatemenus,
 			zeroline: false, 
 			type: 'date',
 			range: [StartDate, EndDate],
@@ -722,6 +722,7 @@ else if (datatypetouse_Development_by_Month == "Consented dwellings by developme
 		title: 'Consented dwellings by development type',
 		showlegend: true,
 		annotations: annotations,
+		updatemenus: updatemenus,
 		legend: {
 			orientation: 'h',
 			y: '-0.25',
@@ -729,7 +730,6 @@ else if (datatypetouse_Development_by_Month == "Consented dwellings by developme
 			xanchor: 'center'},
 		xaxis: {
 			rangeslider: {visible: rangeSliderVis},
-			updatemenus: updatemenus,
 			zeroline: false, 
 			type: 'date',
 			range: [StartDate, EndDate],
@@ -891,6 +891,7 @@ else if (datatypetouse_Development_by_Month == "Consented dwellings by zone") {
 		title: 'Consented dwellings by zone',
 		showlegend: true,
 		annotations: annotations,
+		updatemenus: updatemenus,
 		legend: {
 			orientation: 'h',
 			y: '-0.25',
@@ -898,7 +899,6 @@ else if (datatypetouse_Development_by_Month == "Consented dwellings by zone") {
 			xanchor: 'center'},
 		xaxis: {
 			rangeslider: {visible: rangeSliderVis},
-			updatemenus: updatemenus,
 			zeroline: false, 
 			type: 'date',
 			range: [StartDate, EndDate],
