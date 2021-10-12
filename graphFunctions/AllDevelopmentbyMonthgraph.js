@@ -414,7 +414,7 @@ else if (datatypetouse_Development_by_Month == "Consented dwellings by type") {
 	RemoveBlanks(yValuesRVUs, dels);
 	RemoveBlanks(yValuesTotal, dels);
 	
-	if (timeframe_Development_by_Month == "Month") {
+	if (timeframe_Development_by_Month == "Months") {
 		data = [{
 			x: xValues,
 			y: yValuesHouses,
