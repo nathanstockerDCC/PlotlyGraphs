@@ -414,55 +414,89 @@ else if (datatypetouse_Development_by_Month == "Consented dwellings by type") {
 	RemoveBlanks(yValuesRVUs, dels);
 	RemoveBlanks(yValuesTotal, dels);
 	
-	data = [{
-		x: xValues,
-		y: yValuesHouses,
-		name: "Houses",
-		hoverlabel: {namelength :-1},
-		type: 'line',
-		connectgaps: true,
-		line: {width: 4,},
-		marker: {color: Colour1}
-		
-        },{
-		x: xValues,
-		y: yValuesUnits,
-		name: "Units",
-		hoverlabel: {namelength :-1},
-		type: 'line',
-		connectgaps: true,
-		line: {width: 4,},
-		marker: {color: Colour2}
-		
-        },{
-		x: xValues,
-		y: yValuesApartments,
-		name: "Apartments",
-		hoverlabel: {namelength :-1},
-		type: 'line',
-		connectgaps: true,
-		line: {width: 4,},
-		marker: {color: Colour4}
-		
-        },{
-		x: xValues,
-		y: yValuesRVUs,
-		name: "Retirement village units",
-		hoverlabel: {namelength :-1},
-		type: 'line',
-		connectgaps: true,
-		line: {width: 4,},
-		marker: {color: Colour5}
-		 
-        },{
-		x: xValues,
-		y: yValuesTotal,
-		name: "Total",
-		type: 'bar',
-		connectgaps: true,
-		opacity: 0.7,
-		marker: {color: Colour3}
-        }];
+	if (timeframe_Development_by_Month == "Month") {
+		data = [{
+			x: xValues,
+			y: yValuesHouses,
+			name: "Houses",
+			hoverlabel: {namelength :-1},
+			type: 'bar',
+			connectgaps: true,
+			marker: {color: Colour1}			
+			},{
+			x: xValues,
+			y: yValuesUnits,
+			name: "Units",
+			hoverlabel: {namelength :-1},
+			type: 'bar',
+			connectgaps: true,
+			marker: {color: Colour2}
+			},{
+			x: xValues,
+			y: yValuesApartments,
+			name: "Apartments",
+			hoverlabel: {namelength :-1},
+			type: 'bar',
+			connectgaps: true,
+			marker: {color: Colour4}
+			},{
+			x: xValues,
+			y: yValuesRVUs,
+			name: "Retirement village units",
+			hoverlabel: {namelength :-1},
+			type: 'bar',
+			connectgaps: true,
+			marker: {color: Colour5}
+			}];
+		}
+	else {
+		data = [{
+			x: xValues,
+			y: yValuesHouses,
+			name: "Houses",
+			hoverlabel: {namelength :-1},
+			type: 'line',
+			connectgaps: true,
+			line: {width: 4,},
+			marker: {color: Colour1}			
+			},{
+			x: xValues,
+			y: yValuesUnits,
+			name: "Units",
+			hoverlabel: {namelength :-1},
+			type: 'line',
+			connectgaps: true,
+			line: {width: 4,},
+			marker: {color: Colour2}
+			},{
+			x: xValues,
+			y: yValuesApartments,
+			name: "Apartments",
+			hoverlabel: {namelength :-1},
+			type: 'line',
+			connectgaps: true,
+			line: {width: 4,},
+			marker: {color: Colour4}
+			},{
+			x: xValues,
+			y: yValuesRVUs,
+			name: "Retirement village units",
+			hoverlabel: {namelength :-1},
+			type: 'line',
+			connectgaps: true,
+			line: {width: 4,},
+			marker: {color: Colour5}
+			},{
+			x: xValues,
+			y: yValuesTotal,
+			name: "Total",
+			type: 'bar',
+			connectgaps: true,
+			opacity: 0.7,
+			marker: {color: Colour3}
+			}];	
+	}
+	
 
 	layout = {
 		title: 'Consented dwellings by type',
