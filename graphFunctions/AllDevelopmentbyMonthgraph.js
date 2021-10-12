@@ -66,6 +66,19 @@ else {
 	TimeframeConverted = ""+timeframe_Development_by_Month+" "
 	;}
 
+var annotations = [
+    {
+	text: '<b>Date range selection:</b>',
+	x: 0,
+	y: 1.175,
+	yref: 'paper',
+	xref: 'paper',
+	xanchor: 'left',
+	align: 'left',
+	showarrow: false
+    }
+]
+	
 if (timeframe_Development_by_Month == "Years" && datatypetouse_Development_by_Month != "Constructed dwellings" && datatypetouse_Development_by_Month != "Consented dwellings by development type") {
 	var selectorOptions = {
 		buttons: [{
@@ -86,6 +99,7 @@ if (timeframe_Development_by_Month == "Years" && datatypetouse_Development_by_Mo
 	
 else if (timeframe_Development_by_Month == "Years") {
 	var selectorOptions = false;
+	var annotations = false;
 	;}	
 
 else if (timeframe_Development_by_Month == "Months" && datatypetouse_Development_by_Month != "Consented dwellings by development type") {
@@ -140,19 +154,6 @@ else if (timeframe_Development_by_Month == "Months" || timeframe_Development_by_
 	;}		
 	
 
-var annotations = [
-    {
-	text: 'Date range:',
-	x: 0,
-	y: 1.2,
-	yref: 'paper',
-	xref: 'paper',
-	xanchor: 'left',
-	align: 'left',
-	showarrow: false
-    }
-]
-	
 if (timeframe_Development_by_Month == "Months") {
 	VisType = 'bar';
 //	rangeSliderVis = true;
