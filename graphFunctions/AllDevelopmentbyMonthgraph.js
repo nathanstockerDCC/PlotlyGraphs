@@ -64,7 +64,8 @@ if (timeframe_Development_by_Month == "Year to date") {
 	xTitle = "Year to date"
 	;}
 else {
-	TimeframeConverted = ""+timeframe_Development_by_Month+" "
+	TimeframeConverted = ""+timeframe_Development_by_Month+" ";
+	xTitle = ""
 	;}
 
 var annotations = [
