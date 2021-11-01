@@ -60,7 +60,8 @@ var datatypetouse_Development_by_Month = $('#datatypedd_DevelopmentbyMonthgraph 
 var timeframe_Development_by_Month = $('#timeframe_DevelopmentbyMonthgraph option:selected').text();
 
 if (timeframe_Development_by_Month == "Year to date") {
-	TimeframeConverted = "YTD "
+	TimeframeConverted = "YTD ";
+	xTitle = "Year to date"
 	;}
 else {
 	TimeframeConverted = ""+timeframe_Development_by_Month+" "
@@ -373,7 +374,8 @@ if (datatypetouse_Development_by_Month == "Total dwellings consented") {
 //			dtick: dtickValue,
 			tick0: tick0Value,
 			tickformat: tickformatValue,
-			fixedrange: Zooming
+			fixedrange: Zooming,
+			title: {text: xTitle}
 			},		
 		yaxis: {
 			zeroline: false,
