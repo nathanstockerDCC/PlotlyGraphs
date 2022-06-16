@@ -420,7 +420,7 @@ function PopGraph(chartData){
             tick0: 0,
             dtick: dTickValue,
             tickangle: TickAngleValue,
-    //		range : RangeVal,
+    		range : RangeVal,
             fixedrange: Zooming
             },
         yaxis: {
